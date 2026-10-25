@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IBPS SO IT – Practice Sheets</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FCFCFD; --sheet:#FFFFFF; --ink:#1A2340; --muted:#5B6478;
+  --dropout:#3B6FB6; --dropout-soft:#E6EEF8; --rule:#C9D6EA;
+  --right:#1E7A4C; --right-soft:#E3F3EA; --wrong:#B42318; --wrong-soft:#FBE7E5;
+  --serif:"Newsreader", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#10141F; --sheet:#171C2A; --ink:#E7EAF2; --muted:#A3ABBE;
+    --dropout:#7FA6E0; --dropout-soft:#1E2A42; --rule:#2C3A55;
+    --right:#5CC48D; --right-soft:#16322A; --wrong:#F07A6E; --wrong-soft:#3A1E1D;
+    color-scheme: dark;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink)}
+body{font-family:var(--sans);font-size:16px;line-height:1.5;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--dropout);outline-offset:2px}
+.wrap{max-width:860px;margin:0 auto;padding:24px 18px 64px}
+
+/* ---------- Home ---------- */
+.masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  border-bottom:2px solid var(--dropout);padding-bottom:14px;margin-bottom:22px}
+.masthead h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5vw,40px);line-height:1.1;margin:0}
+.masthead p{margin:4px 0 0;color:var(--muted)}
+.btn{border:1.5px solid var(--dropout);background:transparent;color:var(--dropout);border-radius:999px;
+  padding:8px 16px;font-weight:600;cursor:pointer}
+.btn:hover{background:var(--dropout-soft)}
+.btn.solid{background:var(--dropout);color:var(--sheet)}
+.btn.small{padding:5px 12px;font-size:14px}
+.btn.danger{border-color:var(--wrong);color:var(--wrong)}
+.btn.danger:hover{background:var(--wrong-soft)}
+.btn[disabled]{opacity:.4;cursor:default;background:transparent}
+
+.days{display:grid;gap:14px}
+.day{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;text-align:left;
+  background:var(--sheet);border:1.5px solid var(--rule);border-radius:10px;padding:16px 18px;cursor:pointer;width:100%}
+.day:hover{border-color:var(--dropout)}
+.daynum{width:64px;height:64px;border-radius:50%;border:2px solid var(--dropout);display:grid;place-items:center;
+  font-family:var(--serif);font-size:28px;font-weight:600;color:var(--dropout)}
+.day h2{font-size:18px;margin:0 0 6px;font-weight:600}
+.meter{height:6px;border-radius:3px;background:var(--dropout-soft);overflow:hidden;display:flex}
+.meter i{display:block;height:100%}
+.meter .r{background:var(--right)} .meter .w{background:var(--wrong)}
+.daystats{font-size:14px;color:var(--muted);margin-top:6px}
+.dayside{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.empty{background:var(--sheet);border:1.5px dashed var(--rule);border-radius:10px;padding:28px;text-align:center}
+.empty h2{font-family:var(--serif);margin:0 0 8px}
+.empty p{color:var(--muted);margin:0 0 16px}
+.note{font-size:14px;color:var(--muted);margin-top:22px}
+.note code{background:var(--dropout-soft);padding:1px 6px;border-radius:4px}
+
+/* ---------- Quiz ---------- */
+.bar{background:var(--paper);border-bottom:1.5px solid var(--rule);padding:12px 0 10px;margin-bottom:18px}
+@media (min-width:700px){ .bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5} }
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.bar .top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.bar h1{font-family:var(--serif);font-size:22px;font-weight:600;margin:0;flex:1;min-width:180px}
+.score{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;margin-top:8px;color:var(--muted)}
+.score b{color:var(--ink);font-weight:700}
+.score .ok b{color:var(--right)} .score .bad b{color:var(--wrong)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.filters select{border:1.5px solid var(--rule);background:var(--sheet);border-radius:8px;padding:6px 10px;font-size:14px}
+
+.q{background:var(--sheet);border:1.5px solid var(--rule);border-radius:10px;padding:18px 18px 14px;margin-bottom:16px}
+.q.done-right{border-left:5px solid var(--right)}
+.q.done-wrong{border-left:5px solid var(--wrong)}
+.qhead{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:6px}
+.qno{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--dropout)}
+.tag{font-size:12.5px;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:1px 9px}
+.qtext{font-family:var(--serif);font-size:18.5px;line-height:1.55;margin:4px 0 12px;white-space:pre-wrap;max-width:72ch}
+.opts{display:grid;gap:6px}
+.opt{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;text-align:left;width:100%;
+  background:transparent;border:1.5px solid transparent;border-radius:8px;padding:6px 8px;cursor:pointer}
+.opt:hover:not([disabled]){background:var(--dropout-soft)}
+.opt[disabled]{cursor:default}
+.bubble{width:30px;height:30px;border-radius:50%;border:2px solid var(--dropout);display:grid;place-items:center;
+  font-size:14px;font-weight:700;color:var(--dropout);transition:background .15s,color .15s,border-color .15s}
+.opt .txt{white-space:pre-wrap;overflow-wrap:anywhere}
+.opt.picked-right{background:var(--right-soft);border-color:var(--right)}
+.opt.picked-right .bubble{background:var(--right);border-color:var(--right);color:var(--sheet)}
+.opt.picked-wrong{background:var(--wrong-soft);border-color:var(--wrong)}
+.opt.picked-wrong .bubble{background:var(--wrong);border-color:var(--wrong);color:var(--sheet)}
+.opt.reveal{border-color:var(--right)}
+.opt.reveal .bubble{border-color:var(--right);color:var(--right)}
+.verdict{margin-top:12px;padding:10px 12px;border-radius:8px;font-size:15px}
+.verdict.right{background:var(--right-soft)} .verdict.wrong{background:var(--wrong-soft)}
+.verdict strong{display:block;margin-bottom:2px}
+.verdict.right strong{color:var(--right)} .verdict.wrong strong{color:var(--wrong)}
+
+.pager{display:flex;gap:6px;flex-wrap:wrap;align-items:center;justify-content:center;margin:18px 0}
+.pager .pg{min-width:38px;height:38px;border-radius:50%;border:1.5px solid var(--rule);background:var(--sheet);cursor:pointer;font-weight:600}
+.pager .pg.cur{background:var(--dropout);border-color:var(--dropout);color:var(--sheet)}
+.pager .info{width:100%;text-align:center;font-size:14px;color:var(--muted)}
+.none{text-align:center;color:var(--muted);padding:40px 0}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);
+  background:var(--ink);color:var(--paper);padding:10px 16px;border-radius:8px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s}
+.toast.show{opacity:1}
+@media (max-width:560px){
+  .day{grid-template-columns:auto 1fr;}
+  .dayside{grid-column:1 / -1;flex-direction:row;justify-content:flex-end}
+  .daynum{width:52px;height:52px;font-size:22px}
+  .qtext{font-size:17px}
+}
+.day.missing{cursor:default;border-style:dashed;background:transparent}
+.day.missing:hover{border-color:var(--rule)}
+.day.missing .daynum{border-color:var(--rule);color:var(--muted)}
+.day.missing h2{color:var(--muted)}
+.pill{font-size:13px;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:3px 10px;white-space:nowrap}
+.warn{background:var(--wrong-soft);border:1.5px solid var(--wrong);border-radius:10px;padding:14px 16px;margin-bottom:18px}
+.warn strong{color:var(--wrong)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+/* ---------- Day list (edit titles here if your plan changes) ---------- */
+const DAYS = [
+  {key:"Day1", title:"Day 1: DBMS & SQL"},
+  {key:"Day2", title:"Day 2: Computer Networks"},
+  {key:"Day3", title:"Day 3: Cyber Security + Banking IT & Regulations"},
+  {key:"Day4", title:"Day 4: Programming, OOP & Web"},
+  {key:"Day5", title:"Day 5: Operating Systems + COA & Number Systems"},
+  {key:"Day6", title:"Day 6: DSA + Software Engineering + TOC"},
+  {key:"Day7", title:"Day 7: Linux/Windows + DW + Cloud/AI + Misc"},
+  {key:"Day8", title:"Day 8: Mock Tests 1 & 2"},
+  {key:"Day9", title:"Day 9: Mock Tests 3 & 4"}
+];
+const PER_PAGE = 50;
+const NEG = 0.25;
+const LETTERS = ["a","b","c","d","e","f"];
+const STORE_PROG = "ibpsQuiz.progress.v1.";
+
+const app = document.getElementById("app");
+const toastEl = document.getElementById("toast");
+const days = {};   // key -> {key, num, title, status:'loading'|'ready'|'missing'|'error', questions, error}
+let view = {screen:"home"};
+
+DAYS.forEach((d,i)=>{ days[d.key] = {key:d.key, num:i+1, title:d.title, status:"loading", questions:[]}; });
+
+/* ---------- storage (each visitor's own answers, kept in their browser) ---------- */
+function progress(key){ try{ return JSON.parse(localStorage.getItem(STORE_PROG+key)) || {}; }catch(e){ return {}; } }
+function saveProgress(key, p){ try{ localStorage.setItem(STORE_PROG+key, JSON.stringify(p)); }catch(e){ toast("Your answer couldn't be saved in this browser."); } }
+
+/* ---------- helpers ---------- */
+function el(tag, attrs, ...kids){
+  const n = document.createElement(tag);
+  if(attrs) for(const [k,v] of Object.entries(attrs)){
+    if(k==="class") n.className = v;
+    else if(k==="text") n.textContent = v;
+    else if(k.startsWith("on")) n.addEventListener(k.slice(2), v);
+    else if(v===true) n.setAttribute(k,"");
+    else if(v!==false && v!=null) n.setAttribute(k,v);
+  }
+  for(const c of kids.flat()){ if(c==null) continue; n.append(c.nodeType ? c : document.createTextNode(String(c))); }
+  return n;
+}
+function toast(msg){ toastEl.textContent = msg; toastEl.classList.add("show"); clearTimeout(toast.t); toast.t = setTimeout(()=>toastEl.classList.remove("show"), 2600); }
+function fmt(n){ return Number.isInteger(n) ? String(n) : n.toFixed(2); }
+
+function normalise(raw){
+  const qs = Array.isArray(raw) ? raw : (raw && Array.isArray(raw.questions) ? raw.questions : null);
+  if(!qs || !qs.length) throw new Error("no 'questions' array found");
+  return qs.map((q,i)=>{
+    if(!q.question || !Array.isArray(q.options) || !q.answer) throw new Error("question "+(i+1)+" is missing question, options or answer");
+    return { id: q.id ?? i+1, source: q.source||"", topic: q.topic||"General", question: q.question,
+             options: q.options, answer: String(q.answer).trim().toLowerCase(), explanation: q.explanation||"" };
+  });
+}
+function stats(d){
+  const p = progress(d.key); let right=0, wrong=0;
+  for(const q of d.questions){ const a = p[q.id]; if(!a) continue; if(a===q.answer) right++; else wrong++; }
+  return {right, wrong, answered:right+wrong, total:d.questions.length, net:right-wrong*NEG};
+}
+
+/* ---------- load DayN.json files from the same folder ---------- */
+async function boot(){
+  render();
+  await Promise.all(DAYS.map(async ({key})=>{
+    const d = days[key];
+    try{
+      const r = await fetch(key+".json", {cache:"no-store"});
+      if(!r.ok){ d.status = "missing"; return; }
+      d.questions = normalise(await r.json());
+      d.status = "ready";
+    }catch(e){
+      d.status = location.protocol==="file:" ? "missing" : (e instanceof SyntaxError || /question/.test(e.message) ? "error" : "missing");
+      d.error = e.message;
+    }
+  }));
+  render();
+}
+
+/* ---------- render ---------- */
+function render(){ app.replaceChildren(view.screen==="quiz" && days[view.key]?.status==="ready" ? renderQuiz() : renderHome()); }
+
+function renderHome(){
+  const root = el("div");
+  root.append(el("header",{class:"masthead"},
+    el("div",null, el("h1",{text:"IBPS SO IT practice sheets"}),
+      el("p",{text:"Pick a day to practise its questions. Your answers are saved in this browser."}))
+  ));
+  if(location.protocol==="file:"){
+    root.append(el("div",{class:"warn"},
+      el("strong",{text:"The day files can't load when this page is opened straight from your disk. "}),
+      "Open it through a web address instead: your Vercel link, or a local server started in this folder with ",
+      el("code",{text:"python -m http.server"}), " and then localhost:8000."));
+  }
+  const box = el("div",{class:"days"});
+  for(const {key} of DAYS){
+    const d = days[key];
+    if(d.status!=="ready"){
+      const label = d.status==="loading" ? "Loading…" : d.status==="error" ? "File has an error" : "Not uploaded yet";
+      box.append(el("div",{class:"day missing", title: d.error ? key+".json: "+d.error : key+".json not found"},
+        el("div",{class:"daynum","aria-hidden":"true"}, String(d.num)),
+        el("div",null, el("h2",{text:d.title}),
+          el("div",{class:"daystats"}, d.status==="error" ? key+".json couldn't be read ("+d.error+")" : "Add "+key+".json to this folder to unlock it.")),
+        el("div",{class:"dayside"}, el("span",{class:"pill",text:label}))
+      ));
+      continue;
+    }
+    const s = stats(d);
+    const pr = s.total ? s.right/s.total*100 : 0, pw = s.total ? s.wrong/s.total*100 : 0;
+    box.append(el("div",{class:"day", role:"button", tabindex:"0",
+        onclick:()=>openDay(key), onkeydown:e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); openDay(key);} }},
+      el("div",{class:"daynum","aria-hidden":"true"}, String(d.num)),
+      el("div",null,
+        el("h2",{text:d.title}),
+        el("div",{class:"meter", role:"img", "aria-label":s.right+" correct, "+s.wrong+" wrong out of "+s.total},
+          el("i",{class:"r", style:"width:"+pr+"%"}), el("i",{class:"w", style:"width:"+pw+"%"})),
+        el("div",{class:"daystats"},
+          s.total+" questions, "+s.answered+" answered"+(s.answered ? " ("+s.right+" right, "+s.wrong+" wrong, net "+fmt(s.net)+")" : ""))
+      ),
+      el("div",{class:"dayside"},
+        el("button",{class:"btn small", onclick:e=>{e.stopPropagation(); openDay(key);}}, s.answered ? "Continue" : "Start"))
+    ));
+  }
+  root.append(box);
+  return root;
+}
+
+function openDay(key){ view = {screen:"quiz", key, page:1, topic:"all", status:"all"}; render(); window.scrollTo(0,0); }
+
+function filtered(d, p){
+  return d.questions.filter(q=>{
+    if(view.topic!=="all" && q.topic!==view.topic) return false;
+    const a = p[q.id];
+    if(view.status==="unanswered") return !a;
+    if(view.status==="right") return a && a===q.answer;
+    if(view.status==="wrong") return a && a!==q.answer;
+    return true;
+  });
+}
+
+function renderQuiz(){
+  const d = days[view.key];
+  const p = progress(d.key);
+  const s = stats(d);
+  const list = filtered(d, p);
+  const pages = Math.max(1, Math.ceil(list.length/PER_PAGE));
+  if(view.page>pages) view.page = pages;
+  const start = (view.page-1)*PER_PAGE;
+  const slice = list.slice(start, start+PER_PAGE);
+  const topics = [...new Set(d.questions.map(q=>q.topic))].sort();
+
+  const root = el("div");
+  const topicSel = el("select",{"aria-label":"Filter by topic", onchange:e=>{view.topic=e.target.value; view.page=1; render();}},
+    el("option",{value:"all"},"All topics"), topics.map(t=>el("option",{value:t, selected:view.topic===t},t)));
+  const statusSel = el("select",{"aria-label":"Filter by status", onchange:e=>{view.status=e.target.value; view.page=1; render();}},
+    [["all","All questions"],["unanswered","Unanswered"],["right","Answered right"],["wrong","Answered wrong"]]
+      .map(([v,t])=>el("option",{value:v, selected:view.status===v},t)));
+
+  root.append(el("div",{class:"bar"},
+    el("div",{class:"top"},
+      el("button",{class:"btn small", onclick:()=>{view={screen:"home"}; render(); window.scrollTo(0,0);}},"All days"),
+      el("h1",{text:d.title}),
+      el("button",{class:"btn small danger", onclick:()=>{ if(confirm("Clear all your answers for "+d.title+"?")){ saveProgress(d.key,{}); render(); } }},"Reset answers")
+    ),
+    el("div",{class:"score","aria-live":"polite"},
+      el("span",null,"Answered ", el("b",{text:s.answered+"/"+s.total})),
+      el("span",{class:"ok"},"Right ", el("b",{text:String(s.right)})),
+      el("span",{class:"bad"},"Wrong ", el("b",{text:String(s.wrong)})),
+      el("span",null,"Net score ", el("b",{text:fmt(s.net)}), " (−0.25 per wrong)"),
+      el("span",null,"Accuracy ", el("b",{text:(s.answered? Math.round(s.right/s.answered*100):0)+"%"}))
+    ),
+    el("div",{class:"filters"}, topicSel, statusSel)
+  ));
+
+  if(!slice.length){
+    root.append(el("p",{class:"none",text: view.status==="wrong" ? "No wrong answers here." : "No questions match these filters."}));
+    return root;
+  }
+  root.append(pager(pages, list.length, start, slice.length));
+  slice.forEach((q,i)=> root.append(renderQuestion(d, q, p, start+i+1)));
+  root.append(pager(pages, list.length, start, slice.length));
+  return root;
+}
+
+function pager(pages, total, start, count){
+  const wrap = el("nav",{class:"pager","aria-label":"Pages"});
+  const go = n=>{ view.page=n; render(); window.scrollTo(0,0); };
+  wrap.append(el("button",{class:"btn small", disabled:view.page===1, onclick:()=>go(view.page-1)},"Previous"));
+  for(let i=1;i<=pages;i++){
+    wrap.append(el("button",{class:"pg"+(i===view.page?" cur":""), "aria-current": i===view.page?"page":false,
+      "aria-label":"Page "+i, onclick:()=>go(i)}, String(i)));
+  }
+  wrap.append(el("button",{class:"btn small", disabled:view.page===pages, onclick:()=>go(view.page+1)},"Next"));
+  wrap.append(el("div",{class:"info",text:"Questions "+(start+1)+"–"+(start+count)+" of "+total}));
+  return wrap;
+}
+
+function renderQuestion(d, q, p, n){
+  const chosen = p[q.id];
+  const done = !!chosen;
+  const isRight = done && chosen===q.answer;
+  const card = el("article",{class:"q"+(done ? (isRight?" done-right":" done-wrong") : "")});
+  card.append(el("div",{class:"qhead"},
+    el("span",{class:"qno",text:"Q"+n}),
+    q.topic ? el("span",{class:"tag",text:q.topic}) : null,
+    q.source ? el("span",{class:"tag",text:q.source}) : null));
+  card.append(el("p",{class:"qtext",text:q.question}));
+  const opts = el("div",{class:"opts", role:"group","aria-label":"Options for question "+n});
+  q.options.forEach((o,i)=>{
+    const L = LETTERS[i];
+    let cls = "opt";
+    if(done){ if(L===chosen) cls += isRight ? " picked-right" : " picked-wrong"; else if(L===q.answer) cls += " reveal"; }
+    opts.append(el("button",{class:cls, disabled:done, "aria-label":"Option "+L+": "+o,
+        onclick:()=>{ const pp = progress(d.key); pp[q.id]=L; saveProgress(d.key, pp); refreshCard(card, d, q, n); }},
+      el("span",{class:"bubble","aria-hidden":"true"}, L),
+      el("span",{class:"txt",text:o})));
+  });
+  card.append(opts);
+  if(done){
+    const correctText = q.options[LETTERS.indexOf(q.answer)] ?? "";
+    card.append(el("div",{class:"verdict "+(isRight?"right":"wrong")},
+      el("strong",{text: isRight ? "Correct" : "Wrong. The answer is ("+q.answer+") "+correctText}),
+      q.explanation ? el("span",{text:q.explanation}) : null));
+  }
+  return card;
+}
+
+function refreshCard(card, d, q, n){
+  const fresh = renderQuestion(d, q, progress(d.key), n);
+  card.replaceWith(fresh);
+  const s = stats(d), b = document.querySelectorAll(".score b");
+  if(b.length===5){
+    b[0].textContent = s.answered+"/"+s.total; b[1].textContent = s.right; b[2].textContent = s.wrong;
+    b[3].textContent = fmt(s.net); b[4].textContent = (s.answered? Math.round(s.right/s.answered*100):0)+"%";
+  }
+  const v = fresh.querySelector(".verdict");
+  if(v) v.scrollIntoView({block:"nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto":"smooth"});
+}
+
+boot();
+})();
+</script>
+</body>
+</html>

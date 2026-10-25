@@ -1,0 +1,3637 @@
+{
+  "title": "IBPS SO IT Mains – Day 1: DBMS",
+  "total": 242,
+  "answer_format": "answer is the option letter a–e mapping to options[0]–options[4]",
+  "questions": [
+    {
+      "id": 1,
+      "source": "Session 1 Q1",
+      "topic": "DBMS Basics",
+      "question": "In the three-schema architecture, which level describes how data is physically stored on disk?",
+      "options": [
+        "External",
+        "Conceptual",
+        "Internal",
+        "View",
+        "Logical"
+      ],
+      "answer": "c",
+      "explanation": "Internal (physical) level = storage structures. External = user views; Conceptual = whole logical structure."
+    },
+    {
+      "id": 2,
+      "source": "Session 1 Q2",
+      "topic": "DBMS Basics",
+      "question": "Adding a new column to a table without having to rewrite existing application programs is an example of:",
+      "options": [
+        "Physical data independence",
+        "Logical data independence",
+        "Data abstraction",
+        "Data integrity",
+        "Data redundancy"
+      ],
+      "answer": "b",
+      "explanation": "Changing the conceptual schema without affecting views/apps = logical data independence (harder to achieve than physical)."
+    },
+    {
+      "id": 3,
+      "source": "Session 1 Q3",
+      "topic": "ER Model",
+      "question": "An employee's age, computed from their date of birth, is an example of which attribute type?",
+      "options": [
+        "Composite",
+        "Multivalued",
+        "Key",
+        "Derived",
+        "Complex"
+      ],
+      "answer": "d",
+      "explanation": "Derived attributes are computed from stored ones (Age from DOB)."
+    },
+    {
+      "id": 4,
+      "source": "Session 1 Q5",
+      "topic": "Keys",
+      "question": "Relation R(A, B, C, D, E) has only one candidate key, {A}. How many super keys does R have?",
+      "options": [
+        "5",
+        "8",
+        "15",
+        "16",
+        "32"
+      ],
+      "answer": "d",
+      "explanation": "With n attributes and one candidate key of k attributes: 2^(n-k) = 2^4 = 16. (Harder than typical IBPS level.)"
+    },
+    {
+      "id": 5,
+      "source": "Session 1 Q6",
+      "topic": "Keys",
+      "question": "Which statement about a foreign key is FALSE?",
+      "options": [
+        "It can contain NULL values",
+        "It can contain duplicate values",
+        "It must reference a primary or unique key",
+        "It must be unique within the child table",
+        "It enforces referential integrity"
+      ],
+      "answer": "d",
+      "explanation": "A foreign key may repeat and may be NULL. It doesn't have to be unique."
+    },
+    {
+      "id": 6,
+      "source": "Session 1 Q7",
+      "topic": "ER Model",
+      "question": "Student and Course have an M:N relationship 'Enrolls'. What is the minimum number of tables needed to map this to a relational schema?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "c",
+      "explanation": "Two entity tables plus one table for the M:N relationship = 3."
+    },
+    {
+      "id": 7,
+      "source": "Session 1 Q8",
+      "topic": "Integrity",
+      "question": "Which operation can never violate referential integrity?",
+      "options": [
+        "Inserting a row into the child table",
+        "Deleting a row from the parent table",
+        "Updating the PK in the parent table",
+        "Inserting a row into the parent table",
+        "Updating the FK in the child table"
+      ],
+      "answer": "d",
+      "explanation": "Inserting into the parent (and deleting from the child) can never break referential integrity."
+    },
+    {
+      "id": 8,
+      "source": "Session 1 Q9",
+      "topic": "DBMS Basics",
+      "question": "The number of tuples in a relation is called its:",
+      "options": [
+        "Degree",
+        "Arity",
+        "Cardinality",
+        "Domain",
+        "Schema"
+      ],
+      "answer": "c",
+      "explanation": "Cardinality = rows. Degree (arity) = columns."
+    },
+    {
+      "id": 9,
+      "source": "Session 1 Q10",
+      "topic": "ER Model",
+      "question": "In the EER model, which concept treats a relationship set as an entity so that it can take part in another relationship?",
+      "options": [
+        "Generalization",
+        "Specialization",
+        "Inheritance",
+        "Aggregation",
+        "Composition"
+      ],
+      "answer": "d",
+      "explanation": "Aggregation treats a relationship as a higher-level entity."
+    },
+    {
+      "id": 10,
+      "source": "Batch 1 Q1",
+      "topic": "Transactions",
+      "question": "Which ACID property ensures that the changes made by a committed transaction survive a system crash?",
+      "options": [
+        "Atomicity",
+        "Consistency",
+        "Isolation",
+        "Durability",
+        "Integrity"
+      ],
+      "answer": "d",
+      "explanation": "'After commit' + 'crash' = Durability."
+    },
+    {
+      "id": 11,
+      "source": "Batch 1 Q2",
+      "topic": "SQL",
+      "question": "Which SQL command removes all rows from a table but keeps its structure, and cannot be used with a WHERE clause?",
+      "options": [
+        "DELETE",
+        "DROP",
+        "TRUNCATE",
+        "REMOVE",
+        "ALTER"
+      ],
+      "answer": "c",
+      "explanation": "TRUNCATE removes all rows, keeps structure, no WHERE. DELETE can filter; DROP removes the table."
+    },
+    {
+      "id": 12,
+      "source": "Batch 1 Q3",
+      "topic": "Keys",
+      "question": "Which of the following statements about a primary key is incorrect?",
+      "options": [
+        "It uniquely identifies each record",
+        "It cannot contain NULL values",
+        "A table can have more than one primary key",
+        "It can be made of multiple columns",
+        "It is chosen from the candidate keys"
+      ],
+      "answer": "c",
+      "explanation": "A table has exactly one primary key (which may be composite)."
+    },
+    {
+      "id": 13,
+      "source": "Batch 1 Q4",
+      "topic": "SQL",
+      "question": "Which condition selects employees whose name starts with 'S' and is exactly 5 characters long?",
+      "options": [
+        "WHERE Name LIKE 'S%'",
+        "WHERE Name LIKE 'S____'",
+        "WHERE Name LIKE '%S____'",
+        "WHERE Name LIKE 'S_____'",
+        "WHERE Name LIKE '_S%'"
+      ],
+      "answer": "b",
+      "explanation": "'S' plus four '_' (each exactly one character) = 5 characters."
+    },
+    {
+      "id": 14,
+      "source": "Batch 1 Q5",
+      "topic": "Normalization",
+      "question": "A relation is in 2NF if it is in 1NF and:",
+      "options": [
+        "It has no multivalued attributes",
+        "Every determinant is a candidate key",
+        "It has no transitive dependency",
+        "It has only one candidate key",
+        "No non-prime attribute is partially dependent on any candidate key"
+      ],
+      "answer": "e",
+      "explanation": "2NF removes partial dependencies."
+    },
+    {
+      "id": 15,
+      "source": "Batch 1 Q6",
+      "topic": "Concurrency",
+      "question": "Which type of lock can be held on the same data item by multiple transactions at the same time?",
+      "options": [
+        "Shared lock",
+        "Exclusive lock",
+        "Write lock",
+        "Update lock",
+        "Intent exclusive lock"
+      ],
+      "answer": "a",
+      "explanation": "Only S + S is compatible."
+    },
+    {
+      "id": 16,
+      "source": "Batch 1 Q7",
+      "topic": "SQL",
+      "question": "Which join returns all rows from the left table plus the matching rows from the right table, with NULLs where there is no match?",
+      "options": [
+        "INNER JOIN",
+        "CROSS JOIN",
+        "NATURAL JOIN",
+        "LEFT OUTER JOIN",
+        "SELF JOIN"
+      ],
+      "answer": "d",
+      "explanation": "LEFT OUTER JOIN keeps every left row."
+    },
+    {
+      "id": 17,
+      "source": "Batch 1 Q8",
+      "topic": "SQL",
+      "question": "Which of the following is a DCL command?",
+      "options": [
+        "COMMIT",
+        "GRANT",
+        "ALTER",
+        "SAVEPOINT",
+        "MERGE"
+      ],
+      "answer": "b",
+      "explanation": "DCL = GRANT, REVOKE. COMMIT/SAVEPOINT = TCL; ALTER = DDL; MERGE = DML."
+    },
+    {
+      "id": 18,
+      "source": "Batch 1 Q9",
+      "topic": "SQL",
+      "question": "Which SQL clause filters groups after aggregation has been applied?",
+      "options": [
+        "WHERE",
+        "ORDER BY",
+        "HAVING",
+        "DISTINCT",
+        "GROUP BY"
+      ],
+      "answer": "c",
+      "explanation": "HAVING filters groups. WHERE filters rows; GROUP BY only forms groups."
+    },
+    {
+      "id": 19,
+      "source": "Batch 1 Q10",
+      "topic": "NoSQL",
+      "question": "In MongoDB, data is stored as:",
+      "options": [
+        "Tables with rows",
+        "Key-value pairs only",
+        "BSON documents",
+        "Graph nodes",
+        "Column families"
+      ],
+      "answer": "c",
+      "explanation": "MongoDB is a document store using BSON (binary JSON)."
+    },
+    {
+      "id": 20,
+      "source": "Batch 2 Q11",
+      "topic": "Transactions",
+      "question": "A customer transfers ₹5,000. The amount is debited from their account, but a power failure stops it from being credited to the receiver. Which ACID property is violated?",
+      "options": [
+        "Consistency",
+        "Durability",
+        "Atomicity",
+        "Isolation",
+        "Integrity"
+      ],
+      "answer": "c",
+      "explanation": "Failure in the middle = partial update = Atomicity (all or nothing)."
+    },
+    {
+      "id": 21,
+      "source": "Batch 2 Q12",
+      "topic": "NoSQL",
+      "question": "Which of the following is a graph-based NoSQL database?",
+      "options": [
+        "Cassandra",
+        "MongoDB",
+        "Redis",
+        "Neo4j",
+        "HBase"
+      ],
+      "answer": "d",
+      "explanation": "Neo4j = graph. Cassandra/HBase = column-family, MongoDB = document, Redis = key-value."
+    },
+    {
+      "id": 22,
+      "source": "Batch 2 Q13",
+      "topic": "SQL",
+      "question": "Which of the following statements is incorrect?",
+      "options": [
+        "WHERE filters rows before grouping",
+        "HAVING filters groups after aggregation",
+        "WHERE can directly use aggregate functions such as SUM()",
+        "GROUP BY is evaluated before HAVING",
+        "ORDER BY is evaluated after SELECT"
+      ],
+      "answer": "c",
+      "explanation": "WHERE can't use aggregates; that is HAVING's job. ORDER BY really does run after SELECT."
+    },
+    {
+      "id": 23,
+      "source": "Batch 2 Q14",
+      "topic": "Normalization",
+      "question": "Transitive dependency is removed in which normal form?",
+      "options": [
+        "1NF",
+        "3NF",
+        "2NF",
+        "4NF",
+        "5NF"
+      ],
+      "answer": "b",
+      "explanation": "3NF removes transitive dependency; 2NF removes partial dependency."
+    },
+    {
+      "id": 24,
+      "source": "Batch 2 Q15",
+      "topic": "Concurrency",
+      "question": "Transaction T1 holds an exclusive lock on data item A. Transaction T2 now requests a shared lock on A. What happens?",
+      "options": [
+        "T2 must wait until T1 releases the lock",
+        "T2's lock is granted immediately",
+        "T1's lock is converted to a shared lock",
+        "Both transactions get exclusive locks",
+        "T1 is rolled back automatically"
+      ],
+      "answer": "a",
+      "explanation": "X is incompatible with everything, so T2 waits."
+    },
+    {
+      "id": 25,
+      "source": "Batch 2 Q16",
+      "topic": "SQL",
+      "question": "Which of the following is a TCL command?",
+      "options": [
+        "GRANT",
+        "REVOKE",
+        "CREATE",
+        "UPDATE",
+        "SAVEPOINT"
+      ],
+      "answer": "e",
+      "explanation": "TCL = COMMIT, ROLLBACK, SAVEPOINT."
+    },
+    {
+      "id": 26,
+      "source": "Batch 2 Q17",
+      "topic": "SQL",
+      "question": "Which SQL operator checks whether a subquery returns at least one row?",
+      "options": [
+        "IN",
+        "BETWEEN",
+        "EXISTS",
+        "LIKE",
+        "DISTINCT"
+      ],
+      "answer": "c",
+      "explanation": "EXISTS is true if the subquery returns any row."
+    },
+    {
+      "id": 27,
+      "source": "Batch 2 Q18",
+      "topic": "SQL",
+      "question": "Which join returns the Cartesian product of two tables?",
+      "options": [
+        "INNER JOIN",
+        "NATURAL JOIN",
+        "FULL OUTER JOIN",
+        "CROSS JOIN",
+        "SELF JOIN"
+      ],
+      "answer": "d",
+      "explanation": "CROSS JOIN = every row paired with every row."
+    },
+    {
+      "id": 28,
+      "source": "Batch 2 Q19",
+      "topic": "Normalization",
+      "question": "A relation in which every determinant is a candidate key is in:",
+      "options": [
+        "3NF",
+        "BCNF",
+        "2NF",
+        "4NF",
+        "1NF"
+      ],
+      "answer": "b",
+      "explanation": "That is the definition of BCNF."
+    },
+    {
+      "id": 29,
+      "source": "Batch 2 Q20",
+      "topic": "NoSQL",
+      "question": "Which MongoDB feature distributes data across multiple servers for horizontal scaling?",
+      "options": [
+        "Replication",
+        "Indexing",
+        "Aggregation",
+        "Journaling",
+        "Sharding"
+      ],
+      "answer": "e",
+      "explanation": "Sharding = horizontal scaling. Replication = availability."
+    },
+    {
+      "id": 30,
+      "source": "Batch 3 Q21",
+      "topic": "Relational Algebra",
+      "question": "Which relational algebra operation returns the tuples that are in R1 but not in R2?",
+      "options": [
+        "Union",
+        "Intersection",
+        "Cartesian Product",
+        "Set Difference",
+        "Projection"
+      ],
+      "answer": "d",
+      "explanation": "R1 − R2 = set difference."
+    },
+    {
+      "id": 31,
+      "source": "Batch 3 Q22",
+      "topic": "SQL",
+      "question": "Which SQL operator combines the results of two queries and removes duplicate rows?",
+      "options": [
+        "UNION ALL",
+        "UNION",
+        "JOIN",
+        "INTERSECT ALL",
+        "MERGE"
+      ],
+      "answer": "b",
+      "explanation": "UNION removes duplicates; UNION ALL keeps them."
+    },
+    {
+      "id": 32,
+      "source": "Batch 3 Q23",
+      "topic": "SQL",
+      "question": "In MySQL, which query returns the 3rd highest salary?",
+      "options": [
+        "ORDER BY salary DESC LIMIT 3, 1",
+        "ORDER BY salary DESC LIMIT 1, 3",
+        "ORDER BY salary DESC LIMIT 2, 1",
+        "ORDER BY salary DESC LIMIT 3",
+        "ORDER BY salary ASC LIMIT 2, 1"
+      ],
+      "answer": "c",
+      "explanation": "LIMIT offset, count. nth highest = LIMIT n-1, 1."
+    },
+    {
+      "id": 33,
+      "source": "Batch 3 Q24",
+      "topic": "SQL",
+      "question": "Which of the following statements about TRUNCATE is incorrect?",
+      "options": [
+        "It removes all rows from a table",
+        "It is classified as a DDL command",
+        "It is generally faster than DELETE",
+        "It fires row-level DELETE triggers for each row",
+        "It retains the table structure"
+      ],
+      "answer": "d",
+      "explanation": "TRUNCATE deallocates pages; it doesn't fire DELETE triggers."
+    },
+    {
+      "id": 34,
+      "source": "Batch 3 Q25",
+      "topic": "Relational Calculus",
+      "question": "In Tuple Relational Calculus, what does the expression {t | Student(t) ∧ t.marks > 80} return?",
+      "options": [
+        "Only the marks attribute of all students",
+        "All tuples of Student with marks greater than 80",
+        "All students with marks less than or equal to 80",
+        "The total marks of all students",
+        "The names of students only"
+      ],
+      "answer": "b",
+      "explanation": "{t | P(t)} returns whole tuples satisfying the condition."
+    },
+    {
+      "id": 35,
+      "source": "Batch 3 Q26",
+      "topic": "Concurrency",
+      "question": "Which concurrency control protocol guarantees serializability but can still lead to deadlock?",
+      "options": [
+        "Timestamp ordering protocol",
+        "Optimistic concurrency control",
+        "Basic two-phase locking",
+        "Wait-die scheme",
+        "Tree (graph-based) protocol"
+      ],
+      "answer": "c",
+      "explanation": "Basic 2PL is serializable but can deadlock. Timestamp ordering and tree protocol are deadlock-free."
+    },
+    {
+      "id": 36,
+      "source": "Batch 3 Q27",
+      "topic": "Integrity",
+      "question": "Which constraint ensures that the value of Age stays between 18 and 60?",
+      "options": [
+        "UNIQUE",
+        "FOREIGN KEY",
+        "DEFAULT",
+        "NOT NULL",
+        "CHECK"
+      ],
+      "answer": "e",
+      "explanation": "CHECK enforces a condition on values."
+    },
+    {
+      "id": 37,
+      "source": "Batch 3 Q28",
+      "topic": "SQL",
+      "question": "A virtual table defined by the result of a SELECT query is called a:",
+      "options": [
+        "View",
+        "Index",
+        "Cursor",
+        "Trigger",
+        "Synonym"
+      ],
+      "answer": "a",
+      "explanation": "A view stores only the query, not the data."
+    },
+    {
+      "id": 38,
+      "source": "Batch 3 Q29",
+      "topic": "SQL",
+      "question": "Which window function assigns ranks to tied values and then leaves gaps in the ranking sequence?",
+      "options": [
+        "ROW_NUMBER()",
+        "DENSE_RANK()",
+        "NTILE()",
+        "RANK()",
+        "LEAD()"
+      ],
+      "answer": "d",
+      "explanation": "RANK: 1,1,3. DENSE_RANK: 1,1,2. ROW_NUMBER: 1,2,3."
+    },
+    {
+      "id": 39,
+      "source": "Batch 3 Q30",
+      "topic": "Keys",
+      "question": "Which key enforces uniqueness but still allows NULL values?",
+      "options": [
+        "Unique key",
+        "Primary key",
+        "Surrogate key",
+        "Composite primary key",
+        "Super key"
+      ],
+      "answer": "a",
+      "explanation": "UNIQUE allows NULL; PRIMARY KEY doesn't."
+    },
+    {
+      "id": 40,
+      "source": "Batch 4 Q31",
+      "topic": "Concurrency",
+      "question": "Which statement about basic Two-Phase Locking (2PL) is correct?",
+      "options": [
+        "It prevents deadlock",
+        "It guarantees conflict serializability but can lead to deadlock",
+        "It always avoids cascading rollbacks",
+        "It does not use locks",
+        "It releases locks only at commit"
+      ],
+      "answer": "b",
+      "explanation": "Basic 2PL: serializable, but deadlock and cascading rollback are possible."
+    },
+    {
+      "id": 41,
+      "source": "Batch 4 Q32",
+      "topic": "Concurrency",
+      "question": "Which variant of 2PL is free from deadlock?",
+      "options": [
+        "Basic 2PL",
+        "Strict 2PL",
+        "Rigorous 2PL",
+        "Conservative 2PL",
+        "Two-phase commit"
+      ],
+      "answer": "d",
+      "explanation": "Conservative 2PL acquires all locks before starting, so no deadlock."
+    },
+    {
+      "id": 42,
+      "source": "Batch 4 Q33",
+      "topic": "Concurrency",
+      "question": "Under the Wait-Die scheme, T1 (TS = 5) requests a lock held by T2 (TS = 10). What happens?",
+      "options": [
+        "T1 waits",
+        "T1 is rolled back",
+        "T2 is rolled back",
+        "Both are rolled back",
+        "The lock is granted immediately"
+      ],
+      "answer": "a",
+      "explanation": "Smaller TS = older. In Wait-Die, an older requester waits."
+    },
+    {
+      "id": 43,
+      "source": "Batch 4 Q34",
+      "topic": "Concurrency",
+      "question": "A DBMS detects deadlock using:",
+      "options": [
+        "A precedence graph without a cycle",
+        "A timeout only",
+        "A wait-for graph containing a cycle",
+        "Banker's algorithm",
+        "The lock compatibility matrix"
+      ],
+      "answer": "c",
+      "explanation": "Cycle in the wait-for graph = deadlock."
+    },
+    {
+      "id": 44,
+      "source": "Batch 4 Q35",
+      "topic": "Concurrency",
+      "question": "In Strict 2PL, which locks are held until the transaction commits or aborts?",
+      "options": [
+        "Shared locks only",
+        "Intention locks",
+        "No locks",
+        "All locks",
+        "Exclusive locks"
+      ],
+      "answer": "e",
+      "explanation": "Strict = exclusive locks till commit. Rigorous = all locks till commit."
+    },
+    {
+      "id": 45,
+      "source": "Batch 4 Q36",
+      "topic": "Concurrency",
+      "question": "T2 reads a value written by T1 before T1 commits, and then T1 aborts. Which problem has occurred?",
+      "options": [
+        "Lost update",
+        "Dirty read",
+        "Phantom read",
+        "Unrepeatable read",
+        "Deadlock"
+      ],
+      "answer": "b",
+      "explanation": "Reading uncommitted data = dirty read."
+    },
+    {
+      "id": 46,
+      "source": "Batch 4 Q37",
+      "topic": "Concurrency",
+      "question": "What does the Thomas Write Rule do?",
+      "options": [
+        "Aborts the transaction on every conflict",
+        "Uses locks to order writes",
+        "Ignores obsolete write operations instead of rolling back",
+        "Converts shared locks to exclusive locks",
+        "Detects deadlocks"
+      ],
+      "answer": "c",
+      "explanation": "If TS(T) < W-TS(X), the outdated write is ignored."
+    },
+    {
+      "id": 47,
+      "source": "Batch 4 Q38",
+      "topic": "Concurrency",
+      "question": "If the precedence graph of a schedule contains a cycle, the schedule is:",
+      "options": [
+        "Not conflict serializable",
+        "Conflict serializable",
+        "Always deadlocked",
+        "Strict",
+        "Recoverable"
+      ],
+      "answer": "a",
+      "explanation": "Precedence graph cycle = not conflict serializable. (Wait-for graph cycle = deadlock.)"
+    },
+    {
+      "id": 48,
+      "source": "Batch 4 Q39",
+      "topic": "Transactions",
+      "question": "Concurrency control mechanisms primarily ensure which ACID property?",
+      "options": [
+        "Atomicity",
+        "Durability",
+        "Consistency",
+        "Isolation",
+        "Integrity"
+      ],
+      "answer": "d",
+      "explanation": "Concurrency control = Isolation."
+    },
+    {
+      "id": 49,
+      "source": "Batch 4 Q40",
+      "topic": "Concurrency",
+      "question": "Which of the following ensures that cascading rollbacks never occur?",
+      "options": [
+        "Basic 2PL",
+        "Wait-die",
+        "Wound-wait",
+        "Timeout",
+        "Strict 2PL"
+      ],
+      "answer": "e",
+      "explanation": "Strict 2PL holds X locks till commit, so nobody reads uncommitted data."
+    },
+    {
+      "id": 50,
+      "source": "Batch 5 Q41",
+      "topic": "Concurrency",
+      "question": "In Rigorous 2PL, which locks are held until the transaction commits?",
+      "options": [
+        "Exclusive locks only",
+        "Shared locks only",
+        "All locks",
+        "No locks",
+        "Intention locks only"
+      ],
+      "answer": "c",
+      "explanation": "Rigorous = all locks till commit."
+    },
+    {
+      "id": 51,
+      "source": "Batch 5 Q42",
+      "topic": "Concurrency",
+      "question": "Under Wound-Wait, T1 (TS = 5) requests a lock held by T2 (TS = 10). What happens?",
+      "options": [
+        "T2 is rolled back",
+        "T1 waits",
+        "T1 is rolled back",
+        "Both wait",
+        "The lock is granted to both"
+      ],
+      "answer": "a",
+      "explanation": "T1 is older; in Wound-Wait the older requester wounds (rolls back) the younger holder."
+    },
+    {
+      "id": 52,
+      "source": "Batch 5 Q43",
+      "topic": "Concurrency",
+      "question": "Schedules produced using the Thomas Write Rule are:",
+      "options": [
+        "Always conflict serializable",
+        "Non-serializable",
+        "Always deadlocked",
+        "View serializable",
+        "Always cascadeless"
+      ],
+      "answer": "d",
+      "explanation": "Thomas Write Rule allows view-serializable (not necessarily conflict-serializable) schedules."
+    },
+    {
+      "id": 53,
+      "source": "Batch 5 Q44",
+      "topic": "Concurrency",
+      "question": "In a precedence graph, an edge Ti → Tj is drawn when:",
+      "options": [
+        "Ti waits for a lock held by Tj",
+        "An operation of Ti conflicts with, and comes before, an operation of Tj",
+        "Ti commits before Tj",
+        "Ti and Tj read the same item",
+        "Tj has an older timestamp than Ti"
+      ],
+      "answer": "b",
+      "explanation": "Option (a) describes a wait-for graph edge."
+    },
+    {
+      "id": 54,
+      "source": "Batch 5 Q45",
+      "topic": "Recovery",
+      "question": "What is the main purpose of a checkpoint in log-based recovery?",
+      "options": [
+        "To encrypt the log file",
+        "To lock all data items",
+        "To prevent deadlock",
+        "To commit all active transactions",
+        "To reduce the amount of log scanned during recovery"
+      ],
+      "answer": "e",
+      "explanation": "Checkpoints limit how much log must be scanned after a crash."
+    },
+    {
+      "id": 55,
+      "source": "Batch 5 Q46",
+      "topic": "Recovery",
+      "question": "After a crash, the log contains both <Start T1> and <Commit T1>. During recovery, T1 is:",
+      "options": [
+        "Undone",
+        "Redone",
+        "Ignored",
+        "Aborted",
+        "Restarted from the beginning"
+      ],
+      "answer": "b",
+      "explanation": "Commit present = redo. No commit = undo."
+    },
+    {
+      "id": 56,
+      "source": "Batch 5 Q47",
+      "topic": "Recovery",
+      "question": "Which statement about shadow paging is correct?",
+      "options": [
+        "It keeps a current page table and a shadow page table, and doesn't need an undo/redo log",
+        "It requires write-ahead logging",
+        "It is used for deadlock detection",
+        "It maintains a single page table",
+        "It is a concurrency control protocol"
+      ],
+      "answer": "a",
+      "explanation": "Shadow paging uses two page tables and copy-on-write."
+    },
+    {
+      "id": 57,
+      "source": "Batch 5 Q48",
+      "topic": "Concurrency",
+      "question": "T2 reads a value written by T1, and T2 commits before T1 commits. This schedule is:",
+      "options": [
+        "Recoverable",
+        "Cascadeless",
+        "Non-recoverable",
+        "Strict",
+        "Serial"
+      ],
+      "answer": "c",
+      "explanation": "If T1 later aborts, the committed T2 can't be undone."
+    },
+    {
+      "id": 58,
+      "source": "Batch 5 Q49",
+      "topic": "Concurrency",
+      "question": "Which isolation level prevents dirty reads but still allows unrepeatable reads?",
+      "options": [
+        "Read Uncommitted",
+        "Serializable",
+        "Repeatable Read",
+        "Snapshot",
+        "Read Committed"
+      ],
+      "answer": "e",
+      "explanation": "Read Committed blocks only dirty reads."
+    },
+    {
+      "id": 59,
+      "source": "Batch 5 Q50",
+      "topic": "Concurrency",
+      "question": "Which pair of operations does NOT conflict?",
+      "options": [
+        "R1(X), W2(X)",
+        "W1(X), R2(X)",
+        "W1(X), W2(X)",
+        "R1(X), R2(X)",
+        "All of the above conflict"
+      ],
+      "answer": "d",
+      "explanation": "Two reads never conflict; at least one must be a write."
+    },
+    {
+      "id": 60,
+      "source": "Batch 6 Q51",
+      "topic": "Concurrency",
+      "question": "Under Wound-Wait, T2 (TS = 20) requests a lock held by T1 (TS = 10). What happens?",
+      "options": [
+        "T1 is rolled back",
+        "T2 is rolled back",
+        "T2 waits",
+        "Both are rolled back",
+        "The lock is granted immediately"
+      ],
+      "answer": "c",
+      "explanation": "T2 is younger; in Wound-Wait a younger requester waits."
+    },
+    {
+      "id": 61,
+      "source": "Batch 6 Q52",
+      "topic": "Concurrency",
+      "question": "In both Wait-Die and Wound-Wait, which transaction is rolled back?",
+      "options": [
+        "Always the older one",
+        "Always the younger one",
+        "Always the one holding the lock",
+        "Always the one requesting the lock",
+        "A randomly chosen one"
+      ],
+      "answer": "b",
+      "explanation": "Younger is always the victim in both schemes."
+    },
+    {
+      "id": 62,
+      "source": "Batch 6 Q53",
+      "topic": "Concurrency",
+      "question": "In a wait-for graph, an edge Ti → Tj means:",
+      "options": [
+        "Ti conflicts with and precedes Tj",
+        "Ti committed before Tj",
+        "Ti and Tj hold shared locks on the same item",
+        "Tj is older than Ti",
+        "Ti is waiting for Tj to release a lock"
+      ],
+      "answer": "e",
+      "explanation": "Wait-for graph edges show who is waiting for whom."
+    },
+    {
+      "id": 63,
+      "source": "Batch 6 Q54",
+      "topic": "Recovery",
+      "question": "After a crash, the log contains <Start T2> but no <Commit T2>. During recovery, T2 is:",
+      "options": [
+        "Undone",
+        "Redone",
+        "Committed",
+        "Ignored",
+        "Checkpointed"
+      ],
+      "answer": "a",
+      "explanation": "No commit = undo."
+    },
+    {
+      "id": 64,
+      "source": "Batch 6 Q55",
+      "topic": "Concurrency",
+      "question": "A schedule is recoverable if:",
+      "options": [
+        "It has no conflicting operations",
+        "All transactions run one after another",
+        "It never deadlocks",
+        "Each transaction commits only after every transaction it read from has committed",
+        "It uses timestamp ordering"
+      ],
+      "answer": "d",
+      "explanation": "Reader commits after writer."
+    },
+    {
+      "id": 65,
+      "source": "Batch 6 Q56",
+      "topic": "Concurrency",
+      "question": "Which isolation level prevents dirty reads, unrepeatable reads and phantom reads?",
+      "options": [
+        "Read Committed",
+        "Serializable",
+        "Read Uncommitted",
+        "Repeatable Read",
+        "Read Uncommitted with locks"
+      ],
+      "answer": "b",
+      "explanation": "Serializable blocks all three."
+    },
+    {
+      "id": 66,
+      "source": "Batch 6 Q57",
+      "topic": "Recovery",
+      "question": "Checkpoints in a DBMS mainly help to:",
+      "options": [
+        "Prevent deadlocks",
+        "Encrypt data",
+        "Reduce recovery time after a crash",
+        "Increase concurrency",
+        "Enforce referential integrity"
+      ],
+      "answer": "c",
+      "explanation": "Less log to scan = faster recovery."
+    },
+    {
+      "id": 67,
+      "source": "Batch 6 Q58",
+      "topic": "Concurrency",
+      "question": "In a cascadeless schedule:",
+      "options": [
+        "No transaction ever aborts",
+        "Transactions run serially",
+        "Deadlocks cannot occur",
+        "Every transaction holds all locks until commit",
+        "Transactions read only committed data"
+      ],
+      "answer": "e",
+      "explanation": "Cascadeless = read only committed data."
+    },
+    {
+      "id": 68,
+      "source": "Batch 6 Q59",
+      "topic": "Recovery",
+      "question": "Under the Write-Ahead Logging (WAL) rule:",
+      "options": [
+        "The log record is written to stable storage before the data page is written",
+        "The data page is written before the log record",
+        "Logs are written only at checkpoints",
+        "Logs are written only after commit",
+        "No log is needed for recovery"
+      ],
+      "answer": "a",
+      "explanation": "Log first, then data."
+    },
+    {
+      "id": 69,
+      "source": "Batch 6 Q60",
+      "topic": "Recovery",
+      "question": "Which recovery technique keeps two page tables and does not need undo/redo logs?",
+      "options": [
+        "Deferred update with log",
+        "Immediate update with log",
+        "Checkpointing",
+        "Shadow paging",
+        "ARIES"
+      ],
+      "answer": "d",
+      "explanation": "Shadow paging."
+    },
+    {
+      "id": 70,
+      "source": "Batch 7 Q61",
+      "topic": "ER Model",
+      "question": "An attribute whose value is calculated from another attribute is called a:",
+      "options": [
+        "Composite attribute",
+        "Multivalued attribute",
+        "Derived attribute",
+        "Key attribute",
+        "Simple attribute"
+      ],
+      "answer": "c",
+      "explanation": "Derived (e.g. Age from DOB)."
+    },
+    {
+      "id": 71,
+      "source": "Batch 7 Q62",
+      "topic": "Keys",
+      "question": "Which statement about super keys and candidate keys is incorrect?",
+      "options": [
+        "Every candidate key is a super key",
+        "Every super key is a candidate key",
+        "A candidate key is a minimal super key",
+        "A relation can have more than one candidate key",
+        "The primary key is chosen from the candidate keys"
+      ],
+      "answer": "b",
+      "explanation": "Super keys may contain extra attributes, so not all are candidate keys."
+    },
+    {
+      "id": 72,
+      "source": "Batch 7 Q63",
+      "topic": "Integrity",
+      "question": "What is the main purpose of a domain constraint?",
+      "options": [
+        "It specifies the set of allowed values for an attribute",
+        "It ensures that every row has a unique key",
+        "It links two tables",
+        "It prevents NULL values in every column",
+        "It removes duplicate rows"
+      ],
+      "answer": "a",
+      "explanation": "Domain constraint = allowed values for a column."
+    },
+    {
+      "id": 73,
+      "source": "Batch 7 Q64",
+      "topic": "Normalization",
+      "question": "Partial dependency is removed when a relation is converted to which normal form?",
+      "options": [
+        "1NF",
+        "BCNF",
+        "3NF",
+        "2NF",
+        "4NF"
+      ],
+      "answer": "d",
+      "explanation": "2NF removes partial dependency."
+    },
+    {
+      "id": 74,
+      "source": "Batch 7 Q65",
+      "topic": "Integrity",
+      "question": "Which referential action sets the foreign key in the child rows to NULL when the parent row is deleted?",
+      "options": [
+        "CASCADE",
+        "RESTRICT",
+        "NO ACTION",
+        "SET DEFAULT",
+        "SET NULL"
+      ],
+      "answer": "e",
+      "explanation": "SET NULL."
+    },
+    {
+      "id": 75,
+      "source": "Batch 7 Q66",
+      "topic": "ER Model",
+      "question": "A weak entity is uniquely identified by:",
+      "options": [
+        "Its own primary key",
+        "The owner entity's primary key combined with its partial key",
+        "A foreign key alone",
+        "A surrogate key",
+        "Its derived attributes"
+      ],
+      "answer": "b",
+      "explanation": "Owner PK + partial key (discriminator)."
+    },
+    {
+      "id": 76,
+      "source": "Batch 7 Q67",
+      "topic": "Normalization",
+      "question": "Relation R(A, B, C) has the functional dependencies A → B and B → C, and its only candidate key is A. What is the highest normal form R satisfies?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "BCNF",
+        "4NF"
+      ],
+      "answer": "b",
+      "explanation": "B → C is transitive (non-prime → non-prime), so 3NF fails. No partial dependency, so 2NF."
+    },
+    {
+      "id": 77,
+      "source": "Batch 7 Q69",
+      "topic": "Keys",
+      "question": "Which key can never contain a NULL value?",
+      "options": [
+        "Primary key",
+        "Foreign key",
+        "Unique key",
+        "Alternate key",
+        "None of the above"
+      ],
+      "answer": "a",
+      "explanation": "Entity integrity: PK can't be NULL."
+    },
+    {
+      "id": 78,
+      "source": "Batch 7 Q70",
+      "topic": "Normalization",
+      "question": "A relation is in BCNF if, for every non-trivial functional dependency X → Y:",
+      "options": [
+        "Y is a prime attribute",
+        "X is a non-prime attribute",
+        "Y is a candidate key",
+        "X and Y are disjoint",
+        "X is a super key"
+      ],
+      "answer": "e",
+      "explanation": "BCNF: every determinant is a super key."
+    },
+    {
+      "id": 79,
+      "source": "Batch 8 Q71",
+      "topic": "Normalization",
+      "question": "Which of the following statements about 3NF is true?",
+      "options": [
+        "A table is in 3NF if all of its attributes are atomic",
+        "A table is in 3NF if it has only one candidate key",
+        "A table is in 3NF if it is in 2NF and no non-prime attribute is transitively dependent on any candidate key",
+        "A table is in 3NF if every determinant is a foreign key",
+        "A table is in 3NF if it has no multivalued dependency"
+      ],
+      "answer": "c",
+      "explanation": "3NF = 2NF + no transitive dependency."
+    },
+    {
+      "id": 80,
+      "source": "Batch 8 Q72",
+      "topic": "Normalization",
+      "question": "Relation R(A, B, C, D) has candidate key {A, B} and the functional dependency A → C. What is the highest normal form R satisfies?",
+      "options": [
+        "2NF",
+        "1NF",
+        "3NF",
+        "BCNF",
+        "4NF"
+      ],
+      "answer": "b",
+      "explanation": "A is part of the key and determines non-prime C: partial dependency, so only 1NF."
+    },
+    {
+      "id": 81,
+      "source": "Batch 8 Q73",
+      "topic": "Normalization",
+      "question": "A relation is in 1NF when:",
+      "options": [
+        "It has no transitive dependency",
+        "Every determinant is a candidate key",
+        "It has no partial dependency",
+        "It has no multivalued dependency",
+        "Every attribute contains only atomic values"
+      ],
+      "answer": "e",
+      "explanation": "1NF = atomic values."
+    },
+    {
+      "id": 82,
+      "source": "Batch 8 Q74",
+      "topic": "Keys",
+      "question": "Which of the following can contain both duplicate values and NULLs?",
+      "options": [
+        "Foreign key",
+        "Primary key",
+        "Candidate key",
+        "Super key",
+        "Unique key"
+      ],
+      "answer": "a",
+      "explanation": "Foreign keys can repeat and be NULL."
+    },
+    {
+      "id": 83,
+      "source": "Batch 8 Q75",
+      "topic": "Normalization",
+      "question": "Relation R(A, B, C) has the functional dependencies AB → C and C → B. Its candidate keys are AB and AC. What is the highest normal form R satisfies?",
+      "options": [
+        "2NF",
+        "BCNF",
+        "1NF",
+        "3NF",
+        "4NF"
+      ],
+      "answer": "d",
+      "explanation": "All attributes are prime, so 3NF holds. C → B has a non-super-key determinant, so BCNF fails."
+    },
+    {
+      "id": 84,
+      "source": "Batch 8 Q76",
+      "topic": "Normalization",
+      "question": "If two attributes P and Q satisfy both P → Q and Q → P, they show:",
+      "options": [
+        "Partial dependency",
+        "Transitive dependency",
+        "Multivalued dependency",
+        "Trivial dependency",
+        "Mutual functional dependency"
+      ],
+      "answer": "e",
+      "explanation": "Mutual functional dependency (PYQ 2023)."
+    },
+    {
+      "id": 85,
+      "source": "Batch 8 Q77",
+      "topic": "Keys",
+      "question": "Attributes that are part of some candidate key are called:",
+      "options": [
+        "Non-prime attributes",
+        "Derived attributes",
+        "Prime attributes",
+        "Composite attributes",
+        "Foreign attributes"
+      ],
+      "answer": "c",
+      "explanation": "Prime attributes."
+    },
+    {
+      "id": 86,
+      "source": "Batch 8 Q78",
+      "topic": "Integrity",
+      "question": "The entity integrity constraint states that:",
+      "options": [
+        "A foreign key must match a primary key",
+        "A primary key cannot be NULL",
+        "Values must belong to a domain",
+        "Every table must have an index",
+        "Duplicate rows are allowed"
+      ],
+      "answer": "b",
+      "explanation": "Option (a) is referential integrity."
+    },
+    {
+      "id": 87,
+      "source": "Batch 8 Q79",
+      "topic": "Normalization",
+      "question": "Which normal form deals with multivalued dependencies?",
+      "options": [
+        "4NF",
+        "3NF",
+        "BCNF",
+        "2NF",
+        "5NF"
+      ],
+      "answer": "a",
+      "explanation": "4NF removes MVDs; 5NF removes join dependencies."
+    },
+    {
+      "id": 88,
+      "source": "Batch 8 Q80",
+      "topic": "Normalization",
+      "question": "A functional dependency X → Y is called trivial when:",
+      "options": [
+        "X is a candidate key",
+        "Y is a prime attribute",
+        "X and Y are disjoint",
+        "Y is a subset of X",
+        "X is a foreign key"
+      ],
+      "answer": "d",
+      "explanation": "Trivial: Y ⊆ X, e.g. AB → A."
+    },
+    {
+      "id": 89,
+      "source": "Batch 9 Q81",
+      "topic": "Normalization",
+      "question": "Relation R(A, B, C, D) has the functional dependencies A → B, B → C and C → D, and its only candidate key is A. What is the highest normal form R satisfies?",
+      "options": [
+        "1NF",
+        "3NF",
+        "2NF",
+        "BCNF",
+        "4NF"
+      ],
+      "answer": "c",
+      "explanation": "Single-attribute key, so no partial dependency (2NF). B → C is transitive, so not 3NF."
+    },
+    {
+      "id": 90,
+      "source": "Batch 9 Q82",
+      "topic": "Integrity",
+      "question": "Which constraint requires a foreign key value to either match an existing primary key value in the referenced table or be NULL?",
+      "options": [
+        "Entity integrity",
+        "Domain constraint",
+        "Key constraint",
+        "Referential integrity",
+        "Check constraint"
+      ],
+      "answer": "d",
+      "explanation": "Referential integrity."
+    },
+    {
+      "id": 91,
+      "source": "Batch 9 Q83",
+      "topic": "Normalization",
+      "question": "Which of the following functional dependencies is trivial?",
+      "options": [
+        "A → B",
+        "AB → C",
+        "AB → A",
+        "A → BC",
+        "B → A"
+      ],
+      "answer": "c",
+      "explanation": "A ⊆ AB."
+    },
+    {
+      "id": 92,
+      "source": "Batch 9 Q84",
+      "topic": "Normalization",
+      "question": "Relation R(X, Y, Z) has the functional dependencies XY → Z and Z → X. Its candidate keys are XY and YZ. What is the highest normal form R satisfies?",
+      "options": [
+        "3NF",
+        "BCNF",
+        "2NF",
+        "1NF",
+        "4NF"
+      ],
+      "answer": "a",
+      "explanation": "All attributes prime, so 3NF. Z → X: Z isn't a super key, so not BCNF."
+    },
+    {
+      "id": 93,
+      "source": "Batch 9 Q85",
+      "topic": "Normalization",
+      "question": "Every relation that has only two attributes is always in:",
+      "options": [
+        "1NF only",
+        "2NF only",
+        "3NF only",
+        "No normal form",
+        "BCNF"
+      ],
+      "answer": "e",
+      "explanation": "Any FD in a 2-attribute relation has a key as determinant."
+    },
+    {
+      "id": 94,
+      "source": "Batch 9 Q86",
+      "topic": "Normalization",
+      "question": "Which of the following statements is incorrect?",
+      "options": [
+        "Every relation in BCNF is also in 3NF",
+        "Every relation in 3NF is also in BCNF",
+        "Every relation in 3NF is also in 2NF",
+        "BCNF is stricter than 3NF",
+        "2NF removes partial dependencies"
+      ],
+      "answer": "b",
+      "explanation": "3NF does not guarantee BCNF."
+    },
+    {
+      "id": 95,
+      "source": "Batch 9 Q87",
+      "topic": "Normalization",
+      "question": "Given the functional dependencies A → B, B → C and C → D, what is the closure of A (A⁺)?",
+      "options": [
+        "{A}",
+        "{A, B}",
+        "{A, B, C}",
+        "{A, B, C, D}",
+        "{B, C, D}"
+      ],
+      "answer": "d",
+      "explanation": "A → B → C → D, plus A itself."
+    },
+    {
+      "id": 96,
+      "source": "Batch 9 Q88",
+      "topic": "Normalization",
+      "question": "A decomposition of relation R into R1 and R2 is lossless if:",
+      "options": [
+        "R1 ∩ R2 is a super key of R1 or of R2",
+        "R1 ∪ R2 is empty",
+        "R1 and R2 have no common attributes",
+        "R1 and R2 each have exactly one attribute",
+        "R1 is a subset of R2"
+      ],
+      "answer": "a",
+      "explanation": "The common attributes must be a key of at least one side."
+    },
+    {
+      "id": 97,
+      "source": "Batch 9 Q89",
+      "topic": "Normalization",
+      "question": "Deleting a row unintentionally removes other useful information stored in the same row. This is called:",
+      "options": [
+        "Insertion anomaly",
+        "Update anomaly",
+        "Deletion anomaly",
+        "Redundancy anomaly",
+        "Join anomaly"
+      ],
+      "answer": "c",
+      "explanation": "Deletion anomaly."
+    },
+    {
+      "id": 98,
+      "source": "Batch 9 Q90",
+      "topic": "Keys",
+      "question": "A candidate key that is not chosen as the primary key is called a(n):",
+      "options": [
+        "Super key",
+        "Foreign key",
+        "Composite key",
+        "Surrogate key",
+        "Alternate key"
+      ],
+      "answer": "e",
+      "explanation": "Alternate key."
+    },
+    {
+      "id": 99,
+      "source": "Batch 10 Q91",
+      "topic": "SQL",
+      "question": "Which query selects employees whose name contains 'a' and whose city is not Delhi?",
+      "options": [
+        "SELECT * FROM Emp WHERE Name = '%a%' AND City != 'Delhi';",
+        "SELECT * FROM Emp WHERE Name LIKE '%a%' AND City NOT LIKE 'Delhi';",
+        "SELECT * FROM Emp WHERE Name IN '%a%' AND City NOT IN 'Delhi';",
+        "SELECT * FROM Emp WHERE Name LIKE '%a%' OR City NOT LIKE 'Delhi';",
+        "SELECT * FROM Emp WHERE Name NOT LIKE '%a%' AND City LIKE 'Delhi';"
+      ],
+      "answer": "b",
+      "explanation": "Patterns need LIKE, and both conditions need AND."
+    },
+    {
+      "id": 100,
+      "source": "Batch 10 Q92",
+      "topic": "SQL",
+      "question": "Which statement about DELETE and TRUNCATE is correct?",
+      "options": [
+        "DELETE is DML and can use a WHERE clause; TRUNCATE is DDL and removes all rows",
+        "TRUNCATE can use a WHERE clause",
+        "DELETE removes the table structure",
+        "TRUNCATE is a DML command",
+        "Both commands behave identically"
+      ],
+      "answer": "a",
+      "explanation": "DELETE = DML with WHERE; TRUNCATE = DDL, all rows."
+    },
+    {
+      "id": 101,
+      "source": "Batch 10 Q93",
+      "topic": "SQL",
+      "question": "In MySQL, what does SELECT INSTR('banking', 'k'); return?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "0",
+        "-1"
+      ],
+      "answer": "b",
+      "explanation": "SQL positions are 1-based: b1 a2 n3 k4."
+    },
+    {
+      "id": 102,
+      "source": "Batch 10 Q94",
+      "topic": "SQL",
+      "question": "What is the difference between COUNT(*) and COUNT(column_name)?",
+      "options": [
+        "There is no difference",
+        "COUNT(*) ignores NULL values",
+        "COUNT(column_name) counts duplicate values only once",
+        "COUNT(*) works only together with GROUP BY",
+        "COUNT(column_name) ignores NULL values in that column"
+      ],
+      "answer": "e",
+      "explanation": "COUNT(*) counts all rows; COUNT(col) skips NULLs."
+    },
+    {
+      "id": 103,
+      "source": "Batch 10 Q95",
+      "topic": "SQL",
+      "question": "Which query lists the departments that have more than 5 employees?",
+      "options": [
+        "SELECT dept FROM Emp WHERE COUNT(*) > 5 GROUP BY dept;",
+        "SELECT dept, COUNT(*) FROM Emp GROUP BY dept WHERE COUNT(*) > 5;",
+        "SELECT dept FROM Emp HAVING COUNT(*) > 5;",
+        "SELECT dept, COUNT(*) FROM Emp GROUP BY dept HAVING COUNT(*) > 5;",
+        "SELECT dept, COUNT(*) FROM Emp ORDER BY dept HAVING COUNT(*) > 5;"
+      ],
+      "answer": "d",
+      "explanation": "Group with GROUP BY, then filter groups with HAVING."
+    },
+    {
+      "id": 104,
+      "source": "Batch 10 Q96",
+      "topic": "SQL",
+      "question": "A self join is used to:",
+      "options": [
+        "Join two different tables that have no common columns",
+        "Return the Cartesian product of two tables",
+        "Join a table with itself",
+        "Join three or more tables",
+        "Remove duplicate rows from a table"
+      ],
+      "answer": "c",
+      "explanation": "Self join = table joined with itself (e.g. employee and manager)."
+    },
+    {
+      "id": 105,
+      "source": "Batch 10 Q97",
+      "topic": "SQL",
+      "question": "Which statement about UNION ALL is correct?",
+      "options": [
+        "It keeps duplicate rows and is generally faster than UNION",
+        "It removes duplicate rows",
+        "It returns only the common rows",
+        "It sorts the result automatically",
+        "It works only on tables with different structures"
+      ],
+      "answer": "a",
+      "explanation": "No duplicate removal, so faster."
+    },
+    {
+      "id": 106,
+      "source": "Batch 10 Q98",
+      "topic": "SQL",
+      "question": "Which of the following is NOT an aggregate function?",
+      "options": [
+        "AVG()",
+        "MAX()",
+        "COUNT()",
+        "SUM()",
+        "UPPER()"
+      ],
+      "answer": "e",
+      "explanation": "UPPER() is a string (scalar) function."
+    },
+    {
+      "id": 107,
+      "source": "Batch 10 Q99",
+      "topic": "SQL",
+      "question": "What is the output of SELECT ROUND(15.678, 1);?",
+      "options": [
+        "15",
+        "15.6",
+        "15.7",
+        "16",
+        "15.68"
+      ],
+      "answer": "c",
+      "explanation": "Rounded to 1 decimal place: 15.7."
+    },
+    {
+      "id": 108,
+      "source": "Batch 10 Q100",
+      "topic": "SQL",
+      "question": "Which statement correctly creates an index on the name column of the Emp table?",
+      "options": [
+        "CREATE TABLE INDEX idx_name ON Emp(name);",
+        "CREATE INDEX idx_name ON Emp(name);",
+        "INDEX CREATE idx_name Emp(name);",
+        "ALTER INDEX idx_name ON Emp(name);",
+        "ADD INDEX idx_name TO Emp;"
+      ],
+      "answer": "b",
+      "explanation": "CREATE INDEX name ON table(column)."
+    },
+    {
+      "id": 109,
+      "source": "Batch 11 Q101",
+      "topic": "SQL",
+      "question": "Which values does the condition WHERE marks BETWEEN 10 AND 20 include?",
+      "options": [
+        "Values greater than 10 and less than 20 only",
+        "10 but not 20",
+        "Both 10 and 20, and every value in between",
+        "20 but not 10",
+        "Only 10 and 20"
+      ],
+      "answer": "c",
+      "explanation": "BETWEEN is inclusive on both ends."
+    },
+    {
+      "id": 110,
+      "source": "Batch 11 Q102",
+      "topic": "SQL",
+      "question": "What is the output of SELECT SUBSTRING('DATABASE', 3, 4);?",
+      "options": [
+        "ATAB",
+        "TABA",
+        "TABAS",
+        "ABAS",
+        "DATA"
+      ],
+      "answer": "b",
+      "explanation": "Start at position 3 (T), take 4 characters: TABA."
+    },
+    {
+      "id": 111,
+      "source": "Batch 11 Q103",
+      "topic": "SQL",
+      "question": "Which condition correctly checks whether a column contains NULL?",
+      "options": [
+        "WHERE col = NULL",
+        "WHERE col == NULL",
+        "WHERE col LIKE NULL",
+        "WHERE col IS NULL",
+        "WHERE col IN NULL"
+      ],
+      "answer": "d",
+      "explanation": "NULL is checked with IS NULL; = NULL never matches."
+    },
+    {
+      "id": 112,
+      "source": "Batch 11 Q104",
+      "topic": "SQL",
+      "question": "A subquery returns multiple values. Which operator should be used in the WHERE clause to compare a column against those values?",
+      "options": [
+        "IN",
+        "=",
+        "LIKE",
+        "BETWEEN",
+        "IS"
+      ],
+      "answer": "a",
+      "explanation": "IN works with a list of values; = needs a single value."
+    },
+    {
+      "id": 113,
+      "source": "Batch 11 Q105",
+      "topic": "SQL",
+      "question": "Which query lists the employees who earn more than the average salary?",
+      "options": [
+        "SELECT * FROM Emp WHERE salary > AVG(salary);",
+        "SELECT * FROM Emp HAVING salary > AVG(salary);",
+        "SELECT AVG(salary) FROM Emp WHERE salary > salary;",
+        "SELECT * FROM Emp GROUP BY salary > AVG(salary);",
+        "SELECT * FROM Emp WHERE salary > (SELECT AVG(salary) FROM Emp);"
+      ],
+      "answer": "e",
+      "explanation": "Compute the average in a subquery."
+    },
+    {
+      "id": 114,
+      "source": "Batch 11 Q106",
+      "topic": "SQL",
+      "question": "The salaries in a table are 500, 500, 400 and 300. Ordering by salary from highest to lowest, what rank does DENSE_RANK() assign to 300?",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "1",
+        "5"
+      ],
+      "answer": "b",
+      "explanation": "500 → 1, 500 → 1, 400 → 2, 300 → 3. (RANK would give 4.)"
+    },
+    {
+      "id": 115,
+      "source": "Batch 11 Q107",
+      "topic": "SQL",
+      "question": "The ALTER TABLE command is used to:",
+      "options": [
+        "Delete all rows from a table",
+        "Retrieve data from a table",
+        "Add, modify or drop columns in an existing table",
+        "Create a new database",
+        "Grant privileges to users"
+      ],
+      "answer": "c",
+      "explanation": "ALTER changes structure."
+    },
+    {
+      "id": 116,
+      "source": "Batch 11 Q108",
+      "topic": "SQL",
+      "question": "A trigger in SQL is:",
+      "options": [
+        "A stored program that runs automatically in response to an INSERT, UPDATE or DELETE event",
+        "A function that must be called manually",
+        "A type of index",
+        "A temporary table",
+        "A constraint that prevents NULL values"
+      ],
+      "answer": "a",
+      "explanation": "Triggers fire automatically on events."
+    },
+    {
+      "id": 117,
+      "source": "Batch 11 Q109",
+      "topic": "SQL",
+      "question": "Which statement about a standard (non-materialized) view is incorrect?",
+      "options": [
+        "It is a virtual table",
+        "It can simplify complex queries",
+        "It can be used to restrict access to data",
+        "It always stores its own physical copy of the data",
+        "It is defined using a SELECT statement"
+      ],
+      "answer": "d",
+      "explanation": "Only materialized/indexed views store data."
+    },
+    {
+      "id": 118,
+      "source": "Batch 11 Q110",
+      "topic": "SQL",
+      "question": "A FULL OUTER JOIN returns:",
+      "options": [
+        "Only the matching rows from both tables",
+        "All rows from the left table only",
+        "All rows from the right table only",
+        "The Cartesian product of both tables",
+        "All rows from both tables, with NULLs where there is no match"
+      ],
+      "answer": "e",
+      "explanation": "Cartesian product is CROSS JOIN."
+    },
+    {
+      "id": 119,
+      "source": "Batch 12 Q111",
+      "topic": "SQL",
+      "question": "Salaries are 900, 800, 800 and 700. Ordering from highest to lowest, what rank does RANK() assign to 700?",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "5",
+        "1"
+      ],
+      "answer": "c",
+      "explanation": "900 → 1, 800 → 2, 800 → 2, 700 → 4 (gap)."
+    },
+    {
+      "id": 120,
+      "source": "Batch 12 Q112",
+      "topic": "SQL",
+      "question": "Which of the following statements about joins is incorrect?",
+      "options": [
+        "An INNER JOIN returns only the matching rows",
+        "A LEFT JOIN returns all rows from the left table",
+        "A CROSS JOIN returns the Cartesian product",
+        "A NATURAL JOIN matches on columns that have the same name in both tables",
+        "A SELF JOIN requires two different tables"
+      ],
+      "answer": "e",
+      "explanation": "A self join uses one table twice."
+    },
+    {
+      "id": 121,
+      "source": "Batch 12 Q113",
+      "topic": "SQL",
+      "question": "Which keyword removes duplicate rows from the result of a SELECT query?",
+      "options": [
+        "UNIQUE",
+        "DISTINCT",
+        "GROUP",
+        "DELETE",
+        "REMOVE"
+      ],
+      "answer": "b",
+      "explanation": "SELECT DISTINCT."
+    },
+    {
+      "id": 122,
+      "source": "Batch 12 Q114",
+      "topic": "SQL",
+      "question": "What is the correct order in which these clauses are written in a SELECT statement?",
+      "options": [
+        "SELECT, WHERE, FROM, GROUP BY, HAVING, ORDER BY",
+        "SELECT, FROM, GROUP BY, WHERE, HAVING, ORDER BY",
+        "SELECT, FROM, WHERE, HAVING, GROUP BY, ORDER BY",
+        "SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY",
+        "SELECT, FROM, ORDER BY, WHERE, GROUP BY, HAVING"
+      ],
+      "answer": "d",
+      "explanation": "SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY."
+    },
+    {
+      "id": 123,
+      "source": "Batch 12 Q115",
+      "topic": "SQL",
+      "question": "When there are tied values, ROW_NUMBER():",
+      "options": [
+        "Assigns a unique sequential number to every row",
+        "Assigns the same number to each tied row",
+        "Leaves gaps in the sequence after ties",
+        "Returns NULL for tied rows",
+        "Skips the tied rows"
+      ],
+      "answer": "a",
+      "explanation": "ROW_NUMBER is always unique: 1, 2, 3..."
+    },
+    {
+      "id": 124,
+      "source": "Batch 12 Q116",
+      "topic": "SQL",
+      "question": "Which command removes a view from the database?",
+      "options": [
+        "DELETE VIEW",
+        "REMOVE VIEW",
+        "TRUNCATE VIEW",
+        "ALTER VIEW DROP",
+        "DROP VIEW"
+      ],
+      "answer": "e",
+      "explanation": "DROP VIEW."
+    },
+    {
+      "id": 125,
+      "source": "Batch 12 Q117",
+      "topic": "SQL",
+      "question": "A correlated subquery is one that:",
+      "options": [
+        "Runs only once for the entire outer query",
+        "Can't reference the outer query",
+        "Is evaluated once for each row processed by the outer query",
+        "Always returns a single value",
+        "Can be used only in the FROM clause"
+      ],
+      "answer": "c",
+      "explanation": "It references the outer row, so it re-runs per row. (a) describes a non-correlated subquery."
+    },
+    {
+      "id": 126,
+      "source": "Batch 12 Q118",
+      "topic": "SQL",
+      "question": "What is the output of SELECT COALESCE(NULL, NULL, 5, 10);?",
+      "options": [
+        "5",
+        "NULL",
+        "10",
+        "0",
+        "15"
+      ],
+      "answer": "a",
+      "explanation": "COALESCE returns the first non-NULL value."
+    },
+    {
+      "id": 127,
+      "source": "Batch 12 Q119",
+      "topic": "SQL",
+      "question": "In MySQL, which command renames a table?",
+      "options": [
+        "ALTER NAME old TO new;",
+        "RENAME TABLE old TO new;",
+        "UPDATE TABLE old SET NAME new;",
+        "MODIFY TABLE old new;",
+        "CHANGE TABLE old new;"
+      ],
+      "answer": "b",
+      "explanation": "RENAME TABLE old TO new; (or ALTER TABLE old RENAME TO new;). SQL Server uses sp_rename."
+    },
+    {
+      "id": 128,
+      "source": "Batch 12 Q120",
+      "topic": "Keys",
+      "question": "Which of the following statements about PRIMARY KEY and UNIQUE constraints is incorrect?",
+      "options": [
+        "Both enforce uniqueness",
+        "A table can have more than one UNIQUE constraint",
+        "A PRIMARY KEY column allows NULL values",
+        "A UNIQUE column allows NULL values",
+        "A PRIMARY KEY can be composite"
+      ],
+      "answer": "c",
+      "explanation": "Primary keys never allow NULL."
+    },
+    {
+      "id": 129,
+      "source": "Batch 13 Q121",
+      "topic": "SQL",
+      "question": "If no direction is specified, ORDER BY sorts results in:",
+      "options": [
+        "Descending order",
+        "Ascending order",
+        "Random order",
+        "Insertion order",
+        "Primary key order only"
+      ],
+      "answer": "b",
+      "explanation": "Default is ASC."
+    },
+    {
+      "id": 130,
+      "source": "Batch 13 Q122",
+      "topic": "SQL",
+      "question": "Which operator returns only the rows that appear in the results of both queries?",
+      "options": [
+        "UNION",
+        "UNION ALL",
+        "EXCEPT",
+        "INTERSECT",
+        "JOIN"
+      ],
+      "answer": "d",
+      "explanation": "INTERSECT = common rows."
+    },
+    {
+      "id": 131,
+      "source": "Batch 13 Q123",
+      "topic": "SQL",
+      "question": "In MySQL, which statement correctly creates a trigger that runs before a row is inserted into Emp?",
+      "options": [
+        "CREATE TRIGGER trg BEFORE INSERT ON Emp FOR EACH ROW SET NEW.salary = 0;",
+        "CREATE TABLE trg BEFORE INSERT ON Emp;",
+        "TRIGGER trg ON Emp BEFORE INSERT;",
+        "CREATE VIEW trg BEFORE INSERT ON Emp;",
+        "CREATE INDEX trg ON Emp(BEFORE_INSERT);"
+      ],
+      "answer": "a",
+      "explanation": "CREATE TRIGGER name BEFORE INSERT ON table FOR EACH ROW ..."
+    },
+    {
+      "id": 132,
+      "source": "Batch 13 Q124",
+      "topic": "SQL",
+      "question": "The REVOKE command is used to:",
+      "options": [
+        "Undo the last transaction",
+        "Delete a user account",
+        "Remove privileges previously granted to a user",
+        "Roll back to a savepoint",
+        "Drop a table"
+      ],
+      "answer": "c",
+      "explanation": "REVOKE removes privileges (DCL)."
+    },
+    {
+      "id": 133,
+      "source": "Batch 13 Q125",
+      "topic": "SQL",
+      "question": "A column contains the values 10, 20, NULL and 30. What does AVG(column) return?",
+      "options": [
+        "15",
+        "0",
+        "NULL",
+        "60",
+        "20"
+      ],
+      "answer": "e",
+      "explanation": "NULL is ignored: (10 + 20 + 30) / 3 = 20."
+    },
+    {
+      "id": 134,
+      "source": "Batch 13 Q126",
+      "topic": "SQL",
+      "question": "Which MySQL function returns the current date and time?",
+      "options": [
+        "TODAY()",
+        "CURRENT()",
+        "NOW()",
+        "DATE()",
+        "TIME()"
+      ],
+      "answer": "c",
+      "explanation": "NOW()."
+    },
+    {
+      "id": 135,
+      "source": "Batch 13 Q127",
+      "topic": "SQL",
+      "question": "Which query returns the second highest salary without using LIMIT?",
+      "options": [
+        "SELECT MAX(salary) FROM Emp WHERE salary > (SELECT MAX(salary) FROM Emp);",
+        "SELECT MAX(salary) FROM Emp WHERE salary < (SELECT MAX(salary) FROM Emp);",
+        "SELECT MIN(salary) FROM Emp WHERE salary < (SELECT MAX(salary) FROM Emp);",
+        "SELECT salary FROM Emp WHERE salary = MAX(salary) - 1;",
+        "SELECT MAX(salary) - 1 FROM Emp;"
+      ],
+      "answer": "b",
+      "explanation": "Highest value below the overall maximum."
+    },
+    {
+      "id": 136,
+      "source": "Batch 13 Q128",
+      "topic": "SQL",
+      "question": "A stored procedure is:",
+      "options": [
+        "A precompiled set of SQL statements stored in the database and called explicitly",
+        "A statement that runs automatically on every INSERT",
+        "A type of index",
+        "A virtual table",
+        "A temporary result set"
+      ],
+      "answer": "a",
+      "explanation": "Procedures are called explicitly; triggers fire automatically."
+    },
+    {
+      "id": 137,
+      "source": "Batch 13 Q129",
+      "topic": "Integrity",
+      "question": "Which constraint provides a value for a column when no value is supplied during INSERT?",
+      "options": [
+        "CHECK",
+        "UNIQUE",
+        "NOT NULL",
+        "DEFAULT",
+        "FOREIGN KEY"
+      ],
+      "answer": "d",
+      "explanation": "DEFAULT."
+    },
+    {
+      "id": 138,
+      "source": "Batch 13 Q130",
+      "topic": "SQL",
+      "question": "Which values does WHERE name LIKE '_a%' match?",
+      "options": [
+        "Names starting with 'a'",
+        "Names ending with 'a'",
+        "Names exactly two characters long",
+        "Names containing 'a' anywhere",
+        "Names whose second character is 'a'"
+      ],
+      "answer": "e",
+      "explanation": "'_' = any one character, then 'a', then anything."
+    },
+    {
+      "id": 139,
+      "source": "Batch 14 Q131",
+      "topic": "Relational Algebra",
+      "question": "Which relational algebra operator selects the rows that satisfy a given condition?",
+      "options": [
+        "π",
+        "σ",
+        "⋈",
+        "×",
+        "∪"
+      ],
+      "answer": "b",
+      "explanation": "σ = selection (rows). π = projection (columns)."
+    },
+    {
+      "id": 140,
+      "source": "Batch 14 Q132",
+      "topic": "Relational Algebra",
+      "question": "What does the projection operator (π) do?",
+      "options": [
+        "Selects the specified columns of a relation",
+        "Selects rows based on a condition",
+        "Combines two relations",
+        "Renames a relation",
+        "Returns the common tuples of two relations"
+      ],
+      "answer": "a",
+      "explanation": "π picks columns and removes duplicate rows."
+    },
+    {
+      "id": 141,
+      "source": "Batch 14 Q133",
+      "topic": "Relational Calculus",
+      "question": "In Tuple Relational Calculus, which symbol expresses that at least one tuple satisfies a condition?",
+      "options": [
+        "∀",
+        "σ",
+        "π",
+        "∃",
+        "∪"
+      ],
+      "answer": "d",
+      "explanation": "∃ = there exists. ∀ = for all."
+    },
+    {
+      "id": 142,
+      "source": "Batch 14 Q134",
+      "topic": "Relational Calculus",
+      "question": "Compared with SQL, which operation cannot be performed directly in basic Tuple Relational Calculus?",
+      "options": [
+        "Selection",
+        "Projection",
+        "Join",
+        "Cartesian product",
+        "Aggregation"
+      ],
+      "answer": "e",
+      "explanation": "Basic TRC and RA can't aggregate (COUNT, SUM...)."
+    },
+    {
+      "id": 143,
+      "source": "Batch 14 Q135",
+      "topic": "Relational Algebra",
+      "question": "The division operator (÷) in relational algebra is used for queries involving:",
+      "options": [
+        "Sorting",
+        "Aggregation",
+        "'For all' conditions",
+        "Renaming",
+        "Removing duplicates"
+      ],
+      "answer": "c",
+      "explanation": "E.g. students who took ALL courses."
+    },
+    {
+      "id": 144,
+      "source": "Batch 14 Q136",
+      "topic": "Relational Algebra",
+      "question": "Relation R has 3 tuples and relation S has 4 tuples. How many tuples does R × S contain?",
+      "options": [
+        "7",
+        "12",
+        "3",
+        "4",
+        "1"
+      ],
+      "answer": "b",
+      "explanation": "Cardinality of R × S = 3 × 4 = 12."
+    },
+    {
+      "id": 145,
+      "source": "Batch 14 Q137",
+      "topic": "Indexing",
+      "question": "Which statement about a B+ tree is correct?",
+      "options": [
+        "All data pointers are stored in the leaf nodes, and the leaf nodes are linked together",
+        "Data pointers are stored only in the internal nodes",
+        "The leaf nodes are not linked to each other",
+        "It cannot support range queries",
+        "It is an unbalanced tree"
+      ],
+      "answer": "a",
+      "explanation": "Linked leaves make range queries fast."
+    },
+    {
+      "id": 146,
+      "source": "Batch 14 Q138",
+      "topic": "Indexing",
+      "question": "A clustered index:",
+      "options": [
+        "Can be created many times on the same table",
+        "Stores the index separately without reordering the data",
+        "Determines the physical order of the data rows, so a table can have only one",
+        "Is the same thing as a hash index",
+        "Is used only on views"
+      ],
+      "answer": "c",
+      "explanation": "One clustered index per table."
+    },
+    {
+      "id": 147,
+      "source": "Batch 14 Q139",
+      "topic": "Indexing",
+      "question": "A hash index is best suited for:",
+      "options": [
+        "Range queries",
+        "Sorting results",
+        "Pattern matching with LIKE",
+        "Finding the maximum value",
+        "Equality searches"
+      ],
+      "answer": "e",
+      "explanation": "Hash = exact match. B+ tree = ranges."
+    },
+    {
+      "id": 148,
+      "source": "Batch 14 Q140",
+      "topic": "Indexing",
+      "question": "What is the primary purpose of a B+ tree in databases?",
+      "options": [
+        "Data encryption",
+        "Data compression",
+        "Hashing data",
+        "Efficient indexing",
+        "Backup and recovery"
+      ],
+      "answer": "d",
+      "explanation": "Efficient indexing (PYQ Prelims 2026)."
+    },
+    {
+      "id": 149,
+      "source": "Day Test Q1",
+      "topic": "Transactions",
+      "question": "Which ACID property ensures that a transaction moves the database from one valid state to another while maintaining all defined rules?",
+      "options": [
+        "Atomicity",
+        "Consistency",
+        "Isolation",
+        "Durability",
+        "Integrity"
+      ],
+      "answer": "b",
+      "explanation": "Consistency."
+    },
+    {
+      "id": 150,
+      "source": "Day Test Q2",
+      "topic": "Recovery",
+      "question": "After a crash, the log contains <Start T1>, <Commit T1> and <Start T2>. During recovery:",
+      "options": [
+        "Both T1 and T2 are undone",
+        "Both T1 and T2 are redone",
+        "T1 is undone and T2 is redone",
+        "T1 is redone and T2 is undone",
+        "Both are ignored"
+      ],
+      "answer": "d",
+      "explanation": "Commit present (T1) = redo; no commit (T2) = undo."
+    },
+    {
+      "id": 151,
+      "source": "Day Test Q3",
+      "topic": "Transactions",
+      "question": "An account balance is 1000. A transaction runs these steps in order: add 200, then SAVEPOINT S1, then subtract 500, then ROLLBACK TO S1, then COMMIT. What is the final balance?",
+      "options": [
+        "1000",
+        "700",
+        "1200",
+        "500",
+        "1700"
+      ],
+      "answer": "c",
+      "explanation": "Rollback to S1 undoes only the −500; +200 is committed."
+    },
+    {
+      "id": 152,
+      "source": "Day Test Q4",
+      "topic": "Concurrency",
+      "question": "T1 and T2 both hold shared locks on item A. T3 now requests an exclusive lock on A. What happens?",
+      "options": [
+        "T3 waits",
+        "T3 is granted the lock immediately",
+        "T1 and T2 are rolled back",
+        "The shared locks are upgraded automatically",
+        "T3 receives a shared lock instead"
+      ],
+      "answer": "a",
+      "explanation": "X is incompatible with S."
+    },
+    {
+      "id": 153,
+      "source": "Day Test Q5",
+      "topic": "SQL",
+      "question": "Which of the following queries is invalid?",
+      "options": [
+        "SELECT dept FROM Emp WHERE AVG(salary) > 5000 GROUP BY dept;",
+        "SELECT dept, AVG(salary) FROM Emp GROUP BY dept;",
+        "SELECT dept FROM Emp GROUP BY dept HAVING AVG(salary) > 5000;",
+        "SELECT dept FROM Emp WHERE salary > 5000 GROUP BY dept;",
+        "SELECT COUNT(*) FROM Emp;"
+      ],
+      "answer": "a",
+      "explanation": "Aggregates can't appear in WHERE."
+    },
+    {
+      "id": 154,
+      "source": "Day Test Q6",
+      "topic": "Normalization",
+      "question": "Relation R(A, B, C) has candidate key {A, B} and the functional dependency B → C. What is the highest normal form R satisfies?",
+      "options": [
+        "2NF",
+        "1NF",
+        "3NF",
+        "BCNF",
+        "4NF"
+      ],
+      "answer": "b",
+      "explanation": "B is part of the key → partial dependency → only 1NF."
+    },
+    {
+      "id": 155,
+      "source": "Day Test Q7",
+      "topic": "SQL",
+      "question": "In MySQL, which clause returns the 5th highest salary when salaries are ordered DESC?",
+      "options": [
+        "LIMIT 5, 1",
+        "LIMIT 1, 5",
+        "LIMIT 5",
+        "LIMIT 4, 1",
+        "LIMIT 1, 4"
+      ],
+      "answer": "d",
+      "explanation": "nth highest = LIMIT n-1, 1."
+    },
+    {
+      "id": 156,
+      "source": "Day Test Q8",
+      "topic": "SQL",
+      "question": "Which of the following is a DDL command?",
+      "options": [
+        "SELECT",
+        "GRANT",
+        "COMMIT",
+        "UPDATE",
+        "TRUNCATE"
+      ],
+      "answer": "e",
+      "explanation": "TRUNCATE is DDL."
+    },
+    {
+      "id": 157,
+      "source": "Day Test Q9",
+      "topic": "Concurrency",
+      "question": "Under the Wait-Die scheme, T2 (TS = 20) requests a lock held by T1 (TS = 10). What happens?",
+      "options": [
+        "T2 waits",
+        "T1 is rolled back",
+        "T2 is rolled back",
+        "Both wait",
+        "The lock is granted immediately"
+      ],
+      "answer": "c",
+      "explanation": "T2 is younger (larger TS) and requests, so it dies."
+    },
+    {
+      "id": 158,
+      "source": "Day Test Q10",
+      "topic": "Keys",
+      "question": "Which statement about a foreign key is incorrect?",
+      "options": [
+        "It can contain NULL values",
+        "It references the primary key or a unique key of another table",
+        "It can contain duplicate values",
+        "It enforces referential integrity",
+        "It must always be unique within its own table"
+      ],
+      "answer": "e",
+      "explanation": "FKs don't need to be unique."
+    },
+    {
+      "id": 159,
+      "source": "Day Test Q11",
+      "topic": "Normalization",
+      "question": "Relation R(P, Q, R, S) has candidate key {P, Q} and the functional dependency Q → S. What is the highest normal form R satisfies?",
+      "options": [
+        "2NF",
+        "3NF",
+        "1NF",
+        "BCNF",
+        "4NF"
+      ],
+      "answer": "c",
+      "explanation": "Q is part of the key → partial dependency → 1NF."
+    },
+    {
+      "id": 160,
+      "source": "Day Test Q12",
+      "topic": "Concurrency",
+      "question": "Under Wait-Die, T1 (TS = 8) holds a lock and T3 (TS = 15) requests it. What happens?",
+      "options": [
+        "T3 waits",
+        "T1 is rolled back",
+        "Both wait",
+        "The lock is granted immediately",
+        "T3 is rolled back"
+      ],
+      "answer": "e",
+      "explanation": "T3 is younger and requesting, so it dies."
+    },
+    {
+      "id": 161,
+      "source": "Day Test Q13",
+      "topic": "SQL",
+      "question": "Which of the following statements is incorrect?",
+      "options": [
+        "DROP removes both the table structure and its data",
+        "TRUNCATE removes all rows but keeps the structure",
+        "DELETE can use a WHERE clause",
+        "DROP keeps the table structure",
+        "TRUNCATE is generally faster than DELETE"
+      ],
+      "answer": "d",
+      "explanation": "DROP removes the structure too."
+    },
+    {
+      "id": 162,
+      "source": "Day Test Q14",
+      "topic": "SQL",
+      "question": "A NATURAL JOIN matches rows using:",
+      "options": [
+        "Columns that have the same name in both tables",
+        "Only the primary key columns",
+        "Every column pair, producing a Cartesian product",
+        "A condition written in an ON clause",
+        "Only the foreign key columns"
+      ],
+      "answer": "a",
+      "explanation": "Natural join uses same-named columns."
+    },
+    {
+      "id": 163,
+      "source": "Day Test Q15",
+      "topic": "Relational Algebra",
+      "question": "Which relational algebra expression returns the names of employees whose salary is greater than 50,000?",
+      "options": [
+        "σ name (π salary>50000 (Emp))",
+        "π name (σ salary>50000 (Emp))",
+        "σ salary>50000 (Emp) × name",
+        "π salary>50000 (Emp)",
+        "ρ name (Emp)"
+      ],
+      "answer": "b",
+      "explanation": "Read inside out: σ filters rows, then π picks the column."
+    },
+    {
+      "id": 164,
+      "source": "Day Test Q16",
+      "topic": "Integrity",
+      "question": "A foreign key is defined with ON DELETE CASCADE. When a parent row is deleted:",
+      "options": [
+        "The deletion is blocked",
+        "The child foreign keys are set to NULL",
+        "The matching child rows are also deleted",
+        "The child foreign keys are set to their default value",
+        "Nothing happens to the child rows"
+      ],
+      "answer": "c",
+      "explanation": "CASCADE deletes the children too."
+    },
+    {
+      "id": 165,
+      "source": "Day Test Q17",
+      "topic": "Normalization",
+      "question": "Which of the following statements is incorrect?",
+      "options": [
+        "Every relation in BCNF is also in 3NF",
+        "Every relation in 3NF is also in 2NF",
+        "BCNF requires every determinant to be a super key",
+        "3NF allows X → Y when Y is a prime attribute",
+        "Every relation in 3NF is always in BCNF"
+      ],
+      "answer": "e",
+      "explanation": "3NF ⇏ BCNF."
+    },
+    {
+      "id": 166,
+      "source": "Day Test Q18",
+      "topic": "Integrity",
+      "question": "Which constraint prevents duplicate values in a column but still allows NULLs?",
+      "options": [
+        "UNIQUE",
+        "PRIMARY KEY",
+        "CHECK",
+        "NOT NULL",
+        "DEFAULT"
+      ],
+      "answer": "a",
+      "explanation": "UNIQUE."
+    },
+    {
+      "id": 167,
+      "source": "Day Test Q19",
+      "topic": "SQL",
+      "question": "In MySQL, what does SELECT INSTR('IBPS', 'Z'); return?",
+      "options": [
+        "NULL",
+        "-1",
+        "1",
+        "0",
+        "An error"
+      ],
+      "answer": "d",
+      "explanation": "INSTR returns 0 when not found (PYQ 2024)."
+    },
+    {
+      "id": 168,
+      "source": "Day Test Q20",
+      "topic": "Transactions",
+      "question": "Money is debited from a sender's account, but a system failure stops it from being credited to the receiver. Which ACID property is violated?",
+      "options": [
+        "Consistency",
+        "Atomicity",
+        "Isolation",
+        "Durability",
+        "Integrity"
+      ],
+      "answer": "b",
+      "explanation": "Atomicity."
+    },
+    {
+      "id": 169,
+      "source": "Day Test Q21",
+      "topic": "Concurrency",
+      "question": "Under Wait-Die, T5 (TS = 30) holds a lock and T4 (TS = 12) requests it. What happens?",
+      "options": [
+        "T4 waits",
+        "T4 is rolled back",
+        "T5 is rolled back",
+        "Both are rolled back",
+        "The lock is granted immediately"
+      ],
+      "answer": "a",
+      "explanation": "T4 is older (smaller TS), so it waits."
+    },
+    {
+      "id": 170,
+      "source": "Day Test Q22",
+      "topic": "Concurrency",
+      "question": "Under Wound-Wait, T6 (TS = 40) requests a lock held by T2 (TS = 10). What happens?",
+      "options": [
+        "T2 is rolled back",
+        "T6 is rolled back",
+        "Both are rolled back",
+        "T6 waits",
+        "The lock is granted immediately"
+      ],
+      "answer": "d",
+      "explanation": "T6 is younger; in Wound-Wait a younger requester waits."
+    },
+    {
+      "id": 171,
+      "source": "Day Test Q23",
+      "topic": "Relational Algebra",
+      "question": "Which relational algebra expression returns the names of students in the 'IT' department?",
+      "options": [
+        "σ name (π dept='IT' (Student))",
+        "π dept='IT' (Student)",
+        "π name (σ dept='IT' (Student))",
+        "σ dept='IT' (π name)",
+        "Student × name"
+      ],
+      "answer": "c",
+      "explanation": "σ inside, π outside."
+    },
+    {
+      "id": 172,
+      "source": "Day Test Q24",
+      "topic": "SQL",
+      "question": "In MySQL, what does SELECT INSTR('DATABASE', 'BASE'); return?",
+      "options": [
+        "4",
+        "5",
+        "0",
+        "-1",
+        "6"
+      ],
+      "answer": "b",
+      "explanation": "D1 A2 T3 A4 B5: 'BASE' starts at 5."
+    },
+    {
+      "id": 173,
+      "source": "Day Test Q25",
+      "topic": "Normalization",
+      "question": "Relation R(A, B, C, D) has candidate key {A, B} and the functional dependencies AB → C and C → D. What is the highest normal form R satisfies?",
+      "options": [
+        "1NF",
+        "3NF",
+        "BCNF",
+        "2NF",
+        "4NF"
+      ],
+      "answer": "d",
+      "explanation": "No partial dependency (C is outside the key), so 2NF. C → D is transitive, so not 3NF."
+    },
+    {
+      "id": 174,
+      "source": "Day Test Q26",
+      "topic": "Indexing",
+      "question": "Which statement about a clustered index is incorrect?",
+      "options": [
+        "It determines the physical order of the rows",
+        "Searches on the clustered key are fast",
+        "In SQL Server, the primary key creates a clustered index by default",
+        "Range queries on the clustered key are efficient",
+        "A table can have several clustered indexes"
+      ],
+      "answer": "e",
+      "explanation": "Only one clustered index per table."
+    },
+    {
+      "id": 175,
+      "source": "Day Test Q27",
+      "topic": "SQL",
+      "question": "Which pair of commands are both DCL commands?",
+      "options": [
+        "GRANT and REVOKE",
+        "COMMIT and ROLLBACK",
+        "CREATE and DROP",
+        "INSERT and UPDATE",
+        "SELECT and DELETE"
+      ],
+      "answer": "a",
+      "explanation": "DCL = GRANT, REVOKE."
+    },
+    {
+      "id": 176,
+      "source": "Day Test Q28",
+      "topic": "Concurrency",
+      "question": "A 'lost update' occurs when:",
+      "options": [
+        "A transaction reads uncommitted data",
+        "New rows appear when a query is run again",
+        "Two transactions update the same item and one update overwrites the other",
+        "A transaction is rolled back",
+        "A deadlock occurs"
+      ],
+      "answer": "c",
+      "explanation": "Lost update. (a) = dirty read, (b) = phantom."
+    },
+    {
+      "id": 177,
+      "source": "Day Test Q29",
+      "topic": "SQL",
+      "question": "Which join returns all rows from the right table plus the matching rows from the left table?",
+      "options": [
+        "LEFT OUTER JOIN",
+        "RIGHT OUTER JOIN",
+        "INNER JOIN",
+        "CROSS JOIN",
+        "NATURAL JOIN"
+      ],
+      "answer": "b",
+      "explanation": "RIGHT OUTER JOIN."
+    },
+    {
+      "id": 178,
+      "source": "Day Test Q30",
+      "topic": "Transactions",
+      "question": "Which ACID property ensures that committed changes are not lost after a system crash?",
+      "options": [
+        "Durability",
+        "Atomicity",
+        "Consistency",
+        "Isolation",
+        "Integrity"
+      ],
+      "answer": "a",
+      "explanation": "Durability."
+    },
+    {
+      "id": 179,
+      "source": "Day Test Q31",
+      "topic": "Concurrency",
+      "question": "T1 has TS = 50 and T2 has TS = 25. Which transaction is older?",
+      "options": [
+        "T1",
+        "T2",
+        "Both are the same age",
+        "It can't be determined",
+        "Whichever holds the lock"
+      ],
+      "answer": "b",
+      "explanation": "Smaller timestamp = started earlier = older."
+    },
+    {
+      "id": 180,
+      "source": "Day Test Q32",
+      "topic": "Concurrency",
+      "question": "Under Wait-Die, T7 (TS = 5) requests a lock held by T8 (TS = 9). What happens?",
+      "options": [
+        "T7 is rolled back",
+        "T8 is rolled back",
+        "T7 waits",
+        "Both are rolled back",
+        "The lock is granted immediately"
+      ],
+      "answer": "c",
+      "explanation": "T7 is older, so it waits."
+    },
+    {
+      "id": 181,
+      "source": "Day Test Q33",
+      "topic": "Normalization",
+      "question": "Relation R(A, B, C, D) has candidate key {A, B} and the functional dependencies AB → C and AB → D only. What is the highest normal form R satisfies (considering functional dependencies only)?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "BCNF",
+        "R is not in 1NF"
+      ],
+      "answer": "d",
+      "explanation": "Every determinant is the key, so BCNF."
+    },
+    {
+      "id": 182,
+      "source": "Day Test Q34",
+      "topic": "Normalization",
+      "question": "Relation R(A, B, C) has candidate key A and the functional dependencies A → B and B → C. What is the highest normal form R satisfies?",
+      "options": [
+        "2NF",
+        "1NF",
+        "3NF",
+        "BCNF",
+        "4NF"
+      ],
+      "answer": "a",
+      "explanation": "B → C is transitive, so 2NF."
+    },
+    {
+      "id": 183,
+      "source": "Day Test Q35",
+      "topic": "SQL",
+      "question": "Which of the following statements is incorrect?",
+      "options": [
+        "DROP removes the table's indexes and constraints along with the table",
+        "TRUNCATE can always be rolled back, regardless of the DBMS",
+        "DELETE is a DML command",
+        "TRUNCATE resets an identity/auto-increment counter in SQL Server and MySQL",
+        "DROP is a DDL command"
+      ],
+      "answer": "b",
+      "explanation": "Whether TRUNCATE can be rolled back depends on the DBMS (PYQ 2024)."
+    },
+    {
+      "id": 184,
+      "source": "Day Test Q36",
+      "topic": "Relational Calculus",
+      "question": "In Tuple Relational Calculus, the symbol ∀ means:",
+      "options": [
+        "There exists at least one tuple",
+        "Not",
+        "Or",
+        "Implies",
+        "For all tuples"
+      ],
+      "answer": "e",
+      "explanation": "∀ = for all."
+    },
+    {
+      "id": 185,
+      "source": "Day Test Q37",
+      "topic": "SQL",
+      "question": "Which SQL feature performs calculations across a set of related rows while still returning each row individually, typically using PARTITION BY?",
+      "options": [
+        "Nested query",
+        "Trigger",
+        "Window function",
+        "Scalar function",
+        "Aggregate constraint"
+      ],
+      "answer": "c",
+      "explanation": "Window function (PYQ 2024)."
+    },
+    {
+      "id": 186,
+      "source": "Day Test Q38",
+      "topic": "Concurrency",
+      "question": "What is the minimum isolation level that prevents dirty reads?",
+      "options": [
+        "Read Committed",
+        "Read Uncommitted",
+        "Repeatable Read",
+        "Serializable",
+        "No isolation level prevents them"
+      ],
+      "answer": "a",
+      "explanation": "'Minimum' is the key word: Read Committed."
+    },
+    {
+      "id": 187,
+      "source": "Day Test Q39",
+      "topic": "Indexing",
+      "question": "Which type of index is best for the query WHERE emp_id = 1024?",
+      "options": [
+        "Bitmap index on a range",
+        "Full table scan",
+        "A sparse index on unsorted data",
+        "Hash index",
+        "No index"
+      ],
+      "answer": "d",
+      "explanation": "Equality search = hash index."
+    },
+    {
+      "id": 188,
+      "source": "Day Test Q40",
+      "topic": "SQL",
+      "question": "Employee.manager_id references Employee.emp_id. To list each employee alongside their manager's name, you would use a:",
+      "options": [
+        "CROSS JOIN",
+        "NATURAL JOIN",
+        "FULL OUTER JOIN",
+        "UNION",
+        "SELF JOIN"
+      ],
+      "answer": "e",
+      "explanation": "Same table joined to itself."
+    },
+    {
+      "id": 189,
+      "source": "Day Test Q41",
+      "topic": "SQL",
+      "question": "What does SELECT name, salary, AVG(salary) OVER (PARTITION BY dept) FROM Emp; return?",
+      "options": [
+        "One row per department containing its average salary",
+        "Only the employees whose salary is above average",
+        "Every employee row, along with the average salary of that employee's department",
+        "An error, because GROUP BY is missing",
+        "The overall average salary only"
+      ],
+      "answer": "c",
+      "explanation": "Window functions keep every row and don't need GROUP BY."
+    },
+    {
+      "id": 190,
+      "source": "Day Test Q42",
+      "topic": "Concurrency",
+      "question": "What is the minimum isolation level that prevents unrepeatable reads?",
+      "options": [
+        "Read Uncommitted",
+        "Read Committed",
+        "Serializable",
+        "Repeatable Read",
+        "None of them"
+      ],
+      "answer": "d",
+      "explanation": "Repeatable Read."
+    },
+    {
+      "id": 191,
+      "source": "Day Test Q43",
+      "topic": "Indexing",
+      "question": "Which index is best for the query WHERE salary BETWEEN 30000 AND 50000?",
+      "options": [
+        "B+ tree index",
+        "Hash index",
+        "No index",
+        "Bitmap on the primary key",
+        "A sparse index on unsorted data"
+      ],
+      "answer": "a",
+      "explanation": "Range query = B+ tree."
+    },
+    {
+      "id": 192,
+      "source": "Day Test Q44",
+      "topic": "Normalization",
+      "question": "Relation R(W, X, Y, Z) has candidate key {W, X} and the functional dependency W → Y. What is the highest normal form R satisfies?",
+      "options": [
+        "2NF",
+        "1NF",
+        "3NF",
+        "BCNF",
+        "4NF"
+      ],
+      "answer": "b",
+      "explanation": "W is part of the key → partial dependency → 1NF."
+    },
+    {
+      "id": 193,
+      "source": "Day Test Q45",
+      "topic": "Normalization",
+      "question": "Relation R(A, B, C) has candidate key A and the functional dependencies A → B and A → C only. What is the highest normal form R satisfies?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "It is not normalized",
+        "BCNF"
+      ],
+      "answer": "e",
+      "explanation": "All determinants are the key, so BCNF."
+    },
+    {
+      "id": 194,
+      "source": "Day Test Q46",
+      "topic": "Concurrency",
+      "question": "Under Wound-Wait, T9 (TS = 3) requests a lock held by T4 (TS = 7). What happens?",
+      "options": [
+        "T4 is rolled back",
+        "T9 waits",
+        "T9 is rolled back",
+        "Both wait",
+        "The lock is granted to both"
+      ],
+      "answer": "a",
+      "explanation": "T9 is older and wounds the younger holder T4."
+    },
+    {
+      "id": 195,
+      "source": "Day Test Q47",
+      "topic": "SQL",
+      "question": "Which of the following statements is incorrect?",
+      "options": [
+        "HAVING can contain aggregate functions",
+        "WHERE filters rows before grouping",
+        "WHERE is applied after GROUP BY",
+        "ORDER BY is applied last",
+        "GROUP BY forms groups of rows that share values"
+      ],
+      "answer": "c",
+      "explanation": "WHERE runs before GROUP BY."
+    },
+    {
+      "id": 196,
+      "source": "Day Test Q48",
+      "topic": "Relational Algebra",
+      "question": "In relational algebra, the σ operator is used for:",
+      "options": [
+        "Picking columns",
+        "Joining two relations",
+        "Renaming a relation",
+        "Selecting rows that satisfy a condition",
+        "Computing a Cartesian product"
+      ],
+      "answer": "d",
+      "explanation": "σ = selection (rows)."
+    },
+    {
+      "id": 197,
+      "source": "Day Test Q49",
+      "topic": "SQL",
+      "question": "Which command is generally faster than DELETE for removing all rows, because it doesn't log each row individually?",
+      "options": [
+        "DROP",
+        "TRUNCATE",
+        "ALTER",
+        "UPDATE",
+        "MERGE"
+      ],
+      "answer": "b",
+      "explanation": "TRUNCATE."
+    },
+    {
+      "id": 198,
+      "source": "Day Test Q50",
+      "topic": "Recovery",
+      "question": "What is the main purpose of a checkpoint?",
+      "options": [
+        "To prevent deadlocks",
+        "To encrypt the log",
+        "To lock all tables",
+        "To commit all transactions",
+        "To reduce the work needed during crash recovery"
+      ],
+      "answer": "e",
+      "explanation": "Checkpoint = faster recovery."
+    },
+    {
+      "id": 199,
+      "source": "Additional A1",
+      "topic": "DBMS Basics",
+      "question": "Which data model organizes data in a tree (parent–child) structure, as used by IBM IMS?",
+      "options": [
+        "Graph model",
+        "Hierarchical model",
+        "Object-oriented model",
+        "Network model",
+        "Relational model"
+      ],
+      "answer": "b",
+      "explanation": "Hierarchical = tree, 1:N only. Network = graph (CODASYL)."
+    },
+    {
+      "id": 200,
+      "source": "Additional A2",
+      "topic": "DBMS Basics",
+      "question": "The relational model was proposed by:",
+      "options": [
+        "Charles Bachman",
+        "Larry Ellison",
+        "Peter Chen",
+        "Dennis Ritchie",
+        "E.F. Codd"
+      ],
+      "answer": "e",
+      "explanation": "E.F. Codd, 1970. Peter Chen proposed the ER model (1976)."
+    },
+    {
+      "id": 201,
+      "source": "Additional A3",
+      "topic": "DBMS Basics",
+      "question": "Metadata ('data about data') is stored in the:",
+      "options": [
+        "Index",
+        "Buffer pool",
+        "Data dictionary",
+        "Transaction log",
+        "View"
+      ],
+      "answer": "c",
+      "explanation": "Data dictionary / system catalog."
+    },
+    {
+      "id": 202,
+      "source": "Additional A4",
+      "topic": "DBMS Basics",
+      "question": "The overall structure of a database that rarely changes is called the:",
+      "options": [
+        "Instance",
+        "Snapshot",
+        "Schema",
+        "Domain",
+        "Tuple"
+      ],
+      "answer": "c",
+      "explanation": "Schema = structure; instance = data at a moment."
+    },
+    {
+      "id": 203,
+      "source": "Additional A5",
+      "topic": "DBMS Basics",
+      "question": "The number of attributes (columns) in a relation is called its:",
+      "options": [
+        "Cardinality",
+        "Domain",
+        "Key",
+        "Instance",
+        "Degree"
+      ],
+      "answer": "e",
+      "explanation": "Degree (arity) = columns; cardinality = rows."
+    },
+    {
+      "id": 204,
+      "source": "Additional A6",
+      "topic": "DBMS Basics",
+      "question": "Which type of data independence is harder to achieve?",
+      "options": [
+        "Neither can be achieved",
+        "Network data independence",
+        "Both are equally hard",
+        "Logical data independence",
+        "Physical data independence"
+      ],
+      "answer": "d",
+      "explanation": "Logical is harder, because apps depend on the logical structure."
+    },
+    {
+      "id": 205,
+      "source": "Additional A7",
+      "topic": "DBMS Basics",
+      "question": "Which level of the three-schema architecture has exactly one schema for the whole database?",
+      "options": [
+        "User",
+        "View",
+        "Application",
+        "External",
+        "Conceptual"
+      ],
+      "answer": "e",
+      "explanation": "One conceptual schema; many external views; one internal schema."
+    },
+    {
+      "id": 206,
+      "source": "Additional A8",
+      "topic": "DBMS Basics",
+      "question": "Which of the following is a DDL command?",
+      "options": [
+        "INSERT",
+        "SELECT",
+        "RENAME",
+        "ROLLBACK",
+        "GRANT"
+      ],
+      "answer": "c",
+      "explanation": "DDL = CREATE, ALTER, DROP, TRUNCATE, RENAME."
+    },
+    {
+      "id": 207,
+      "source": "Additional A9",
+      "topic": "ER Model",
+      "question": "In ER-to-table mapping, a 1:N relationship between two entities is usually implemented by:",
+      "options": [
+        "Creating a separate relationship table",
+        "Placing the FK on the N side",
+        "Merging both tables",
+        "Placing the FK on the 1 side",
+        "Using a composite key on both tables"
+      ],
+      "answer": "b",
+      "explanation": "No new table: FK goes on the many side. M:N needs a separate table."
+    },
+    {
+      "id": 208,
+      "source": "Additional A10",
+      "topic": "ER Model",
+      "question": "A multivalued attribute (e.g. several phone numbers) is mapped to:",
+      "options": [
+        "A derived attribute",
+        "A view",
+        "The primary key",
+        "An extra column",
+        "A separate table"
+      ],
+      "answer": "e",
+      "explanation": "Multivalued attributes go into a separate table."
+    },
+    {
+      "id": 209,
+      "source": "Additional A11",
+      "topic": "ER Model",
+      "question": "Specialization is a ______ process, while generalization is a ______ process.",
+      "options": [
+        "Bottom-up; top-down",
+        "Bottom-up; bottom-up",
+        "Top-down; top-down",
+        "Top-down; bottom-up",
+        "Horizontal; vertical"
+      ],
+      "answer": "d",
+      "explanation": "Specialization: Employee → Manager/Engineer (top-down). Generalization: Car + Truck → Vehicle (bottom-up)."
+    },
+    {
+      "id": 210,
+      "source": "Additional A12",
+      "topic": "ER Model",
+      "question": "A weak entity always has which type of participation in its identifying relationship?",
+      "options": [
+        "Total participation",
+        "No participation",
+        "Optional participation",
+        "Partial participation",
+        "Recursive participation"
+      ],
+      "answer": "a",
+      "explanation": "A weak entity can't exist without its owner, so participation is total."
+    },
+    {
+      "id": 211,
+      "source": "Additional A13",
+      "topic": "Keys",
+      "question": "A system-generated key such as an IDENTITY or auto-increment column is called a:",
+      "options": [
+        "Surrogate key",
+        "Natural key",
+        "Super key",
+        "Foreign key",
+        "Candidate key"
+      ],
+      "answer": "a",
+      "explanation": "Surrogate key."
+    },
+    {
+      "id": 212,
+      "source": "Additional A14",
+      "topic": "Keys",
+      "question": "A key made of two or more attributes is called a:",
+      "options": [
+        "Alternate key",
+        "Foreign key",
+        "Composite key",
+        "Unique key",
+        "Surrogate key"
+      ],
+      "answer": "c",
+      "explanation": "Composite key."
+    },
+    {
+      "id": 213,
+      "source": "Additional A15",
+      "topic": "Keys",
+      "question": "A minimal super key is called a:",
+      "options": [
+        "Surrogate key",
+        "Secondary key",
+        "Composite key",
+        "Candidate key",
+        "Foreign key"
+      ],
+      "answer": "d",
+      "explanation": "Candidate key = super key with no redundant attribute."
+    },
+    {
+      "id": 214,
+      "source": "Additional A16",
+      "topic": "Relational Algebra",
+      "question": "Union, intersection and set difference require the two relations to be:",
+      "options": [
+        "Union-compatible (same number of attributes with matching domains)",
+        "Joined first",
+        "Of equal cardinality",
+        "Sorted",
+        "Indexed"
+      ],
+      "answer": "a",
+      "explanation": "Union-compatibility is required for set operations."
+    },
+    {
+      "id": 215,
+      "source": "Additional A17",
+      "topic": "Relational Algebra",
+      "question": "R has 3 attributes and S has 4 attributes. What is the degree of R × S?",
+      "options": [
+        "1",
+        "12",
+        "3",
+        "7",
+        "4"
+      ],
+      "answer": "d",
+      "explanation": "Degree adds (3 + 4 = 7); cardinality multiplies."
+    },
+    {
+      "id": 216,
+      "source": "Additional A18",
+      "topic": "Relational Algebra",
+      "question": "Which relational algebra operation is NOT commutative?",
+      "options": [
+        "Natural join",
+        "Cartesian product (ignoring column order)",
+        "Set difference",
+        "Intersection",
+        "Union"
+      ],
+      "answer": "c",
+      "explanation": "R − S ≠ S − R."
+    },
+    {
+      "id": 217,
+      "source": "Additional A19",
+      "topic": "Relational Algebra",
+      "question": "The rename operator in relational algebra is:",
+      "options": [
+        "σ",
+        "÷",
+        "π",
+        "ρ",
+        "⋈"
+      ],
+      "answer": "d",
+      "explanation": "ρ (rho) renames relations/attributes."
+    },
+    {
+      "id": 218,
+      "source": "Additional A20",
+      "topic": "Relational Calculus",
+      "question": "According to Codd's theorem, relational algebra and safe relational calculus are:",
+      "options": [
+        "Equivalent in expressive power",
+        "Calculus is more powerful",
+        "Unrelated",
+        "Algebra is more powerful",
+        "Both procedural"
+      ],
+      "answer": "a",
+      "explanation": "RA, safe TRC and safe DRC have the same expressive power."
+    },
+    {
+      "id": 219,
+      "source": "Additional A21",
+      "topic": "Relational Calculus",
+      "question": "Relational calculus is a ______ query language.",
+      "options": [
+        "Non-procedural (declarative)",
+        "Procedural",
+        "Low-level",
+        "Machine",
+        "Object-oriented"
+      ],
+      "answer": "a",
+      "explanation": "Calculus = what to get. Algebra = how to get it (procedural)."
+    },
+    {
+      "id": 220,
+      "source": "Additional A22",
+      "topic": "Relational Calculus",
+      "question": "Domain Relational Calculus uses variables that range over:",
+      "options": [
+        "Indexes",
+        "Relations",
+        "Whole tuples",
+        "Transactions",
+        "Attribute values (domains)"
+      ],
+      "answer": "e",
+      "explanation": "DRC uses domain variables; TRC uses tuple variables."
+    },
+    {
+      "id": 221,
+      "source": "Additional A23",
+      "topic": "Indexing",
+      "question": "An index with an entry for every search-key value is a:",
+      "options": [
+        "Bitmap index",
+        "Sparse index",
+        "Hash index",
+        "Clustered view",
+        "Dense index"
+      ],
+      "answer": "e",
+      "explanation": "Dense = every value; sparse = some values (needs sorted data)."
+    },
+    {
+      "id": 222,
+      "source": "Additional A24",
+      "topic": "Indexing",
+      "question": "A sparse index can be used only when the data file is:",
+      "options": [
+        "Sorted on the search key",
+        "Hashed",
+        "Unsorted",
+        "Encrypted",
+        "Partitioned"
+      ],
+      "answer": "a",
+      "explanation": "Sparse indexes rely on the file being sorted."
+    },
+    {
+      "id": 223,
+      "source": "Additional A25",
+      "topic": "Indexing",
+      "question": "How many non-clustered indexes can a table have?",
+      "options": [
+        "Exactly two",
+        "One per column only if it's a key",
+        "Only one",
+        "Many",
+        "None"
+      ],
+      "answer": "d",
+      "explanation": "Many non-clustered; only one clustered."
+    },
+    {
+      "id": 224,
+      "source": "Additional A26",
+      "topic": "Indexing",
+      "question": "Extendible hashing is an example of:",
+      "options": [
+        "B+ tree indexing",
+        "Bitmap indexing",
+        "Clustering",
+        "Dynamic hashing",
+        "Static hashing"
+      ],
+      "answer": "d",
+      "explanation": "Dynamic hashing lets the number of buckets grow."
+    },
+    {
+      "id": 225,
+      "source": "Additional A27",
+      "topic": "Indexing",
+      "question": "The search time in a B+ tree with n keys is:",
+      "options": [
+        "O(n²)",
+        "O(n log n)",
+        "O(log n)",
+        "O(1)",
+        "O(n)"
+      ],
+      "answer": "c",
+      "explanation": "Balanced tree = O(log n)."
+    },
+    {
+      "id": 226,
+      "source": "Additional A28",
+      "topic": "Concurrency",
+      "question": "A transaction re-runs a query and finds new rows inserted by another transaction. This is a:",
+      "options": [
+        "Lost update",
+        "Phantom read",
+        "Dirty read",
+        "Cascading rollback",
+        "Deadlock"
+      ],
+      "answer": "b",
+      "explanation": "Phantom read: new rows appear."
+    },
+    {
+      "id": 227,
+      "source": "Additional A29",
+      "topic": "Concurrency",
+      "question": "A transaction reads the same item twice and gets different values because another transaction updated it in between. This is a(n):",
+      "options": [
+        "Unrepeatable read",
+        "Dirty read",
+        "Deadlock",
+        "Lost update",
+        "Phantom read"
+      ],
+      "answer": "a",
+      "explanation": "Unrepeatable read."
+    },
+    {
+      "id": 228,
+      "source": "Additional A30",
+      "topic": "Concurrency",
+      "question": "Which intention lock signals that a transaction plans to take exclusive locks at a lower level?",
+      "options": [
+        "IX",
+        "X",
+        "S",
+        "SIX",
+        "IS"
+      ],
+      "answer": "a",
+      "explanation": "IX = intention exclusive. IS = intention shared."
+    },
+    {
+      "id": 229,
+      "source": "Additional A31",
+      "topic": "Concurrency",
+      "question": "Which relationship between schedule classes is correct?",
+      "options": [
+        "Strict ⊂ Cascadeless ⊂ Recoverable",
+        "Recoverable ⊂ Cascadeless ⊂ Strict",
+        "Recoverable ⊂ Strict ⊂ Cascadeless",
+        "Cascadeless ⊂ Strict ⊂ Recoverable",
+        "All three are identical"
+      ],
+      "answer": "a",
+      "explanation": "Every strict schedule is cascadeless, and every cascadeless schedule is recoverable."
+    },
+    {
+      "id": 230,
+      "source": "Additional A32",
+      "topic": "Concurrency",
+      "question": "Which statement is correct?",
+      "options": [
+        "Conflict and view serializability are identical",
+        "Serializability has nothing to do with conflicts",
+        "Every conflict-serializable schedule is view serializable",
+        "Only serial schedules are serializable",
+        "Every view-serializable schedule is conflict serializable"
+      ],
+      "answer": "c",
+      "explanation": "Conflict serializable ⊂ view serializable."
+    },
+    {
+      "id": 231,
+      "source": "Additional A33",
+      "topic": "Concurrency",
+      "question": "The three phases of optimistic concurrency control are:",
+      "options": [
+        "Read, Lock, Write",
+        "Read, Validation, Write",
+        "Growing, Shrinking, Commit",
+        "Begin, Validate, Abort",
+        "Lock, Execute, Unlock"
+      ],
+      "answer": "b",
+      "explanation": "Optimistic CC: work on local copies, validate, then write."
+    },
+    {
+      "id": 232,
+      "source": "Additional A34",
+      "topic": "Concurrency",
+      "question": "In 2PL, upgrading a lock from S to X is allowed only during the:",
+      "options": [
+        "Shrinking phase",
+        "Any phase",
+        "Commit phase",
+        "Validation phase",
+        "Growing phase"
+      ],
+      "answer": "e",
+      "explanation": "Acquiring/upgrading = growing; releasing/downgrading = shrinking."
+    },
+    {
+      "id": 233,
+      "source": "Additional A35",
+      "topic": "Concurrency",
+      "question": "Which isolation level is SQL Server's default?",
+      "options": [
+        "Read Uncommitted",
+        "Serializable",
+        "Read Committed",
+        "Snapshot",
+        "Repeatable Read"
+      ],
+      "answer": "c",
+      "explanation": "SQL Server defaults to Read Committed."
+    },
+    {
+      "id": 234,
+      "source": "Additional A36",
+      "topic": "Transactions",
+      "question": "Under standard DBMS transaction theory, which command can generally be rolled back before COMMIT?",
+      "options": [
+        "DELETE",
+        "CREATE",
+        "DROP",
+        "ALTER",
+        "COMMIT"
+      ],
+      "answer": "a",
+      "explanation": "DML (DELETE) can be rolled back; DDL is usually auto-committed (PYQ 2023)."
+    },
+    {
+      "id": 235,
+      "source": "Additional A37",
+      "topic": "NoSQL",
+      "question": "Which of the following is a NoSQL database?",
+      "options": [
+        "Informix",
+        "MySQL",
+        "DB2",
+        "Cassandra",
+        "MariaDB"
+      ],
+      "answer": "d",
+      "explanation": "Cassandra (column-family). The rest are relational (PYQ 2022)."
+    },
+    {
+      "id": 236,
+      "source": "Additional A38",
+      "topic": "NoSQL",
+      "question": "In MongoDB, which feature ensures data availability in case of hardware failure?",
+      "options": [
+        "Indexing",
+        "Replication",
+        "Sharding",
+        "Caching",
+        "Aggregation"
+      ],
+      "answer": "b",
+      "explanation": "Replication = availability (PYQ 2023). Sharding = scaling."
+    },
+    {
+      "id": 237,
+      "source": "Additional A39",
+      "topic": "NoSQL",
+      "question": "Redis is best described as a(n):",
+      "options": [
+        "Graph database",
+        "Column-family store",
+        "In-memory key-value store",
+        "Document store",
+        "Relational database"
+      ],
+      "answer": "c",
+      "explanation": "Redis is an in-memory key-value store, often used for caching."
+    },
+    {
+      "id": 238,
+      "source": "Additional A40",
+      "topic": "NoSQL",
+      "question": "According to the CAP theorem, a distributed system can guarantee at most:",
+      "options": [
+        "Only one",
+        "Atomicity and isolation",
+        "Consistency and durability",
+        "All three",
+        "Two of Consistency, Availability and Partition tolerance"
+      ],
+      "answer": "e",
+      "explanation": "Only 2 of the 3."
+    },
+    {
+      "id": 239,
+      "source": "Additional A41",
+      "topic": "NoSQL",
+      "question": "NoSQL systems typically follow which model instead of ACID?",
+      "options": [
+        "CRUD",
+        "REST",
+        "DRY",
+        "SOLID",
+        "BASE"
+      ],
+      "answer": "e",
+      "explanation": "BASE: Basically Available, Soft state, Eventually consistent."
+    },
+    {
+      "id": 240,
+      "source": "Additional A42",
+      "topic": "NoSQL",
+      "question": "In MongoDB terminology, a 'collection' corresponds to an RDBMS:",
+      "options": [
+        "Row",
+        "Index",
+        "Column",
+        "Schema",
+        "Table"
+      ],
+      "answer": "e",
+      "explanation": "Collection = table, document = row, field = column."
+    },
+    {
+      "id": 241,
+      "source": "Additional A43",
+      "topic": "NoSQL",
+      "question": "NoSQL databases typically scale:",
+      "options": [
+        "Not at all",
+        "Only with joins",
+        "Vertically only (bigger server)",
+        "Horizontally (adding servers)",
+        "Only through normalization"
+      ],
+      "answer": "d",
+      "explanation": "NoSQL scales horizontally; RDBMS traditionally scales vertically."
+    },
+    {
+      "id": 242,
+      "source": "Additional A44",
+      "topic": "Recovery",
+      "question": "Log records needed to undo a transaction must be written before the data changes. This rule is called:",
+      "options": [
+        "Thomas Write Rule",
+        "Checkpointing",
+        "Two-phase commit",
+        "Shadow paging",
+        "Write-Ahead Logging"
+      ],
+      "answer": "e",
+      "explanation": "WAL."
+    }
+  ]
+}

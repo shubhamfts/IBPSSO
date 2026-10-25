@@ -1,0 +1,3157 @@
+{
+  "title": "IBPS SO IT Mains – Day 2: Computer Networks",
+  "total": 210,
+  "answer_format": "answer is the option letter a–e mapping to options[0]–options[4]",
+  "questions": [
+    {
+      "id": 1,
+      "source": "Batch 1 Q1",
+      "topic": "OSI & Devices",
+      "question": "Which PDU corresponds to the Transport layer of the OSI model?",
+      "options": [
+        "Frame",
+        "Packet",
+        "Segment",
+        "Bit",
+        "Message"
+      ],
+      "answer": "c",
+      "explanation": "Transport layer PDU is a Segment (TCP). Sequence: Bit (L1), Frame (L2), Packet (L3), Segment (L4)."
+    },
+    {
+      "id": 2,
+      "source": "Batch 1 Q2",
+      "topic": "OSI & Devices",
+      "question": "At which OSI layer does a repeater operate?",
+      "options": [
+        "Physical layer",
+        "Data Link layer",
+        "Network layer",
+        "Transport layer",
+        "Session layer"
+      ],
+      "answer": "a",
+      "explanation": "A repeater only regenerates the signal, so it works at the Physical layer (L1)."
+    },
+    {
+      "id": 3,
+      "source": "Batch 1 Q3",
+      "topic": "OSI & Devices",
+      "question": "Which device separates broadcast domains?",
+      "options": [
+        "Hub",
+        "Repeater",
+        "Switch",
+        "Router",
+        "Bridge"
+      ],
+      "answer": "d",
+      "explanation": "Routers stop broadcasts. A switch separates only collision domains; a hub separates nothing."
+    },
+    {
+      "id": 4,
+      "source": "Batch 1 Q4",
+      "topic": "Physical Layer",
+      "question": "According to IEEE 802.3, what is the maximum length of a single 100Base-TX segment?",
+      "options": [
+        "185 m",
+        "100 m",
+        "500 m",
+        "2 km",
+        "1000 m"
+      ],
+      "answer": "b",
+      "explanation": "All twisted-pair (-T / -TX) Ethernet standards have a 100 m limit."
+    },
+    {
+      "id": 5,
+      "source": "Batch 1 Q5",
+      "topic": "Data Link",
+      "question": "HDLC is an example of a:",
+      "options": [
+        "Character-oriented protocol",
+        "Byte-oriented protocol",
+        "Connectionless transport protocol",
+        "Routing protocol",
+        "Bit-oriented protocol"
+      ],
+      "answer": "e",
+      "explanation": "HDLC is bit-oriented: flag 01111110 with bit stuffing. PPP is byte-oriented."
+    },
+    {
+      "id": 6,
+      "source": "Batch 1 Q6",
+      "topic": "Data Link",
+      "question": "Which type of VLAN port carries traffic for multiple VLANs over a single link?",
+      "options": [
+        "Access port",
+        "Native port",
+        "Trunk port",
+        "Voice port",
+        "Management port"
+      ],
+      "answer": "c",
+      "explanation": "A trunk port carries many VLANs (802.1Q tags). An access port carries one VLAN."
+    },
+    {
+      "id": 7,
+      "source": "Batch 1 Q7",
+      "topic": "Physical Layer",
+      "question": "A walkie-talkie is an example of which transmission mode?",
+      "options": [
+        "Simplex",
+        "Half duplex",
+        "Full duplex",
+        "Synchronous",
+        "Multiplex"
+      ],
+      "answer": "b",
+      "explanation": "Half duplex: both directions, but one at a time."
+    },
+    {
+      "id": 8,
+      "source": "Batch 1 Q8",
+      "topic": "Data Link",
+      "question": "CSMA/CA is mainly used in:",
+      "options": [
+        "Wireless LANs (IEEE 802.11)",
+        "Wired Ethernet (IEEE 802.3)",
+        "Token Ring networks",
+        "Fiber optic backbones",
+        "Telephone networks"
+      ],
+      "answer": "a",
+      "explanation": "CSMA/CA (Avoidance) is used over the Air (Wi-Fi). CSMA/CD (Detection) is used on Cable (Ethernet)."
+    },
+    {
+      "id": 9,
+      "source": "Batch 1 Q9",
+      "topic": "Data Link",
+      "question": "Which error detection method does Ethernet use?",
+      "options": [
+        "Simple parity",
+        "Checksum",
+        "Hamming code",
+        "CRC",
+        "Two-dimensional parity"
+      ],
+      "answer": "d",
+      "explanation": "Ethernet's FCS field uses CRC-32. Checksums are used by IP, TCP and UDP."
+    },
+    {
+      "id": 10,
+      "source": "Batch 1 Q10",
+      "topic": "Data Link",
+      "question": "Which switch feature copies traffic from one port to another so that it can be inspected by a packet analyzer?",
+      "options": [
+        "STP",
+        "VLAN",
+        "Link aggregation",
+        "QoS",
+        "Port mirroring"
+      ],
+      "answer": "e",
+      "explanation": "Port mirroring (SPAN) copies a port's traffic to a monitoring port."
+    },
+    {
+      "id": 11,
+      "source": "Batch 2 Q11",
+      "topic": "OSI & Devices",
+      "question": "Which device gives each port its own collision domain but keeps all ports in a single broadcast domain?",
+      "options": [
+        "Hub",
+        "Switch",
+        "Router",
+        "Repeater",
+        "Modem"
+      ],
+      "answer": "b",
+      "explanation": "A switch separates collision domains per port, but all ports remain in one broadcast domain."
+    },
+    {
+      "id": 12,
+      "source": "Batch 2 Q12",
+      "topic": "Physical Layer",
+      "question": "What is the maximum segment length for twisted-pair Ethernet standards such as 10Base-T and 1000Base-T?",
+      "options": [
+        "185 m",
+        "500 m",
+        "2 km",
+        "100 m",
+        "50 m"
+      ],
+      "answer": "d",
+      "explanation": "Twisted-pair Ethernet is limited to 100 m. 185 m is 10Base2 (thin coax), 500 m is 10Base5 (thick coax)."
+    },
+    {
+      "id": 13,
+      "source": "Batch 2 Q13",
+      "topic": "Data Link",
+      "question": "Which of the following is a byte-oriented protocol?",
+      "options": [
+        "HDLC",
+        "SDLC",
+        "PPP",
+        "Ethernet",
+        "CSMA/CD"
+      ],
+      "answer": "c",
+      "explanation": "PPP is byte-oriented and uses byte stuffing. HDLC and SDLC are bit-oriented."
+    },
+    {
+      "id": 14,
+      "source": "Batch 2 Q14",
+      "topic": "Data Link",
+      "question": "Which IEEE standard is used to tag frames when multiple VLANs travel over a trunk link?",
+      "options": [
+        "802.1Q",
+        "802.11",
+        "802.3af",
+        "802.1D",
+        "802.15"
+      ],
+      "answer": "a",
+      "explanation": "802.1Q adds a 4-byte VLAN tag. 802.1D is STP, 802.11 Wi-Fi, 802.15 Bluetooth."
+    },
+    {
+      "id": 15,
+      "source": "Batch 2 Q15",
+      "topic": "Data Link",
+      "question": "Wired Ethernet networks use which media access method?",
+      "options": [
+        "CSMA/CA",
+        "Token passing",
+        "Pure ALOHA",
+        "Polling",
+        "CSMA/CD"
+      ],
+      "answer": "e",
+      "explanation": "Wired Ethernet uses CSMA/CD (Collision Detection)."
+    },
+    {
+      "id": 16,
+      "source": "Batch 2 Q16",
+      "topic": "Data Link",
+      "question": "The Frame Check Sequence (FCS) field in an Ethernet frame uses:",
+      "options": [
+        "A parity bit",
+        "CRC-32",
+        "Hamming code",
+        "A TCP checksum",
+        "An MD5 hash"
+      ],
+      "answer": "b",
+      "explanation": "The FCS is a CRC-32 value. A TCP checksum belongs to the Transport layer, not the Ethernet frame."
+    },
+    {
+      "id": 17,
+      "source": "Batch 2 Q17",
+      "topic": "Data Link",
+      "question": "A network administrator wants an IDS to see all the traffic passing through a specific switch port. Which feature should they configure?",
+      "options": [
+        "STP",
+        "VLAN trunking",
+        "Link aggregation",
+        "Port mirroring (SPAN)",
+        "QoS"
+      ],
+      "answer": "d",
+      "explanation": "Port mirroring (SPAN) copies the port's traffic to the IDS / analyzer port."
+    },
+    {
+      "id": 18,
+      "source": "Batch 2 Q18",
+      "topic": "Physical Layer",
+      "question": "How many links are needed to fully connect 6 devices in a mesh topology?",
+      "options": [
+        "6",
+        "12",
+        "15",
+        "30",
+        "36"
+      ],
+      "answer": "c",
+      "explanation": "n(n-1)/2 = 6 x 5 / 2 = 15."
+    },
+    {
+      "id": 19,
+      "source": "Batch 2 Q19",
+      "topic": "Data Link",
+      "question": "What is the size of a MAC address?",
+      "options": [
+        "48 bits",
+        "32 bits",
+        "64 bits",
+        "128 bits",
+        "24 bits"
+      ],
+      "answer": "a",
+      "explanation": "A MAC address is 48 bits (12 hex digits). The first 24 bits are the OUI."
+    },
+    {
+      "id": 20,
+      "source": "Batch 2 Q20",
+      "topic": "Data Link",
+      "question": "When an error occurs in Go-Back-N ARQ, which frames are retransmitted?",
+      "options": [
+        "Only the lost frame",
+        "Only the frames after the lost one",
+        "No frames",
+        "Only the acknowledgements",
+        "The lost frame and all frames sent after it"
+      ],
+      "answer": "e",
+      "explanation": "Go-Back-N's receiver accepts only in-order frames, so the sender resends the lost frame and everything after it."
+    },
+    {
+      "id": 21,
+      "source": "Batch 3 Q21",
+      "topic": "OSI & Devices",
+      "question": "Which OSI layer is responsible for routing?",
+      "options": [
+        "Data Link",
+        "Transport",
+        "Network",
+        "Session",
+        "Physical"
+      ],
+      "answer": "c",
+      "explanation": "Routing (choosing paths using IP addresses) is the Network layer's job."
+    },
+    {
+      "id": 22,
+      "source": "Batch 3 Q22",
+      "topic": "Data Link",
+      "question": "In HDLC bit stuffing, the sender:",
+      "options": [
+        "Inserts a 0 after five consecutive 1s",
+        "Inserts a 1 after five consecutive 0s",
+        "Removes every 0 that follows a 1",
+        "Inserts an escape byte before the flag",
+        "Adds a parity bit after every byte"
+      ],
+      "answer": "a",
+      "explanation": "After five 1s a 0 is inserted, so the flag 01111110 never appears inside data."
+    },
+    {
+      "id": 23,
+      "source": "Batch 3 Q23",
+      "topic": "Data Link",
+      "question": "Using a Hamming code, how many redundant bits are needed to protect 4 data bits?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5",
+        "1"
+      ],
+      "answer": "b",
+      "explanation": "Smallest r with 2^r >= m + r + 1: 2^3 = 8 >= 4 + 3 + 1 = 8, so r = 3."
+    },
+    {
+      "id": 24,
+      "source": "Batch 3 Q24",
+      "topic": "Data Link",
+      "question": "Which protocol prevents loops in a network of interconnected switches?",
+      "options": [
+        "ARP",
+        "VLAN",
+        "LACP",
+        "CSMA/CD",
+        "STP"
+      ],
+      "answer": "e",
+      "explanation": "Spanning Tree Protocol blocks redundant ports to keep the topology loop-free."
+    },
+    {
+      "id": 25,
+      "source": "Batch 3 Q25",
+      "topic": "Data Link",
+      "question": "In Selective Repeat ARQ, which frames are retransmitted after an error?",
+      "options": [
+        "All frames in the window",
+        "The lost frame and all frames sent after it",
+        "No frames",
+        "Only the lost or damaged frame",
+        "Only the frames sent before the lost one"
+      ],
+      "answer": "d",
+      "explanation": "Selective Repeat buffers out-of-order frames and resends only the lost one."
+    },
+    {
+      "id": 26,
+      "source": "Batch 3 Q26",
+      "topic": "Data Link",
+      "question": "What is the maximum efficiency of Slotted ALOHA?",
+      "options": [
+        "18.4%",
+        "36.8%",
+        "50%",
+        "100%",
+        "25%"
+      ],
+      "answer": "b",
+      "explanation": "Slotted ALOHA = 36.8%; Pure ALOHA = 18.4%."
+    },
+    {
+      "id": 27,
+      "source": "Batch 3 Q27",
+      "topic": "Data Link",
+      "question": "Which of the following is the Ethernet broadcast MAC address?",
+      "options": [
+        "00:00:00:00:00:00",
+        "127.0.0.1",
+        "FF:FF:FF:FF:FF:FF",
+        "255.255.255.255",
+        "01:00:5E:00:00:01"
+      ],
+      "answer": "c",
+      "explanation": "All 1s (FF:FF:FF:FF:FF:FF) is the MAC broadcast. 255.255.255.255 is an IP broadcast, not a MAC."
+    },
+    {
+      "id": 28,
+      "source": "Batch 3 Q28",
+      "topic": "Data Link",
+      "question": "Which technology combines several physical links between two switches into one logical link, to increase bandwidth and provide redundancy?",
+      "options": [
+        "Link aggregation (LACP)",
+        "Port mirroring",
+        "VLAN trunking",
+        "STP",
+        "QoS"
+      ],
+      "answer": "a",
+      "explanation": "Link aggregation (LACP, 802.3ad) bundles physical links into one logical link."
+    },
+    {
+      "id": 29,
+      "source": "Batch 3 Q29",
+      "topic": "Physical Layer",
+      "question": "Which connector is commonly used with coaxial cable?",
+      "options": [
+        "RJ45",
+        "RJ11",
+        "LC",
+        "USB",
+        "BNC"
+      ],
+      "answer": "e",
+      "explanation": "Coax uses BNC. RJ45 is twisted-pair Ethernet, RJ11 is telephone, LC is fiber."
+    },
+    {
+      "id": 30,
+      "source": "Batch 3 Q30",
+      "topic": "OSI & Devices",
+      "question": "Match each OSI layer with its function. Layers: 1. Network, 2. Transport, 3. Data Link, 4. Physical. Functions: (a) Access control, (b) Channel transmission, (c) Routing, (d) Segmentation and reassembly.",
+      "options": [
+        "1-d, 2-c, 3-b, 4-a",
+        "1-c, 2-a, 3-d, 4-b",
+        "1-a, 2-b, 3-c, 4-d",
+        "1-c, 2-d, 3-a, 4-b",
+        "1-b, 2-d, 3-a, 4-c"
+      ],
+      "answer": "d",
+      "explanation": "Network = Routing, Transport = Segmentation and reassembly, Data Link = Access control, Physical = Channel transmission."
+    },
+    {
+      "id": 31,
+      "source": "Batch 4 Q31",
+      "topic": "IP Addressing",
+      "question": "What is the total number of networks available in IPv4 Class C?",
+      "options": [
+        "2¹⁶",
+        "2²¹",
+        "2²⁴",
+        "2¹⁴",
+        "2⁷"
+      ],
+      "answer": "b",
+      "explanation": "Class C has 24 network bits; the first 3 are fixed (110), leaving 21 free bits: 2²¹."
+    },
+    {
+      "id": 32,
+      "source": "Batch 4 Q32",
+      "topic": "IP Addressing",
+      "question": "Which of the following is a private IP address?",
+      "options": [
+        "172.32.0.1",
+        "192.169.1.1",
+        "172.20.5.1",
+        "11.0.0.1",
+        "8.8.4.4"
+      ],
+      "answer": "c",
+      "explanation": "Private Class B is 172.16 to 172.31, so 172.20.5.1 is private. 172.32 and 192.169 are public."
+    },
+    {
+      "id": 33,
+      "source": "Batch 4 Q33",
+      "topic": "Subnetting",
+      "question": "A Class B network (/16) must be divided into at least 500 subnets. Which subnet mask should be used?",
+      "options": [
+        "255.255.255.0",
+        "255.255.254.0",
+        "255.255.240.0",
+        "255.255.255.192",
+        "255.255.255.128"
+      ],
+      "answer": "e",
+      "explanation": "2^9 = 512 >= 500, so borrow 9 bits: /25 = 255.255.255.128."
+    },
+    {
+      "id": 34,
+      "source": "Batch 4 Q34",
+      "topic": "Subnetting",
+      "question": "How many usable hosts are there in each subnet of 192.168.1.0/27?",
+      "options": [
+        "30",
+        "32",
+        "62",
+        "14",
+        "126"
+      ],
+      "answer": "a",
+      "explanation": "Host bits = 32 - 27 = 5, so 2^5 - 2 = 30."
+    },
+    {
+      "id": 35,
+      "source": "Batch 4 Q35",
+      "topic": "Subnetting",
+      "question": "What is the network address of 10.1.70.5/20?",
+      "options": [
+        "10.1.70.0",
+        "10.1.0.0",
+        "10.1.80.0",
+        "10.1.64.0",
+        "10.1.48.0"
+      ],
+      "answer": "d",
+      "explanation": "/20 gives block 16 in the 3rd octet. 70 lies in 64 to 79, so the network is 10.1.64.0."
+    },
+    {
+      "id": 36,
+      "source": "Batch 4 Q36",
+      "topic": "IPv4 Header",
+      "question": "When a router decrements a packet's TTL to 0, what does it do?",
+      "options": [
+        "Forwards the packet with TTL reset to 64",
+        "Fragments the packet",
+        "Discards the packet and sends an ICMP Time Exceeded message to the source",
+        "Returns the packet to the previous router",
+        "Increases the TTL and forwards the packet"
+      ],
+      "answer": "c",
+      "explanation": "TTL 0 means the packet is dropped and ICMP Time Exceeded is sent back. This prevents infinite loops."
+    },
+    {
+      "id": 37,
+      "source": "Batch 4 Q37",
+      "topic": "IPv4 Header",
+      "question": "A router receives an IP packet that is larger than the MTU of the outgoing link, and the DF bit is set. What does the router do?",
+      "options": [
+        "Fragments the packet and forwards it",
+        "Drops the packet and sends an ICMP 'Fragmentation Needed' message",
+        "Forwards the packet unchanged",
+        "Reassembles the packet",
+        "Compresses the packet"
+      ],
+      "answer": "b",
+      "explanation": "DF = Don't Fragment, so the router can't split it. It drops the packet and reports 'Fragmentation Needed'."
+    },
+    {
+      "id": 38,
+      "source": "Batch 4 Q38",
+      "topic": "IPv6",
+      "question": "Which of the following is an IPv6 link-local address?",
+      "options": [
+        "2001:db8::1",
+        "FF02::1",
+        "::1",
+        "FD00::5",
+        "FE80::202:B3FF:FE1E:8329"
+      ],
+      "answer": "e",
+      "explanation": "Link-local addresses start with FE80. FF = multicast, ::1 = loopback, 2001 = global, FD = unique local."
+    },
+    {
+      "id": 39,
+      "source": "Batch 4 Q39",
+      "topic": "IPv6",
+      "question": "Which of the following is NOT a type of IPv6 address?",
+      "options": [
+        "Broadcast",
+        "Unicast",
+        "Multicast",
+        "Anycast",
+        "Link-local unicast"
+      ],
+      "answer": "a",
+      "explanation": "IPv6 has no broadcast; multicast does that job."
+    },
+    {
+      "id": 40,
+      "source": "Batch 4 Q40",
+      "topic": "IPv4 Header",
+      "question": "A packet starts with a hop limit of 64 and passes through 5 routers before reaching its destination. What is its hop limit on arrival?",
+      "options": [
+        "64",
+        "69",
+        "60",
+        "59",
+        "5"
+      ],
+      "answer": "d",
+      "explanation": "Each router decrements by 1: 64 - 5 = 59."
+    },
+    {
+      "id": 41,
+      "source": "Batch 5 Q41",
+      "topic": "IP Addressing",
+      "question": "In IPv4 Class B, the first octet falls in which range?",
+      "options": [
+        "128–191",
+        "1–126",
+        "192–223",
+        "224–239",
+        "240–255"
+      ],
+      "answer": "a",
+      "explanation": "A: 1–126, B: 128–191, C: 192–223, D: 224–239, E: 240–255."
+    },
+    {
+      "id": 42,
+      "source": "Batch 5 Q42",
+      "topic": "Subnetting",
+      "question": "A /16 network is subnetted using a /22 mask. How many subnets are created?",
+      "options": [
+        "16",
+        "32",
+        "64",
+        "128",
+        "256"
+      ],
+      "answer": "c",
+      "explanation": "Bits borrowed = 22 - 16 = 6, so 2^6 = 64 subnets."
+    },
+    {
+      "id": 43,
+      "source": "Batch 5 Q43",
+      "topic": "Subnetting",
+      "question": "How many usable hosts does each subnet have with mask 255.255.255.240?",
+      "options": [
+        "16",
+        "14",
+        "30",
+        "6",
+        "62"
+      ],
+      "answer": "b",
+      "explanation": "Block size = 256 - 240 = 16, so usable hosts = 16 - 2 = 14."
+    },
+    {
+      "id": 44,
+      "source": "Batch 5 Q44",
+      "topic": "Subnetting",
+      "question": "What is the broadcast address of the subnet containing 192.168.5.77/28?",
+      "options": [
+        "192.168.5.64",
+        "192.168.5.80",
+        "192.168.5.63",
+        "192.168.5.79",
+        "192.168.5.255"
+      ],
+      "answer": "d",
+      "explanation": "/28 block = 16. 77 lies in 64 to 79, so the broadcast is .79."
+    },
+    {
+      "id": 45,
+      "source": "Batch 5 Q45",
+      "topic": "IP Addressing",
+      "question": "A Windows PC shows the IP address 169.254.10.5. What does this most likely mean?",
+      "options": [
+        "It has a static public IP",
+        "It is on a Class D multicast network",
+        "It is using the loopback interface",
+        "It has been assigned an IPv6 address",
+        "It failed to get an address from a DHCP server and assigned itself an APIPA address"
+      ],
+      "answer": "e",
+      "explanation": "169.254.x.x is APIPA, self-assigned when DHCP fails."
+    },
+    {
+      "id": 46,
+      "source": "Batch 5 Q46",
+      "topic": "IPv4 Header",
+      "question": "A 3000-byte IPv4 packet (20-byte header + 2980 bytes of data) must cross a link with an MTU of 1500 bytes. How many fragments are created?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "1",
+        "5"
+      ],
+      "answer": "b",
+      "explanation": "Max data per fragment = 1480. 2980 = 1480 + 1480 + 20, so 3 fragments."
+    },
+    {
+      "id": 47,
+      "source": "Batch 5 Q47",
+      "topic": "IPv4 Header",
+      "question": "In the IPv4 header, the Fragment Offset field is measured in units of:",
+      "options": [
+        "8 bytes",
+        "1 byte",
+        "4 bytes",
+        "16 bytes",
+        "1 bit"
+      ],
+      "answer": "a",
+      "explanation": "Fragment offset is in 8-byte units, which is why fragment data sizes must be multiples of 8."
+    },
+    {
+      "id": 48,
+      "source": "Batch 5 Q48",
+      "topic": "IPv4 Header",
+      "question": "What value in the IPv4 Protocol field indicates that the payload is TCP?",
+      "options": [
+        "1",
+        "17",
+        "6",
+        "4",
+        "41"
+      ],
+      "answer": "c",
+      "explanation": "1 = ICMP, 6 = TCP, 17 = UDP."
+    },
+    {
+      "id": 49,
+      "source": "Batch 5 Q49",
+      "topic": "IPv6",
+      "question": "Which is the correct shortened form of 2001:0db8:0000:0000:0000:ff00:0042:8329?",
+      "options": [
+        "2001:db8:0:0::ff00::42:8329",
+        "2001::db8::ff00:42:8329",
+        "2001:db8:::ff00:42:8329",
+        "21:db8::ff:42:8329",
+        "2001:db8::ff00:42:8329"
+      ],
+      "answer": "e",
+      "explanation": "Drop leading zeros in each group and replace one run of zero groups with :: (only once)."
+    },
+    {
+      "id": 50,
+      "source": "Batch 5 Q50",
+      "topic": "IPv6",
+      "question": "What is the size of the IPv6 base header?",
+      "options": [
+        "20 bytes, variable",
+        "60 bytes",
+        "32 bytes",
+        "40 bytes, fixed",
+        "128 bytes"
+      ],
+      "answer": "d",
+      "explanation": "IPv6 base header is a fixed 40 bytes. IPv4 header is 20 to 60 bytes."
+    },
+    {
+      "id": 51,
+      "source": "Batch 6 Q51",
+      "topic": "Network Protocols",
+      "question": "Which mechanism translates private internal IP addresses into public IP addresses, letting LAN devices communicate externally while concealing their internal addresses?",
+      "options": [
+        "VPN",
+        "Proxy server",
+        "Firewall",
+        "NAT",
+        "Router"
+      ],
+      "answer": "d",
+      "explanation": "NAT translates private to public addresses and hides internal addressing."
+    },
+    {
+      "id": 52,
+      "source": "Batch 6 Q52",
+      "topic": "Network Protocols",
+      "question": "What is the primary function of ARP in an IPv4 local network?",
+      "options": [
+        "To assign IP addresses dynamically",
+        "To resolve domain names into IP addresses",
+        "To find the MAC address that corresponds to an IP address",
+        "To encrypt network traffic",
+        "To route packets between networks"
+      ],
+      "answer": "c",
+      "explanation": "ARP resolves IP to MAC. DHCP assigns IPs; DNS resolves names."
+    },
+    {
+      "id": 53,
+      "source": "Batch 6 Q53",
+      "topic": "Network Protocols",
+      "question": "What is the correct order of messages in the DHCP process?",
+      "options": [
+        "Discover, Offer, Request, Acknowledge",
+        "Request, Offer, Discover, Acknowledge",
+        "Offer, Discover, Acknowledge, Request",
+        "Discover, Request, Offer, Acknowledge",
+        "Acknowledge, Discover, Offer, Request"
+      ],
+      "answer": "a",
+      "explanation": "DORA: Discover, Offer, Request, Acknowledge."
+    },
+    {
+      "id": 54,
+      "source": "Batch 6 Q54",
+      "topic": "Network Protocols",
+      "question": "The traceroute command discovers the path to a host by relying on:",
+      "options": [
+        "ARP replies from each router",
+        "DHCP offers from each router",
+        "DNS lookups of each router",
+        "TCP handshakes with each router",
+        "Increasing TTL values and ICMP Time Exceeded messages"
+      ],
+      "answer": "e",
+      "explanation": "Traceroute sends packets with TTL 1, 2, 3... and each router that drops one reveals itself via ICMP Time Exceeded."
+    },
+    {
+      "id": 55,
+      "source": "Batch 6 Q55",
+      "topic": "Transport",
+      "question": "What is the primary purpose of sequence numbers in TCP?",
+      "options": [
+        "To count the routers in a path",
+        "To ensure data is delivered in the correct order",
+        "To identify the receiver's port number",
+        "To detect congestion in the network",
+        "To encrypt data before transmission"
+      ],
+      "answer": "b",
+      "explanation": "Sequence numbers let TCP deliver data in order and detect lost or duplicate segments."
+    },
+    {
+      "id": 56,
+      "source": "Batch 6 Q56",
+      "topic": "Transport",
+      "question": "Which of the following normally uses UDP?",
+      "options": [
+        "HTTP",
+        "FTP",
+        "SMTP",
+        "DNS queries",
+        "SSH"
+      ],
+      "answer": "d",
+      "explanation": "DNS queries use UDP 53. HTTP, FTP, SMTP and SSH use TCP."
+    },
+    {
+      "id": 57,
+      "source": "Batch 6 Q57",
+      "topic": "Transport",
+      "question": "In the TCP 3-way handshake, which message does the server send in the second step?",
+      "options": [
+        "SYN",
+        "ACK",
+        "FIN",
+        "RST",
+        "SYN-ACK"
+      ],
+      "answer": "e",
+      "explanation": "Handshake: SYN, SYN-ACK, ACK."
+    },
+    {
+      "id": 58,
+      "source": "Batch 6 Q58",
+      "topic": "Delays",
+      "question": "A 1000-byte packet is sent on a 4 Mbps link. What is the transmission delay?",
+      "options": [
+        "0.25 ms",
+        "2 ms",
+        "250 ms",
+        "8 ms",
+        "0.5 ms"
+      ],
+      "answer": "b",
+      "explanation": "L = 8000 bits; 8000 / 4,000,000 = 0.002 s = 2 ms."
+    },
+    {
+      "id": 59,
+      "source": "Batch 6 Q59",
+      "topic": "Delays",
+      "question": "A 4000-bit packet travels through 3 intermediate routers using store-and-forward switching. Every link has a rate of 2 Mbps. Ignoring propagation, queuing and processing delays, what is the total delay?",
+      "options": [
+        "6 ms",
+        "2 ms",
+        "8 ms",
+        "12 ms",
+        "4 ms"
+      ],
+      "answer": "c",
+      "explanation": "Per link 4000 / 2,000,000 = 2 ms. Links = N + 1 = 4, so 8 ms."
+    },
+    {
+      "id": 60,
+      "source": "Batch 6 Q60",
+      "topic": "Transport",
+      "question": "Which TCP mechanism prevents a fast sender from overflowing the receiver's buffer?",
+      "options": [
+        "Flow control (sliding window)",
+        "Congestion control (slow start)",
+        "The 3-way handshake",
+        "Checksum",
+        "Sequence numbers"
+      ],
+      "answer": "a",
+      "explanation": "Flow control protects the receiver; congestion control protects the network."
+    },
+    {
+      "id": 61,
+      "source": "Batch 6 (original)",
+      "topic": "Network Protocols",
+      "question": "What is the maximum hop count allowed by RIP?",
+      "options": [
+        "16",
+        "15",
+        "255",
+        "30",
+        "Unlimited"
+      ],
+      "answer": "b",
+      "explanation": "RIP allows up to 15 hops; 16 means unreachable."
+    },
+    {
+      "id": 62,
+      "source": "Batch 6 (original)",
+      "topic": "Network Protocols",
+      "question": "Which routing protocol is used to exchange routes between autonomous systems on the internet?",
+      "options": [
+        "RIP",
+        "OSPF",
+        "EIGRP",
+        "ARP",
+        "BGP"
+      ],
+      "answer": "e",
+      "explanation": "BGP is the internet's routing protocol between autonomous systems (TCP 179)."
+    },
+    {
+      "id": 63,
+      "source": "Batch 7 Q61",
+      "topic": "Network Protocols",
+      "question": "The ping command uses which protocol?",
+      "options": [
+        "ARP",
+        "ICMP (Echo Request / Echo Reply)",
+        "DHCP",
+        "TCP",
+        "DNS"
+      ],
+      "answer": "b",
+      "explanation": "Ping sends ICMP Echo Request and waits for Echo Reply."
+    },
+    {
+      "id": 64,
+      "source": "Batch 7 Q62",
+      "topic": "Delays",
+      "question": "A link is 3000 km long and the signal speed is 2 × 10⁸ m/s. What is the propagation delay?",
+      "options": [
+        "1.5 ms",
+        "150 ms",
+        "6 ms",
+        "15 ms",
+        "0.15 ms"
+      ],
+      "answer": "d",
+      "explanation": "d / s = 3 × 10⁶ / 2 × 10⁸ = 0.015 s = 15 ms."
+    },
+    {
+      "id": 65,
+      "source": "Batch 7 Q63",
+      "topic": "Ports",
+      "question": "DHCP uses which transport protocol and ports?",
+      "options": [
+        "UDP, ports 67 (server) and 68 (client)",
+        "TCP, ports 67 and 68",
+        "UDP, port 53",
+        "TCP, port 80",
+        "UDP, port 161"
+      ],
+      "answer": "a",
+      "explanation": "DHCP: UDP 67 (server) and 68 (client)."
+    },
+    {
+      "id": 66,
+      "source": "Batch 7 Q64",
+      "topic": "Network Protocols",
+      "question": "Which type of NAT lets many private devices share a single public IP address by using port numbers to tell them apart?",
+      "options": [
+        "Static NAT",
+        "Dynamic NAT",
+        "Twice NAT",
+        "Policy NAT",
+        "PAT (NAT overload)"
+      ],
+      "answer": "e",
+      "explanation": "PAT (NAT overload) maps many private hosts to one public IP using ports. Home routers use this."
+    },
+    {
+      "id": 67,
+      "source": "Batch 7 Q65",
+      "topic": "Transport",
+      "question": "What is the size of the UDP header?",
+      "options": [
+        "20 bytes",
+        "4 bytes",
+        "8 bytes",
+        "40 bytes",
+        "60 bytes"
+      ],
+      "answer": "c",
+      "explanation": "UDP header = 8 bytes. TCP header = 20 to 60 bytes."
+    },
+    {
+      "id": 68,
+      "source": "Batch 7 Q66",
+      "topic": "Delays",
+      "question": "If the bandwidth of a link is doubled, which delay changes?",
+      "options": [
+        "Propagation delay is halved",
+        "Transmission delay is halved",
+        "Both delays are halved",
+        "Neither delay changes",
+        "Propagation delay is doubled"
+      ],
+      "answer": "b",
+      "explanation": "Transmission = L/R depends on bandwidth. Propagation = d/s does not."
+    },
+    {
+      "id": 69,
+      "source": "Batch 7 Q67",
+      "topic": "Delays",
+      "question": "A 2000-byte packet is sent on an 8 Mbps link with a propagation delay of 5 ms. What is the total delay over this single link?",
+      "options": [
+        "2 ms",
+        "5 ms",
+        "3 ms",
+        "10 ms",
+        "7 ms"
+      ],
+      "answer": "e",
+      "explanation": "Transmission = 16000 / 8,000,000 = 2 ms. Total = 2 + 5 = 7 ms."
+    },
+    {
+      "id": 70,
+      "source": "Batch 7 Q68",
+      "topic": "Network Protocols",
+      "question": "Which protocol resolves a MAC address to an IP address?",
+      "options": [
+        "RARP",
+        "ARP",
+        "DNS",
+        "ICMP",
+        "NAT"
+      ],
+      "answer": "a",
+      "explanation": "RARP = Reverse ARP (MAC to IP). ARP does IP to MAC."
+    },
+    {
+      "id": 71,
+      "source": "Batch 7 Q69",
+      "topic": "Transport",
+      "question": "Which of the following statements is incorrect?",
+      "options": [
+        "TCP is connection-oriented",
+        "UDP is connectionless",
+        "TCP uses acknowledgements",
+        "UDP guarantees delivery of every datagram",
+        "UDP has less overhead than TCP"
+      ],
+      "answer": "d",
+      "explanation": "UDP is unreliable; it does not guarantee delivery."
+    },
+    {
+      "id": 72,
+      "source": "Batch 7 Q70",
+      "topic": "Transport",
+      "question": "TCP congestion control is mainly designed to protect:",
+      "options": [
+        "The receiver's buffer",
+        "The sender's CPU",
+        "The network from overload",
+        "The application layer",
+        "The DNS server"
+      ],
+      "answer": "c",
+      "explanation": "Congestion control protects the network. Flow control protects the receiver."
+    },
+    {
+      "id": 73,
+      "source": "Batch 8 Q71",
+      "topic": "Application Layer",
+      "question": "In what order does a DNS resolver contact servers to translate a domain name into an IP address?",
+      "options": [
+        "TLD server → Root server → Authoritative server",
+        "Authoritative server → TLD server → Root server",
+        "Root server → TLD server → Authoritative server",
+        "TLD server → Authoritative server → Root server",
+        "Root server → Authoritative server → TLD server"
+      ],
+      "answer": "c",
+      "explanation": "Root, then TLD (.com), then the authoritative server, which returns the IP."
+    },
+    {
+      "id": 74,
+      "source": "Batch 8 Q72",
+      "topic": "Application Layer",
+      "question": "Which HTTP status code means Internal Server Error?",
+      "options": [
+        "200",
+        "301",
+        "404",
+        "500",
+        "403"
+      ],
+      "answer": "d",
+      "explanation": "500 = Internal Server Error. 5xx = server errors."
+    },
+    {
+      "id": 75,
+      "source": "Batch 8 Q73",
+      "topic": "Application Layer",
+      "question": "How do SMTP and POP3 differ?",
+      "options": [
+        "SMTP retrieves emails, while POP3 sends them",
+        "SMTP secures messages, while POP3 stores them permanently",
+        "SMTP manages file transfers, while POP3 manages attachments",
+        "Both protocols perform the same function",
+        "SMTP sends emails, while POP3 downloads them"
+      ],
+      "answer": "e",
+      "explanation": "SMTP sends/pushes mail; POP3 downloads mail to a device."
+    },
+    {
+      "id": 76,
+      "source": "Batch 8 Q74",
+      "topic": "Ports",
+      "question": "What is the default port used by RDP?",
+      "options": [
+        "3389",
+        "3390",
+        "1433",
+        "3306",
+        "22"
+      ],
+      "answer": "a",
+      "explanation": "RDP = 3389. 1433 = SQL Server, 3306 = MySQL, 22 = SSH."
+    },
+    {
+      "id": 77,
+      "source": "Batch 8 Q75",
+      "topic": "Application Layer",
+      "question": "Which statement correctly describes a feature of IMAP?",
+      "options": [
+        "Emails are automatically deleted from the server after download",
+        "Users can manage server-side mailbox properties such as read status and folders",
+        "Emails can be transferred only within a local network",
+        "Emails can be accessed only offline",
+        "It works without user authentication"
+      ],
+      "answer": "b",
+      "explanation": "IMAP keeps mail on the server and syncs folders and read status across devices."
+    },
+    {
+      "id": 78,
+      "source": "Batch 8 Q76",
+      "topic": "Application Layer",
+      "question": "Which DNS record identifies the mail server for a domain?",
+      "options": [
+        "A",
+        "AAAA",
+        "CNAME",
+        "MX",
+        "PTR"
+      ],
+      "answer": "d",
+      "explanation": "MX = Mail Exchanger. A = IPv4, AAAA = IPv6, CNAME = alias, PTR = reverse lookup."
+    },
+    {
+      "id": 79,
+      "source": "Batch 8 Q77",
+      "topic": "Application Layer",
+      "question": "Which transport layer protocol does SMTP use?",
+      "options": [
+        "TCP",
+        "UDP",
+        "ICMP",
+        "ARP",
+        "SCTP"
+      ],
+      "answer": "a",
+      "explanation": "SMTP runs over TCP (port 25)."
+    },
+    {
+      "id": 80,
+      "source": "Batch 8 Q78",
+      "topic": "Ports",
+      "question": "Which port does FTP use for its control connection?",
+      "options": [
+        "20",
+        "22",
+        "21",
+        "23",
+        "25"
+      ],
+      "answer": "c",
+      "explanation": "FTP: 21 = control, 20 = data."
+    },
+    {
+      "id": 81,
+      "source": "Batch 8 Q79",
+      "topic": "Application Layer",
+      "question": "What does the HTTP status code 404 mean?",
+      "options": [
+        "Unauthorized",
+        "Forbidden",
+        "Bad Gateway",
+        "Moved Permanently",
+        "Not Found"
+      ],
+      "answer": "e",
+      "explanation": "404 = Not Found. 401 = Unauthorized, 403 = Forbidden, 502 = Bad Gateway, 301 = Moved Permanently."
+    },
+    {
+      "id": 82,
+      "source": "Batch 8 Q80",
+      "topic": "Application Layer",
+      "question": "In email handling, what is the role of a user agent?",
+      "options": [
+        "It transfers emails between mail servers",
+        "It provides the interface for users to compose, send and read emails",
+        "It permanently stores emails on the server",
+        "It filters spam before delivery",
+        "It encrypts messages"
+      ],
+      "answer": "b",
+      "explanation": "The user agent is the email app (Outlook, Gmail app). Mail servers (MTAs) transfer mail between servers."
+    },
+    {
+      "id": 83,
+      "source": "Batch 9 Q81",
+      "topic": "Ports",
+      "question": "What is the default port number for Remote Desktop Protocol (RDP)?",
+      "options": [
+        "3390",
+        "3388",
+        "3389",
+        "1433",
+        "23"
+      ],
+      "answer": "c",
+      "explanation": "RDP = 3389."
+    },
+    {
+      "id": 84,
+      "source": "Batch 9 Q82",
+      "topic": "Ports",
+      "question": "Which protocol uses port 22?",
+      "options": [
+        "SSH",
+        "Telnet",
+        "FTP",
+        "SMTP",
+        "DNS"
+      ],
+      "answer": "a",
+      "explanation": "22 = SSH (secure, lower number); 23 = Telnet."
+    },
+    {
+      "id": 85,
+      "source": "Batch 9 Q83",
+      "topic": "Application Layer",
+      "question": "You can't connect to a website, even though your internet connection is working. What is the most likely reason?",
+      "options": [
+        "The browser cache hasn't been cleared",
+        "The DNS server is down or misconfigured",
+        "The website's IP address changed recently",
+        "The operating system is outdated",
+        "The monitor's resolution is too low"
+      ],
+      "answer": "b",
+      "explanation": "If the connection works but names don't resolve, DNS is the most likely problem."
+    },
+    {
+      "id": 86,
+      "source": "Batch 9 Q84",
+      "topic": "Application Layer",
+      "question": "By default, what happens to emails on the server when they are retrieved using POP3?",
+      "options": [
+        "They are synchronised across all devices",
+        "They are moved into server-side folders",
+        "They are forwarded to another server",
+        "They are encrypted on the server",
+        "They are downloaded to the device and deleted from the server"
+      ],
+      "answer": "e",
+      "explanation": "POP3 downloads and (by default) deletes from the server. IMAP keeps mail on the server."
+    },
+    {
+      "id": 87,
+      "source": "Batch 9 Q85",
+      "topic": "Application Layer",
+      "question": "Which of the following protocols is NOT part of the HTTP/HTTPS web communication protocol family?",
+      "options": [
+        "HTTPS",
+        "HTTP",
+        "WebDAV",
+        "FTP",
+        "None of the above"
+      ],
+      "answer": "d",
+      "explanation": "FTP is a separate file transfer protocol. WebDAV is an extension of HTTP."
+    },
+    {
+      "id": 88,
+      "source": "Batch 9 Q86",
+      "topic": "Network Services",
+      "question": "Which practice is used to hide the IP addresses of backend servers from clients?",
+      "options": [
+        "Using a reverse proxy",
+        "Using a forward proxy",
+        "Using DHCP",
+        "Using ARP",
+        "Using Telnet"
+      ],
+      "answer": "a",
+      "explanation": "A reverse proxy sits in front of servers and hides their IPs. A forward proxy acts for clients."
+    },
+    {
+      "id": 89,
+      "source": "Batch 9 Q87",
+      "topic": "Application Layer",
+      "question": "A logged-in user tries to open an admin page they don't have permission to view. Which HTTP status code is returned?",
+      "options": [
+        "401",
+        "404",
+        "403",
+        "500",
+        "301"
+      ],
+      "answer": "c",
+      "explanation": "403 Forbidden: identity is known but access is not allowed. 401 means not authenticated."
+    },
+    {
+      "id": 90,
+      "source": "Batch 9 Q88",
+      "topic": "Application Layer",
+      "question": "SNMP is primarily used for:",
+      "options": [
+        "Sending email",
+        "Managing and monitoring network devices",
+        "Transferring files",
+        "Resolving domain names",
+        "Encrypting web traffic"
+      ],
+      "answer": "b",
+      "explanation": "SNMP = Simple Network Management Protocol (UDP 161/162)."
+    },
+    {
+      "id": 91,
+      "source": "Batch 9 Q89",
+      "topic": "Network Services",
+      "question": "How does a CDN improve website performance?",
+      "options": [
+        "By encrypting all traffic",
+        "By assigning IP addresses to users",
+        "By compressing the database",
+        "By blocking malicious users",
+        "By serving content from edge servers close to the user"
+      ],
+      "answer": "e",
+      "explanation": "CDNs cache content on edge servers near users, reducing latency."
+    },
+    {
+      "id": 92,
+      "source": "Batch 9 Q90",
+      "topic": "Application Layer",
+      "question": "Why is Telnet considered insecure compared with SSH?",
+      "options": [
+        "It uses UDP",
+        "It uses port 22",
+        "It requires a GUI",
+        "It sends data, including passwords, in plaintext",
+        "It works only on Windows"
+      ],
+      "answer": "d",
+      "explanation": "Telnet (TCP 23) sends everything in plaintext. SSH encrypts."
+    },
+    {
+      "id": 93,
+      "source": "Port Drill D1",
+      "topic": "Ports",
+      "question": "Port 23 is used by:",
+      "options": [
+        "SSH",
+        "Telnet",
+        "SMTP",
+        "FTP",
+        "DNS"
+      ],
+      "answer": "b",
+      "explanation": "23 = Telnet; 22 = SSH."
+    },
+    {
+      "id": 94,
+      "source": "Port Drill D2",
+      "topic": "Ports",
+      "question": "HTTPS uses port:",
+      "options": [
+        "80",
+        "8080",
+        "22",
+        "443",
+        "53"
+      ],
+      "answer": "d",
+      "explanation": "HTTPS = 443; HTTP = 80."
+    },
+    {
+      "id": 95,
+      "source": "Port Drill D3",
+      "topic": "Ports",
+      "question": "Port 110 is used by:",
+      "options": [
+        "POP3",
+        "IMAP",
+        "SMTP",
+        "SNMP",
+        "NTP"
+      ],
+      "answer": "a",
+      "explanation": "110 = POP3; 143 = IMAP."
+    },
+    {
+      "id": 96,
+      "source": "Port Drill D4",
+      "topic": "Ports",
+      "question": "IMAP uses port:",
+      "options": [
+        "110",
+        "25",
+        "143",
+        "993",
+        "161"
+      ],
+      "answer": "c",
+      "explanation": "IMAP = 143 (993 when secured)."
+    },
+    {
+      "id": 97,
+      "source": "Port Drill D5",
+      "topic": "Ports",
+      "question": "Port 53 is used by:",
+      "options": [
+        "HTTP",
+        "DHCP",
+        "FTP",
+        "SMTP",
+        "DNS"
+      ],
+      "answer": "e",
+      "explanation": "53 = DNS."
+    },
+    {
+      "id": 98,
+      "source": "Port Drill D6",
+      "topic": "Ports",
+      "question": "SNMP uses port:",
+      "options": [
+        "123",
+        "161",
+        "389",
+        "69",
+        "143"
+      ],
+      "answer": "b",
+      "explanation": "SNMP = 161 (162 for traps). 123 = NTP, 389 = LDAP, 69 = TFTP."
+    },
+    {
+      "id": 99,
+      "source": "Port Drill D7",
+      "topic": "Ports",
+      "question": "Port 25 is used by:",
+      "options": [
+        "POP3",
+        "FTP",
+        "SMTP",
+        "Telnet",
+        "SSH"
+      ],
+      "answer": "c",
+      "explanation": "25 = SMTP."
+    },
+    {
+      "id": 100,
+      "source": "Port Drill D8",
+      "topic": "Ports",
+      "question": "Microsoft SQL Server uses port:",
+      "options": [
+        "1433",
+        "3306",
+        "3389",
+        "1521",
+        "443"
+      ],
+      "answer": "a",
+      "explanation": "SQL Server = 1433; MySQL = 3306; RDP = 3389."
+    },
+    {
+      "id": 101,
+      "source": "Port Drill D9",
+      "topic": "Ports",
+      "question": "The FTP data connection uses port:",
+      "options": [
+        "21",
+        "22",
+        "23",
+        "20",
+        "69"
+      ],
+      "answer": "d",
+      "explanation": "FTP data = 20; FTP control = 21."
+    },
+    {
+      "id": 102,
+      "source": "Port Drill D10",
+      "topic": "Ports",
+      "question": "Port 3306 is used by:",
+      "options": [
+        "RDP",
+        "SQL Server",
+        "Oracle",
+        "LDAP",
+        "MySQL"
+      ],
+      "answer": "e",
+      "explanation": "3306 = MySQL."
+    },
+    {
+      "id": 103,
+      "source": "Day Test Q1",
+      "topic": "OSI & Devices",
+      "question": "Which PDU corresponds to the Network layer?",
+      "options": [
+        "Segment",
+        "Frame",
+        "Packet",
+        "Bit",
+        "Message"
+      ],
+      "answer": "c",
+      "explanation": "Network layer PDU = Packet."
+    },
+    {
+      "id": 104,
+      "source": "Day Test Q2",
+      "topic": "IP Addressing",
+      "question": "In IPv4 Class C, the first octet falls in which range?",
+      "options": [
+        "192–223",
+        "128–191",
+        "1–126",
+        "224–239",
+        "240–255"
+      ],
+      "answer": "a",
+      "explanation": "Class C = 192 to 223."
+    },
+    {
+      "id": 105,
+      "source": "Day Test Q3",
+      "topic": "IP Addressing",
+      "question": "Which of the following is a private IP address?",
+      "options": [
+        "172.32.1.1",
+        "192.168.10.5",
+        "8.8.8.8",
+        "172.15.0.1",
+        "11.1.1.1"
+      ],
+      "answer": "b",
+      "explanation": "192.168.x.x is private. 172.15 and 172.32 fall outside the private 172.16 to 172.31 range."
+    },
+    {
+      "id": 106,
+      "source": "Day Test Q4",
+      "topic": "Application Layer",
+      "question": "In what order does a DNS resolver contact servers to resolve a domain name?",
+      "options": [
+        "TLD → Root → Authoritative",
+        "Authoritative → TLD → Root",
+        "TLD → Authoritative → Root",
+        "Root → Authoritative → TLD",
+        "Root → TLD → Authoritative"
+      ],
+      "answer": "e",
+      "explanation": "Root, TLD, Authoritative."
+    },
+    {
+      "id": 107,
+      "source": "Day Test Q5",
+      "topic": "Subnetting",
+      "question": "How many usable hosts does each /28 subnet have?",
+      "options": [
+        "16",
+        "30",
+        "6",
+        "14",
+        "62"
+      ],
+      "answer": "d",
+      "explanation": "Host bits = 4, so 2^4 - 2 = 14."
+    },
+    {
+      "id": 108,
+      "source": "Day Test Q6",
+      "topic": "Data Link",
+      "question": "CSMA/CD is used in:",
+      "options": [
+        "Wi-Fi networks",
+        "Bluetooth",
+        "Wired Ethernet",
+        "Satellite links",
+        "Cellular networks"
+      ],
+      "answer": "c",
+      "explanation": "CSMA/CD = wired Ethernet (Cable = Detection)."
+    },
+    {
+      "id": 109,
+      "source": "Day Test Q7",
+      "topic": "IPv4 Header",
+      "question": "A packet starts with a hop limit of 12 and passes through 4 routers before reaching the destination host. What is its remaining hop limit?",
+      "options": [
+        "8",
+        "12",
+        "16",
+        "4",
+        "7"
+      ],
+      "answer": "a",
+      "explanation": "12 - 4 = 8."
+    },
+    {
+      "id": 110,
+      "source": "Day Test Q8",
+      "topic": "Ports",
+      "question": "Which port does IMAP use?",
+      "options": [
+        "110",
+        "143",
+        "25",
+        "993",
+        "161"
+      ],
+      "answer": "b",
+      "explanation": "IMAP = 143."
+    },
+    {
+      "id": 111,
+      "source": "Day Test Q9",
+      "topic": "Delays",
+      "question": "A 6000-bit packet passes through 2 intermediate routers using store-and-forward switching. Every link runs at 3 Mbps. Ignoring all other delays, what is the total delay?",
+      "options": [
+        "4 ms",
+        "2 ms",
+        "8 ms",
+        "12 ms",
+        "6 ms"
+      ],
+      "answer": "e",
+      "explanation": "Per link 6000 / 3,000,000 = 2 ms. 3 links (N + 1), so 6 ms."
+    },
+    {
+      "id": 112,
+      "source": "Day Test Q10",
+      "topic": "Data Link",
+      "question": "Which type of switch port carries traffic for multiple VLANs over a single link?",
+      "options": [
+        "Access port",
+        "Native port",
+        "Voice port",
+        "Trunk port",
+        "Management port"
+      ],
+      "answer": "d",
+      "explanation": "Trunk port carries multiple VLANs."
+    },
+    {
+      "id": 113,
+      "source": "Day Test Q11",
+      "topic": "Data Link",
+      "question": "Which switch feature lets a packet analyzer running in promiscuous mode inspect traffic from other ports?",
+      "options": [
+        "STP",
+        "Port mirroring",
+        "VLAN",
+        "Link aggregation",
+        "QoS"
+      ],
+      "answer": "b",
+      "explanation": "Port mirroring copies traffic to the analyzer's port."
+    },
+    {
+      "id": 114,
+      "source": "Day Test Q12",
+      "topic": "Data Link",
+      "question": "Which of the following is an example of a bit-oriented protocol?",
+      "options": [
+        "SMTP",
+        "FTP",
+        "PPP",
+        "HTTP",
+        "HDLC"
+      ],
+      "answer": "e",
+      "explanation": "HDLC is bit-oriented."
+    },
+    {
+      "id": 115,
+      "source": "Day Test Q13",
+      "topic": "Subnetting",
+      "question": "A /16 network is subnetted using a /19 mask. How many subnets are created?",
+      "options": [
+        "4",
+        "16",
+        "8",
+        "32",
+        "3"
+      ],
+      "answer": "c",
+      "explanation": "19 - 16 = 3 bits, so 2^3 = 8."
+    },
+    {
+      "id": 116,
+      "source": "Day Test Q14",
+      "topic": "Network Protocols",
+      "question": "Which protocol resolves an IP address to a MAC address?",
+      "options": [
+        "ARP",
+        "RARP",
+        "DNS",
+        "DHCP",
+        "ICMP"
+      ],
+      "answer": "a",
+      "explanation": "ARP: IP to MAC."
+    },
+    {
+      "id": 117,
+      "source": "Day Test Q15",
+      "topic": "IPv4 Header",
+      "question": "A router receives a packet that is larger than the MTU of the outgoing link, and the DF bit is set. What does the router do?",
+      "options": [
+        "Fragments the packet and forwards it",
+        "Forwards the packet unchanged",
+        "Reassembles the packet",
+        "Drops the packet and sends an ICMP 'Fragmentation Needed' message",
+        "Compresses the packet"
+      ],
+      "answer": "d",
+      "explanation": "DF set: drop and send ICMP 'Fragmentation Needed'."
+    },
+    {
+      "id": 118,
+      "source": "Day Test Q16",
+      "topic": "IP Addressing",
+      "question": "A PC can't reach a DHCP server. Which address range does it assign to itself?",
+      "options": [
+        "10.0.0.x",
+        "169.254.x.x",
+        "127.0.0.x",
+        "192.168.0.x",
+        "0.0.0.0"
+      ],
+      "answer": "b",
+      "explanation": "APIPA = 169.254.x.x."
+    },
+    {
+      "id": 119,
+      "source": "Day Test Q17",
+      "topic": "Application Layer",
+      "question": "What does the HTTP status code 301 mean?",
+      "options": [
+        "OK",
+        "Not Found",
+        "Forbidden",
+        "Internal Server Error",
+        "Moved Permanently"
+      ],
+      "answer": "e",
+      "explanation": "301 = Moved Permanently (3xx = redirection)."
+    },
+    {
+      "id": 120,
+      "source": "Day Test Q18",
+      "topic": "IPv6",
+      "question": "What is the IPv6 loopback address?",
+      "options": [
+        "::1",
+        "FE80::1",
+        "FF02::1",
+        "127.0.0.1",
+        "::"
+      ],
+      "answer": "a",
+      "explanation": "::1 is IPv6 loopback (127.0.0.1 is IPv4). :: is unspecified."
+    },
+    {
+      "id": 121,
+      "source": "Day Test Q19",
+      "topic": "Delays",
+      "question": "A 2500-byte packet is sent on a 10 Mbps link. What is the transmission delay?",
+      "options": [
+        "0.25 ms",
+        "20 ms",
+        "2 ms",
+        "0.2 ms",
+        "25 ms"
+      ],
+      "answer": "c",
+      "explanation": "20000 bits / 10,000,000 = 2 ms."
+    },
+    {
+      "id": 122,
+      "source": "Day Test Q20",
+      "topic": "OSI & Devices",
+      "question": "Which device separates broadcast domains?",
+      "options": [
+        "Hub",
+        "Switch",
+        "Repeater",
+        "Router",
+        "Bridge"
+      ],
+      "answer": "d",
+      "explanation": "Router."
+    },
+    {
+      "id": 123,
+      "source": "Day Test Q21",
+      "topic": "Data Link",
+      "question": "In Selective Repeat ARQ, which frames are retransmitted after an error?",
+      "options": [
+        "All frames in the window",
+        "The lost frame and all frames after it",
+        "No frames",
+        "Only the lost frame",
+        "Only the frames before the lost one"
+      ],
+      "answer": "d",
+      "explanation": "Selective Repeat resends only the lost frame."
+    },
+    {
+      "id": 124,
+      "source": "Day Test Q22",
+      "topic": "Physical Layer",
+      "question": "A telephone call, where both people can talk at the same time, is an example of which transmission mode?",
+      "options": [
+        "Full duplex",
+        "Half duplex",
+        "Simplex",
+        "Asynchronous",
+        "Multiplex"
+      ],
+      "answer": "a",
+      "explanation": "Both directions at the same time = full duplex."
+    },
+    {
+      "id": 125,
+      "source": "Day Test Q23",
+      "topic": "Application Layer",
+      "question": "Which transport protocol does SMTP use?",
+      "options": [
+        "UDP",
+        "ICMP",
+        "TCP",
+        "ARP",
+        "SCTP"
+      ],
+      "answer": "c",
+      "explanation": "SMTP uses TCP."
+    },
+    {
+      "id": 126,
+      "source": "Day Test Q24",
+      "topic": "IPv6",
+      "question": "What is the size of an IPv6 address?",
+      "options": [
+        "32 bits",
+        "128 bits",
+        "64 bits",
+        "48 bits",
+        "256 bits"
+      ],
+      "answer": "b",
+      "explanation": "IPv6 = 128 bits; IPv4 = 32; MAC = 48."
+    },
+    {
+      "id": 127,
+      "source": "Day Test Q25",
+      "topic": "Subnetting",
+      "question": "What is the network address of 192.168.4.150/26?",
+      "options": [
+        "192.168.4.0",
+        "192.168.4.64",
+        "192.168.4.192",
+        "192.168.4.150",
+        "192.168.4.128"
+      ],
+      "answer": "e",
+      "explanation": "/26 block = 64. 150 lies in 128 to 191, so network = .128."
+    },
+    {
+      "id": 128,
+      "source": "Day Test Q26",
+      "topic": "Ports",
+      "question": "Which port does FTP use for its control connection?",
+      "options": [
+        "20",
+        "22",
+        "23",
+        "21",
+        "25"
+      ],
+      "answer": "d",
+      "explanation": "FTP control = 21."
+    },
+    {
+      "id": 129,
+      "source": "Day Test Q27",
+      "topic": "Physical Layer",
+      "question": "Which connector is used with coaxial cable?",
+      "options": [
+        "BNC",
+        "RJ45",
+        "RJ11",
+        "LC",
+        "USB"
+      ],
+      "answer": "a",
+      "explanation": "Coax = BNC."
+    },
+    {
+      "id": 130,
+      "source": "Day Test Q28",
+      "topic": "Transport",
+      "question": "What is the size of the UDP header?",
+      "options": [
+        "20 bytes",
+        "8 bytes",
+        "40 bytes",
+        "4 bytes",
+        "60 bytes"
+      ],
+      "answer": "b",
+      "explanation": "UDP header = 8 bytes."
+    },
+    {
+      "id": 131,
+      "source": "Day Test Q29",
+      "topic": "IPv6",
+      "question": "Which type of address does IPv6 NOT have?",
+      "options": [
+        "Unicast",
+        "Multicast",
+        "Broadcast",
+        "Anycast",
+        "Link-local"
+      ],
+      "answer": "c",
+      "explanation": "No broadcast in IPv6."
+    },
+    {
+      "id": 132,
+      "source": "Day Test Q30",
+      "topic": "Network Services",
+      "question": "Which practice hides the IP addresses of backend servers?",
+      "options": [
+        "Using DHCP",
+        "Using a forward proxy",
+        "Using ARP",
+        "Using Telnet",
+        "Using a reverse proxy"
+      ],
+      "answer": "e",
+      "explanation": "Reverse proxy protects/hides servers."
+    },
+    {
+      "id": 133,
+      "source": "Day Test Q31",
+      "topic": "Data Link",
+      "question": "In Go-Back-N ARQ, which frames are retransmitted when a frame is lost?",
+      "options": [
+        "Only the lost frame",
+        "The lost frame and all frames sent after it",
+        "No frames",
+        "Only the acknowledgements",
+        "All frames since the connection started"
+      ],
+      "answer": "b",
+      "explanation": "Go-Back-N goes back to the lost frame and resends everything after it."
+    },
+    {
+      "id": 134,
+      "source": "Day Test Q32",
+      "topic": "Physical Layer",
+      "question": "How many links are needed to fully connect 5 devices in a mesh topology?",
+      "options": [
+        "5",
+        "20",
+        "25",
+        "10",
+        "15"
+      ],
+      "answer": "d",
+      "explanation": "5 x 4 / 2 = 10."
+    },
+    {
+      "id": 135,
+      "source": "Day Test Q33",
+      "topic": "IP Addressing",
+      "question": "How many networks are available in IPv4 Class B?",
+      "options": [
+        "2¹⁴",
+        "2¹⁶",
+        "2²¹",
+        "2⁷",
+        "2²⁴"
+      ],
+      "answer": "a",
+      "explanation": "16 network bits minus 2 fixed bits (10) = 14, so 2¹⁴. 2¹⁶ is addresses per network."
+    },
+    {
+      "id": 136,
+      "source": "Day Test Q34",
+      "topic": "Subnetting",
+      "question": "Each subnet must support 60 hosts. Which subnet mask should be used?",
+      "options": [
+        "255.255.255.224",
+        "255.255.255.240",
+        "255.255.255.192",
+        "255.255.255.128",
+        "255.255.255.248"
+      ],
+      "answer": "c",
+      "explanation": "Need 2^h - 2 >= 60, so h = 6 (62 hosts), prefix /26 = .192."
+    },
+    {
+      "id": 137,
+      "source": "Day Test Q35",
+      "topic": "Network Protocols",
+      "question": "The traceroute command discovers the path to a host by relying on:",
+      "options": [
+        "ARP replies",
+        "DHCP offers",
+        "DNS lookups",
+        "TCP handshakes",
+        "Increasing TTL values and ICMP Time Exceeded messages"
+      ],
+      "answer": "e",
+      "explanation": "Traceroute increments TTL and reads ICMP Time Exceeded replies."
+    },
+    {
+      "id": 138,
+      "source": "Day Test Q36",
+      "topic": "Ports",
+      "question": "Which port does DNS use?",
+      "options": [
+        "25",
+        "53",
+        "80",
+        "67",
+        "110"
+      ],
+      "answer": "b",
+      "explanation": "DNS = 53."
+    },
+    {
+      "id": 139,
+      "source": "Day Test Q37",
+      "topic": "Delays",
+      "question": "A link is 1000 km long and the signal speed is 2 × 10⁸ m/s. What is the propagation delay?",
+      "options": [
+        "5 ms",
+        "0.5 ms",
+        "50 ms",
+        "2 ms",
+        "20 ms"
+      ],
+      "answer": "a",
+      "explanation": "10⁶ / 2 × 10⁸ = 0.005 s = 5 ms."
+    },
+    {
+      "id": 140,
+      "source": "Day Test Q38",
+      "topic": "Application Layer",
+      "question": "HTTP status codes in the 4xx range indicate:",
+      "options": [
+        "Success",
+        "Redirection",
+        "A server error",
+        "A client error",
+        "Informational responses"
+      ],
+      "answer": "d",
+      "explanation": "4xx = client error; 5xx = server error."
+    },
+    {
+      "id": 141,
+      "source": "Day Test Q39",
+      "topic": "OSI & Devices",
+      "question": "Which OSI layer is responsible for segmentation and reassembly?",
+      "options": [
+        "Network",
+        "Data Link",
+        "Transport",
+        "Session",
+        "Physical"
+      ],
+      "answer": "c",
+      "explanation": "Transport layer."
+    },
+    {
+      "id": 142,
+      "source": "Day Test Q40",
+      "topic": "Data Link",
+      "question": "What is the purpose of the Spanning Tree Protocol (STP)?",
+      "options": [
+        "Assigning IP addresses",
+        "Encrypting traffic",
+        "Creating VLANs",
+        "Aggregating links",
+        "Preventing loops in switched networks"
+      ],
+      "answer": "e",
+      "explanation": "STP prevents switching loops."
+    },
+    {
+      "id": 143,
+      "source": "Day Test Q41",
+      "topic": "OSI & Devices",
+      "question": "Which PDU corresponds to the Data Link layer?",
+      "options": [
+        "Frame",
+        "Packet",
+        "Segment",
+        "Bit",
+        "Datagram"
+      ],
+      "answer": "a",
+      "explanation": "Data Link PDU = Frame. 'Datagram' is UDP's unit."
+    },
+    {
+      "id": 144,
+      "source": "Day Test Q42",
+      "topic": "Subnetting",
+      "question": "What is the broadcast address of the subnet containing 10.0.0.200/27?",
+      "options": [
+        "10.0.0.255",
+        "10.0.0.191",
+        "10.0.0.223",
+        "10.0.0.207",
+        "10.0.0.192"
+      ],
+      "answer": "c",
+      "explanation": "/27 block = 32. 200 lies in 192 to 223, so broadcast = .223."
+    },
+    {
+      "id": 145,
+      "source": "Day Test Q43",
+      "topic": "Ports",
+      "question": "Which port does POP3 use?",
+      "options": [
+        "25",
+        "143",
+        "53",
+        "21",
+        "110"
+      ],
+      "answer": "e",
+      "explanation": "POP3 = 110."
+    },
+    {
+      "id": 146,
+      "source": "Day Test Q44",
+      "topic": "IPv4 Header",
+      "question": "What is the minimum size of an IPv4 header?",
+      "options": [
+        "40 bytes",
+        "20 bytes",
+        "8 bytes",
+        "60 bytes",
+        "32 bytes"
+      ],
+      "answer": "b",
+      "explanation": "IPv4 header = 20 bytes minimum, 60 maximum."
+    },
+    {
+      "id": 147,
+      "source": "Day Test Q45",
+      "topic": "Network Protocols",
+      "question": "What is the correct order of the DHCP messages?",
+      "options": [
+        "Request, Offer, Discover, Acknowledge",
+        "Offer, Discover, Request, Acknowledge",
+        "Discover, Request, Offer, Acknowledge",
+        "Discover, Offer, Request, Acknowledge",
+        "Acknowledge, Request, Offer, Discover"
+      ],
+      "answer": "d",
+      "explanation": "DORA."
+    },
+    {
+      "id": 148,
+      "source": "Day Test Q46",
+      "topic": "Data Link",
+      "question": "Which media access method do Wi-Fi networks use?",
+      "options": [
+        "CSMA/CA",
+        "CSMA/CD",
+        "Token passing",
+        "Pure ALOHA",
+        "Polling"
+      ],
+      "answer": "a",
+      "explanation": "Wi-Fi = CSMA/CA."
+    },
+    {
+      "id": 149,
+      "source": "Day Test Q47",
+      "topic": "IP Addressing",
+      "question": "What is the total number of networks available in IPv4 Class B?",
+      "options": [
+        "2¹⁶",
+        "2²¹",
+        "2¹⁴",
+        "2⁸",
+        "2⁷"
+      ],
+      "answer": "c",
+      "explanation": "2¹⁴."
+    },
+    {
+      "id": 150,
+      "source": "Day Test Q48",
+      "topic": "OSI & Devices",
+      "question": "Which function belongs to the Transport layer?",
+      "options": [
+        "Routing",
+        "Access control",
+        "Channel transmission",
+        "Encryption of user data",
+        "Segmentation and reassembly"
+      ],
+      "answer": "e",
+      "explanation": "Transport = segmentation and reassembly."
+    },
+    {
+      "id": 151,
+      "source": "Day Test Q49",
+      "topic": "Delays",
+      "question": "A 1500-byte packet passes through 3 intermediate routers using store-and-forward switching. Every link runs at 12 Mbps. Ignoring all other delays, what is the total delay?",
+      "options": [
+        "3 ms",
+        "4 ms",
+        "1 ms",
+        "12 ms",
+        "6 ms"
+      ],
+      "answer": "b",
+      "explanation": "12000 bits / 12 Mbps = 1 ms per link; 4 links = 4 ms."
+    },
+    {
+      "id": 152,
+      "source": "Day Test Q50",
+      "topic": "IP Addressing",
+      "question": "Which of the following IP addresses is NOT private?",
+      "options": [
+        "10.20.30.40",
+        "192.168.100.1",
+        "172.31.255.254",
+        "172.32.10.1",
+        "172.16.0.1"
+      ],
+      "answer": "d",
+      "explanation": "172.32 is outside 172.16 to 172.31, so it's public."
+    },
+    {
+      "id": 153,
+      "source": "Additional A1",
+      "topic": "Ports",
+      "question": "Which protocol uses UDP port 69?",
+      "options": [
+        "SNMP",
+        "TFTP",
+        "SFTP",
+        "NTP",
+        "FTP"
+      ],
+      "answer": "b",
+      "explanation": "TFTP (Trivial FTP) = UDP 69. No login or directory listing."
+    },
+    {
+      "id": 154,
+      "source": "Additional A2",
+      "topic": "Ports",
+      "question": "NTP (Network Time Protocol) uses which port?",
+      "options": [
+        "69",
+        "123",
+        "161",
+        "53",
+        "389"
+      ],
+      "answer": "b",
+      "explanation": "NTP = UDP 123."
+    },
+    {
+      "id": 155,
+      "source": "Additional A3",
+      "topic": "Ports",
+      "question": "LDAP uses which default port?",
+      "options": [
+        "3389",
+        "143",
+        "443",
+        "389",
+        "161"
+      ],
+      "answer": "d",
+      "explanation": "LDAP = 389 (directory services such as Active Directory)."
+    },
+    {
+      "id": 156,
+      "source": "Additional A4",
+      "topic": "Ports",
+      "question": "Secure IMAP (IMAPS) uses which port?",
+      "options": [
+        "465",
+        "143",
+        "993",
+        "587",
+        "995"
+      ],
+      "answer": "c",
+      "explanation": "IMAPS = 993; POP3S = 995."
+    },
+    {
+      "id": 157,
+      "source": "Additional A5",
+      "topic": "Ports",
+      "question": "Secure POP3 (POP3S) uses which port?",
+      "options": [
+        "995",
+        "587",
+        "465",
+        "993",
+        "110"
+      ],
+      "answer": "a",
+      "explanation": "POP3S = 995."
+    },
+    {
+      "id": 158,
+      "source": "Additional A6",
+      "topic": "Ports",
+      "question": "Which port is commonly used for secure SMTP mail submission?",
+      "options": [
+        "143",
+        "587",
+        "110",
+        "21",
+        "3389"
+      ],
+      "answer": "b",
+      "explanation": "Secure SMTP submission uses 587 (or 465). Plain SMTP = 25."
+    },
+    {
+      "id": 159,
+      "source": "Additional A7",
+      "topic": "Ports",
+      "question": "SNMP traps are sent to which port?",
+      "options": [
+        "123",
+        "69",
+        "161",
+        "162",
+        "514"
+      ],
+      "answer": "d",
+      "explanation": "SNMP: 161 for queries, 162 for traps."
+    },
+    {
+      "id": 160,
+      "source": "Additional A8",
+      "topic": "Ports",
+      "question": "The well-known port range is:",
+      "options": [
+        "1–65535",
+        "0–1023",
+        "1024–49151",
+        "49152–65535",
+        "0–255"
+      ],
+      "answer": "b",
+      "explanation": "Well-known 0–1023, registered 1024–49151, dynamic 49152–65535."
+    },
+    {
+      "id": 161,
+      "source": "Additional A9",
+      "topic": "Ports",
+      "question": "A socket is identified by:",
+      "options": [
+        "Hostname and MAC address",
+        "Port number only",
+        "MAC address and port",
+        "IP address and subnet mask",
+        "IP address and port number"
+      ],
+      "answer": "e",
+      "explanation": "Socket = IP address + port, e.g. 192.168.1.10:443."
+    },
+    {
+      "id": 162,
+      "source": "Additional A10",
+      "topic": "Ports",
+      "question": "Which port does HTTP use by default?",
+      "options": [
+        "25",
+        "21",
+        "8443",
+        "443",
+        "80"
+      ],
+      "answer": "e",
+      "explanation": "HTTP = 80; HTTPS = 443."
+    },
+    {
+      "id": 163,
+      "source": "Additional A11",
+      "topic": "Application Layer",
+      "question": "SFTP transfers files securely by running over:",
+      "options": [
+        "UDP port 69",
+        "SSH on port 22",
+        "SSL on port 443",
+        "Telnet on port 23",
+        "FTP on port 21"
+      ],
+      "answer": "b",
+      "explanation": "SFTP runs over SSH (port 22). FTPS is FTP secured with SSL/TLS."
+    },
+    {
+      "id": 164,
+      "source": "Additional A12",
+      "topic": "Application Layer",
+      "question": "FTPS is:",
+      "options": [
+        "FTP secured with SSL/TLS",
+        "FTP over UDP",
+        "Trivial FTP",
+        "FTP over SSH",
+        "FTP without authentication"
+      ],
+      "answer": "a",
+      "explanation": "FTPS = FTP + SSL/TLS. SFTP = file transfer over SSH."
+    },
+    {
+      "id": 165,
+      "source": "Additional A13",
+      "topic": "Application Layer",
+      "question": "Which FTP transfer mode reduces data size during transmission to improve bandwidth efficiency?",
+      "options": [
+        "Stream mode",
+        "Block mode",
+        "Passive mode",
+        "Compressed mode",
+        "Active mode"
+      ],
+      "answer": "d",
+      "explanation": "Compressed mode compresses the data. Stream is the default mode."
+    },
+    {
+      "id": 166,
+      "source": "Additional A14",
+      "topic": "Application Layer",
+      "question": "HTTPS is:",
+      "options": [
+        "HTTP with compression only",
+        "HTTP running over UDP",
+        "A separate protocol unrelated to HTTP",
+        "HTTP with TLS encryption",
+        "HTTP on port 80"
+      ],
+      "answer": "d",
+      "explanation": "HTTPS = HTTP + TLS, on port 443."
+    },
+    {
+      "id": 167,
+      "source": "Additional A15",
+      "topic": "Application Layer",
+      "question": "HTTP is described as stateless. This means:",
+      "options": [
+        "It cannot transfer images",
+        "It requires a VPN",
+        "It works only on port 443",
+        "The server doesn't remember previous requests, so cookies/sessions are used",
+        "It never uses TCP"
+      ],
+      "answer": "d",
+      "explanation": "Stateless: each request is independent; cookies and sessions add state."
+    },
+    {
+      "id": 168,
+      "source": "Additional A16",
+      "topic": "Application Layer",
+      "question": "Which HTTP method sends form data in the request body?",
+      "options": [
+        "OPTIONS",
+        "POST",
+        "TRACE",
+        "GET",
+        "HEAD"
+      ],
+      "answer": "b",
+      "explanation": "POST sends data in the body; GET puts parameters in the URL."
+    },
+    {
+      "id": 169,
+      "source": "Additional A17",
+      "topic": "Application Layer",
+      "question": "What does HTTP 401 indicate?",
+      "options": [
+        "Server Error",
+        "Unauthorized (authentication required)",
+        "Forbidden",
+        "Not Found",
+        "Bad Request"
+      ],
+      "answer": "b",
+      "explanation": "401 = not authenticated (log in). 403 = authenticated but not allowed."
+    },
+    {
+      "id": 170,
+      "source": "Additional A18",
+      "topic": "Application Layer",
+      "question": "Which HTTP status code means 'Found' (temporary redirect)?",
+      "options": [
+        "301",
+        "307",
+        "200",
+        "302",
+        "304"
+      ],
+      "answer": "d",
+      "explanation": "302 = Found (temporary). 301 = permanent."
+    },
+    {
+      "id": 171,
+      "source": "Additional A19",
+      "topic": "Application Layer",
+      "question": "HTTP 304 means:",
+      "options": [
+        "Bad Gateway",
+        "Created",
+        "Forbidden",
+        "Moved Permanently",
+        "Not Modified (use cached copy)"
+      ],
+      "answer": "e",
+      "explanation": "304 Not Modified: the client's cached copy is still valid."
+    },
+    {
+      "id": 172,
+      "source": "Additional A20",
+      "topic": "Application Layer",
+      "question": "HTTP 503 means:",
+      "options": [
+        "Bad Gateway",
+        "Service Unavailable",
+        "Not Implemented",
+        "Internal Server Error",
+        "Gateway Timeout"
+      ],
+      "answer": "b",
+      "explanation": "503 = Service Unavailable (server overloaded or down for maintenance)."
+    },
+    {
+      "id": 173,
+      "source": "Additional A21",
+      "topic": "Application Layer",
+      "question": "HTTP 201 means:",
+      "options": [
+        "OK",
+        "No Content",
+        "Accepted",
+        "Created",
+        "Found"
+      ],
+      "answer": "d",
+      "explanation": "201 = Created, e.g. after a successful POST that creates a resource."
+    },
+    {
+      "id": 174,
+      "source": "Additional A22",
+      "topic": "Application Layer",
+      "question": "Which DNS record maps a domain name to an IPv6 address?",
+      "options": [
+        "AAAA",
+        "PTR",
+        "NS",
+        "MX",
+        "A"
+      ],
+      "answer": "a",
+      "explanation": "AAAA = IPv6. A = IPv4."
+    },
+    {
+      "id": 175,
+      "source": "Additional A23",
+      "topic": "Application Layer",
+      "question": "A CNAME record is used to:",
+      "options": [
+        "Create an alias pointing one name to another",
+        "List name servers",
+        "Map a name to an IPv4 address",
+        "Identify the mail server",
+        "Perform reverse lookup"
+      ],
+      "answer": "a",
+      "explanation": "CNAME = canonical name (alias)."
+    },
+    {
+      "id": 176,
+      "source": "Additional A24",
+      "topic": "Application Layer",
+      "question": "Which DNS record is used for reverse lookup (IP to name)?",
+      "options": [
+        "PTR",
+        "CNAME",
+        "A",
+        "MX",
+        "AAAA"
+      ],
+      "answer": "a",
+      "explanation": "PTR = pointer record, used for reverse DNS."
+    },
+    {
+      "id": 177,
+      "source": "Additional A25",
+      "topic": "Application Layer",
+      "question": "DNS zone transfers between DNS servers use:",
+      "options": [
+        "TCP 80",
+        "TCP 53",
+        "UDP 53",
+        "ICMP",
+        "UDP 67"
+      ],
+      "answer": "b",
+      "explanation": "Normal queries use UDP 53; zone transfers and large responses use TCP 53."
+    },
+    {
+      "id": 178,
+      "source": "Additional A26",
+      "topic": "Application Layer",
+      "question": "In a recursive DNS query:",
+      "options": [
+        "Each server only refers the client to another server",
+        "No caching is done",
+        "The root server returns the final IP",
+        "The client contacts the authoritative server directly",
+        "The resolver does all the work and returns the final answer"
+      ],
+      "answer": "e",
+      "explanation": "Recursive: the resolver returns the final answer. Iterative: servers return referrals."
+    },
+    {
+      "id": 179,
+      "source": "Additional A27",
+      "topic": "Application Layer",
+      "question": "Which protocol is best when the same mailbox must stay in sync on a phone and a laptop?",
+      "options": [
+        "POP3",
+        "SMTP",
+        "IMAP",
+        "FTP",
+        "SNMP"
+      ],
+      "answer": "c",
+      "explanation": "IMAP keeps mail and folders on the server, so all devices stay in sync."
+    },
+    {
+      "id": 180,
+      "source": "Additional A28",
+      "topic": "Application Layer",
+      "question": "MIME is used in email to:",
+      "options": [
+        "Delete mail from the server",
+        "Authenticate users",
+        "Encrypt messages",
+        "Send attachments and non-ASCII content",
+        "Route mail between servers"
+      ],
+      "answer": "d",
+      "explanation": "MIME extends email to carry attachments, images and non-ASCII text."
+    },
+    {
+      "id": 181,
+      "source": "Additional A29",
+      "topic": "Application Layer",
+      "question": "WebDAV is:",
+      "options": [
+        "An extension of HTTP for editing and managing files on a web server",
+        "A secure email protocol",
+        "A DNS record type",
+        "A VPN protocol",
+        "A routing protocol"
+      ],
+      "answer": "a",
+      "explanation": "WebDAV extends HTTP for collaborative file editing on web servers."
+    },
+    {
+      "id": 182,
+      "source": "Additional A30",
+      "topic": "Application Layer",
+      "question": "Telnet uses which port?",
+      "options": [
+        "3389",
+        "22",
+        "23",
+        "25",
+        "21"
+      ],
+      "answer": "c",
+      "explanation": "Telnet = 23 (plaintext, insecure)."
+    },
+    {
+      "id": 183,
+      "source": "Additional A31",
+      "topic": "Network Services",
+      "question": "A VPN primarily provides:",
+      "options": [
+        "Faster internet speed",
+        "An encrypted tunnel over a public network",
+        "Automatic IP assignment",
+        "Email delivery",
+        "Domain name resolution"
+      ],
+      "answer": "b",
+      "explanation": "A VPN creates an encrypted tunnel across the internet."
+    },
+    {
+      "id": 184,
+      "source": "Additional A32",
+      "topic": "Network Services",
+      "question": "Which type of VPN connects two entire office networks?",
+      "options": [
+        "Site-to-site VPN",
+        "Remote-access VPN",
+        "Personal VPN",
+        "Client-less VPN",
+        "Mobile VPN"
+      ],
+      "answer": "a",
+      "explanation": "Site-to-site connects whole networks; remote-access connects one user."
+    },
+    {
+      "id": 185,
+      "source": "Additional A33",
+      "topic": "Network Services",
+      "question": "IPsec operates at which OSI layer?",
+      "options": [
+        "Physical",
+        "Transport",
+        "Data Link",
+        "Network",
+        "Application"
+      ],
+      "answer": "d",
+      "explanation": "IPsec secures IP packets at the Network layer."
+    },
+    {
+      "id": 186,
+      "source": "Additional A34",
+      "topic": "Network Services",
+      "question": "A forward proxy acts on behalf of:",
+      "options": [
+        "DNS servers",
+        "ISPs only",
+        "Clients",
+        "Routers",
+        "Servers"
+      ],
+      "answer": "c",
+      "explanation": "A forward proxy acts for clients (filtering, caching, hiding client identity). A reverse proxy acts for servers."
+    },
+    {
+      "id": 187,
+      "source": "Additional A35",
+      "topic": "Network Services",
+      "question": "In a CDN, the servers located close to users are called:",
+      "options": [
+        "Gateway routers",
+        "Edge servers",
+        "Root servers",
+        "Origin servers",
+        "Proxy clients"
+      ],
+      "answer": "b",
+      "explanation": "Edge servers cache content near users; the origin server holds the master copy."
+    },
+    {
+      "id": 188,
+      "source": "Additional A36",
+      "topic": "Network Services",
+      "question": "Compared with 2.4 GHz Wi-Fi, the 5 GHz band generally offers:",
+      "options": [
+        "No encryption",
+        "Longer range and lower speed",
+        "Same range and speed",
+        "Shorter range and higher speed",
+        "Only Bluetooth support"
+      ],
+      "answer": "d",
+      "explanation": "5 GHz = faster but shorter range; 2.4 GHz = longer range but slower."
+    },
+    {
+      "id": 189,
+      "source": "Additional A37",
+      "topic": "Network Services",
+      "question": "Bluetooth is defined under which IEEE standard and network type?",
+      "options": [
+        "802.16, MAN",
+        "802.1Q, VLAN",
+        "802.3, LAN",
+        "802.11, WLAN",
+        "802.15, PAN"
+      ],
+      "answer": "e",
+      "explanation": "Bluetooth = IEEE 802.15, a short-range Personal Area Network."
+    },
+    {
+      "id": 190,
+      "source": "Additional A38",
+      "topic": "Transport",
+      "question": "How many steps does a normal TCP connection termination take?",
+      "options": [
+        "5",
+        "1",
+        "4",
+        "2",
+        "3"
+      ],
+      "answer": "c",
+      "explanation": "Termination is 4-way: FIN, ACK, FIN, ACK."
+    },
+    {
+      "id": 191,
+      "source": "Additional A39",
+      "topic": "Transport",
+      "question": "A SYN flood attack exploits:",
+      "options": [
+        "UDP's lack of a header",
+        "Half-open connections in the TCP 3-way handshake",
+        "ICMP Echo replies",
+        "The DNS resolution process",
+        "ARP caching"
+      ],
+      "answer": "b",
+      "explanation": "The attacker sends SYNs but never completes the handshake, exhausting server resources."
+    },
+    {
+      "id": 192,
+      "source": "Additional A40",
+      "topic": "Network Protocols",
+      "question": "ICMP is identified in the IPv4 Protocol field by which number?",
+      "options": [
+        "4",
+        "41",
+        "6",
+        "17",
+        "1"
+      ],
+      "answer": "e",
+      "explanation": "ICMP = 1, TCP = 6, UDP = 17. ICMP has no port numbers."
+    },
+    {
+      "id": 193,
+      "source": "Additional A41",
+      "topic": "Network Protocols",
+      "question": "Which value in the IPv4 Protocol field indicates UDP?",
+      "options": [
+        "17",
+        "6",
+        "53",
+        "1",
+        "69"
+      ],
+      "answer": "a",
+      "explanation": "UDP = 17."
+    },
+    {
+      "id": 194,
+      "source": "Additional A42",
+      "topic": "Network Protocols",
+      "question": "Static NAT provides:",
+      "options": [
+        "Random mapping from a pool",
+        "Mapping of MAC addresses",
+        "IPv6 to IPv4 translation only",
+        "A fixed one-to-one mapping between a private and a public IP",
+        "Many-to-one mapping using ports"
+      ],
+      "answer": "d",
+      "explanation": "Static NAT = fixed one-to-one; used for servers reachable from outside."
+    },
+    {
+      "id": 195,
+      "source": "Additional A43",
+      "topic": "Network Protocols",
+      "question": "In ARP, the request and the reply are sent as:",
+      "options": [
+        "Both unicast",
+        "Request unicast, reply broadcast",
+        "Both broadcast",
+        "Request broadcast, reply unicast",
+        "Both multicast"
+      ],
+      "answer": "d",
+      "explanation": "ARP request is broadcast to the LAN; only the owner replies by unicast."
+    },
+    {
+      "id": 196,
+      "source": "Additional A44",
+      "topic": "Network Protocols",
+      "question": "The period for which a DHCP-assigned IP address is valid is called the:",
+      "options": [
+        "TTL",
+        "Window",
+        "Hop limit",
+        "Session",
+        "Lease"
+      ],
+      "answer": "e",
+      "explanation": "DHCP addresses are leased and must be renewed."
+    },
+    {
+      "id": 197,
+      "source": "Additional A45",
+      "topic": "Network Protocols",
+      "question": "OSPF is a:",
+      "options": [
+        "Distance vector protocol using hop count",
+        "Transport protocol",
+        "Link state protocol using Dijkstra's algorithm",
+        "Path vector protocol between autonomous systems",
+        "Data link protocol"
+      ],
+      "answer": "c",
+      "explanation": "OSPF = link state, Dijkstra (SPF). RIP = distance vector; BGP = path vector."
+    },
+    {
+      "id": 198,
+      "source": "Additional A46",
+      "topic": "Network Protocols",
+      "question": "Routes entered manually by an administrator are called:",
+      "options": [
+        "Floating routes",
+        "Default gateways",
+        "Learned routes",
+        "Static routes",
+        "Dynamic routes"
+      ],
+      "answer": "d",
+      "explanation": "Static = manual; dynamic = learned automatically via routing protocols."
+    },
+    {
+      "id": 199,
+      "source": "Additional A47",
+      "topic": "Data Link",
+      "question": "What is the Ethernet MTU (maximum payload)?",
+      "options": [
+        "64 bytes",
+        "9000 bytes",
+        "576 bytes",
+        "1518 bytes",
+        "1500 bytes"
+      ],
+      "answer": "e",
+      "explanation": "Ethernet MTU = 1500 bytes. A full frame is 64 to 1518 bytes."
+    },
+    {
+      "id": 200,
+      "source": "Additional A48",
+      "topic": "Data Link",
+      "question": "The first 24 bits of a MAC address are called the:",
+      "options": [
+        "VLAN ID",
+        "Host ID",
+        "NIC ID",
+        "OUI (Organizationally Unique Identifier)",
+        "Subnet ID"
+      ],
+      "answer": "d",
+      "explanation": "OUI identifies the manufacturer; the last 24 bits identify the device."
+    },
+    {
+      "id": 201,
+      "source": "Additional A49",
+      "topic": "Data Link",
+      "question": "Which IEEE standard defines the Spanning Tree Protocol?",
+      "options": [
+        "802.11",
+        "802.3ad",
+        "802.15",
+        "802.1D",
+        "802.1Q"
+      ],
+      "answer": "d",
+      "explanation": "802.1D = STP; 802.1Q = VLAN tagging; 802.3ad = link aggregation."
+    },
+    {
+      "id": 202,
+      "source": "Additional A50",
+      "topic": "Data Link",
+      "question": "What is the minimum Ethernet frame size?",
+      "options": [
+        "64 bytes",
+        "1500 bytes",
+        "20 bytes",
+        "46 bytes",
+        "128 bytes"
+      ],
+      "answer": "a",
+      "explanation": "Minimum 64 bytes, so collisions can be detected while the frame is still being sent."
+    },
+    {
+      "id": 203,
+      "source": "Additional A51",
+      "topic": "Data Link",
+      "question": "What is the maximum efficiency of Pure ALOHA?",
+      "options": [
+        "18.4%",
+        "100%",
+        "36.8%",
+        "25%",
+        "50%"
+      ],
+      "answer": "a",
+      "explanation": "Pure ALOHA = 18.4%; Slotted ALOHA = 36.8%."
+    },
+    {
+      "id": 204,
+      "source": "Additional A52",
+      "topic": "Data Link",
+      "question": "The main advantage of a Hamming code over parity is that it can:",
+      "options": [
+        "Encrypt data",
+        "Correct single-bit errors",
+        "Detect burst errors only",
+        "Compress data",
+        "Detect all multi-bit errors"
+      ],
+      "answer": "b",
+      "explanation": "Hamming codes locate and correct a single flipped bit; parity only detects."
+    },
+    {
+      "id": 205,
+      "source": "Additional A53",
+      "topic": "IP Addressing",
+      "question": "CIDR stands for:",
+      "options": [
+        "Common IP Domain Range",
+        "Central IP Distribution Registry",
+        "Classful Internet Domain Routing",
+        "Classless Inter-Domain Routing",
+        "Controlled Internet Data Relay"
+      ],
+      "answer": "d",
+      "explanation": "Classless Inter-Domain Routing: the /n prefix notation that replaced classful addressing."
+    },
+    {
+      "id": 206,
+      "source": "Additional A54",
+      "topic": "IP Addressing",
+      "question": "Combining 192.168.0.0/24, 192.168.1.0/24, 192.168.2.0/24 and 192.168.3.0/24 into one route gives:",
+      "options": [
+        "192.168.0.0/16",
+        "192.168.4.0/22",
+        "192.168.0.0/22",
+        "192.168.0.0/23",
+        "192.168.0.0/25"
+      ],
+      "answer": "c",
+      "explanation": "Four /24s = 2 bits fewer, so /22. This is supernetting."
+    },
+    {
+      "id": 207,
+      "source": "Additional A55",
+      "topic": "IP Addressing",
+      "question": "Class D addresses (224–239) are used for:",
+      "options": [
+        "Multicast",
+        "Broadcast",
+        "Loopback",
+        "Private networks",
+        "Experimental use"
+      ],
+      "answer": "a",
+      "explanation": "Class D = multicast; Class E = experimental."
+    },
+    {
+      "id": 208,
+      "source": "Additional A56",
+      "topic": "IP Addressing",
+      "question": "Which IPv4 address is used for loopback?",
+      "options": [
+        "10.0.0.1",
+        "255.255.255.255",
+        "127.0.0.1",
+        "169.254.0.1",
+        "0.0.0.0"
+      ],
+      "answer": "c",
+      "explanation": "127.0.0.1 = loopback (this machine)."
+    },
+    {
+      "id": 209,
+      "source": "Additional A57",
+      "topic": "Subnetting",
+      "question": "How many usable hosts are available on a /30 subnet?",
+      "options": [
+        "6",
+        "0",
+        "1",
+        "2",
+        "4"
+      ],
+      "answer": "d",
+      "explanation": "2^2 - 2 = 2; used for point-to-point router links."
+    },
+    {
+      "id": 210,
+      "source": "Additional A58",
+      "topic": "Transport",
+      "question": "'Slow start' is part of which TCP mechanism?",
+      "options": [
+        "Error detection",
+        "Congestion control",
+        "Flow control",
+        "Connection establishment",
+        "Port addressing"
+      ],
+      "answer": "b",
+      "explanation": "Slow start belongs to congestion control (protects the network)."
+    }
+  ]
+}
