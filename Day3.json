@@ -1,0 +1,3187 @@
+{
+  "title": "Day 3: Cyber Security + Banking IT & Regulations",
+  "total": 212,
+  "answer_format": "answer is the option letter a–e mapping to options[0]–options[4]",
+  "questions": [
+    {
+      "id": 1,
+      "source": "Batch 1 Q1",
+      "topic": "Cryptography",
+      "question": "Which of the following is the standard used for digital certificates in a public key infrastructure?",
+      "options": [
+        "SHA-256",
+        "X.509",
+        "TLS 1.2",
+        "RSA",
+        "AES"
+      ],
+      "answer": "b",
+      "explanation": "X.509 is the certificate format. SHA-256 = hash, RSA = asymmetric algorithm, AES = symmetric."
+    },
+    {
+      "id": 2,
+      "source": "Batch 1 Q2",
+      "topic": "Cryptography",
+      "question": "In asymmetric encryption, which key is used to encrypt a message so that only the intended receiver can read it?",
+      "options": [
+        "The sender's private key",
+        "The sender's public key",
+        "The receiver's private key",
+        "The receiver's public key",
+        "A shared secret key"
+      ],
+      "answer": "d",
+      "explanation": "Confidentiality: encrypt with the receiver's public key; only the receiver's private key can decrypt."
+    },
+    {
+      "id": 3,
+      "source": "Batch 1 Q3",
+      "topic": "Cryptography",
+      "question": "Which of the following is mainly used to provide non-repudiation?",
+      "options": [
+        "Firewall",
+        "Encryption",
+        "Digital certificate",
+        "Hash function",
+        "Digital signature"
+      ],
+      "answer": "e",
+      "explanation": "A digital signature means the sender can't deny sending the message."
+    },
+    {
+      "id": 4,
+      "source": "Batch 1 Q4",
+      "topic": "Cryptography",
+      "question": "What is the effective key length used by DES, excluding parity bits?",
+      "options": [
+        "56 bits",
+        "64 bits",
+        "128 bits",
+        "32 bits",
+        "192 bits"
+      ],
+      "answer": "a",
+      "explanation": "DES key = 64 bits, of which 8 are parity, so 56 effective."
+    },
+    {
+      "id": 5,
+      "source": "Batch 1 Q5",
+      "topic": "Cryptography",
+      "question": "Which of the following algorithms uses the same key for both encryption and decryption?",
+      "options": [
+        "Diffie-Hellman key exchange",
+        "RSA",
+        "AES",
+        "ECDSA",
+        "SHA-256"
+      ],
+      "answer": "c",
+      "explanation": "AES is symmetric. RSA/ECDSA/DH are asymmetric; SHA-256 is a hash."
+    },
+    {
+      "id": 6,
+      "source": "Batch 1 Q6",
+      "topic": "Cryptography",
+      "question": "How does salting improve the security of stored password hashes?",
+      "options": [
+        "It converts plaintext to hashed text using MD5 without adding anything",
+        "It encrypts the hash using a symmetric algorithm",
+        "It stores the hash without any change",
+        "It compresses the hash to save storage",
+        "It adds a random value to the input before hashing, so every hash is unique"
+      ],
+      "answer": "e",
+      "explanation": "A salt is a random value added before hashing; it defeats rainbow tables."
+    },
+    {
+      "id": 7,
+      "source": "Batch 1 Q7",
+      "topic": "Cryptography",
+      "question": "Which of the following is NOT a property of a cryptographic hash function?",
+      "options": [
+        "It produces a fixed-length output",
+        "It is one-way",
+        "It is collision-resistant",
+        "It can be reversed to recover the original input",
+        "The same input always gives the same output"
+      ],
+      "answer": "d",
+      "explanation": "Hashes are one-way; they can't be reversed."
+    },
+    {
+      "id": 8,
+      "source": "Batch 1 Q8",
+      "topic": "Security Basics",
+      "question": "In the CIA triad, ensuring that data is not altered without detection is called:",
+      "options": [
+        "Confidentiality",
+        "Integrity",
+        "Availability",
+        "Authentication",
+        "Authorization"
+      ],
+      "answer": "b",
+      "explanation": "Integrity = no undetected modification (hashing, signatures)."
+    },
+    {
+      "id": 9,
+      "source": "Batch 1 Q9",
+      "topic": "Cryptography",
+      "question": "A digital signature is created by encrypting the message hash with:",
+      "options": [
+        "The sender's private key",
+        "The sender's public key",
+        "The receiver's public key",
+        "The receiver's private key",
+        "A symmetric session key"
+      ],
+      "answer": "a",
+      "explanation": "Sign with your own private key; others verify with your public key."
+    },
+    {
+      "id": 10,
+      "source": "Batch 1 Q10",
+      "topic": "Cryptography",
+      "question": "How many keys are needed for 10 users to communicate privately in pairs using symmetric encryption?",
+      "options": [
+        "10",
+        "20",
+        "45",
+        "90",
+        "100"
+      ],
+      "answer": "c",
+      "explanation": "Symmetric: n(n−1)/2 = 10 × 9 / 2 = 45."
+    },
+    {
+      "id": 11,
+      "source": "Batch 2 Q11",
+      "topic": "Cryptography",
+      "question": "What is the effective key length of DES?",
+      "options": [
+        "64 bits",
+        "56 bits",
+        "128 bits",
+        "48 bits",
+        "112 bits"
+      ],
+      "answer": "b",
+      "explanation": "64 − 8 parity bits = 56."
+    },
+    {
+      "id": 12,
+      "source": "Batch 2 Q12",
+      "topic": "Cryptography",
+      "question": "The Diffie-Hellman algorithm is mainly used for:",
+      "options": [
+        "Creating digital signatures",
+        "Hashing passwords",
+        "Securely exchanging a shared secret key",
+        "Encrypting large files directly",
+        "Issuing certificates"
+      ],
+      "answer": "c",
+      "explanation": "DH is for key exchange only."
+    },
+    {
+      "id": 13,
+      "source": "Batch 2 Q13",
+      "topic": "Cryptography",
+      "question": "Which of the following is an asymmetric encryption algorithm?",
+      "options": [
+        "AES",
+        "DES",
+        "Blowfish",
+        "RSA",
+        "RC4"
+      ],
+      "answer": "d",
+      "explanation": "Asymmetric = RSA, ECC, DH, DSA. The rest are symmetric."
+    },
+    {
+      "id": 14,
+      "source": "Batch 2 Q14",
+      "topic": "Cryptography",
+      "question": "Which security service does a digital signature NOT provide?",
+      "options": [
+        "Confidentiality",
+        "Authentication",
+        "Integrity",
+        "Non-repudiation",
+        "Proof of origin"
+      ],
+      "answer": "a",
+      "explanation": "Signatures don't encrypt the message, so no confidentiality."
+    },
+    {
+      "id": 15,
+      "source": "Batch 2 Q15",
+      "topic": "Cryptography",
+      "question": "Which entity issues and signs digital certificates?",
+      "options": [
+        "DNS server",
+        "Registration server",
+        "Firewall",
+        "Proxy server",
+        "Certificate Authority (CA)"
+      ],
+      "answer": "e",
+      "explanation": "The CA issues and signs certificates."
+    },
+    {
+      "id": 16,
+      "source": "Batch 2 Q16",
+      "topic": "Cryptography",
+      "question": "Hiding a secret message inside an image file, so that nobody even knows the message exists, is called:",
+      "options": [
+        "Cryptography",
+        "Steganography",
+        "Hashing",
+        "Salting",
+        "Tokenization"
+      ],
+      "answer": "b",
+      "explanation": "Steganography hides the existence of a message; cryptography makes it unreadable."
+    },
+    {
+      "id": 17,
+      "source": "Batch 2 Q17",
+      "topic": "Security Basics",
+      "question": "Verifying the identity of a user, for example through a password or OTP, is called:",
+      "options": [
+        "Authorization",
+        "Accounting",
+        "Authentication",
+        "Auditing",
+        "Encryption"
+      ],
+      "answer": "c",
+      "explanation": "Authentication = who you are. Authorization = what you can do."
+    },
+    {
+      "id": 18,
+      "source": "Batch 2 Q18",
+      "topic": "Security Basics",
+      "question": "A DDoS attack mainly targets which goal of the CIA triad?",
+      "options": [
+        "Confidentiality",
+        "Integrity",
+        "Non-repudiation",
+        "Availability",
+        "Authentication"
+      ],
+      "answer": "d",
+      "explanation": "DoS/DDoS make systems unavailable."
+    },
+    {
+      "id": 19,
+      "source": "Batch 2 Q19",
+      "topic": "Cryptography",
+      "question": "What is the size of an MD5 hash?",
+      "options": [
+        "64 bits",
+        "160 bits",
+        "256 bits",
+        "512 bits",
+        "128 bits"
+      ],
+      "answer": "e",
+      "explanation": "MD5 = 128, SHA-1 = 160, SHA-256 = 256."
+    },
+    {
+      "id": 20,
+      "source": "Batch 2 Q20",
+      "topic": "Cryptography",
+      "question": "After the TLS handshake is complete, the actual data is encrypted using:",
+      "options": [
+        "A symmetric session key (such as AES)",
+        "The server's private key",
+        "The client's public key",
+        "A hash function",
+        "The CA's private key"
+      ],
+      "answer": "a",
+      "explanation": "Hybrid encryption: asymmetric for key exchange, symmetric (AES) for data."
+    },
+    {
+      "id": 21,
+      "source": "Batch 3 Q21",
+      "topic": "Cryptography",
+      "question": "DES uses a 64-bit key. How many of those bits are actually used for encryption?",
+      "options": [
+        "64",
+        "48",
+        "56",
+        "32",
+        "8"
+      ],
+      "answer": "c",
+      "explanation": "56 bits; the other 8 are parity."
+    },
+    {
+      "id": 22,
+      "source": "Batch 3 Q22",
+      "topic": "Cryptography",
+      "question": "Which group contains only asymmetric algorithms?",
+      "options": [
+        "AES, DES, RSA",
+        "RSA, ECC, Diffie-Hellman",
+        "DES, 3DES, Blowfish",
+        "RC4, AES, ECC",
+        "SHA-256, MD5, RSA"
+      ],
+      "answer": "b",
+      "explanation": "RSA, ECC and DH are all asymmetric."
+    },
+    {
+      "id": 23,
+      "source": "Batch 3 Q23",
+      "topic": "Cryptography",
+      "question": "What is the output size of the MD5 hash function?",
+      "options": [
+        "160 bits",
+        "256 bits",
+        "64 bits",
+        "128 bits",
+        "512 bits"
+      ],
+      "answer": "d",
+      "explanation": "MD5 = 128 bits."
+    },
+    {
+      "id": 24,
+      "source": "Batch 3 Q24",
+      "topic": "Cryptography",
+      "question": "How many keys are needed in total for 10 users to communicate using asymmetric encryption?",
+      "options": [
+        "20",
+        "45",
+        "10",
+        "90",
+        "100"
+      ],
+      "answer": "a",
+      "explanation": "Asymmetric: 2n = 20 (one key pair per user). 45 is the symmetric formula."
+    },
+    {
+      "id": 25,
+      "source": "Batch 3 Q25",
+      "topic": "Cryptography",
+      "question": "HMAC provides which security services?",
+      "options": [
+        "Confidentiality only",
+        "Availability and confidentiality",
+        "Non-repudiation only",
+        "Compression and integrity",
+        "Integrity and authentication"
+      ],
+      "answer": "e",
+      "explanation": "HMAC = hash + secret key: integrity and authentication."
+    },
+    {
+      "id": 26,
+      "source": "Batch 3 Q26",
+      "topic": "Cryptography",
+      "question": "Which mechanism is used to check whether a digital certificate has been revoked before its expiry date?",
+      "options": [
+        "X.509 encoding",
+        "CRL / OCSP",
+        "SHA-256 hashing",
+        "Salting",
+        "Diffie-Hellman"
+      ],
+      "answer": "b",
+      "explanation": "CRL/OCSP check revocation. X.509 is just the format."
+    },
+    {
+      "id": 27,
+      "source": "Batch 3 Q27",
+      "topic": "Cryptography",
+      "question": "What is the output size of SHA-256?",
+      "options": [
+        "128 bits",
+        "160 bits",
+        "256 bits",
+        "512 bits",
+        "64 bits"
+      ],
+      "answer": "c",
+      "explanation": "The name gives it away: 256 bits."
+    },
+    {
+      "id": 28,
+      "source": "Batch 3 Q28",
+      "topic": "Cryptography",
+      "question": "Which of the following is a symmetric stream cipher?",
+      "options": [
+        "RSA",
+        "AES",
+        "ECC",
+        "SHA-1",
+        "RC4"
+      ],
+      "answer": "e",
+      "explanation": "RC4 is a stream cipher. AES/DES are block ciphers."
+    },
+    {
+      "id": 29,
+      "source": "Batch 3 Q29",
+      "topic": "Cryptography",
+      "question": "In hybrid encryption, as used by HTTPS/TLS:",
+      "options": [
+        "Only asymmetric encryption is used for all data",
+        "Only hashing is used",
+        "Symmetric encryption is used to exchange keys, and asymmetric encryption is used for the data",
+        "Asymmetric encryption (or Diffie-Hellman) is used to exchange a session key, and symmetric encryption is used for the data",
+        "No keys are exchanged"
+      ],
+      "answer": "d",
+      "explanation": "Asymmetric for the key exchange, then fast symmetric for the data."
+    },
+    {
+      "id": 30,
+      "source": "Batch 3 Q30",
+      "topic": "Cryptography",
+      "question": "Which of the following statements is incorrect?",
+      "options": [
+        "A hash can be reversed using the private key",
+        "Encryption can be reversed using the correct key",
+        "Hashing is a one-way function",
+        "A salt makes identical passwords produce different hashes",
+        "SHA-256 produces a 256-bit output"
+      ],
+      "answer": "a",
+      "explanation": "Hashes can't be reversed by any key."
+    },
+    {
+      "id": 31,
+      "source": "Batch 4 Q31",
+      "topic": "Social Engineering",
+      "question": "Which of the following best describes a watering hole attack?",
+      "options": [
+        "Infecting a user's system through email attachments",
+        "Redirecting traffic from secure websites to fake login pages",
+        "Infecting a commonly visited website to target a specific group of users",
+        "Sending mass phishing emails to unknown users",
+        "Encrypting files and demanding a ransom"
+      ],
+      "answer": "c",
+      "explanation": "Watering hole: infect the site the target group visits (PYQ 2025)."
+    },
+    {
+      "id": 32,
+      "source": "Batch 4 Q32",
+      "topic": "Web Attacks",
+      "question": "Which of the following techniques helps prevent SQL injection attacks?",
+      "options": [
+        "Running SQL queries in a loop",
+        "Giving admin rights to all users",
+        "Using simple, open SQL queries",
+        "Validating and sanitizing user inputs",
+        "Disabling the login screen"
+      ],
+      "answer": "d",
+      "explanation": "Input validation/sanitization and parameterized queries prevent SQLi (PYQ 2025)."
+    },
+    {
+      "id": 33,
+      "source": "Batch 4 Q33",
+      "topic": "Web Attacks",
+      "question": "Which web application attack involves injecting malicious scripts into a trusted website to target its users?",
+      "options": [
+        "Cross-Site Request Forgery (CSRF)",
+        "Cross-Site Scripting (XSS)",
+        "SQL injection",
+        "Distributed Denial-of-Service (DDoS)",
+        "Brute force attack"
+      ],
+      "answer": "b",
+      "explanation": "XSS injects scripts that run in other users' browsers (PYQ 2022)."
+    },
+    {
+      "id": 34,
+      "source": "Batch 4 Q34",
+      "topic": "Web Attacks",
+      "question": "Which attack causes a logged-in user's browser to send unauthorised requests to a trusted web application without the user's consent?",
+      "options": [
+        "Phishing",
+        "SQL injection",
+        "Spoofing",
+        "Session hijacking",
+        "CSRF"
+      ],
+      "answer": "e",
+      "explanation": "CSRF forges requests from a logged-in user's browser (PYQ 2024)."
+    },
+    {
+      "id": 35,
+      "source": "Batch 4 Q35",
+      "topic": "DoS/DDoS",
+      "question": "Which type of DDoS attack sends spoofed ICMP echo requests to broadcast addresses, causing many systems to flood the victim with ICMP replies?",
+      "options": [
+        "Smurf attack",
+        "SYN flood",
+        "Ping of Death",
+        "DNS amplification",
+        "UDP flood"
+      ],
+      "answer": "a",
+      "explanation": "Smurf = ICMP to broadcast with the victim's IP spoofed (PYQ 2023)."
+    },
+    {
+      "id": 36,
+      "source": "Batch 4 Q36",
+      "topic": "DoS/DDoS",
+      "question": "What is the name of the attack in which an attacker overwhelms a web server by sending a very large number of HTTP requests?",
+      "options": [
+        "Packet sniffing",
+        "DNS spoofing",
+        "HTTP flooding",
+        "Session hijacking",
+        "Port scanning"
+      ],
+      "answer": "c",
+      "explanation": "HTTP flood (PYQ 2024)."
+    },
+    {
+      "id": 37,
+      "source": "Batch 4 Q37",
+      "topic": "Network Attacks",
+      "question": "A rogue wireless access point that closely imitates a legitimate Wi-Fi network to trick users and capture their credentials is an example of which attack?",
+      "options": [
+        "Man-in-the-middle attack",
+        "DNS spoofing attack",
+        "ARP poisoning attack",
+        "Evil twin attack",
+        "Smurf attack"
+      ],
+      "answer": "d",
+      "explanation": "Evil twin = fake Wi-Fi AP (PYQ 2024)."
+    },
+    {
+      "id": 38,
+      "source": "Batch 4 Q38",
+      "topic": "Network Attacks",
+      "question": "Which form of snooping attack involves unauthorised monitoring of network communications to capture sensitive information?",
+      "options": [
+        "Spoofing",
+        "SQL injection",
+        "Denial of Service",
+        "Phishing",
+        "Eavesdropping"
+      ],
+      "answer": "e",
+      "explanation": "Eavesdropping/sniffing is a passive attack (PYQ 2022)."
+    },
+    {
+      "id": 39,
+      "source": "Batch 4 Q39",
+      "topic": "Malware",
+      "question": "Which type of malware replicates itself across a network without needing a host file or user action?",
+      "options": [
+        "Virus",
+        "Worm",
+        "Trojan",
+        "Rootkit",
+        "Spyware"
+      ],
+      "answer": "b",
+      "explanation": "Worm travels alone; a virus needs a host."
+    },
+    {
+      "id": 40,
+      "source": "Batch 4 Q40",
+      "topic": "Malware",
+      "question": "Malware that encrypts a victim's files and demands payment to restore access is called:",
+      "options": [
+        "Ransomware",
+        "Adware",
+        "Keylogger",
+        "Logic bomb",
+        "Spyware"
+      ],
+      "answer": "a",
+      "explanation": "Ransomware."
+    },
+    {
+      "id": 41,
+      "source": "Batch 5 Q41",
+      "topic": "Social Engineering",
+      "question": "A spear-phishing attack aimed specifically at a company's CEO or CFO is called:",
+      "options": [
+        "Vishing",
+        "Smishing",
+        "Whaling",
+        "Pharming",
+        "Baiting"
+      ],
+      "answer": "c",
+      "explanation": "Whaling targets the 'big fish' (executives)."
+    },
+    {
+      "id": 42,
+      "source": "Batch 5 Q42",
+      "topic": "Social Engineering",
+      "question": "A customer receives an SMS saying 'Your KYC has expired, click this link to update.' This is an example of:",
+      "options": [
+        "Smishing",
+        "Vishing",
+        "Whaling",
+        "Tailgating",
+        "Pharming"
+      ],
+      "answer": "a",
+      "explanation": "SMS phishing = smishing. Voice = vishing."
+    },
+    {
+      "id": 43,
+      "source": "Batch 5 Q43",
+      "topic": "Social Engineering",
+      "question": "A user types the correct bank URL but is still taken to a fake website, because the DNS has been tampered with. This attack is called:",
+      "options": [
+        "Phishing",
+        "Spear phishing",
+        "Baiting",
+        "Watering hole",
+        "Pharming"
+      ],
+      "answer": "e",
+      "explanation": "Pharming redirects even when the correct URL is typed."
+    },
+    {
+      "id": 44,
+      "source": "Batch 5 Q44",
+      "topic": "DoS/DDoS",
+      "question": "Which attack sends many TCP SYN packets without completing the handshake, leaving the server with many half-open connections?",
+      "options": [
+        "Ping of Death",
+        "SYN flood",
+        "Smurf attack",
+        "Replay attack",
+        "Teardrop"
+      ],
+      "answer": "b",
+      "explanation": "SYN flood."
+    },
+    {
+      "id": 45,
+      "source": "Batch 5 Q45",
+      "topic": "Network Attacks",
+      "question": "An attacker on a LAN sends fake ARP replies so that victims send their traffic through the attacker's machine. This is:",
+      "options": [
+        "DNS spoofing",
+        "IP spoofing",
+        "Evil twin",
+        "ARP poisoning",
+        "Session hijacking"
+      ],
+      "answer": "d",
+      "explanation": "ARP poisoning enables MITM on a LAN."
+    },
+    {
+      "id": 46,
+      "source": "Batch 5 Q46",
+      "topic": "Network Attacks",
+      "question": "An attack that exploits a software vulnerability unknown to the vendor, for which no patch exists yet, is called a:",
+      "options": [
+        "Zero-day attack",
+        "Brute force attack",
+        "Dictionary attack",
+        "Replay attack",
+        "Logic bomb"
+      ],
+      "answer": "a",
+      "explanation": "Zero-day: no patch yet."
+    },
+    {
+      "id": 47,
+      "source": "Batch 5 Q47",
+      "topic": "Malware",
+      "question": "Malware disguised as legitimate software, such as a free game, but carrying a hidden malicious payload is called a:",
+      "options": [
+        "Worm",
+        "Trojan",
+        "Virus",
+        "Rootkit",
+        "Adware"
+      ],
+      "answer": "b",
+      "explanation": "Trojan horse."
+    },
+    {
+      "id": 48,
+      "source": "Batch 5 Q48",
+      "topic": "Malware",
+      "question": "Which type of malware hides deep in the operating system with administrator-level access and is very hard to detect?",
+      "options": [
+        "Adware",
+        "Keylogger",
+        "Rootkit",
+        "Ransomware",
+        "Worm"
+      ],
+      "answer": "c",
+      "explanation": "Rootkit = root-level, hidden."
+    },
+    {
+      "id": 49,
+      "source": "Batch 5 Q49",
+      "topic": "Network Attacks",
+      "question": "Which of the following is an example of a passive attack?",
+      "options": [
+        "Denial of Service",
+        "Man-in-the-middle with message modification",
+        "Replay attack",
+        "Eavesdropping",
+        "IP spoofing"
+      ],
+      "answer": "d",
+      "explanation": "Passive attacks only observe; eavesdropping is the classic one."
+    },
+    {
+      "id": 50,
+      "source": "Batch 5 Q50",
+      "topic": "Malware",
+      "question": "A network of compromised computers, controlled by an attacker through a C&C server and often used to launch DDoS attacks, is called a:",
+      "options": [
+        "Rootkit",
+        "Worm",
+        "Honeypot",
+        "Logic bomb",
+        "Botnet"
+      ],
+      "answer": "e",
+      "explanation": "Botnet."
+    },
+    {
+      "id": 51,
+      "source": "Batch 6 Q51",
+      "topic": "IDS/IPS",
+      "question": "Which type of Intrusion Detection System analyses network traffic in real time?",
+      "options": [
+        "Host-based IDS (HIDS)",
+        "Network-based IDS (NIDS)",
+        "Signature-based IDS",
+        "Anomaly-based IDS",
+        "Behaviour-based IDS"
+      ],
+      "answer": "b",
+      "explanation": "NIDS monitors network traffic (PYQ 2022)."
+    },
+    {
+      "id": 52,
+      "source": "Batch 6 Q52",
+      "topic": "Defence",
+      "question": "Which security approach permits only predefined, approved inputs or entities and rejects all others by default?",
+      "options": [
+        "Packet sniffing",
+        "Blacklisting",
+        "Input masking",
+        "Whitelisting",
+        "Traffic shaping"
+      ],
+      "answer": "d",
+      "explanation": "Whitelisting = guest list; only approved entries get in (PYQ 2024)."
+    },
+    {
+      "id": 53,
+      "source": "Batch 6 Q53",
+      "topic": "Firewalls",
+      "question": "Which of the following threats is least effectively controlled by a traditional hardware firewall?",
+      "options": [
+        "Unauthorised port access",
+        "Malicious inbound traffic",
+        "External intrusion attempts",
+        "Unauthorised external network access",
+        "Data theft by authorised internal users"
+      ],
+      "answer": "e",
+      "explanation": "Insiders' traffic is allowed by the rules (PYQ 2024)."
+    },
+    {
+      "id": 54,
+      "source": "Batch 6 Q54",
+      "topic": "Firewalls",
+      "question": "Which firewall monitors the state of every connection and allows or blocks packets based on that context, providing stronger security?",
+      "options": [
+        "Proxy firewall",
+        "Static packet firewall",
+        "Dynamic packet filtering firewall",
+        "Circuit-level gateway",
+        "Application gateway"
+      ],
+      "answer": "c",
+      "explanation": "Stateful inspection = dynamic packet filtering (PYQ 2024)."
+    },
+    {
+      "id": 55,
+      "source": "Batch 6 Q55",
+      "topic": "Access Control",
+      "question": "Match the access control models with their features. Models: A. Zero Trust, B. DAC, C. MAC, D. RBAC. Features: 1. Based on roles in an organisation, 2. Based on security labels/classification, 3. Access decided by the data owner, 4. Never trust, always verify (assume breach).",
+      "options": [
+        "A-1, B-2, C-3, D-4",
+        "A-4, B-3, C-2, D-1",
+        "A-3, B-4, C-1, D-2",
+        "A-2, B-1, C-4, D-3",
+        "A-4, B-1, C-3, D-2"
+      ],
+      "answer": "b",
+      "explanation": "Zero Trust = never trust; DAC = owner; MAC = labels; RBAC = roles (PYQ 2025)."
+    },
+    {
+      "id": 56,
+      "source": "Batch 6 Q56",
+      "topic": "Authentication",
+      "question": "Which authorisation framework is commonly used in modern web applications to enable token-based access, and is often integrated into Single Sign-On systems?",
+      "options": [
+        "OAuth 2.0",
+        "Kerberos",
+        "Secure Sockets Layer",
+        "LDAP",
+        "Transport Layer Security"
+      ],
+      "answer": "a",
+      "explanation": "OAuth 2.0 (PYQ 2023). Kerberos uses tickets."
+    },
+    {
+      "id": 57,
+      "source": "Batch 6 Q57",
+      "topic": "Frameworks",
+      "question": "In the Cyber Kill Chain, which phase combines a malicious payload with a specific exploit to prepare for delivery?",
+      "options": [
+        "Reconnaissance",
+        "Delivery",
+        "Exploitation",
+        "Installation",
+        "Weaponization"
+      ],
+      "answer": "e",
+      "explanation": "Weaponization (PYQ 2024)."
+    },
+    {
+      "id": 58,
+      "source": "Batch 6 Q58",
+      "topic": "Defence",
+      "question": "What is the main purpose of a DMZ?",
+      "options": [
+        "To encrypt all internal traffic",
+        "To store backups",
+        "To host public-facing servers in a separate zone from the internal network",
+        "To assign IP addresses",
+        "To block all inbound traffic"
+      ],
+      "answer": "c",
+      "explanation": "DMZ isolates public-facing servers."
+    },
+    {
+      "id": 59,
+      "source": "Batch 6 Q59",
+      "topic": "Defence",
+      "question": "In server security, which of the following practices is NOT desirable?",
+      "options": [
+        "Using a reverse proxy to hide server IP addresses",
+        "Deploying public-facing servers in a DMZ",
+        "Disabling unnecessary services and ports",
+        "Allowing unrestricted root login via SSH for faster access",
+        "Running regular vulnerability assessments"
+      ],
+      "answer": "d",
+      "explanation": "Unrestricted root SSH is a major risk (PYQ 2022)."
+    },
+    {
+      "id": 60,
+      "source": "Batch 6 Q60",
+      "topic": "Authentication",
+      "question": "Which of the following is a true example of multi-factor authentication?",
+      "options": [
+        "Password + PIN",
+        "Password + security question",
+        "Two different passwords",
+        "Username + password",
+        "Password + OTP sent to the registered phone"
+      ],
+      "answer": "e",
+      "explanation": "MFA needs different factor types: know + have. Password + PIN are both 'know'."
+    },
+    {
+      "id": 61,
+      "source": "Batch 7 Q61",
+      "topic": "Defence",
+      "question": "Which approach is considered more secure because it rejects everything by default and allows only approved items?",
+      "options": [
+        "Blacklisting",
+        "Traffic shaping",
+        "Whitelisting",
+        "Packet sniffing",
+        "Input masking"
+      ],
+      "answer": "c",
+      "explanation": "Whitelisting."
+    },
+    {
+      "id": 62,
+      "source": "Batch 7 Q62",
+      "topic": "Firewalls",
+      "question": "Which of the following is commonly used to block or allow network ports such as HTTP and SSH?",
+      "options": [
+        "Compiler",
+        "Firewall",
+        "Load balancer",
+        "Web browser",
+        "Database server"
+      ],
+      "answer": "b",
+      "explanation": "Firewall (PYQ 2024)."
+    },
+    {
+      "id": 63,
+      "source": "Batch 7 Q63",
+      "topic": "IDS/IPS",
+      "question": "What is the key difference between an IDS and an IPS?",
+      "options": [
+        "An IDS blocks attacks, while an IPS only alerts",
+        "Both only generate logs",
+        "An IDS works only on hosts",
+        "An IPS works only offline",
+        "An IPS sits inline and can actively block attacks, while an IDS only detects and alerts"
+      ],
+      "answer": "e",
+      "explanation": "IDS = CCTV (alerts). IPS = guard (blocks)."
+    },
+    {
+      "id": 64,
+      "source": "Batch 7 Q64",
+      "topic": "IDS/IPS",
+      "question": "What is the main limitation of signature-based intrusion detection?",
+      "options": [
+        "It cannot detect new (zero-day) attacks",
+        "It produces too many false positives",
+        "It cannot detect known attacks",
+        "It works only on wireless networks",
+        "It needs no updates"
+      ],
+      "answer": "a",
+      "explanation": "Signatures only match known attacks. Anomaly-based has more false positives."
+    },
+    {
+      "id": 65,
+      "source": "Batch 7 Q65",
+      "topic": "Defence",
+      "question": "What is BitLocker?",
+      "options": [
+        "A malware protection program",
+        "A network firewall tool",
+        "A file compression utility",
+        "A disk encryption feature in Windows",
+        "A backup management tool"
+      ],
+      "answer": "d",
+      "explanation": "BitLocker = Windows full-disk encryption (PYQ 2022)."
+    },
+    {
+      "id": 66,
+      "source": "Batch 7 Q66",
+      "topic": "Defence",
+      "question": "A network is divided into smaller segments to isolate different groups of systems and control communication between them. What is the major benefit of network segmentation?",
+      "options": [
+        "It removes the need for authentication",
+        "It reduces the impact of security breaches",
+        "It increases the number of security vulnerabilities",
+        "It allows unrestricted communication between all devices",
+        "It removes the need for network monitoring"
+      ],
+      "answer": "b",
+      "explanation": "Segmentation limits lateral movement (PYQ Prelims 2026)."
+    },
+    {
+      "id": 67,
+      "source": "Batch 7 Q67",
+      "topic": "Firewalls",
+      "question": "According to the 2024 past-paper key, Next-Generation Firewalls primarily belong to which generation of firewall technology?",
+      "options": [
+        "First generation",
+        "Second generation",
+        "Third generation",
+        "Fourth generation",
+        "Fifth generation"
+      ],
+      "answer": "c",
+      "explanation": "Third generation (per the PYQ key)."
+    },
+    {
+      "id": 68,
+      "source": "Batch 7 Q68",
+      "topic": "Defence",
+      "question": "A decoy system that is deliberately made attractive to attackers, so their methods can be studied, is called a:",
+      "options": [
+        "DMZ",
+        "Proxy server",
+        "Firewall",
+        "Sandbox",
+        "Honeypot"
+      ],
+      "answer": "e",
+      "explanation": "Honeypot."
+    },
+    {
+      "id": 69,
+      "source": "Batch 7 Q69",
+      "topic": "Access Control",
+      "question": "In banks, one employee enters a transaction and a different employee approves it (the maker–checker system). Which security principle is this?",
+      "options": [
+        "Separation of duties",
+        "Defence in depth",
+        "Zero Trust",
+        "Need to know",
+        "Single sign-on"
+      ],
+      "answer": "a",
+      "explanation": "Separation of duties."
+    },
+    {
+      "id": 70,
+      "source": "Batch 7 Q70",
+      "topic": "Firewalls",
+      "question": "At which OSI layer does a proxy (application-level gateway) firewall inspect traffic?",
+      "options": [
+        "Network layer",
+        "Transport layer",
+        "Data Link layer",
+        "Application layer",
+        "Physical layer"
+      ],
+      "answer": "d",
+      "explanation": "Layer 7."
+    },
+    {
+      "id": 71,
+      "source": "Batch 8 Q71",
+      "topic": "DPDP Act",
+      "question": "Which of the following is NOT a right under the DPDP Act, 2023?",
+      "options": [
+        "Right to access information",
+        "Right to erasure of data",
+        "Right to grievance redressal",
+        "Right to nominate",
+        "Right to transfer data"
+      ],
+      "answer": "e",
+      "explanation": "No data portability right under DPDP (PYQ Prelims 2026)."
+    },
+    {
+      "id": 72,
+      "source": "Batch 8 Q72",
+      "topic": "KYC & AML",
+      "question": "In banking, what is the primary role of KYC?",
+      "options": [
+        "Verifying customer identity to prevent financial threats",
+        "Assessing customer income to decide credit eligibility",
+        "Monitoring account activity to improve transaction speed",
+        "Collecting customer data to personalise banking services",
+        "Evaluating customer records to recommend investments"
+      ],
+      "answer": "a",
+      "explanation": "KYC = identity verification to prevent money laundering and fraud (PYQ Prelims 2026)."
+    },
+    {
+      "id": 73,
+      "source": "Batch 8 Q73",
+      "topic": "BCP/DR",
+      "question": "In disaster recovery planning, which term refers to the maximum acceptable data loss, measured in time?",
+      "options": [
+        "RTO",
+        "RPO",
+        "MTTF",
+        "DRP",
+        "BCP"
+      ],
+      "answer": "b",
+      "explanation": "RPO = data loss (Point in time). RTO = outage time (PYQ 2025)."
+    },
+    {
+      "id": 74,
+      "source": "Batch 8 Q74",
+      "topic": "ISO Standards",
+      "question": "In business continuity planning, a Disaster Recovery Plan is part of which international standard?",
+      "options": [
+        "ISO 27001",
+        "ISO 31000",
+        "ISO 9001",
+        "ISO 22301",
+        "ISO/IEC 20000"
+      ],
+      "answer": "d",
+      "explanation": "ISO 22301 = business continuity (PYQ 2025)."
+    },
+    {
+      "id": 75,
+      "source": "Batch 8 Q75",
+      "topic": "BCP/DR",
+      "question": "Which statement about offsite recovery strategies is correct?",
+      "options": [
+        "A cold site has all necessary equipment pre-installed and ready to use",
+        "A warm site is identical to a hot site, but without real-time data synchronisation",
+        "A hot site provides fully operational systems with real-time data mirroring and needs minimal downtime during recovery",
+        "A backup site is always fully equipped for immediate switchover",
+        "None of the above"
+      ],
+      "answer": "c",
+      "explanation": "Hot site = fully operational + real-time mirroring (PYQ 2022)."
+    },
+    {
+      "id": 76,
+      "source": "Batch 8 Q76",
+      "topic": "ISO Standards",
+      "question": "Which international standard defines the processes of the software development lifecycle and has been adopted by BIS?",
+      "options": [
+        "ISO/IEC 9126",
+        "ISO 27001",
+        "ISO 9001",
+        "ISO/IEC 15504",
+        "ISO/IEC 12207"
+      ],
+      "answer": "e",
+      "explanation": "ISO/IEC 12207 (PYQ 2025)."
+    },
+    {
+      "id": 77,
+      "source": "Batch 8 Q77",
+      "topic": "DPDP Act",
+      "question": "What is the maximum penalty per breach that the DPDP Act, 2023 allows to be imposed on a Data Fiduciary?",
+      "options": [
+        "₹250 crore",
+        "₹50 crore",
+        "₹500 crore",
+        "₹10 crore",
+        "₹1,000 crore"
+      ],
+      "answer": "a",
+      "explanation": "Up to ₹250 crore."
+    },
+    {
+      "id": 78,
+      "source": "Batch 8 Q78",
+      "topic": "IT Act & CERT-In",
+      "question": "Under CERT-In's 2022 directions, within how many hours must organisations report a cyber incident after noticing it?",
+      "options": [
+        "1 hour",
+        "24 hours",
+        "6 hours",
+        "72 hours",
+        "48 hours"
+      ],
+      "answer": "c",
+      "explanation": "6 hours."
+    },
+    {
+      "id": 79,
+      "source": "Batch 8 Q79",
+      "topic": "Payments",
+      "question": "What is the minimum amount that can be transferred through RTGS?",
+      "options": [
+        "No minimum",
+        "₹50,000",
+        "₹1 lakh",
+        "₹2 lakh",
+        "₹5 lakh"
+      ],
+      "answer": "d",
+      "explanation": "RTGS minimum = ₹2 lakh; NEFT has no minimum."
+    },
+    {
+      "id": 80,
+      "source": "Batch 8 Q80",
+      "topic": "BCP/DR",
+      "question": "An incremental backup copies:",
+      "options": [
+        "All data, every time",
+        "Only the changes made since the last backup of any type",
+        "Only the changes made since the last full backup",
+        "Only system files",
+        "Only deleted files"
+      ],
+      "answer": "b",
+      "explanation": "Incremental = since last backup of any type. Differential = since last full."
+    },
+    {
+      "id": 81,
+      "source": "Batch 9 Q81",
+      "topic": "DPDP Act",
+      "question": "Under the DPDP Act, the organisation that decides the purpose and means of processing personal data is called the:",
+      "options": [
+        "Data Principal",
+        "Data Fiduciary",
+        "Data Processor",
+        "Consent Manager",
+        "Data Protection Officer"
+      ],
+      "answer": "b",
+      "explanation": "Data Fiduciary. The individual is the Data Principal."
+    },
+    {
+      "id": 82,
+      "source": "Batch 9 Q82",
+      "topic": "DPDP Act",
+      "question": "Which body enforces the DPDP Act and imposes penalties?",
+      "options": [
+        "CERT-In",
+        "RBI",
+        "SEBI",
+        "Data Protection Board of India",
+        "NPCI"
+      ],
+      "answer": "d",
+      "explanation": "Data Protection Board of India."
+    },
+    {
+      "id": 83,
+      "source": "Batch 9 Q83",
+      "topic": "IT Act & CERT-In",
+      "question": "Which section of the IT Act, 2000 deals with identity theft?",
+      "options": [
+        "Section 66C",
+        "Section 66D",
+        "Section 66F",
+        "Section 43",
+        "Section 67"
+      ],
+      "answer": "a",
+      "explanation": "66C = Copying identity. 66D = Deception (impersonation). 66F = Fear (cyber terrorism)."
+    },
+    {
+      "id": 84,
+      "source": "Batch 9 Q84",
+      "topic": "IT Act & CERT-In",
+      "question": "Which section of the IT Act, 2000 deals with cyber terrorism and provides for life imprisonment?",
+      "options": [
+        "Section 66",
+        "Section 66C",
+        "Section 66D",
+        "Section 69A",
+        "Section 66F"
+      ],
+      "answer": "e",
+      "explanation": "66F."
+    },
+    {
+      "id": 85,
+      "source": "Batch 9 Q85",
+      "topic": "Payments",
+      "question": "How are NEFT transactions settled?",
+      "options": [
+        "Individually, in real time",
+        "Only once a day",
+        "In batches",
+        "Only on working days at noon",
+        "Through SWIFT"
+      ],
+      "answer": "c",
+      "explanation": "NEFT = batches; RTGS = real-time gross settlement."
+    },
+    {
+      "id": 86,
+      "source": "Batch 9 Q86",
+      "topic": "Payments",
+      "question": "PCI-DSS is a security standard for organisations that handle:",
+      "options": [
+        "Medical records",
+        "Payment card data",
+        "Government ID data",
+        "Email systems",
+        "Cloud infrastructure"
+      ],
+      "answer": "b",
+      "explanation": "PCI = Payment Card Industry."
+    },
+    {
+      "id": 87,
+      "source": "Batch 9 Q87",
+      "topic": "BCP/DR",
+      "question": "A differential backup copies:",
+      "options": [
+        "All data, every time",
+        "Only the changes since the last backup of any type",
+        "Only system files",
+        "All changes since the last full backup",
+        "Only deleted files"
+      ],
+      "answer": "d",
+      "explanation": "Differential = since the last full backup."
+    },
+    {
+      "id": 88,
+      "source": "Batch 9 Q88",
+      "topic": "ISO Standards",
+      "question": "ISO/IEC 27001 is the standard for:",
+      "options": [
+        "Information Security Management Systems (ISMS)",
+        "Business continuity management",
+        "Software lifecycle processes",
+        "Quality management",
+        "Risk management"
+      ],
+      "answer": "a",
+      "explanation": "27001 = Security (ISMS)."
+    },
+    {
+      "id": 89,
+      "source": "Batch 9 Q89",
+      "topic": "KYC & AML",
+      "question": "Banks in India file Suspicious Transaction Reports (STRs) with:",
+      "options": [
+        "CERT-In",
+        "CERSAI",
+        "FIU-IND",
+        "NPCI",
+        "SEBI"
+      ],
+      "answer": "c",
+      "explanation": "FIU-IND. CERSAI = CKYC registry; CERT-In = cyber incidents."
+    },
+    {
+      "id": 90,
+      "source": "Batch 9 Q90",
+      "topic": "BCP/DR",
+      "question": "Which type of recovery site provides only space, power and cooling, with no equipment installed?",
+      "options": [
+        "Hot site",
+        "Warm site",
+        "Mirror site",
+        "Mobile site",
+        "Cold site"
+      ],
+      "answer": "e",
+      "explanation": "Cold site."
+    },
+    {
+      "id": 91,
+      "source": "Day Test Q1",
+      "topic": "Cryptography",
+      "question": "Which of the following is the standard format for digital certificates in a PKI?",
+      "options": [
+        "SHA-256",
+        "RSA",
+        "TLS",
+        "X.509",
+        "AES"
+      ],
+      "answer": "d",
+      "explanation": "X.509."
+    },
+    {
+      "id": 92,
+      "source": "Day Test Q2",
+      "topic": "Cryptography",
+      "question": "To make sure only the intended receiver can read a message, the sender encrypts it with:",
+      "options": [
+        "The receiver's public key",
+        "The sender's private key",
+        "The sender's public key",
+        "The receiver's private key",
+        "A hash function"
+      ],
+      "answer": "a",
+      "explanation": "Receiver's public key."
+    },
+    {
+      "id": 93,
+      "source": "Day Test Q3",
+      "topic": "Cryptography",
+      "question": "What is the effective key length of DES?",
+      "options": [
+        "64 bits",
+        "128 bits",
+        "56 bits",
+        "48 bits",
+        "256 bits"
+      ],
+      "answer": "c",
+      "explanation": "56 bits."
+    },
+    {
+      "id": 94,
+      "source": "Day Test Q4",
+      "topic": "Social Engineering",
+      "question": "An attacker infects a website that a specific group of employees frequently visits, in order to compromise their systems. This is a:",
+      "options": [
+        "Phishing attack",
+        "Pharming attack",
+        "Smurf attack",
+        "Evil twin attack",
+        "Watering hole attack"
+      ],
+      "answer": "e",
+      "explanation": "Watering hole."
+    },
+    {
+      "id": 95,
+      "source": "Day Test Q5",
+      "topic": "Web Attacks",
+      "question": "Which attack tricks a logged-in user's browser into sending an unauthorised request to a trusted site?",
+      "options": [
+        "XSS",
+        "CSRF",
+        "SQL injection",
+        "Session hijacking",
+        "Phishing"
+      ],
+      "answer": "b",
+      "explanation": "CSRF."
+    },
+    {
+      "id": 96,
+      "source": "Day Test Q6",
+      "topic": "Defence",
+      "question": "Which security approach allows only pre-approved entities and rejects everything else by default?",
+      "options": [
+        "Blacklisting",
+        "Traffic shaping",
+        "Whitelisting",
+        "Packet sniffing",
+        "Input masking"
+      ],
+      "answer": "c",
+      "explanation": "Whitelisting."
+    },
+    {
+      "id": 97,
+      "source": "Day Test Q7",
+      "topic": "BCP/DR",
+      "question": "Which term means the maximum acceptable data loss, measured in time?",
+      "options": [
+        "RPO",
+        "RTO",
+        "MTBF",
+        "BCP",
+        "DRP"
+      ],
+      "answer": "a",
+      "explanation": "RPO."
+    },
+    {
+      "id": 98,
+      "source": "Day Test Q8",
+      "topic": "ISO Standards",
+      "question": "Which ISO standard covers business continuity management, including disaster recovery planning?",
+      "options": [
+        "ISO 27001",
+        "ISO 9001",
+        "ISO 31000",
+        "ISO 20000",
+        "ISO 22301"
+      ],
+      "answer": "e",
+      "explanation": "ISO 22301."
+    },
+    {
+      "id": 99,
+      "source": "Day Test Q9",
+      "topic": "IT Act & CERT-In",
+      "question": "Which section of the IT Act, 2000 deals with identity theft?",
+      "options": [
+        "Section 66",
+        "Section 66F",
+        "Section 43",
+        "Section 66C",
+        "Section 67"
+      ],
+      "answer": "d",
+      "explanation": "66C."
+    },
+    {
+      "id": 100,
+      "source": "Day Test Q10",
+      "topic": "Payments",
+      "question": "Which standard must be followed by organisations that store, process or transmit payment card data?",
+      "options": [
+        "ISO 27701",
+        "PCI-DSS",
+        "COBIT",
+        "ITIL",
+        "ISO 9001"
+      ],
+      "answer": "b",
+      "explanation": "PCI-DSS. COBIT = IT governance."
+    },
+    {
+      "id": 101,
+      "source": "Day Test Q11",
+      "topic": "Cryptography",
+      "question": "Which pair contains only asymmetric algorithms?",
+      "options": [
+        "AES, DES",
+        "Blowfish, RC4",
+        "RSA, ECC",
+        "3DES, AES",
+        "SHA-256, MD5"
+      ],
+      "answer": "c",
+      "explanation": "RSA, ECC."
+    },
+    {
+      "id": 102,
+      "source": "Day Test Q12",
+      "topic": "Cryptography",
+      "question": "What is the output size of MD5?",
+      "options": [
+        "128 bits",
+        "160 bits",
+        "256 bits",
+        "64 bits",
+        "512 bits"
+      ],
+      "answer": "a",
+      "explanation": "128 bits."
+    },
+    {
+      "id": 103,
+      "source": "Day Test Q13",
+      "topic": "Cryptography",
+      "question": "What is the purpose of a salt in password hashing?",
+      "options": [
+        "It encrypts the password with AES",
+        "It compresses the hash",
+        "It makes the hash reversible",
+        "It removes duplicate passwords",
+        "It adds a random value before hashing, so identical passwords produce different hashes"
+      ],
+      "answer": "e",
+      "explanation": "Random value before hashing."
+    },
+    {
+      "id": 104,
+      "source": "Day Test Q14",
+      "topic": "DoS/DDoS",
+      "question": "Which attack sends spoofed ICMP echo requests to a broadcast address, so that every host replies to the victim?",
+      "options": [
+        "SYN flood",
+        "Ping of Death",
+        "HTTP flood",
+        "Smurf attack",
+        "Teardrop"
+      ],
+      "answer": "d",
+      "explanation": "Smurf."
+    },
+    {
+      "id": 105,
+      "source": "Day Test Q15",
+      "topic": "Network Attacks",
+      "question": "A fake Wi-Fi hotspot named 'Airport_Free_WiFi', set up to steal users' credentials, is an example of:",
+      "options": [
+        "ARP poisoning",
+        "An evil twin attack",
+        "DNS spoofing",
+        "A replay attack",
+        "Whaling"
+      ],
+      "answer": "b",
+      "explanation": "Evil twin."
+    },
+    {
+      "id": 106,
+      "source": "Day Test Q16",
+      "topic": "Network Attacks",
+      "question": "An attack that exploits a vulnerability for which no patch exists yet is called a:",
+      "options": [
+        "Brute force attack",
+        "Dictionary attack",
+        "Zero-day attack",
+        "Logic bomb",
+        "Replay attack"
+      ],
+      "answer": "c",
+      "explanation": "Zero-day."
+    },
+    {
+      "id": 107,
+      "source": "Day Test Q17",
+      "topic": "IDS/IPS",
+      "question": "Which type of IDS monitors network traffic in real time across a network segment?",
+      "options": [
+        "NIDS",
+        "HIDS",
+        "Antivirus",
+        "DLP",
+        "Honeypot"
+      ],
+      "answer": "a",
+      "explanation": "NIDS."
+    },
+    {
+      "id": 108,
+      "source": "Day Test Q18",
+      "topic": "Access Control",
+      "question": "Which access control model follows the principle 'never trust, always verify'?",
+      "options": [
+        "DAC",
+        "MAC",
+        "RBAC",
+        "ABAC",
+        "Zero Trust"
+      ],
+      "answer": "e",
+      "explanation": "Zero Trust."
+    },
+    {
+      "id": 109,
+      "source": "Day Test Q19",
+      "topic": "IT Act & CERT-In",
+      "question": "A fraudster logs in using someone else's stolen password and digital signature. Which section of the IT Act covers this identity theft?",
+      "options": [
+        "Section 66F",
+        "Section 66C",
+        "Section 66D",
+        "Section 69A",
+        "Section 43"
+      ],
+      "answer": "b",
+      "explanation": "66C."
+    },
+    {
+      "id": 110,
+      "source": "Day Test Q20",
+      "topic": "Payments",
+      "question": "PCI-DSS is a security standard for protecting:",
+      "options": [
+        "Medical records",
+        "Source code",
+        "Email servers",
+        "Payment card data",
+        "Government documents"
+      ],
+      "answer": "d",
+      "explanation": "Card data."
+    },
+    {
+      "id": 111,
+      "source": "Day Test Q21",
+      "topic": "Cryptography",
+      "question": "Which of the following is mainly used to provide non-repudiation?",
+      "options": [
+        "Firewall",
+        "Digital signature",
+        "Encryption",
+        "Hash function",
+        "Digital certificate"
+      ],
+      "answer": "b",
+      "explanation": "Digital signature."
+    },
+    {
+      "id": 112,
+      "source": "Day Test Q22",
+      "topic": "Web Attacks",
+      "question": "Which is the most effective way to prevent SQL injection?",
+      "options": [
+        "Parameterized queries (prepared statements) and input validation",
+        "Giving the application admin rights",
+        "Building queries by joining strings from user input",
+        "Disabling the login page",
+        "Running queries in a loop"
+      ],
+      "answer": "a",
+      "explanation": "Parameterized queries + input validation."
+    },
+    {
+      "id": 113,
+      "source": "Day Test Q23",
+      "topic": "Web Attacks",
+      "question": "An attacker posts a comment containing <script> code on a trusted website, and the code runs in the browsers of other visitors. This is:",
+      "options": [
+        "CSRF",
+        "SQL injection",
+        "Phishing",
+        "Cross-Site Scripting (XSS)",
+        "Session hijacking"
+      ],
+      "answer": "d",
+      "explanation": "Stored XSS."
+    },
+    {
+      "id": 114,
+      "source": "Day Test Q24",
+      "topic": "DoS/DDoS",
+      "question": "An attacker overwhelms a web server by sending a very large number of HTTP GET requests. This is a(n):",
+      "options": [
+        "Smurf attack",
+        "Ping of Death",
+        "SYN flood",
+        "ARP poisoning",
+        "HTTP flood"
+      ],
+      "answer": "e",
+      "explanation": "HTTP flood."
+    },
+    {
+      "id": 115,
+      "source": "Day Test Q25",
+      "topic": "Firewalls",
+      "question": "A firewall that keeps a table of active connections and allows or blocks packets based on that context is a:",
+      "options": [
+        "Static packet filter",
+        "Circuit-level gateway",
+        "Dynamic packet filtering (stateful inspection) firewall",
+        "Application gateway",
+        "Proxy server"
+      ],
+      "answer": "c",
+      "explanation": "Stateful = dynamic packet filtering."
+    },
+    {
+      "id": 116,
+      "source": "Day Test Q26",
+      "topic": "Firewalls",
+      "question": "Which threat is least effectively controlled by a traditional hardware firewall?",
+      "options": [
+        "Data theft by authorised internal users",
+        "Unauthorised port access",
+        "Malicious inbound traffic",
+        "External intrusion attempts",
+        "Unauthorised external access"
+      ],
+      "answer": "a",
+      "explanation": "Insider threats."
+    },
+    {
+      "id": 117,
+      "source": "Day Test Q27",
+      "topic": "Defence",
+      "question": "BitLocker is:",
+      "options": [
+        "A malware scanner",
+        "A network firewall",
+        "A backup tool",
+        "A file compression utility",
+        "A disk encryption feature in Windows"
+      ],
+      "answer": "e",
+      "explanation": "Windows disk encryption."
+    },
+    {
+      "id": 118,
+      "source": "Day Test Q28",
+      "topic": "Frameworks",
+      "question": "In the Cyber Kill Chain, which phase involves combining a malicious payload with an exploit?",
+      "options": [
+        "Reconnaissance",
+        "Delivery",
+        "Installation",
+        "Weaponization",
+        "Command & Control"
+      ],
+      "answer": "d",
+      "explanation": "Weaponization."
+    },
+    {
+      "id": 119,
+      "source": "Day Test Q29",
+      "topic": "BCP/DR",
+      "question": "Which recovery site has fully operational systems with real-time data mirroring?",
+      "options": [
+        "Cold site",
+        "Warm site",
+        "Hot site",
+        "Mobile site",
+        "Reciprocal site"
+      ],
+      "answer": "c",
+      "explanation": "Hot site."
+    },
+    {
+      "id": 120,
+      "source": "Day Test Q30",
+      "topic": "DPDP Act",
+      "question": "Which of the following is NOT a right of a Data Principal under the DPDP Act?",
+      "options": [
+        "Right to access information",
+        "Right to transfer (port) data",
+        "Right to correction and erasure",
+        "Right to grievance redressal",
+        "Right to nominate"
+      ],
+      "answer": "b",
+      "explanation": "No portability right."
+    },
+    {
+      "id": 121,
+      "source": "Day Test Q31",
+      "topic": "Cryptography",
+      "question": "Diffie-Hellman is mainly used for:",
+      "options": [
+        "Digital signatures",
+        "Password hashing",
+        "Securely exchanging a shared secret key",
+        "Encrypting files directly",
+        "Issuing certificates"
+      ],
+      "answer": "c",
+      "explanation": "Key exchange."
+    },
+    {
+      "id": 122,
+      "source": "Day Test Q32",
+      "topic": "Cryptography",
+      "question": "A digital signature is created by encrypting the message hash with:",
+      "options": [
+        "The receiver's public key",
+        "The receiver's private key",
+        "The sender's public key",
+        "A symmetric session key",
+        "The sender's private key"
+      ],
+      "answer": "e",
+      "explanation": "Sender's private key. (Secrecy = receiver's public; signature = sender's private.)"
+    },
+    {
+      "id": 123,
+      "source": "Day Test Q33",
+      "topic": "Cryptography",
+      "question": "Which of the following is NOT a property of a cryptographic hash function?",
+      "options": [
+        "It can be reversed to recover the original input",
+        "It produces a fixed-length output",
+        "It is one-way",
+        "It is collision-resistant",
+        "The same input always gives the same hash"
+      ],
+      "answer": "a",
+      "explanation": "Hashes can't be reversed."
+    },
+    {
+      "id": 124,
+      "source": "Day Test Q34",
+      "topic": "Malware",
+      "question": "Which malware spreads across a network by itself, without needing a host file or any user action?",
+      "options": [
+        "Virus",
+        "Worm",
+        "Trojan",
+        "Rootkit",
+        "Adware"
+      ],
+      "answer": "b",
+      "explanation": "Worm."
+    },
+    {
+      "id": 125,
+      "source": "Day Test Q35",
+      "topic": "Social Engineering",
+      "question": "A customer receives an SMS saying 'Your account will be blocked, update your KYC at this link.' This is:",
+      "options": [
+        "Vishing",
+        "Whaling",
+        "Pharming",
+        "Smishing",
+        "Baiting"
+      ],
+      "answer": "d",
+      "explanation": "Smishing."
+    },
+    {
+      "id": 126,
+      "source": "Day Test Q36",
+      "topic": "Social Engineering",
+      "question": "A user types the correct bank URL but lands on a fake site, because the DNS has been tampered with. This is:",
+      "options": [
+        "Spear phishing",
+        "Watering hole",
+        "Evil twin",
+        "Smishing",
+        "Pharming"
+      ],
+      "answer": "e",
+      "explanation": "Pharming."
+    },
+    {
+      "id": 127,
+      "source": "Day Test Q37",
+      "topic": "IDS/IPS",
+      "question": "What is the key difference between an IPS and an IDS?",
+      "options": [
+        "An IPS sits inline and can block attacks, while an IDS only detects and alerts",
+        "An IDS blocks attacks, while an IPS only logs them",
+        "Both only alert",
+        "An IPS works only on hosts",
+        "An IDS needs no signatures"
+      ],
+      "answer": "a",
+      "explanation": "IPS blocks; IDS alerts."
+    },
+    {
+      "id": 128,
+      "source": "Day Test Q38",
+      "topic": "Defence",
+      "question": "What is the major benefit of network segmentation?",
+      "options": [
+        "It removes the need for authentication",
+        "It allows unrestricted communication between devices",
+        "It reduces the impact of a security breach",
+        "It increases the number of vulnerabilities",
+        "It removes the need for monitoring"
+      ],
+      "answer": "c",
+      "explanation": "Reduces breach impact."
+    },
+    {
+      "id": 129,
+      "source": "Day Test Q39",
+      "topic": "Access Control",
+      "question": "Which access control model grants permissions based on a user's job role in the organisation?",
+      "options": [
+        "DAC",
+        "RBAC",
+        "MAC",
+        "Zero Trust",
+        "ABAC"
+      ],
+      "answer": "b",
+      "explanation": "RBAC."
+    },
+    {
+      "id": 130,
+      "source": "Day Test Q40",
+      "topic": "KYC & AML",
+      "question": "In banking, what is the primary purpose of KYC?",
+      "options": [
+        "Assessing credit eligibility",
+        "Personalising banking services",
+        "Recommending investments",
+        "Verifying customer identity to prevent financial crime",
+        "Speeding up transactions"
+      ],
+      "answer": "d",
+      "explanation": "Identity verification."
+    },
+    {
+      "id": 131,
+      "source": "Day Test Q41",
+      "topic": "Cryptography",
+      "question": "The receiver verifies a digital signature using:",
+      "options": [
+        "The receiver's private key",
+        "The sender's public key",
+        "The sender's private key",
+        "The receiver's public key",
+        "A symmetric key"
+      ],
+      "answer": "b",
+      "explanation": "Sender's public key."
+    },
+    {
+      "id": 132,
+      "source": "Day Test Q42",
+      "topic": "BCP/DR",
+      "question": "What does RTO (Recovery Time Objective) mean?",
+      "options": [
+        "The maximum acceptable data loss, measured in time",
+        "The mean time between failures",
+        "The time needed to take a backup",
+        "The maximum acceptable downtime before systems must be restored",
+        "The time to detect an attack"
+      ],
+      "answer": "d",
+      "explanation": "RTO = Outage/downtime."
+    },
+    {
+      "id": 133,
+      "source": "Day Test Q43",
+      "topic": "BCP/DR",
+      "question": "An incremental backup copies:",
+      "options": [
+        "Only the changes since the last backup of any type",
+        "All data, every time",
+        "All changes since the last full backup",
+        "Only system files",
+        "Only the log files"
+      ],
+      "answer": "a",
+      "explanation": "Since the last backup of any type."
+    },
+    {
+      "id": 134,
+      "source": "Day Test Q44",
+      "topic": "ISO Standards",
+      "question": "Which ISO standard defines software lifecycle processes and has been adopted by BIS?",
+      "options": [
+        "ISO 27001",
+        "ISO 9001",
+        "ISO 22301",
+        "ISO 31000",
+        "ISO/IEC 12207"
+      ],
+      "answer": "e",
+      "explanation": "12207."
+    },
+    {
+      "id": 135,
+      "source": "Day Test Q45",
+      "topic": "Malware",
+      "question": "Malware disguised as useful software, such as a free PDF reader, but carrying a hidden malicious payload is called a:",
+      "options": [
+        "Worm",
+        "Rootkit",
+        "Trojan",
+        "Logic bomb",
+        "Botnet"
+      ],
+      "answer": "c",
+      "explanation": "Trojan."
+    },
+    {
+      "id": 136,
+      "source": "Day Test Q46",
+      "topic": "Authentication",
+      "question": "Which of the following is a true example of multi-factor authentication?",
+      "options": [
+        "Password + PIN",
+        "Password + OTP sent to the registered phone",
+        "Two different passwords",
+        "Password + security question",
+        "Username + password"
+      ],
+      "answer": "b",
+      "explanation": "Know + have."
+    },
+    {
+      "id": 137,
+      "source": "Day Test Q47",
+      "topic": "Cryptography",
+      "question": "After the TLS handshake, the actual data is encrypted using:",
+      "options": [
+        "A symmetric session key",
+        "The server's private key",
+        "The CA's public key",
+        "A hash function",
+        "The client's private key"
+      ],
+      "answer": "a",
+      "explanation": "Symmetric session key."
+    },
+    {
+      "id": 138,
+      "source": "Day Test Q48",
+      "topic": "Authentication",
+      "question": "Which token-based authorisation framework is behind 'Log in with Google' style sign-ins and is often used in SSO?",
+      "options": [
+        "SSL",
+        "Kerberos",
+        "TLS",
+        "OAuth 2.0",
+        "LDAP"
+      ],
+      "answer": "d",
+      "explanation": "OAuth 2.0."
+    },
+    {
+      "id": 139,
+      "source": "Day Test Q49",
+      "topic": "Defence",
+      "question": "Where are public-facing servers, such as web and mail servers, usually placed to keep them separate from the internal network?",
+      "options": [
+        "In the internal LAN",
+        "In a VLAN trunk",
+        "In a honeypot",
+        "In a VPN tunnel",
+        "In a DMZ"
+      ],
+      "answer": "e",
+      "explanation": "DMZ."
+    },
+    {
+      "id": 140,
+      "source": "Day Test Q50",
+      "topic": "IT Act & CERT-In",
+      "question": "Under CERT-In's directions, a cyber incident must be reported within:",
+      "options": [
+        "24 hours",
+        "72 hours",
+        "6 hours",
+        "1 hour",
+        "7 days"
+      ],
+      "answer": "c",
+      "explanation": "6 hours."
+    },
+    {
+      "id": 141,
+      "source": "Additional A1",
+      "topic": "Malware",
+      "question": "Malware that secretly records a user's keystrokes to steal passwords and PINs is a:",
+      "options": [
+        "Worm",
+        "Keylogger",
+        "Adware",
+        "Botnet",
+        "Rootkit"
+      ],
+      "answer": "b",
+      "explanation": "Keylogger."
+    },
+    {
+      "id": 142,
+      "source": "Additional A2",
+      "topic": "Malware",
+      "question": "Malicious code that stays dormant until a specific condition is met (such as a date) is a:",
+      "options": [
+        "Spyware",
+        "Logic bomb",
+        "Trojan",
+        "Adware",
+        "Worm"
+      ],
+      "answer": "b",
+      "explanation": "Logic bomb."
+    },
+    {
+      "id": 143,
+      "source": "Additional A3",
+      "topic": "Malware",
+      "question": "Malware that runs only in memory using legitimate tools like PowerShell, leaving no file on disk, is called:",
+      "options": [
+        "A worm",
+        "A boot sector virus",
+        "A virus",
+        "Adware",
+        "Fileless malware"
+      ],
+      "answer": "e",
+      "explanation": "Fileless malware."
+    },
+    {
+      "id": 144,
+      "source": "Additional A4",
+      "topic": "Malware",
+      "question": "A secret entry point that bypasses normal authentication is called a:",
+      "options": [
+        "Proxy",
+        "Honeypot",
+        "Firewall rule",
+        "Sandbox",
+        "Backdoor"
+      ],
+      "answer": "e",
+      "explanation": "Backdoor."
+    },
+    {
+      "id": 145,
+      "source": "Additional A5",
+      "topic": "Malware",
+      "question": "Which type of malware needs a host file and user action to spread?",
+      "options": [
+        "Fileless malware",
+        "Virus",
+        "Botnet",
+        "Worm",
+        "Rootkit"
+      ],
+      "answer": "b",
+      "explanation": "A virus needs a host; a worm spreads on its own."
+    },
+    {
+      "id": 146,
+      "source": "Additional A6",
+      "topic": "Social Engineering",
+      "question": "A fraudster calls a customer pretending to be from the bank and asks for the OTP. This is:",
+      "options": [
+        "Smishing",
+        "Whaling",
+        "Pharming",
+        "Vishing",
+        "Baiting"
+      ],
+      "answer": "d",
+      "explanation": "Vishing = voice phishing."
+    },
+    {
+      "id": 147,
+      "source": "Additional A7",
+      "topic": "Social Engineering",
+      "question": "A phishing email personalised for one specific employee using real details about them is:",
+      "options": [
+        "Vishing",
+        "Spear phishing",
+        "Smishing",
+        "Pharming",
+        "Whaling"
+      ],
+      "answer": "b",
+      "explanation": "Spear phishing. Whaling targets executives."
+    },
+    {
+      "id": 148,
+      "source": "Additional A8",
+      "topic": "Social Engineering",
+      "question": "Leaving infected USB drives in a company parking lot for employees to pick up is:",
+      "options": [
+        "Whaling",
+        "Baiting",
+        "Tailgating",
+        "Pretexting",
+        "Pharming"
+      ],
+      "answer": "b",
+      "explanation": "Baiting."
+    },
+    {
+      "id": 149,
+      "source": "Additional A9",
+      "topic": "Social Engineering",
+      "question": "Physically following an authorised employee through a secured door is called:",
+      "options": [
+        "Tailgating",
+        "Shoulder surfing",
+        "Baiting",
+        "Pretexting",
+        "Vishing"
+      ],
+      "answer": "a",
+      "explanation": "Tailgating (piggybacking)."
+    },
+    {
+      "id": 150,
+      "source": "Additional A10",
+      "topic": "Social Engineering",
+      "question": "Watching someone type their ATM PIN is called:",
+      "options": [
+        "Tailgating",
+        "Pharming",
+        "Eavesdropping",
+        "Shoulder surfing",
+        "Baiting"
+      ],
+      "answer": "d",
+      "explanation": "Shoulder surfing."
+    },
+    {
+      "id": 151,
+      "source": "Additional A11",
+      "topic": "Web Attacks",
+      "question": "Which type of XSS is considered most dangerous because the script is saved on the server and served to every visitor?",
+      "options": [
+        "SQL injection",
+        "Stored (persistent) XSS",
+        "Reflected XSS",
+        "DOM-based XSS",
+        "Blind CSRF"
+      ],
+      "answer": "b",
+      "explanation": "Stored XSS."
+    },
+    {
+      "id": 152,
+      "source": "Additional A12",
+      "topic": "Web Attacks",
+      "question": "Which defence is specifically used against CSRF?",
+      "options": [
+        "RAID",
+        "Disk encryption",
+        "Anti-CSRF tokens in forms",
+        "Salting passwords",
+        "Port mirroring"
+      ],
+      "answer": "c",
+      "explanation": "Anti-CSRF tokens and SameSite cookies."
+    },
+    {
+      "id": 153,
+      "source": "Additional A13",
+      "topic": "Web Attacks",
+      "question": "Marking cookies as HttpOnly mainly protects against:",
+      "options": [
+        "SYN floods",
+        "Brute force on SSH",
+        "ARP poisoning",
+        "Ping of Death",
+        "Theft of cookies by scripts in XSS attacks"
+      ],
+      "answer": "e",
+      "explanation": "JavaScript can't read HttpOnly cookies, limiting XSS damage."
+    },
+    {
+      "id": 154,
+      "source": "Additional A14",
+      "topic": "Web Attacks",
+      "question": "An attacker enters ' OR '1'='1 into a login box and gets in without a password. This is:",
+      "options": [
+        "Pharming",
+        "CSRF",
+        "XSS",
+        "SQL injection",
+        "Session hijacking"
+      ],
+      "answer": "d",
+      "explanation": "Always-true condition = SQL injection."
+    },
+    {
+      "id": 155,
+      "source": "Additional A15",
+      "topic": "Web Attacks",
+      "question": "A firewall designed specifically to protect web applications from SQLi and XSS is a:",
+      "options": [
+        "Packet filter",
+        "HIDS",
+        "Circuit-level gateway",
+        "Honeypot",
+        "WAF (Web Application Firewall)"
+      ],
+      "answer": "e",
+      "explanation": "WAF."
+    },
+    {
+      "id": 156,
+      "source": "Additional A16",
+      "topic": "DoS/DDoS",
+      "question": "Sending a single oversized ping packet (over 65,535 bytes) to crash a target is called:",
+      "options": [
+        "SYN flood",
+        "HTTP flood",
+        "Ping of Death",
+        "Fraggle",
+        "Smurf attack"
+      ],
+      "answer": "c",
+      "explanation": "Ping of Death."
+    },
+    {
+      "id": 157,
+      "source": "Additional A17",
+      "topic": "DoS/DDoS",
+      "question": "An attack like Smurf but using UDP instead of ICMP is called:",
+      "options": [
+        "SYN flood",
+        "Fraggle attack",
+        "Teardrop",
+        "Ping of Death",
+        "HTTP flood"
+      ],
+      "answer": "b",
+      "explanation": "Fraggle."
+    },
+    {
+      "id": 158,
+      "source": "Additional A18",
+      "topic": "DoS/DDoS",
+      "question": "The main difference between DoS and DDoS is that DDoS:",
+      "options": [
+        "Comes from many sources at once (often a botnet)",
+        "Needs physical access",
+        "Targets confidentiality",
+        "Uses only ICMP",
+        "Is always undetectable"
+      ],
+      "answer": "a",
+      "explanation": "DDoS = distributed, many sources."
+    },
+    {
+      "id": 159,
+      "source": "Additional A19",
+      "topic": "Network Attacks",
+      "question": "Stealing a user's session cookie to take over their logged-in session is:",
+      "options": [
+        "Phishing",
+        "Smurf attack",
+        "Replay attack",
+        "Session hijacking",
+        "Brute force"
+      ],
+      "answer": "d",
+      "explanation": "Session hijacking."
+    },
+    {
+      "id": 160,
+      "source": "Additional A20",
+      "topic": "Network Attacks",
+      "question": "Capturing a valid login message and re-sending it later to gain access is a:",
+      "options": [
+        "Brute force attack",
+        "Dictionary attack",
+        "Smurf attack",
+        "Zero-day attack",
+        "Replay attack"
+      ],
+      "answer": "e",
+      "explanation": "Replay attack."
+    },
+    {
+      "id": 161,
+      "source": "Additional A21",
+      "topic": "Network Attacks",
+      "question": "Trying every possible password combination is a:",
+      "options": [
+        "Replay attack",
+        "Credential stuffing",
+        "Phishing",
+        "Brute force attack",
+        "Dictionary attack"
+      ],
+      "answer": "d",
+      "explanation": "Brute force. Dictionary uses a list of common words."
+    },
+    {
+      "id": 162,
+      "source": "Additional A22",
+      "topic": "Network Attacks",
+      "question": "Using username/password pairs leaked from another website to log in elsewhere is:",
+      "options": [
+        "Brute force",
+        "Dictionary attack",
+        "Credential stuffing",
+        "Replay attack",
+        "Pharming"
+      ],
+      "answer": "c",
+      "explanation": "Credential stuffing."
+    },
+    {
+      "id": 163,
+      "source": "Additional A23",
+      "topic": "Network Attacks",
+      "question": "A long-term, stealthy, targeted attack, often state-sponsored, that stays hidden for months is an:",
+      "options": [
+        "Logic bomb",
+        "APT (Advanced Persistent Threat)",
+        "Evil twin",
+        "SYN flood",
+        "Zero-day"
+      ],
+      "answer": "b",
+      "explanation": "APT."
+    },
+    {
+      "id": 164,
+      "source": "Additional A24",
+      "topic": "Network Attacks",
+      "question": "An attacker secretly intercepts and possibly alters messages between two parties. This is:",
+      "options": [
+        "DoS",
+        "Eavesdropping only",
+        "Man-in-the-middle (MITM)",
+        "Baiting",
+        "Smurf"
+      ],
+      "answer": "c",
+      "explanation": "MITM is active; pure eavesdropping is passive."
+    },
+    {
+      "id": 165,
+      "source": "Additional A25",
+      "topic": "Cryptography",
+      "question": "Which asymmetric algorithm gives the same security as RSA with much smaller keys?",
+      "options": [
+        "AES",
+        "MD5",
+        "ECC",
+        "DES",
+        "RC4"
+      ],
+      "answer": "c",
+      "explanation": "ECC (Elliptic Curve Cryptography)."
+    },
+    {
+      "id": 166,
+      "source": "Additional A26",
+      "topic": "Cryptography",
+      "question": "What is the output size of SHA-1?",
+      "options": [
+        "128 bits",
+        "64 bits",
+        "160 bits",
+        "256 bits",
+        "512 bits"
+      ],
+      "answer": "c",
+      "explanation": "SHA-1 = 160 bits."
+    },
+    {
+      "id": 167,
+      "source": "Additional A27",
+      "topic": "Cryptography",
+      "question": "A small change in the input producing a completely different hash is called the:",
+      "options": [
+        "Key stretching",
+        "Avalanche effect",
+        "Salting",
+        "Padding",
+        "Collision"
+      ],
+      "answer": "b",
+      "explanation": "Avalanche effect."
+    },
+    {
+      "id": 168,
+      "source": "Additional A28",
+      "topic": "Cryptography",
+      "question": "Encryption that processes data in fixed-size chunks, like AES, is called a:",
+      "options": [
+        "Hash function",
+        "Digital signature",
+        "Key exchange",
+        "Stream cipher",
+        "Block cipher"
+      ],
+      "answer": "e",
+      "explanation": "Block cipher. RC4 is a stream cipher."
+    },
+    {
+      "id": 169,
+      "source": "Additional A29",
+      "topic": "Cryptography",
+      "question": "TLS is the successor to:",
+      "options": [
+        "PGP",
+        "SSH",
+        "Kerberos",
+        "SSL",
+        "IPsec"
+      ],
+      "answer": "d",
+      "explanation": "TLS replaced SSL."
+    },
+    {
+      "id": 170,
+      "source": "Additional A30",
+      "topic": "Security Basics",
+      "question": "Deciding what an authenticated user is allowed to do is called:",
+      "options": [
+        "Authentication",
+        "Auditing",
+        "Authorization",
+        "Encryption",
+        "Accounting"
+      ],
+      "answer": "c",
+      "explanation": "Authorization comes after authentication."
+    },
+    {
+      "id": 171,
+      "source": "Additional A31",
+      "topic": "Security Basics",
+      "question": "Which CIA goal is protected by encryption?",
+      "options": [
+        "Accounting",
+        "Non-repudiation only",
+        "Integrity only",
+        "Availability",
+        "Confidentiality"
+      ],
+      "answer": "e",
+      "explanation": "Encryption = confidentiality."
+    },
+    {
+      "id": 172,
+      "source": "Additional A32",
+      "topic": "IDS/IPS",
+      "question": "Anomaly-based IDS is better than signature-based IDS at detecting:",
+      "options": [
+        "Nothing at all",
+        "Physical intrusions",
+        "Only known viruses",
+        "Only port scans",
+        "New (unknown) attacks"
+      ],
+      "answer": "e",
+      "explanation": "Anomaly-based can catch new attacks but has more false positives."
+    },
+    {
+      "id": 173,
+      "source": "Additional A33",
+      "topic": "IDS/IPS",
+      "question": "An IDS that monitors a single machine's logs and files is a:",
+      "options": [
+        "SIEM",
+        "HIDS",
+        "WAF",
+        "Honeypot",
+        "NIDS"
+      ],
+      "answer": "b",
+      "explanation": "HIDS = host-based."
+    },
+    {
+      "id": 174,
+      "source": "Additional A34",
+      "topic": "IDS/IPS",
+      "question": "An attack that goes completely undetected by the IDS is called a:",
+      "options": [
+        "Honeypot hit",
+        "False negative",
+        "True positive",
+        "False positive",
+        "True negative"
+      ],
+      "answer": "b",
+      "explanation": "False negative is the dangerous error. False positive = false alarm."
+    },
+    {
+      "id": 175,
+      "source": "Additional A35",
+      "topic": "Defence",
+      "question": "A tool that detects and blocks sensitive data from leaving the organisation is:",
+      "options": [
+        "DMZ",
+        "DLP (Data Loss Prevention)",
+        "NAT",
+        "IDS",
+        "Honeypot"
+      ],
+      "answer": "b",
+      "explanation": "DLP helps against insider data theft."
+    },
+    {
+      "id": 176,
+      "source": "Additional A36",
+      "topic": "Defence",
+      "question": "Running suspicious code in an isolated environment to observe its behaviour is called:",
+      "options": [
+        "Segmentation",
+        "Sandboxing",
+        "Hardening",
+        "Tokenization",
+        "Whitelisting"
+      ],
+      "answer": "b",
+      "explanation": "Sandboxing."
+    },
+    {
+      "id": 177,
+      "source": "Additional A37",
+      "topic": "Access Control",
+      "question": "Giving users only the minimum access needed to do their job is the principle of:",
+      "options": [
+        "Defence in depth",
+        "Least privilege",
+        "Separation of duties",
+        "Single sign-on",
+        "Zero Trust"
+      ],
+      "answer": "b",
+      "explanation": "Least privilege."
+    },
+    {
+      "id": 178,
+      "source": "Additional A38",
+      "topic": "Access Control",
+      "question": "Using multiple layers of security so that if one fails, others still protect the system is called:",
+      "options": [
+        "Least privilege",
+        "Need to know",
+        "Whitelisting",
+        "Defence in depth",
+        "Single sign-on"
+      ],
+      "answer": "d",
+      "explanation": "Defence in depth."
+    },
+    {
+      "id": 179,
+      "source": "Additional A39",
+      "topic": "Access Control",
+      "question": "Access control based on security labels such as Top Secret and Confidential is:",
+      "options": [
+        "ABAC",
+        "DAC",
+        "Zero Trust",
+        "RBAC",
+        "MAC"
+      ],
+      "answer": "e",
+      "explanation": "MAC = labels/classification."
+    },
+    {
+      "id": 180,
+      "source": "Additional A40",
+      "topic": "Access Control",
+      "question": "Access control where the owner of a file decides who can access it is:",
+      "options": [
+        "DAC",
+        "MAC",
+        "ABAC",
+        "Zero Trust",
+        "RBAC"
+      ],
+      "answer": "a",
+      "explanation": "DAC = owner decides."
+    },
+    {
+      "id": 181,
+      "source": "Additional A41",
+      "topic": "Authentication",
+      "question": "Which authentication factor is a fingerprint?",
+      "options": [
+        "Somewhere you are",
+        "Something you are",
+        "Something you do",
+        "Something you know",
+        "Something you have"
+      ],
+      "answer": "b",
+      "explanation": "Biometrics = something you are."
+    },
+    {
+      "id": 182,
+      "source": "Additional A42",
+      "topic": "Authentication",
+      "question": "Logging in once and accessing many applications without logging in again is called:",
+      "options": [
+        "OAuth",
+        "Single Sign-On (SSO)",
+        "Kerberos",
+        "RBAC",
+        "MFA"
+      ],
+      "answer": "b",
+      "explanation": "SSO."
+    },
+    {
+      "id": 183,
+      "source": "Additional A43",
+      "topic": "Authentication",
+      "question": "Which authentication protocol uses tickets and is the default in Windows Active Directory?",
+      "options": [
+        "SAML",
+        "LDAP",
+        "Kerberos",
+        "OAuth 2.0",
+        "RADIUS"
+      ],
+      "answer": "c",
+      "explanation": "Kerberos = tickets."
+    },
+    {
+      "id": 184,
+      "source": "Additional A44",
+      "topic": "Frameworks",
+      "question": "What is the first stage of the Cyber Kill Chain?",
+      "options": [
+        "Installation",
+        "Exploitation",
+        "Weaponization",
+        "Delivery",
+        "Reconnaissance"
+      ],
+      "answer": "e",
+      "explanation": "Reconnaissance → Weaponization → Delivery → Exploitation → Installation → C2 → Actions."
+    },
+    {
+      "id": 185,
+      "source": "Additional A45",
+      "topic": "Frameworks",
+      "question": "A system that collects and correlates logs from across an organisation for real-time alerts is a:",
+      "options": [
+        "VPN",
+        "DLP",
+        "IDS",
+        "SIEM",
+        "WAF"
+      ],
+      "answer": "d",
+      "explanation": "SIEM."
+    },
+    {
+      "id": 186,
+      "source": "Additional A46",
+      "topic": "Frameworks",
+      "question": "The team or facility that monitors and responds to security threats around the clock is the:",
+      "options": [
+        "CERT-In",
+        "SOC",
+        "DMZ",
+        "CA",
+        "NOC"
+      ],
+      "answer": "b",
+      "explanation": "SOC (Security Operations Center)."
+    },
+    {
+      "id": 187,
+      "source": "Additional A47",
+      "topic": "Frameworks",
+      "question": "VAPT stands for:",
+      "options": [
+        "Virus Analysis and Patch Tracking",
+        "Virtual Access and Protection Tool",
+        "Virtual Application Protection Technology",
+        "Verified Authentication and Privilege Testing",
+        "Vulnerability Assessment and Penetration Testing"
+      ],
+      "answer": "e",
+      "explanation": "Scan for weaknesses + actively exploit them."
+    },
+    {
+      "id": 188,
+      "source": "Additional A48",
+      "topic": "DPDP Act",
+      "question": "Under the DPDP Act, the individual whose personal data is processed is called the:",
+      "options": [
+        "Consent Manager",
+        "Data Principal",
+        "Data Auditor",
+        "Data Fiduciary",
+        "Data Processor"
+      ],
+      "answer": "b",
+      "explanation": "Data Principal."
+    },
+    {
+      "id": 189,
+      "source": "Additional A49",
+      "topic": "DPDP Act",
+      "question": "Under the DPDP Act, a registered platform that helps users give, manage and withdraw consent is a:",
+      "options": [
+        "Data Auditor",
+        "Data Fiduciary",
+        "Data Processor",
+        "Data Protection Officer",
+        "Consent Manager"
+      ],
+      "answer": "e",
+      "explanation": "Consent Manager."
+    },
+    {
+      "id": 190,
+      "source": "Additional A50",
+      "topic": "DPDP Act",
+      "question": "Under the DPDP Act, a child is anyone below the age of:",
+      "options": [
+        "16",
+        "21",
+        "14",
+        "13",
+        "18"
+      ],
+      "answer": "e",
+      "explanation": "Under 18; verifiable parental consent is required."
+    },
+    {
+      "id": 191,
+      "source": "Additional A51",
+      "topic": "IT Act & CERT-In",
+      "question": "Which section of the IT Act, 2000 covers cheating by impersonation using a computer (e.g. OTP fraud)?",
+      "options": [
+        "Section 43",
+        "Section 66C",
+        "Section 66F",
+        "Section 66D",
+        "Section 67"
+      ],
+      "answer": "d",
+      "explanation": "66D = Deception."
+    },
+    {
+      "id": 192,
+      "source": "Additional A52",
+      "topic": "IT Act & CERT-In",
+      "question": "Which body licenses Certifying Authorities that issue digital signature certificates in India?",
+      "options": [
+        "NPCI",
+        "CERSAI",
+        "CCA (Controller of Certifying Authorities)",
+        "CERT-In",
+        "RBI"
+      ],
+      "answer": "c",
+      "explanation": "CCA."
+    },
+    {
+      "id": 193,
+      "source": "Additional A53",
+      "topic": "KYC & AML",
+      "question": "The Central KYC Registry in India is maintained by:",
+      "options": [
+        "CERT-In",
+        "CERSAI",
+        "SEBI",
+        "FIU-IND",
+        "NPCI"
+      ],
+      "answer": "b",
+      "explanation": "CERSAI."
+    },
+    {
+      "id": 194,
+      "source": "Additional A54",
+      "topic": "KYC & AML",
+      "question": "India's main anti-money-laundering law is the:",
+      "options": [
+        "FEMA",
+        "PMLA (Prevention of Money Laundering Act)",
+        "Banking Regulation Act",
+        "DPDP Act",
+        "IT Act"
+      ],
+      "answer": "b",
+      "explanation": "PMLA."
+    },
+    {
+      "id": 195,
+      "source": "Additional A55",
+      "topic": "KYC & AML",
+      "question": "What is the correct order of the three stages of money laundering?",
+      "options": [
+        "Integration → Placement → Layering",
+        "Layering → Integration → Placement",
+        "Layering → Placement → Integration",
+        "Placement → Layering → Integration",
+        "Placement → Integration → Layering"
+      ],
+      "answer": "d",
+      "explanation": "Placement, Layering, Integration."
+    },
+    {
+      "id": 196,
+      "source": "Additional A56",
+      "topic": "KYC & AML",
+      "question": "KYC done remotely over a live video call is called:",
+      "options": [
+        "Re-KYC",
+        "CKYC",
+        "e-NACH",
+        "V-CIP (Video KYC)",
+        "AePS"
+      ],
+      "answer": "d",
+      "explanation": "V-CIP."
+    },
+    {
+      "id": 197,
+      "source": "Additional A57",
+      "topic": "KYC & AML",
+      "question": "Which report is filed for cash transactions above ₹10 lakh?",
+      "options": [
+        "STR",
+        "Form 60",
+        "CKYC",
+        "CTR (Cash Transaction Report)",
+        "FIR"
+      ],
+      "answer": "d",
+      "explanation": "CTR. STR is for suspicious transactions."
+    },
+    {
+      "id": 198,
+      "source": "Additional A58",
+      "topic": "Payments",
+      "question": "Which payment system is used for bulk recurring payments like salaries and EMIs?",
+      "options": [
+        "RTGS",
+        "CTS",
+        "SWIFT",
+        "AePS",
+        "NACH"
+      ],
+      "answer": "e",
+      "explanation": "NACH."
+    },
+    {
+      "id": 199,
+      "source": "Additional A59",
+      "topic": "Payments",
+      "question": "Which system lets customers make payments at micro-ATMs using Aadhaar authentication?",
+      "options": [
+        "AePS",
+        "NACH",
+        "RTGS",
+        "CTS",
+        "IMPS"
+      ],
+      "answer": "a",
+      "explanation": "AePS = Aadhaar-enabled Payment System."
+    },
+    {
+      "id": 200,
+      "source": "Additional A60",
+      "topic": "Payments",
+      "question": "SWIFT is mainly:",
+      "options": [
+        "An international messaging network for bank transfers",
+        "A card network",
+        "A domestic instant payment system",
+        "A KYC registry",
+        "A cheque clearing system"
+      ],
+      "answer": "a",
+      "explanation": "SWIFT carries payment instructions between banks worldwide."
+    },
+    {
+      "id": 201,
+      "source": "Additional A61",
+      "topic": "Payments",
+      "question": "How many characters does an IFSC code have?",
+      "options": [
+        "8",
+        "10",
+        "9",
+        "11",
+        "12"
+      ],
+      "answer": "d",
+      "explanation": "11 characters; the 5th is always 0."
+    },
+    {
+      "id": 202,
+      "source": "Additional A62",
+      "topic": "Payments",
+      "question": "Which system clears cheques using their electronic images?",
+      "options": [
+        "SWIFT",
+        "AePS",
+        "NACH",
+        "CTS (Cheque Truncation System)",
+        "NEFT"
+      ],
+      "answer": "d",
+      "explanation": "CTS."
+    },
+    {
+      "id": 203,
+      "source": "Additional A63",
+      "topic": "Payments",
+      "question": "UPI payments use an identifier like name@bank, called a:",
+      "options": [
+        "BIC",
+        "MICR",
+        "CKYC ID",
+        "VPA (Virtual Payment Address)",
+        "IFSC"
+      ],
+      "answer": "d",
+      "explanation": "VPA."
+    },
+    {
+      "id": 204,
+      "source": "Additional A64",
+      "topic": "Payments",
+      "question": "Replacing a card number with a substitute value so merchants don't store real card data is called:",
+      "options": [
+        "Steganography",
+        "Encryption at rest",
+        "Hashing",
+        "Tokenization",
+        "Salting"
+      ],
+      "answer": "d",
+      "explanation": "Tokenization."
+    },
+    {
+      "id": 205,
+      "source": "Additional A65",
+      "topic": "Payments",
+      "question": "A centralised banking system that lets customers transact at any branch is called:",
+      "options": [
+        "SWIFT",
+        "CBS (Core Banking Solution)",
+        "NACH",
+        "CKYC",
+        "CTS"
+      ],
+      "answer": "b",
+      "explanation": "CBS enables 'anywhere banking'."
+    },
+    {
+      "id": 206,
+      "source": "Additional A66",
+      "topic": "BCP/DR",
+      "question": "Which recovery site is partly equipped, with data restored from backups, taking hours to days?",
+      "options": [
+        "Mobile site",
+        "Warm site",
+        "Hot site",
+        "Mirror site",
+        "Cold site"
+      ],
+      "answer": "b",
+      "explanation": "Warm site."
+    },
+    {
+      "id": 207,
+      "source": "Additional A67",
+      "topic": "BCP/DR",
+      "question": "Which statement about BCP and DRP is correct?",
+      "options": [
+        "DRP is a part of BCP",
+        "BCP is a part of DRP",
+        "BCP covers only IT systems",
+        "DRP covers only people, not IT",
+        "They are unrelated"
+      ],
+      "answer": "a",
+      "explanation": "BCP = keep the business running; DRP = restore IT (subset of BCP)."
+    },
+    {
+      "id": 208,
+      "source": "Additional A68",
+      "topic": "BCP/DR",
+      "question": "Which backup type is the easiest to restore from?",
+      "options": [
+        "None",
+        "Differential backup",
+        "Full backup",
+        "Snapshot of logs only",
+        "Incremental backup"
+      ],
+      "answer": "c",
+      "explanation": "Full backup: a single set to restore."
+    },
+    {
+      "id": 209,
+      "source": "Additional A69",
+      "topic": "ISO Standards",
+      "question": "ISO 31000 is the standard for:",
+      "options": [
+        "Risk management",
+        "IT service management",
+        "Business continuity",
+        "Quality management",
+        "Information security"
+      ],
+      "answer": "a",
+      "explanation": "31000 = risk."
+    },
+    {
+      "id": 210,
+      "source": "Additional A70",
+      "topic": "ISO Standards",
+      "question": "ISO/IEC 20000 is the standard for:",
+      "options": [
+        "Quality management",
+        "Software lifecycle",
+        "IT service management",
+        "Business continuity",
+        "Risk management"
+      ],
+      "answer": "c",
+      "explanation": "20000 = IT service management (ITIL-based)."
+    },
+    {
+      "id": 211,
+      "source": "Additional A71",
+      "topic": "ISO Standards",
+      "question": "ISO 9001 is the standard for:",
+      "options": [
+        "Information security",
+        "Business continuity",
+        "Software lifecycle",
+        "Quality management",
+        "Risk management"
+      ],
+      "answer": "d",
+      "explanation": "9001 = quality."
+    },
+    {
+      "id": 212,
+      "source": "Additional A72",
+      "topic": "ISO Standards",
+      "question": "COBIT is a framework for:",
+      "options": [
+        "Software testing",
+        "Quality management",
+        "IT governance",
+        "Card data security",
+        "Business continuity"
+      ],
+      "answer": "c",
+      "explanation": "COBIT = IT governance. ITIL = IT service management."
+    }
+  ]
+}
