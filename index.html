@@ -82,6 +82,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .qno{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--dropout)}
 .tag{font-size:12.5px;color:var(--muted);border:1px solid var(--rule);border-radius:999px;padding:1px 9px}
 .qtext{font-family:var(--serif);font-size:18.5px;line-height:1.55;margin:4px 0 12px;white-space:pre-wrap;max-width:72ch}
+.code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;font-size:14.5px;line-height:1.5;background:var(--dropout-soft);border-radius:8px;padding:10px 12px;margin:0 0 12px;overflow-x:auto;white-space:pre}
 .opts{display:grid;gap:6px}
 .opt{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;text-align:left;width:100%;
   background:transparent;border:1.5px solid transparent;border-radius:8px;padding:6px 8px;cursor:pointer}
@@ -335,7 +336,13 @@ function renderQuestion(d, q, p, n){
     el("span",{class:"qno",text:"Q"+n}),
     q.topic ? el("span",{class:"tag",text:q.topic}) : null,
     q.source ? el("span",{class:"tag",text:q.source}) : null));
-  card.append(el("p",{class:"qtext",text:q.question}));
+  const nl = q.question.indexOf("\n");
+  if(nl > -1){
+    card.append(el("p",{class:"qtext",text:q.question.slice(0,nl)}));
+    card.append(el("pre",{class:"code",text:q.question.slice(nl+1)}));
+  } else {
+    card.append(el("p",{class:"qtext",text:q.question}));
+  }
   const opts = el("div",{class:"opts", role:"group","aria-label":"Options for question "+n});
   q.options.forEach((o,i)=>{
     const L = LETTERS[i];
