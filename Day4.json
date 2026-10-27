@@ -1,0 +1,3217 @@
+{
+  "title": "Day 4: Programming, OOP & Web",
+  "total": 214,
+  "answer_format": "answer is the option letter a–e mapping to options[0]–options[4]",
+  "questions": [
+    {
+      "id": 1,
+      "source": "Batch 1 Q1",
+      "topic": "C",
+      "question": "What is the output of this C code?\nint x = 10;\nprintf(\"%d %d\", x++, ++x);",
+      "options": [
+        "10 12",
+        "11 12",
+        "10 11",
+        "12 12",
+        "Undefined behaviour"
+      ],
+      "answer": "e",
+      "explanation": "x is modified twice in one expression, so the result is undefined behaviour (PYQ 2025)."
+    },
+    {
+      "id": 2,
+      "source": "Batch 1 Q2",
+      "topic": "C",
+      "question": "In C, which file-handling function is used to reposition the file pointer?",
+      "options": [
+        "fread()",
+        "fwrite()",
+        "fprintf()",
+        "fseek()",
+        "fclose()"
+      ],
+      "answer": "d",
+      "explanation": "fseek() repositions; ftell() reports the position; rewind() goes to the start."
+    },
+    {
+      "id": 3,
+      "source": "Batch 1 Q3",
+      "topic": "C",
+      "question": "What is the output?\nchar arr[] = \"FGHJKGF\";\nchar *p = arr;\nprintf(\"%c\", *(p + 3));",
+      "options": [
+        "F",
+        "H",
+        "J",
+        "K",
+        "G"
+      ],
+      "answer": "c",
+      "explanation": "*(p+3) = arr[3]. F0 G1 H2 J3."
+    },
+    {
+      "id": 4,
+      "source": "Batch 1 Q4",
+      "topic": "C",
+      "question": "What is the output?\nint a = 5, b = 10, c = 15;\nint result = (a > b) ? ((b > c) ? b : c) : ((a > c) ? a : c);\nprintf(\"%d\", result);",
+      "options": [
+        "15",
+        "5",
+        "10",
+        "0",
+        "Compilation error"
+      ],
+      "answer": "a",
+      "explanation": "a > b is false → (a > c)? 5 > 15 is false → c = 15."
+    },
+    {
+      "id": 5,
+      "source": "Batch 1 Q5",
+      "topic": "C",
+      "question": "What is the output?\nint a = 1;\na += 3;\nprintf(\"%d\", a + a);",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "10",
+        "2"
+      ],
+      "answer": "c",
+      "explanation": "a = 4, so a + a = 8."
+    },
+    {
+      "id": 6,
+      "source": "Batch 1 Q6",
+      "topic": "C",
+      "question": "What is the output?\nvoid show(int x, int y) { printf(\"x = %d, y = %d\", x, y); }\nint main() { int a = 10; int b; show(a, b); return 0; }",
+      "options": [
+        "x = 0, y = 10",
+        "x = 10, y = some garbage value",
+        "x = 10, y = 10",
+        "x = 0, y = some garbage value",
+        "Compilation error"
+      ],
+      "answer": "b",
+      "explanation": "An uninitialised local variable holds a garbage value."
+    },
+    {
+      "id": 7,
+      "source": "Batch 1 Q7",
+      "topic": "C",
+      "question": "Which statement about the #define directive in C is incorrect?",
+      "options": [
+        "It can create symbolic constants",
+        "It can define function-like macros with parameters",
+        "Macros are expanded by the preprocessor before compilation",
+        "It can create multi-line macros using the backslash \\",
+        "Macros provide automatic type checking, like C functions"
+      ],
+      "answer": "e",
+      "explanation": "Macros are plain text replacement; there's no type checking."
+    },
+    {
+      "id": 8,
+      "source": "Batch 1 Q8",
+      "topic": "C",
+      "question": "Which function is NOT declared in <stdio.h>?",
+      "options": [
+        "printf()",
+        "scanf()",
+        "fopen()",
+        "sqrt()",
+        "fprintf()"
+      ],
+      "answer": "d",
+      "explanation": "sqrt() is in math.h."
+    },
+    {
+      "id": 9,
+      "source": "Batch 1 Q9",
+      "topic": "C",
+      "question": "What is the output of printf(\"%d %d\", 7/2, 7%2);?",
+      "options": [
+        "3.5 1",
+        "3 1",
+        "4 1",
+        "3 0",
+        "3.5 0"
+      ],
+      "answer": "b",
+      "explanation": "Integer division drops the decimal: 7/2 = 3, 7%2 = 1."
+    },
+    {
+      "id": 10,
+      "source": "Batch 1 Q10",
+      "topic": "C",
+      "question": "What is the output?\n#define SQ(x) x*x\nprintf(\"%d\", SQ(2+3));",
+      "options": [
+        "25",
+        "13",
+        "10",
+        "11",
+        "Compilation error"
+      ],
+      "answer": "d",
+      "explanation": "Text replacement: 2+3*2+3 = 2+6+3 = 11."
+    },
+    {
+      "id": 11,
+      "source": "Batch 2 Q11",
+      "topic": "C",
+      "question": "Which operations are valid on pointers in C/C++?",
+      "options": [
+        "Pointer multiplication",
+        "Pointer division",
+        "Adding an integer to, or subtracting an integer from, a pointer",
+        "Pointer modulus",
+        "Pointer exponentiation"
+      ],
+      "answer": "c",
+      "explanation": "Valid: ± integer, pointer − pointer, comparison (PYQ 2024)."
+    },
+    {
+      "id": 12,
+      "source": "Batch 2 Q12",
+      "topic": "C",
+      "question": "What is the output?\nchar s[] = \"IBPS\";\nprintf(\"%d\", sizeof(s));",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "8",
+        "1"
+      ],
+      "answer": "b",
+      "explanation": "4 characters + '\\0' = 5. strlen would give 4."
+    },
+    {
+      "id": 13,
+      "source": "Batch 2 Q13",
+      "topic": "C",
+      "question": "What is printed when f() is called three times?\nvoid f() { static int c = 0; c++; printf(\"%d \", c); }",
+      "options": [
+        "1 1 1",
+        "0 1 2",
+        "3 3 3",
+        "1 2 3",
+        "Compilation error"
+      ],
+      "answer": "d",
+      "explanation": "A static local is initialised once and keeps its value: 1 2 3."
+    },
+    {
+      "id": 14,
+      "source": "Batch 2 Q14",
+      "topic": "C",
+      "question": "In C, the ternary operator is also called the:",
+      "options": [
+        "Conditional operator",
+        "Logical operator",
+        "Bitwise operator",
+        "Relational operator",
+        "Arithmetic operator"
+      ],
+      "answer": "a",
+      "explanation": "?: is the conditional operator (PYQ 2022)."
+    },
+    {
+      "id": 15,
+      "source": "Batch 2 Q15",
+      "topic": "C",
+      "question": "Which function allocates memory and initialises every byte to zero?",
+      "options": [
+        "malloc()",
+        "realloc()",
+        "free()",
+        "sizeof()",
+        "calloc()"
+      ],
+      "answer": "e",
+      "explanation": "calloc zeroes memory; malloc leaves garbage."
+    },
+    {
+      "id": 16,
+      "source": "Batch 2 Q16",
+      "topic": "C",
+      "question": "What is the purpose of feof(file) in C?",
+      "options": [
+        "To read the next character",
+        "To close the file",
+        "To check whether the end-of-file indicator has been set",
+        "To move the file pointer to the beginning",
+        "To open the file in read mode"
+      ],
+      "answer": "c",
+      "explanation": "feof checks the EOF indicator (PYQ 2023)."
+    },
+    {
+      "id": 17,
+      "source": "Batch 2 Q17",
+      "topic": "C",
+      "question": "What is the output?\nint x = 5;\nint y = x++ + 10;\nprintf(\"%d %d\", x, y);",
+      "options": [
+        "5 15",
+        "6 15",
+        "6 16",
+        "5 16",
+        "15 6"
+      ],
+      "answer": "b",
+      "explanation": "x++ uses 5 then increments: y = 15, x = 6."
+    },
+    {
+      "id": 18,
+      "source": "Batch 2 Q18",
+      "topic": "C",
+      "question": "What is the output?\nint n = 2;\nswitch (n) {\n  case 1: printf(\"A\");\n  case 2: printf(\"B\");\n  case 3: printf(\"C\"); break;\n  default: printf(\"D\");\n}",
+      "options": [
+        "B",
+        "C",
+        "BCD",
+        "ABCD",
+        "BC"
+      ],
+      "answer": "e",
+      "explanation": "Jumps to case 2, falls through to case 3, stops at break: BC."
+    },
+    {
+      "id": 19,
+      "source": "Batch 2 Q19",
+      "topic": "C",
+      "question": "With int = 4, char = 1, double = 8 bytes, what is the size of union U { int i; char c; double d; }?",
+      "options": [
+        "13",
+        "4",
+        "8",
+        "16",
+        "1"
+      ],
+      "answer": "c",
+      "explanation": "Union size = largest member (8). A struct would add sizes."
+    },
+    {
+      "id": 20,
+      "source": "Batch 2 Q20",
+      "topic": "C",
+      "question": "What is the output?\nint i = 5;\ndo { printf(\"%d\", i); i++; } while (i < 5);",
+      "options": [
+        "5",
+        "Nothing is printed",
+        "56",
+        "Infinite loop",
+        "Compilation error"
+      ],
+      "answer": "a",
+      "explanation": "do-while runs at least once."
+    },
+    {
+      "id": 21,
+      "source": "Batch 3 Q21",
+      "topic": "C",
+      "question": "For char s[] = \"HELLO\";, what does sizeof(s) return?",
+      "options": [
+        "5",
+        "6",
+        "7",
+        "4",
+        "10"
+      ],
+      "answer": "b",
+      "explanation": "5 characters + '\\0' = 6."
+    },
+    {
+      "id": 22,
+      "source": "Batch 3 Q22",
+      "topic": "C",
+      "question": "For char s[] = \"HELLO\";, what does strlen(s) return?",
+      "options": [
+        "6",
+        "7",
+        "4",
+        "5",
+        "0"
+      ],
+      "answer": "d",
+      "explanation": "strlen doesn't count '\\0'."
+    },
+    {
+      "id": 23,
+      "source": "Batch 3 Q23",
+      "topic": "C",
+      "question": "What is printed when g() is called twice?\nvoid g() { static int n = 5; n = n + 5; printf(\"%d \", n); }",
+      "options": [
+        "10 10",
+        "5 10",
+        "10 15",
+        "15 15",
+        "Compilation error"
+      ],
+      "answer": "c",
+      "explanation": "Static keeps its value: 10, then 15."
+    },
+    {
+      "id": 24,
+      "source": "Batch 3 Q24",
+      "topic": "C",
+      "question": "What is printed when h() is called twice?\nvoid h() { int n = 5; n = n + 5; printf(\"%d \", n); }",
+      "options": [
+        "10 10",
+        "10 15",
+        "5 10",
+        "15 15",
+        "Garbage values"
+      ],
+      "answer": "a",
+      "explanation": "A normal local is recreated each call: 10 10."
+    },
+    {
+      "id": 25,
+      "source": "Batch 3 Q25",
+      "topic": "C",
+      "question": "What is the output?\nint n = 1;\nswitch (n) {\n  case 1: printf(\"X\");\n  case 2: printf(\"Y\"); break;\n  case 3: printf(\"Z\");\n}",
+      "options": [
+        "X",
+        "XYZ",
+        "Y",
+        "Z",
+        "XY"
+      ],
+      "answer": "e",
+      "explanation": "Falls through from case 1 to case 2, stops at break."
+    },
+    {
+      "id": 26,
+      "source": "Batch 3 Q26",
+      "topic": "C",
+      "question": "What is the output?\nint n = 5;\nswitch (n) {\n  case 1: printf(\"A\"); break;\n  default: printf(\"D\");\n  case 2: printf(\"B\");\n}",
+      "options": [
+        "D",
+        "DB",
+        "B",
+        "Nothing is printed",
+        "Compilation error"
+      ],
+      "answer": "b",
+      "explanation": "No match → default prints D, then falls through to case 2 and prints B."
+    },
+    {
+      "id": 27,
+      "source": "Batch 3 Q27",
+      "topic": "C",
+      "question": "With char = 1 and int = 4 bytes, what is the size of union U { char c; int i; }?",
+      "options": [
+        "5",
+        "8",
+        "4",
+        "1",
+        "9"
+      ],
+      "answer": "c",
+      "explanation": "Largest member = 4."
+    },
+    {
+      "id": 28,
+      "source": "Batch 3 Q28",
+      "topic": "C",
+      "question": "Which statement about a union is correct?",
+      "options": [
+        "Each member has its own separate memory",
+        "Its size is the sum of all its members",
+        "It cannot contain an int",
+        "All its members share the same memory location",
+        "It is the same as a struct"
+      ],
+      "answer": "d",
+      "explanation": "All union members share one memory location."
+    },
+    {
+      "id": 29,
+      "source": "Batch 3 Q29",
+      "topic": "C",
+      "question": "A static local variable inside a function is initialised:",
+      "options": [
+        "Every time the function is called",
+        "Never",
+        "Only once, and it keeps its value between calls",
+        "Only when main() ends",
+        "Only if the function itself is declared static"
+      ],
+      "answer": "c",
+      "explanation": "The function itself doesn't need to be static."
+    },
+    {
+      "id": 30,
+      "source": "Batch 3 Q30",
+      "topic": "C",
+      "question": "What is the difference between malloc() and calloc()?",
+      "options": [
+        "malloc does not initialise the memory (garbage), while calloc sets it to zero",
+        "malloc sets memory to zero, while calloc does not",
+        "Both set memory to zero",
+        "Neither allocates memory",
+        "calloc takes one argument, while malloc takes two"
+      ],
+      "answer": "a",
+      "explanation": "calloc(n, size) zero-initialises and takes 2 arguments."
+    },
+    {
+      "id": 31,
+      "source": "Batch 4 Q31",
+      "topic": "C++ & OOP",
+      "question": "In C++, what does the this pointer refer to?",
+      "options": [
+        "The base class",
+        "A null pointer",
+        "The current object",
+        "A static member",
+        "The class name"
+      ],
+      "answer": "c",
+      "explanation": "this points to the calling object (PYQ 2025)."
+    },
+    {
+      "id": 32,
+      "source": "Batch 4 Q32",
+      "topic": "C++ & OOP",
+      "question": "If no access specifier is written in a C++ class, what is the default access level?",
+      "options": [
+        "Public",
+        "Protected",
+        "Internal",
+        "Inherited",
+        "Private"
+      ],
+      "answer": "e",
+      "explanation": "Class default = private; struct default = public (PYQ 2026)."
+    },
+    {
+      "id": 33,
+      "source": "Batch 4 Q33",
+      "topic": "C++ & OOP",
+      "question": "Which of the following is NOT a valid data type in C++?",
+      "options": [
+        "float",
+        "double",
+        "int",
+        "Real",
+        "char"
+      ],
+      "answer": "d",
+      "explanation": "There is no 'Real' type (PYQ 2025)."
+    },
+    {
+      "id": 34,
+      "source": "Batch 4 Q34",
+      "topic": "C++ & OOP",
+      "question": "In OOP, what is the correct definition of a class?",
+      "options": [
+        "An instance allocated in memory",
+        "A data type that defines both properties and behaviours",
+        "A container for functions only",
+        "A blueprint containing method signatures only",
+        "A variable holder for all object states"
+      ],
+      "answer": "b",
+      "explanation": "Watch for 'only' traps (PYQ 2025)."
+    },
+    {
+      "id": 35,
+      "source": "Batch 4 Q35",
+      "topic": "C++ & OOP",
+      "question": "A subclass in OOP cannot access which members of its base class?",
+      "options": [
+        "Public members",
+        "Protected members",
+        "Static members",
+        "Private members",
+        "Public member functions"
+      ],
+      "answer": "d",
+      "explanation": "Private members aren't accessible in the derived class (PYQ 2025)."
+    },
+    {
+      "id": 36,
+      "source": "Batch 4 Q36",
+      "topic": "C++ & OOP",
+      "question": "In C++, which statement correctly describes endl and setw?",
+      "options": [
+        "endl inserts a new line, while setw sets the output field width",
+        "endl formats the output width, while setw inserts a new line",
+        "endl reads input, while setw displays output",
+        "endl allocates memory, while setw controls loops",
+        "endl converts types, while setw handles exceptions"
+      ],
+      "answer": "a",
+      "explanation": "PYQ 2024."
+    },
+    {
+      "id": 37,
+      "source": "Batch 4 Q37",
+      "topic": "C++ & OOP",
+      "question": "Which OOP concept hides internal implementation details and exposes only the necessary functionality?",
+      "options": [
+        "Encapsulation",
+        "Inheritance",
+        "Polymorphism",
+        "Abstraction",
+        "Overloading"
+      ],
+      "answer": "d",
+      "explanation": "Abstraction hides implementation; encapsulation hides data (PYQ 2024)."
+    },
+    {
+      "id": 38,
+      "source": "Batch 4 Q38",
+      "topic": "C++ & OOP",
+      "question": "Which statement correctly distinguishes composition from aggregation?",
+      "options": [
+        "Aggregation represents a stronger dependency than composition",
+        "Composition lets child objects exist independently of the parent",
+        "In composition, the child object depends on the lifecycle of the parent object",
+        "Aggregation and composition represent identical relationships",
+        "Composition is used only for multiple inheritance"
+      ],
+      "answer": "c",
+      "explanation": "Composition = Can't survive alone (PYQ 2024)."
+    },
+    {
+      "id": 39,
+      "source": "Batch 4 Q39",
+      "topic": "C++ & OOP",
+      "question": "What is the output?\nbool a = true, b = false;\ncout << (a && !b);",
+      "options": [
+        "true",
+        "1",
+        "0",
+        "false",
+        "Compilation error"
+      ],
+      "answer": "b",
+      "explanation": "cout prints bools as 1/0."
+    },
+    {
+      "id": 40,
+      "source": "Batch 4 Q40",
+      "topic": "C++ & OOP",
+      "question": "What is the purpose of polymorphism in OOP?",
+      "options": [
+        "Allowing the same operator or function to be used in different ways",
+        "Allowing a subclass to acquire superclass properties",
+        "Allowing objects to hide their internal data",
+        "Allowing multiple objects to share the same class",
+        "Allowing a class to inherit from many classes"
+      ],
+      "answer": "a",
+      "explanation": "PYQ Prelims 2026."
+    },
+    {
+      "id": 41,
+      "source": "Batch 5 Q41",
+      "topic": "C++ & OOP",
+      "question": "What is the most fundamental benefit of inheritance in OOP?",
+      "options": [
+        "Faster program execution",
+        "Better code readability",
+        "Increased code reusability",
+        "Simpler debugging",
+        "Better memory management"
+      ],
+      "answer": "c",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 42,
+      "source": "Batch 5 Q42",
+      "topic": "C++ & OOP",
+      "question": "Statements: (i) Namespaces group identifiers and avoid naming conflicts. (ii) The using directive in C++ removes the need to qualify names explicitly. (iii) In C++, two different namespaces cannot contain the same identifier. Which is correct?",
+      "options": [
+        "(i) True, (ii) True, (iii) False",
+        "(i) True, (ii) False, (iii) False",
+        "(i) False, (ii) True, (iii) True",
+        "(i) True, (ii) True, (iii) True",
+        "(i) False, (ii) False, (iii) True"
+      ],
+      "answer": "a",
+      "explanation": "A::x and B::x can coexist (PYQ 2022)."
+    },
+    {
+      "id": 43,
+      "source": "Batch 5 Q43",
+      "topic": "C++ & OOP",
+      "question": "What is the primary use of a global variable in C++?",
+      "options": [
+        "To store values accessible only inside a loop",
+        "To create variables that exist only while a function runs",
+        "To store data permanently in a file",
+        "To declare variables that cannot be modified",
+        "To allow data to be accessed from multiple functions in a program"
+      ],
+      "answer": "e",
+      "explanation": "PYQ 2024."
+    },
+    {
+      "id": 44,
+      "source": "Batch 5 Q44",
+      "topic": "C++ & OOP",
+      "question": "Which operator has the highest precedence in C++?",
+      "options": [
+        "Addition (+)",
+        "Logical AND (&&)",
+        "Multiplication (*)",
+        "Function call operator ()",
+        "Assignment (=)"
+      ],
+      "answer": "d",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 45,
+      "source": "Batch 5 Q45",
+      "topic": "C++ & OOP",
+      "question": "What is the output?\nint a = 25, b = 14;\ncout << a << \" + \" << b << \" = \" << a + b;",
+      "options": [
+        "14 + 25 = 39",
+        "25 + 14 = 39",
+        "25 + 14 = 2514",
+        "Compilation error",
+        "39"
+      ],
+      "answer": "b",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 46,
+      "source": "Batch 5 Q46",
+      "topic": "C++ & OOP",
+      "question": "Which statement about destructors in C++ is correct?",
+      "options": [
+        "A class can have many destructors with different parameters",
+        "A destructor can return a value",
+        "A destructor cannot be overloaded, so a class has only one",
+        "A destructor must be called manually every time",
+        "A destructor has the same name as the class without ~"
+      ],
+      "answer": "c",
+      "explanation": "~ClassName(), no arguments, no overloading."
+    },
+    {
+      "id": 47,
+      "source": "Batch 5 Q47",
+      "topic": "C++ & OOP",
+      "question": "A C++ class contains virtual void show() = 0;. Which statement is true?",
+      "options": [
+        "The class becomes abstract and cannot be instantiated",
+        "The class can be instantiated normally",
+        "The class becomes a friend class",
+        "The function runs at compile time",
+        "The class cannot be inherited"
+      ],
+      "answer": "a",
+      "explanation": "A pure virtual function makes the class abstract."
+    },
+    {
+      "id": 48,
+      "source": "Batch 5 Q48",
+      "topic": "C++ & OOP",
+      "question": "Function overloading in C++ is resolved:",
+      "options": [
+        "At runtime using virtual functions",
+        "By the linker only",
+        "By the operating system",
+        "Only when the program crashes",
+        "At compile time (static binding)"
+      ],
+      "answer": "e",
+      "explanation": "Overloading = compile time; overriding = runtime."
+    },
+    {
+      "id": 49,
+      "source": "Batch 5 Q49",
+      "topic": "C++ & OOP",
+      "question": "Which operator cannot be overloaded in C++?",
+      "options": [
+        "+",
+        "==",
+        "[]",
+        ":: (scope resolution)",
+        "<<"
+      ],
+      "answer": "d",
+      "explanation": "Not overloadable: :: . .* ?: sizeof."
+    },
+    {
+      "id": 50,
+      "source": "Batch 5 Q50",
+      "topic": "C++ & OOP",
+      "question": "In C++, what is the default access level of members in a struct?",
+      "options": [
+        "Private",
+        "Public",
+        "Protected",
+        "Internal",
+        "None"
+      ],
+      "answer": "b",
+      "explanation": "struct = public; class = private."
+    },
+    {
+      "id": 51,
+      "source": "Batch 6 Q51",
+      "topic": "Java",
+      "question": "In Java 8 or later, which memory area stores class metadata at runtime?",
+      "options": [
+        "Stack",
+        "Heap",
+        "Metaspace",
+        "PermGen",
+        "None of the above"
+      ],
+      "answer": "c",
+      "explanation": "Metaspace replaced PermGen (PYQ 2025)."
+    },
+    {
+      "id": 52,
+      "source": "Batch 6 Q52",
+      "topic": "Java",
+      "question": "What happens if a Java class has no constructors defined?",
+      "options": [
+        "The compiler throws an error",
+        "The compiler adds a default constructor automatically",
+        "A parameterised constructor is added",
+        "Objects can't be created with new",
+        "Only static methods can be accessed"
+      ],
+      "answer": "b",
+      "explanation": "PYQ 2025."
+    },
+    {
+      "id": 53,
+      "source": "Batch 6 Q53",
+      "topic": "Java",
+      "question": "Which exception is thrown in Java when a class is not found at runtime?",
+      "options": [
+        "NullPointerException",
+        "IOException",
+        "ArithmeticException",
+        "NoClassDefFoundError",
+        "ClassNotFoundException"
+      ],
+      "answer": "e",
+      "explanation": "ClassNotFoundException (PYQ 2025). NoClassDefFoundError is an Error."
+    },
+    {
+      "id": 54,
+      "source": "Batch 6 Q54",
+      "topic": "Java",
+      "question": "Which statement about method binding in Java is correct?",
+      "options": [
+        "Dynamic binding is used for overloading, resolved at runtime",
+        "Static binding is used for overriding and is more flexible",
+        "Static binding is faster than dynamic binding, and dynamic binding is not applicable to method overloading",
+        "Both are resolved at runtime",
+        "Overloading uses dynamic dispatch"
+      ],
+      "answer": "c",
+      "explanation": "PYQ 2025."
+    },
+    {
+      "id": 55,
+      "source": "Batch 6 Q55",
+      "topic": "Java",
+      "question": "Which keyword declares class-level members accessible without creating an instance?",
+      "options": [
+        "static",
+        "final",
+        "transient",
+        "volatile",
+        "synchronized"
+      ],
+      "answer": "a",
+      "explanation": "PYQ 2022."
+    },
+    {
+      "id": 56,
+      "source": "Batch 6 Q56",
+      "topic": "Java",
+      "question": "Which keyword is used for a variable whose value cannot be changed after initialisation?",
+      "options": [
+        "static",
+        "const",
+        "fixed",
+        "final",
+        "immutable"
+      ],
+      "answer": "d",
+      "explanation": "PYQ Prelims 2026."
+    },
+    {
+      "id": 57,
+      "source": "Batch 6 Q57",
+      "topic": "Java",
+      "question": "What is the final value of a?\nint a = 0;\nfor (int i = 0; i < 5; i++) { a++; }\nfor (int j = 0; j < 5; j++) { a--; }",
+      "options": [
+        "-5",
+        "0",
+        "5",
+        "10",
+        "None of the above"
+      ],
+      "answer": "b",
+      "explanation": "+5 then −5 = 0 (PYQ 2022)."
+    },
+    {
+      "id": 58,
+      "source": "Batch 6 Q58",
+      "topic": "Java",
+      "question": "What is the output?\nString str = \"2237\\u3456\\u7891\" + \"011\";\nSystem.out.println(str.length());",
+      "options": [
+        "19",
+        "13",
+        "17",
+        "Compilation error",
+        "9"
+      ],
+      "answer": "e",
+      "explanation": "Each \\uXXXX is one character: 4 + 2 + 3 = 9 (PYQ 2023)."
+    },
+    {
+      "id": 59,
+      "source": "Batch 6 Q59",
+      "topic": "Java",
+      "question": "What is the output of System.out.println(1 + 2 + \"3\" + 4 + 5);?",
+      "options": [
+        "15",
+        "3345",
+        "12345",
+        "339",
+        "Compilation error"
+      ],
+      "answer": "b",
+      "explanation": "1+2 = 3, then string concatenation: \"3\"+\"3\"+\"4\"+\"5\"."
+    },
+    {
+      "id": 60,
+      "source": "Batch 6 Q60",
+      "topic": "Java",
+      "question": "What is the output?\nint x = 10;\nint y = x++ + ++x;\nSystem.out.println(y);",
+      "options": [
+        "Undefined behaviour",
+        "21",
+        "22",
+        "20",
+        "23"
+      ],
+      "answer": "c",
+      "explanation": "Java evaluates left to right: 10 + 12 = 22."
+    },
+    {
+      "id": 61,
+      "source": "Batch 7 Q61",
+      "topic": "Java",
+      "question": "In Java, multiple inheritance is achieved through:",
+      "options": [
+        "Multiple extends clauses",
+        "Abstract classes only",
+        "Interfaces",
+        "Friend classes",
+        "Virtual base classes"
+      ],
+      "answer": "c",
+      "explanation": "A class extends one class but implements many interfaces."
+    },
+    {
+      "id": 62,
+      "source": "Batch 7 Q62",
+      "topic": "Java",
+      "question": "What is the output?\nString s1 = new String(\"hi\");\nString s2 = new String(\"hi\");\nSystem.out.println((s1 == s2) + \" \" + s1.equals(s2));",
+      "options": [
+        "true true",
+        "false true",
+        "true false",
+        "false false",
+        "Compilation error"
+      ],
+      "answer": "b",
+      "explanation": "== compares references; equals compares content."
+    },
+    {
+      "id": 63,
+      "source": "Batch 7 Q63",
+      "topic": "Java",
+      "question": "What is the size of char in Java?",
+      "options": [
+        "1 byte",
+        "4 bytes",
+        "8 bytes",
+        "2 bytes",
+        "Depends on the OS"
+      ],
+      "answer": "d",
+      "explanation": "Java char is 2 bytes (Unicode)."
+    },
+    {
+      "id": 64,
+      "source": "Batch 7 Q64",
+      "topic": "Java",
+      "question": "What happens when this compiles?\nint n;\nSystem.out.println(n);   // inside main",
+      "options": [
+        "Prints 0",
+        "Prints a garbage value",
+        "Prints null",
+        "Runtime exception",
+        "Compilation error: variable not initialised"
+      ],
+      "answer": "e",
+      "explanation": "Java local variables must be initialised."
+    },
+    {
+      "id": 65,
+      "source": "Batch 7 Q65",
+      "topic": "Java",
+      "question": "What is the output of \"PROGRAM\".substring(2, 5)?",
+      "options": [
+        "OGR",
+        "ROG",
+        "OGRA",
+        "GRA",
+        "PRO"
+      ],
+      "answer": "a",
+      "explanation": "0-based, end excluded: indexes 2, 3, 4."
+    },
+    {
+      "id": 66,
+      "source": "Batch 7 Q66",
+      "topic": "Java",
+      "question": "In Java exception handling, the finally block:",
+      "options": [
+        "Runs only if an exception occurs",
+        "Runs only if no exception occurs",
+        "Always runs, unless System.exit() is called",
+        "Never runs if there's a return in try",
+        "Is required in every try block"
+      ],
+      "answer": "c",
+      "explanation": "finally always runs (except System.exit)."
+    },
+    {
+      "id": 67,
+      "source": "Batch 7 Q67",
+      "topic": "Java",
+      "question": "What happens when int r = 10 / 0; executes in Java?",
+      "options": [
+        "r becomes Infinity",
+        "r becomes 0",
+        "r becomes NaN",
+        "An ArithmeticException is thrown",
+        "A compilation error occurs"
+      ],
+      "answer": "d",
+      "explanation": "Integer division by zero throws; 10.0/0 gives Infinity."
+    },
+    {
+      "id": 68,
+      "source": "Batch 7 Q68",
+      "topic": "Java",
+      "question": "A class declared final in Java:",
+      "options": [
+        "Cannot be instantiated",
+        "Must be abstract",
+        "Can only have static methods",
+        "Cannot have constructors",
+        "Cannot be inherited"
+      ],
+      "answer": "e",
+      "explanation": "e.g. String is final."
+    },
+    {
+      "id": 69,
+      "source": "Batch 7 Q69",
+      "topic": "Java",
+      "question": "Which class provides a mutable and thread-safe sequence of characters?",
+      "options": [
+        "String",
+        "StringBuffer",
+        "StringBuilder",
+        "Character",
+        "Scanner"
+      ],
+      "answer": "b",
+      "explanation": "StringBuffer is synchronized; StringBuilder isn't."
+    },
+    {
+      "id": 70,
+      "source": "Batch 7 Q70",
+      "topic": "Java",
+      "question": "What is the main role of the JVM?",
+      "options": [
+        "Executing bytecode, making Java platform-independent",
+        "Compiling .java into .class",
+        "Providing the code editor",
+        "Managing the database",
+        "Designing the UI"
+      ],
+      "answer": "a",
+      "explanation": "javac compiles; the JVM executes."
+    },
+    {
+      "id": 71,
+      "source": "Batch 8 Q71",
+      "topic": "Python",
+      "question": "Which is a valid identifier in Python?",
+      "options": [
+        "1stVariable",
+        "variable-name",
+        "variable_name",
+        "for",
+        "variable@name"
+      ],
+      "answer": "c",
+      "explanation": "Letters, digits, underscore; can't start with a digit (PYQ 2022)."
+    },
+    {
+      "id": 72,
+      "source": "Batch 8 Q72",
+      "topic": "Python",
+      "question": "What is the output?\nnames = [\"Aman\", \"Rahul\", \"Peter\"]\nnames.insert(1, \"John\")\nprint(names[1])",
+      "options": [
+        "Aman",
+        "Rahul",
+        "Peter",
+        "John",
+        "Error"
+      ],
+      "answer": "d",
+      "explanation": "insert puts John AT index 1 (PYQ 2024)."
+    },
+    {
+      "id": 73,
+      "source": "Batch 8 Q73",
+      "topic": "Python",
+      "question": "What is the output?\na = (1, 2, 3, 4, 5)\nprint(a[-4:-1])",
+      "options": [
+        "(2, 3, 4)",
+        "(3, 4, 5)",
+        "(3, 4)",
+        "(2, 3, 4, 5)",
+        "(1, 2, 3)"
+      ],
+      "answer": "a",
+      "explanation": "From −4 up to (not including) −1 (PYQ 2024)."
+    },
+    {
+      "id": 74,
+      "source": "Batch 8 Q74",
+      "topic": "Python",
+      "question": "Which file mode appends to an existing file without deleting its data?",
+      "options": [
+        "r",
+        "w",
+        "x",
+        "rb",
+        "a"
+      ],
+      "answer": "e",
+      "explanation": "PYQ 2024."
+    },
+    {
+      "id": 75,
+      "source": "Batch 8 Q75",
+      "topic": "Python",
+      "question": "What is the output?\nimport re\ntext = \"IBPS_SO_IT_2024\"\nresult = re.findall(r'[A-Z]+', text)\nprint(result[1])",
+      "options": [
+        "IBPS",
+        "SO",
+        "IT",
+        "2024",
+        "_"
+      ],
+      "answer": "b",
+      "explanation": "['IBPS', 'SO', 'IT'] → index 1 (PYQ 2024)."
+    },
+    {
+      "id": 76,
+      "source": "Batch 8 Q76",
+      "topic": "Python",
+      "question": "Which operator checks directly whether a key exists in a dictionary?",
+      "options": [
+        "The find() operator",
+        "The search() method",
+        "The contains() function",
+        "The index() method",
+        "The in operator"
+      ],
+      "answer": "e",
+      "explanation": "PYQ 2024."
+    },
+    {
+      "id": 77,
+      "source": "Batch 8 Q77",
+      "topic": "Python",
+      "question": "Which is used in Python to access command-line arguments?",
+      "options": [
+        "os.path",
+        "sys.argv",
+        "input.argv",
+        "args.sys",
+        "command.line"
+      ],
+      "answer": "b",
+      "explanation": "PYQ 2024."
+    },
+    {
+      "id": 78,
+      "source": "Batch 8 Q78",
+      "topic": "Web",
+      "question": "In JavaScript, what does typeof null report?",
+      "options": [
+        "null",
+        "undefined",
+        "object",
+        "number",
+        "string"
+      ],
+      "answer": "c",
+      "explanation": "A historical JS bug (PYQ 2025)."
+    },
+    {
+      "id": 79,
+      "source": "Batch 8 Q79",
+      "topic": "Web",
+      "question": "What is the output?\nconsole.log(parseInt(\"10.5\") + parseInt(\"5.7\") + \"2\");",
+      "options": [
+        "152",
+        "17.7",
+        "16.2",
+        "152.7",
+        "NaN"
+      ],
+      "answer": "a",
+      "explanation": "10 + 5 = 15, then + \"2\" concatenates (PYQ 2025)."
+    },
+    {
+      "id": 80,
+      "source": "Batch 8 Q80",
+      "topic": "Web",
+      "question": "Which best describes the CSS z-index property?",
+      "options": [
+        "Sets horizontal position",
+        "Sets vertical position",
+        "Adjusts opacity",
+        "Controls the stacking order of elements along the z-axis",
+        "Sets font size"
+      ],
+      "answer": "d",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 81,
+      "source": "Batch 9 Q81",
+      "topic": "Python",
+      "question": "Which keyword is used to define a generator in Python?",
+      "options": [
+        "return",
+        "yield",
+        "generate",
+        "produce",
+        "iterator"
+      ],
+      "answer": "b",
+      "explanation": "PYQ Prelims 2026."
+    },
+    {
+      "id": 82,
+      "source": "Batch 9 Q82",
+      "topic": "Python",
+      "question": "Which regular expression matches \"cat\" and \"bat\" but not \"at\"?",
+      "options": [
+        "^.[cb]at$",
+        "[cat|bat]",
+        "^at$",
+        "^[cb]at$",
+        ".*at$"
+      ],
+      "answer": "d",
+      "explanation": "PYQ 2025."
+    },
+    {
+      "id": 83,
+      "source": "Batch 9 Q83",
+      "topic": "Web",
+      "question": "The HTML <template> tag is NOT used for:",
+      "options": [
+        "Holding reusable HTML blocks",
+        "Defining HTML for later use with JavaScript",
+        "Rendering content immediately when the page loads",
+        "Keeping code hidden from display",
+        "Delaying rendering until needed"
+      ],
+      "answer": "c",
+      "explanation": "Template content isn't rendered on load (PYQ 2025)."
+    },
+    {
+      "id": 84,
+      "source": "Batch 9 Q84",
+      "topic": "Web",
+      "question": "Which tag is used to create a table in HTML?",
+      "options": [
+        "<div>",
+        "<grid>",
+        "<html-table>",
+        "<section>",
+        "<table>"
+      ],
+      "answer": "e",
+      "explanation": "PYQ 2022."
+    },
+    {
+      "id": 85,
+      "source": "Batch 9 Q85",
+      "topic": "Web",
+      "question": "What does var_dump() do in PHP?",
+      "options": [
+        "Shows information about variables, including type and value",
+        "Assigns default values",
+        "Logs error messages",
+        "Creates a new variable",
+        "Initialises arrays and objects"
+      ],
+      "answer": "a",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 86,
+      "source": "Batch 9 Q86",
+      "topic": "Web",
+      "question": "Which is a high-level scripting language rather than a low-level or system language?",
+      "options": [
+        "Assembly",
+        "C",
+        "Perl",
+        "C++",
+        "Machine language"
+      ],
+      "answer": "c",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 87,
+      "source": "Batch 9 Q87",
+      "topic": "Web",
+      "question": "What is the output?\nconsole.log((5 == \"5\") + \" \" + (5 === \"5\"));",
+      "options": [
+        "true true",
+        "false false",
+        "false true",
+        "true false",
+        "Error"
+      ],
+      "answer": "d",
+      "explanation": "== converts types; === doesn't."
+    },
+    {
+      "id": 88,
+      "source": "Batch 9 Q88",
+      "topic": "Python",
+      "question": "What is the output of print(7 / 2, 7 // 2)?",
+      "options": [
+        "3 3",
+        "3.5 3.5",
+        "3 3.5",
+        "3.5 4",
+        "3.5 3"
+      ],
+      "answer": "e",
+      "explanation": "/ always returns float; // is floor division."
+    },
+    {
+      "id": 89,
+      "source": "Batch 9 Q89",
+      "topic": "Python",
+      "question": "What is the output?\ns = {1, 2, 2, 3, 3, 3}\nprint(len(s))",
+      "options": [
+        "6",
+        "3",
+        "1",
+        "4",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "Sets drop duplicates."
+    },
+    {
+      "id": 90,
+      "source": "Batch 9 Q90",
+      "topic": "Python",
+      "question": "What is the output?\nnums = [10, 20, 30]\nnums.insert(0, 5)\nprint(nums[1])",
+      "options": [
+        "5",
+        "20",
+        "10",
+        "30",
+        "Error"
+      ],
+      "answer": "c",
+      "explanation": "[5, 10, 20, 30] → index 1 = 10."
+    },
+    {
+      "id": 91,
+      "source": "Day Test Q1",
+      "topic": "C",
+      "question": "What is the output?\nint x = 10;\nprintf(\"%d %d\", x++, ++x);",
+      "options": [
+        "10 12",
+        "11 12",
+        "10 11",
+        "12 12",
+        "Undefined behaviour"
+      ],
+      "answer": "e",
+      "explanation": "Undefined behaviour."
+    },
+    {
+      "id": 92,
+      "source": "Day Test Q2",
+      "topic": "Python",
+      "question": "What is the output?\nb = (10, 20, 30, 40, 50)\nprint(b[-3:])",
+      "options": [
+        "(30, 40)",
+        "(40, 50)",
+        "(30, 40, 50)",
+        "(20, 30, 40)",
+        "(10, 20, 30)"
+      ],
+      "answer": "c",
+      "explanation": "Last three items."
+    },
+    {
+      "id": 93,
+      "source": "Day Test Q3",
+      "topic": "C++ & OOP",
+      "question": "In a C++ class, what is the default member access level?",
+      "options": [
+        "Private",
+        "Public",
+        "Protected",
+        "Package-private",
+        "Internal"
+      ],
+      "answer": "a",
+      "explanation": "Private."
+    },
+    {
+      "id": 94,
+      "source": "Day Test Q4",
+      "topic": "Java",
+      "question": "What is the output of \"Hello, World!\".length() in Java?",
+      "options": [
+        "12",
+        "13",
+        "14",
+        "11",
+        "Compilation error"
+      ],
+      "answer": "b",
+      "explanation": "Comma, space and ! all count: 13."
+    },
+    {
+      "id": 95,
+      "source": "Day Test Q5",
+      "topic": "Web",
+      "question": "In JavaScript, what does typeof null return?",
+      "options": [
+        "\"null\"",
+        "\"undefined\"",
+        "\"number\"",
+        "\"object\"",
+        "\"string\""
+      ],
+      "answer": "d",
+      "explanation": "\"object\"."
+    },
+    {
+      "id": 96,
+      "source": "Day Test Q6",
+      "topic": "C",
+      "question": "What is printed when f() is called three times?\nvoid f() { static int c = 0; c++; printf(\"%d \", c); }",
+      "options": [
+        "1 2 3",
+        "1 1 1",
+        "0 1 2",
+        "3 3 3",
+        "Compilation error"
+      ],
+      "answer": "a",
+      "explanation": "Static local keeps its value."
+    },
+    {
+      "id": 97,
+      "source": "Day Test Q7",
+      "topic": "Java",
+      "question": "What happens if a Java class has no constructors defined?",
+      "options": [
+        "The compiler throws an error",
+        "Objects can't be created",
+        "A parameterised constructor is added",
+        "Only static methods can be used",
+        "The compiler adds a default constructor automatically"
+      ],
+      "answer": "e",
+      "explanation": "Default constructor added."
+    },
+    {
+      "id": 98,
+      "source": "Day Test Q8",
+      "topic": "Python",
+      "question": "What is the output?\nlst = ['a', 'b', 'c']\nlst.insert(2, 'x')\nprint(lst)",
+      "options": [
+        "['a', 'x', 'b', 'c']",
+        "['a', 'b', 'c', 'x']",
+        "['a', 'b', 'x', 'c']",
+        "['x', 'a', 'b', 'c']",
+        "['a', 'b', 'x']"
+      ],
+      "answer": "c",
+      "explanation": "x goes AT index 2."
+    },
+    {
+      "id": 99,
+      "source": "Day Test Q9",
+      "topic": "C",
+      "question": "With int = 4 bytes, what is the size of union U { char c[10]; int i; }?",
+      "options": [
+        "14",
+        "10",
+        "4",
+        "16",
+        "1"
+      ],
+      "answer": "b",
+      "explanation": "Exam rule: largest member = 10. (Real compilers usually pad to 12 for 4-byte alignment.)"
+    },
+    {
+      "id": 100,
+      "source": "Day Test Q10",
+      "topic": "C++ & OOP",
+      "question": "Which OOP concept hides internal implementation details?",
+      "options": [
+        "Inheritance",
+        "Encapsulation",
+        "Polymorphism",
+        "Abstraction",
+        "Overloading"
+      ],
+      "answer": "d",
+      "explanation": "Abstraction."
+    },
+    {
+      "id": 101,
+      "source": "Day Test Q11",
+      "topic": "Java",
+      "question": "Which Java keyword makes a variable unchangeable after initialisation?",
+      "options": [
+        "static",
+        "const",
+        "fixed",
+        "final",
+        "immutable"
+      ],
+      "answer": "d",
+      "explanation": "final."
+    },
+    {
+      "id": 102,
+      "source": "Day Test Q12",
+      "topic": "C",
+      "question": "What is the output?\n#define SQ(x) x*x\nprintf(\"%d\", SQ(3+1));",
+      "options": [
+        "16",
+        "7",
+        "10",
+        "8",
+        "Compilation error"
+      ],
+      "answer": "b",
+      "explanation": "3+1*3+1 = 3+3+1 = 7."
+    },
+    {
+      "id": 103,
+      "source": "Day Test Q13",
+      "topic": "Python",
+      "question": "What is the output?\nimport re\nprint(re.findall(r'\\d+', \"A12B345C6\"))",
+      "options": [
+        "['12', '345', '6']",
+        "['1', '2', '3', '4', '5', '6']",
+        "['A', 'B', 'C']",
+        "['12345', '6']",
+        "123456"
+      ],
+      "answer": "a",
+      "explanation": "\\d+ = runs of one or more digits."
+    },
+    {
+      "id": 104,
+      "source": "Day Test Q14",
+      "topic": "Web",
+      "question": "What is the output of console.log(\"5\" - 2 + \"1\");?",
+      "options": [
+        "\"521\"",
+        "4",
+        "\"41\"",
+        "NaN",
+        "\"31\""
+      ],
+      "answer": "e",
+      "explanation": "\"5\" − 2 = 3 (minus converts), then 3 + \"1\" = \"31\"."
+    },
+    {
+      "id": 105,
+      "source": "Day Test Q15",
+      "topic": "C++ & OOP",
+      "question": "In C++, which statement describes endl and setw?",
+      "options": [
+        "endl sets field width; setw inserts a new line",
+        "Both insert a new line",
+        "endl inserts a new line; setw sets the output field width",
+        "endl reads input; setw prints output",
+        "Both set field width"
+      ],
+      "answer": "c",
+      "explanation": "endl = new line; setw = width."
+    },
+    {
+      "id": 106,
+      "source": "Day Test Q16",
+      "topic": "Java",
+      "question": "In Java, method overloading is resolved:",
+      "options": [
+        "At compile time (static binding)",
+        "At runtime (dynamic binding)",
+        "By the garbage collector",
+        "By the JIT compiler only",
+        "Never"
+      ],
+      "answer": "a",
+      "explanation": "Compile time."
+    },
+    {
+      "id": 107,
+      "source": "Day Test Q17",
+      "topic": "C++ & OOP",
+      "question": "Which statement correctly describes composition?",
+      "options": [
+        "The child always exists independently",
+        "It is weaker than aggregation",
+        "It is an is-a relationship",
+        "The child object depends on the lifecycle of the parent object",
+        "It is used only with interfaces"
+      ],
+      "answer": "d",
+      "explanation": "Composition = strong has-a."
+    },
+    {
+      "id": 108,
+      "source": "Day Test Q18",
+      "topic": "Python",
+      "question": "What is the output?\nd = {'a': 1, 'b': 2}\nprint('b' in d, 2 in d)",
+      "options": [
+        "True True",
+        "True False",
+        "False True",
+        "False False",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "in checks keys, not values."
+    },
+    {
+      "id": 109,
+      "source": "Day Test Q19",
+      "topic": "C",
+      "question": "Which C function checks whether the end-of-file indicator has been set?",
+      "options": [
+        "fseek()",
+        "ftell()",
+        "rewind()",
+        "fclose()",
+        "feof()"
+      ],
+      "answer": "e",
+      "explanation": "feof()."
+    },
+    {
+      "id": 110,
+      "source": "Day Test Q20",
+      "topic": "Web",
+      "question": "The HTML <template> tag is NOT used for:",
+      "options": [
+        "Holding reusable HTML blocks",
+        "Defining HTML for later use with JavaScript",
+        "Rendering content immediately when the page loads",
+        "Keeping markup hidden",
+        "Delaying rendering until needed"
+      ],
+      "answer": "c",
+      "explanation": "Not rendered on load."
+    },
+    {
+      "id": 111,
+      "source": "Day Test Q21",
+      "topic": "Python",
+      "question": "What does opening a file with mode 'w' do in Python?",
+      "options": [
+        "Opens for reading only",
+        "Creates the file, or erases its contents if it exists, and opens it for writing",
+        "Appends without deleting",
+        "Raises an error if the file exists",
+        "Opens in binary read mode"
+      ],
+      "answer": "b",
+      "explanation": "'w' truncates; 'a' appends; 'x' errors if it exists."
+    },
+    {
+      "id": 112,
+      "source": "Day Test Q22",
+      "topic": "C",
+      "question": "Which operations are valid on pointers in C?",
+      "options": [
+        "Multiplying two pointers",
+        "Dividing a pointer by an integer",
+        "Taking the modulus of a pointer",
+        "Adding an integer to, or subtracting an integer from, a pointer",
+        "Raising a pointer to a power"
+      ],
+      "answer": "d",
+      "explanation": "± integer."
+    },
+    {
+      "id": 113,
+      "source": "Day Test Q23",
+      "topic": "C++ & OOP",
+      "question": "In C++, what does the this pointer refer to?",
+      "options": [
+        "The current object",
+        "The base class",
+        "A null pointer",
+        "A static member",
+        "The class name"
+      ],
+      "answer": "a",
+      "explanation": "Current object."
+    },
+    {
+      "id": 114,
+      "source": "Day Test Q24",
+      "topic": "Java",
+      "question": "What is the output?\nString a = new String(\"ok\");\nString b = new String(\"ok\");\nSystem.out.println((a == b) + \" \" + a.equals(b));",
+      "options": [
+        "true true",
+        "true false",
+        "false true",
+        "false false",
+        "Compilation error"
+      ],
+      "answer": "c",
+      "explanation": "Different objects, same content."
+    },
+    {
+      "id": 115,
+      "source": "Day Test Q25",
+      "topic": "Web",
+      "question": "What is the output of console.log(5 === \"5\");?",
+      "options": [
+        "true",
+        "false",
+        "undefined",
+        "NaN",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "Strict equality: different types."
+    },
+    {
+      "id": 116,
+      "source": "Day Test Q26",
+      "topic": "Python",
+      "question": "What is the output of print(2 ** 3 + 7 // 2)?",
+      "options": [
+        "11.5",
+        "12",
+        "10",
+        "14",
+        "11"
+      ],
+      "answer": "e",
+      "explanation": "8 + 3 = 11."
+    },
+    {
+      "id": 117,
+      "source": "Day Test Q27",
+      "topic": "C",
+      "question": "What does strlen(\"IBPS\") return in C?",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "6",
+        "8"
+      ],
+      "answer": "a",
+      "explanation": "strlen excludes '\\0'."
+    },
+    {
+      "id": 118,
+      "source": "Day Test Q28",
+      "topic": "C++ & OOP",
+      "question": "A subclass cannot access which members of its base class?",
+      "options": [
+        "Public",
+        "Protected",
+        "Private",
+        "Static public",
+        "Public methods"
+      ],
+      "answer": "c",
+      "explanation": "Private."
+    },
+    {
+      "id": 119,
+      "source": "Day Test Q29",
+      "topic": "Java",
+      "question": "Which is an unchecked (runtime) exception in Java?",
+      "options": [
+        "IOException",
+        "SQLException",
+        "ClassNotFoundException",
+        "NullPointerException",
+        "FileNotFoundException"
+      ],
+      "answer": "d",
+      "explanation": "Unchecked = programmer bugs (NPE, Arithmetic...). Checked = external (IO, SQL, ClassNotFound)."
+    },
+    {
+      "id": 120,
+      "source": "Day Test Q30",
+      "topic": "Web",
+      "question": "What is the correct CSS box model order, from the inside out?",
+      "options": [
+        "Margin → Border → Padding → Content",
+        "Padding → Content → Border → Margin",
+        "Border → Padding → Content → Margin",
+        "Content → Border → Padding → Margin",
+        "Content → Padding → Border → Margin"
+      ],
+      "answer": "e",
+      "explanation": "Content, padding, border, margin."
+    },
+    {
+      "id": 121,
+      "source": "Day Test Q31",
+      "topic": "Java",
+      "question": "In Java 8+, which memory area stores class metadata?",
+      "options": [
+        "Stack",
+        "Heap",
+        "Metaspace",
+        "PermGen",
+        "Register"
+      ],
+      "answer": "c",
+      "explanation": "Metaspace."
+    },
+    {
+      "id": 122,
+      "source": "Day Test Q32",
+      "topic": "C",
+      "question": "What is printed?\nint main() { int n; printf(\"%d\", n); return 0; }",
+      "options": [
+        "A garbage value",
+        "0",
+        "NULL",
+        "A compilation error",
+        "1"
+      ],
+      "answer": "a",
+      "explanation": "C local = garbage (Java would refuse to compile)."
+    },
+    {
+      "id": 123,
+      "source": "Day Test Q33",
+      "topic": "Python",
+      "question": "Which is a valid Python identifier?",
+      "options": [
+        "2ndName",
+        "first-name",
+        "class",
+        "my@var",
+        "_total"
+      ],
+      "answer": "e",
+      "explanation": "Underscore start is fine."
+    },
+    {
+      "id": 124,
+      "source": "Day Test Q34",
+      "topic": "Web",
+      "question": "What is the output of console.log(\"2\" + 10 + 5);?",
+      "options": [
+        "17",
+        "\"2105\"",
+        "\"215\"",
+        "\"1052\"",
+        "NaN"
+      ],
+      "answer": "b",
+      "explanation": "String first → everything concatenates."
+    },
+    {
+      "id": 125,
+      "source": "Day Test Q35",
+      "topic": "C++ & OOP",
+      "question": "In C++, run-time polymorphism is achieved using:",
+      "options": [
+        "Function overloading",
+        "Operator overloading",
+        "Templates",
+        "Virtual functions (overriding)",
+        "Macros"
+      ],
+      "answer": "d",
+      "explanation": "Virtual functions."
+    },
+    {
+      "id": 126,
+      "source": "Day Test Q36",
+      "topic": "Java",
+      "question": "Which statement about method binding in Java is correct?",
+      "options": [
+        "Dynamic binding is used for overloading",
+        "Static binding is used for overriding",
+        "Static binding is faster than dynamic binding, and dynamic binding is not applicable to overloading",
+        "Both are resolved at runtime",
+        "Overloading uses dynamic dispatch"
+      ],
+      "answer": "c",
+      "explanation": "PYQ 2025."
+    },
+    {
+      "id": 127,
+      "source": "Day Test Q37",
+      "topic": "Web",
+      "question": "What does var_dump() do in PHP?",
+      "options": [
+        "Shows information about variables, including type and value",
+        "Deletes variables",
+        "Logs errors",
+        "Creates arrays",
+        "Converts variables to strings"
+      ],
+      "answer": "a",
+      "explanation": "Type + value."
+    },
+    {
+      "id": 128,
+      "source": "Day Test Q38",
+      "topic": "Python",
+      "question": "Which Python keyword makes a function return values one at a time, as a generator?",
+      "options": [
+        "return",
+        "lambda",
+        "async",
+        "break",
+        "yield"
+      ],
+      "answer": "e",
+      "explanation": "yield."
+    },
+    {
+      "id": 129,
+      "source": "Day Test Q39",
+      "topic": "Web",
+      "question": "Which of the following is a high-level scripting language?",
+      "options": [
+        "Assembly",
+        "Perl",
+        "C",
+        "Machine language",
+        "C++"
+      ],
+      "answer": "b",
+      "explanation": "Perl."
+    },
+    {
+      "id": 130,
+      "source": "Day Test Q40",
+      "topic": "C",
+      "question": "What is the output of printf(\"%.1f\", 7/2.0);?",
+      "options": [
+        "3",
+        "3.0",
+        "4.0",
+        "3.5",
+        "3.50"
+      ],
+      "answer": "d",
+      "explanation": "2.0 makes it floating-point division."
+    },
+    {
+      "id": 131,
+      "source": "Day Test Q41",
+      "topic": "C",
+      "question": "In C, the ternary operator is also called the:",
+      "options": [
+        "Logical operator",
+        "Conditional operator",
+        "Bitwise operator",
+        "Relational operator",
+        "Arithmetic operator"
+      ],
+      "answer": "b",
+      "explanation": "Conditional operator."
+    },
+    {
+      "id": 132,
+      "source": "Day Test Q42",
+      "topic": "Python",
+      "question": "Which Python file mode adds content without deleting existing data?",
+      "options": [
+        "r",
+        "w",
+        "x",
+        "a",
+        "rb"
+      ],
+      "answer": "d",
+      "explanation": "'a' = append."
+    },
+    {
+      "id": 133,
+      "source": "Day Test Q43",
+      "topic": "C++ & OOP",
+      "question": "Which statement correctly distinguishes composition from aggregation?",
+      "options": [
+        "In composition, the child object depends on the lifecycle of the parent object",
+        "Aggregation is a stronger dependency than composition",
+        "Composition lets children exist independently",
+        "Both are identical",
+        "Composition is used only for multiple inheritance"
+      ],
+      "answer": "a",
+      "explanation": "Composition is the STRONGER one."
+    },
+    {
+      "id": 134,
+      "source": "Day Test Q44",
+      "topic": "Java",
+      "question": "Which exception is thrown in Java when a class is not found at runtime?",
+      "options": [
+        "NullPointerException",
+        "IOException",
+        "ArithmeticException",
+        "NumberFormatException",
+        "ClassNotFoundException"
+      ],
+      "answer": "e",
+      "explanation": "ClassNotFoundException."
+    },
+    {
+      "id": 135,
+      "source": "Day Test Q45",
+      "topic": "Web",
+      "question": "Which CSS property controls the stacking order along the z-axis?",
+      "options": [
+        "position",
+        "display",
+        "z-index",
+        "opacity",
+        "float"
+      ],
+      "answer": "c",
+      "explanation": "z-index."
+    },
+    {
+      "id": 136,
+      "source": "Day Test Q46",
+      "topic": "C",
+      "question": "What is the output?\nint n = 3;\nswitch (n) {\n  case 3: printf(\"C\");\n  case 4: printf(\"D\");\n  default: printf(\"E\");\n}",
+      "options": [
+        "C",
+        "CDE",
+        "CD",
+        "E",
+        "DE"
+      ],
+      "answer": "b",
+      "explanation": "No breaks → falls through to the end."
+    },
+    {
+      "id": 137,
+      "source": "Day Test Q47",
+      "topic": "Java",
+      "question": "What is the output of System.out.println(1 + 2 + \"3\" + 4);?",
+      "options": [
+        "10",
+        "1234",
+        "37",
+        "334",
+        "64"
+      ],
+      "answer": "d",
+      "explanation": "1+2 = 3, then concatenation: \"3\"+\"3\"+\"4\"."
+    },
+    {
+      "id": 138,
+      "source": "Day Test Q48",
+      "topic": "C",
+      "question": "The reserved words in C are called:",
+      "options": [
+        "Constants",
+        "Identifiers",
+        "Operators",
+        "Functions",
+        "Keywords"
+      ],
+      "answer": "e",
+      "explanation": "Keywords (PYQ 2022)."
+    },
+    {
+      "id": 139,
+      "source": "Day Test Q49",
+      "topic": "Python",
+      "question": "What does re.match(r'\\d+', \"abc123\") return?",
+      "options": [
+        "'123'",
+        "['123']",
+        "None",
+        "'abc'",
+        "An error"
+      ],
+      "answer": "c",
+      "explanation": "re.match only matches at the START; the string starts with 'a'. re.search would find '123'."
+    },
+    {
+      "id": 140,
+      "source": "Day Test Q50",
+      "topic": "C++ & OOP",
+      "question": "In OOP, defining one type based on another type is called:",
+      "options": [
+        "Inheritance",
+        "Class",
+        "Object",
+        "Polymorphism",
+        "Encapsulation"
+      ],
+      "answer": "a",
+      "explanation": "PYQ 2022."
+    },
+    {
+      "id": 141,
+      "source": "Additional A1",
+      "topic": "C",
+      "question": "Which format specifier prints a double with scanf/printf in C?",
+      "options": [
+        "%s",
+        "%u",
+        "%lf",
+        "%c",
+        "%d"
+      ],
+      "answer": "c",
+      "explanation": "%lf for double; %f for float."
+    },
+    {
+      "id": 142,
+      "source": "Additional A2",
+      "topic": "C",
+      "question": "In a && b, if a is false:",
+      "options": [
+        "b is evaluated twice",
+        "The program crashes",
+        "b is not evaluated (short-circuit)",
+        "b is always evaluated",
+        "The result is true"
+      ],
+      "answer": "c",
+      "explanation": "Short-circuit evaluation."
+    },
+    {
+      "id": 143,
+      "source": "Additional A3",
+      "topic": "C",
+      "question": "Which storage class variable cannot have its address taken with &?",
+      "options": [
+        "global",
+        "static",
+        "auto",
+        "extern",
+        "register"
+      ],
+      "answer": "e",
+      "explanation": "register asks for a CPU register."
+    },
+    {
+      "id": 144,
+      "source": "Additional A4",
+      "topic": "C",
+      "question": "Which storage class declares a variable defined in another file?",
+      "options": [
+        "volatile",
+        "auto",
+        "register",
+        "static",
+        "extern"
+      ],
+      "answer": "e",
+      "explanation": "extern."
+    },
+    {
+      "id": 145,
+      "source": "Additional A5",
+      "topic": "C",
+      "question": "A pointer pointing to memory that has already been freed is a:",
+      "options": [
+        "Function pointer",
+        "Void pointer",
+        "Dangling pointer",
+        "NULL pointer",
+        "Wild pointer"
+      ],
+      "answer": "c",
+      "explanation": "Dangling. Wild = uninitialised pointer."
+    },
+    {
+      "id": 146,
+      "source": "Additional A6",
+      "topic": "C",
+      "question": "A void pointer must be ______ before it can be dereferenced.",
+      "options": [
+        "Set to NULL",
+        "Declared static",
+        "Incremented",
+        "Cast to another type",
+        "Freed"
+      ],
+      "answer": "d",
+      "explanation": "void* is generic; cast first."
+    },
+    {
+      "id": 147,
+      "source": "Additional A7",
+      "topic": "C",
+      "question": "What does strcmp(s1, s2) return when the two strings are equal?",
+      "options": [
+        "NULL",
+        "The length",
+        "0",
+        "1",
+        "-1"
+      ],
+      "answer": "c",
+      "explanation": "0 means equal."
+    },
+    {
+      "id": 148,
+      "source": "Additional A8",
+      "topic": "C",
+      "question": "Which header declares malloc() and free()?",
+      "options": [
+        "math.h",
+        "stdio.h",
+        "stdlib.h",
+        "ctype.h",
+        "string.h"
+      ],
+      "answer": "c",
+      "explanation": "stdlib.h."
+    },
+    {
+      "id": 149,
+      "source": "Additional A9",
+      "topic": "C",
+      "question": "Forgetting to call free() on allocated memory causes:",
+      "options": [
+        "Nothing at all",
+        "A stack overflow",
+        "A memory leak",
+        "A syntax error",
+        "A segmentation fault always"
+      ],
+      "answer": "c",
+      "explanation": "Memory leak."
+    },
+    {
+      "id": 150,
+      "source": "Additional A10",
+      "topic": "C",
+      "question": "Opening a file with mode \"w\" in C:",
+      "options": [
+        "Opens it in binary",
+        "Appends to the end",
+        "Creates it, or erases it if it already exists",
+        "Opens it read-only",
+        "Fails if it exists"
+      ],
+      "answer": "c",
+      "explanation": "\"w\" truncates; \"a\" appends."
+    },
+    {
+      "id": 151,
+      "source": "Additional A11",
+      "topic": "C",
+      "question": "Which C function moves the file pointer back to the beginning?",
+      "options": [
+        "fclose()",
+        "fseek(fp, 0, SEEK_END)",
+        "feof()",
+        "ftell()",
+        "rewind()"
+      ],
+      "answer": "e",
+      "explanation": "rewind()."
+    },
+    {
+      "id": 152,
+      "source": "Additional A12",
+      "topic": "C",
+      "question": "Which C functions read and write binary blocks of data?",
+      "options": [
+        "fread() / fwrite()",
+        "fgets() / fputs()",
+        "scanf() / printf()",
+        "fgetc() / fputc()",
+        "getchar() / putchar()"
+      ],
+      "answer": "a",
+      "explanation": "fread/fwrite."
+    },
+    {
+      "id": 153,
+      "source": "Additional A13",
+      "topic": "C",
+      "question": "What is the value of EOF in C?",
+      "options": [
+        "-1",
+        "NULL",
+        "0",
+        "1",
+        "255"
+      ],
+      "answer": "a",
+      "explanation": "EOF = −1."
+    },
+    {
+      "id": 154,
+      "source": "Additional A14",
+      "topic": "C",
+      "question": "for(;;) in C creates:",
+      "options": [
+        "An infinite loop",
+        "A compile error",
+        "A loop that runs once",
+        "A do-while loop",
+        "A loop that never runs"
+      ],
+      "answer": "a",
+      "explanation": "Infinite loop."
+    },
+    {
+      "id": 155,
+      "source": "Additional A15",
+      "topic": "C",
+      "question": "The continue statement in a loop:",
+      "options": [
+        "Exits the function",
+        "Exits the loop",
+        "Restarts the program",
+        "Does nothing",
+        "Skips to the next iteration"
+      ],
+      "answer": "e",
+      "explanation": "break exits; continue skips."
+    },
+    {
+      "id": 156,
+      "source": "Additional A16",
+      "topic": "C",
+      "question": "By default, C passes arguments to functions:",
+      "options": [
+        "By value",
+        "By reference",
+        "Globally",
+        "By pointer only",
+        "By name"
+      ],
+      "answer": "a",
+      "explanation": "Call by value; pass a pointer to simulate by-reference."
+    },
+    {
+      "id": 157,
+      "source": "Additional A17",
+      "topic": "C",
+      "question": "The size of a struct is:",
+      "options": [
+        "Always 4 bytes",
+        "Always 8 bytes",
+        "The sum of its members (plus any padding)",
+        "Zero",
+        "The size of its largest member"
+      ],
+      "answer": "c",
+      "explanation": "Union = largest; struct = sum."
+    },
+    {
+      "id": 158,
+      "source": "Additional A18",
+      "topic": "C",
+      "question": "Which operators in C are evaluated right to left?",
+      "options": [
+        "* and /",
+        "Assignment (=) and the conditional operator (?:)",
+        "&& and ||",
+        "< and >",
+        "+ and -"
+      ],
+      "answer": "b",
+      "explanation": "Assignment and ?: (and unary) are right-associative."
+    },
+    {
+      "id": 159,
+      "source": "Additional A19",
+      "topic": "C++ & OOP",
+      "question": "Which is true about constructors in C++?",
+      "options": [
+        "They have no return type and can be overloaded",
+        "They must return int",
+        "There can be only one",
+        "They are called manually",
+        "They can't take parameters"
+      ],
+      "answer": "a",
+      "explanation": "Same name as class, no return type, can be overloaded."
+    },
+    {
+      "id": 160,
+      "source": "Additional A20",
+      "topic": "C++ & OOP",
+      "question": "Which constructor creates a new object as a copy of an existing one?",
+      "options": [
+        "Parameterised constructor",
+        "Copy constructor",
+        "Virtual constructor",
+        "Default constructor",
+        "Static constructor"
+      ],
+      "answer": "b",
+      "explanation": "Copy constructor."
+    },
+    {
+      "id": 161,
+      "source": "Additional A21",
+      "topic": "C++ & OOP",
+      "question": "Which is allowed in C++?",
+      "options": [
+        "Overloaded destructors",
+        "A constructor with a return type",
+        "A destructor with parameters",
+        "A virtual constructor",
+        "A virtual destructor"
+      ],
+      "answer": "e",
+      "explanation": "Virtual destructor yes; virtual constructor no."
+    },
+    {
+      "id": 162,
+      "source": "Additional A22",
+      "topic": "C++ & OOP",
+      "question": "A non-member function that can access a class's private members is a:",
+      "options": [
+        "Inline function",
+        "Static function",
+        "Template function",
+        "Virtual function",
+        "Friend function"
+      ],
+      "answer": "e",
+      "explanation": "Friend function (not inherited)."
+    },
+    {
+      "id": 163,
+      "source": "Additional A23",
+      "topic": "C++ & OOP",
+      "question": "The diamond problem in C++ multiple inheritance is solved using:",
+      "options": [
+        "A static class",
+        "A friend class",
+        "Namespaces",
+        "A virtual base class",
+        "Templates"
+      ],
+      "answer": "d",
+      "explanation": "Virtual base class."
+    },
+    {
+      "id": 164,
+      "source": "Additional A24",
+      "topic": "C++ & OOP",
+      "question": "Which C++ operator is the scope resolution operator?",
+      "options": [
+        "*",
+        ".",
+        "&",
+        "->",
+        "::"
+      ],
+      "answer": "e",
+      "explanation": "e.g. std::cout."
+    },
+    {
+      "id": 165,
+      "source": "Additional A25",
+      "topic": "C++ & OOP",
+      "question": "int &r = x; in C++ creates:",
+      "options": [
+        "An array",
+        "A constant",
+        "A pointer to x",
+        "A copy of x",
+        "A reference (alias) to x"
+      ],
+      "answer": "e",
+      "explanation": "Reference = another name for x."
+    },
+    {
+      "id": 166,
+      "source": "Additional A26",
+      "topic": "C++ & OOP",
+      "question": "In C++, new and delete correspond to C's:",
+      "options": [
+        "goto and label",
+        "malloc and free",
+        "fopen and fclose",
+        "struct and union",
+        "printf and scanf"
+      ],
+      "answer": "b",
+      "explanation": "Dynamic memory."
+    },
+    {
+      "id": 167,
+      "source": "Additional A27",
+      "topic": "C++ & OOP",
+      "question": "Which C++ feature enables generic programming (one function/class for many types)?",
+      "options": [
+        "Templates",
+        "References",
+        "Namespaces",
+        "Macros",
+        "Friend functions"
+      ],
+      "answer": "a",
+      "explanation": "Templates."
+    },
+    {
+      "id": 168,
+      "source": "Additional A28",
+      "topic": "C++ & OOP",
+      "question": "An STL stack follows which order?",
+      "options": [
+        "Sorted",
+        "LIFO",
+        "Priority",
+        "Random",
+        "FIFO"
+      ],
+      "answer": "b",
+      "explanation": "Stack = LIFO; queue = FIFO."
+    },
+    {
+      "id": 169,
+      "source": "Additional A29",
+      "topic": "C++ & OOP",
+      "question": "Which keywords handle exceptions in C++?",
+      "options": [
+        "check, fail, recover",
+        "on error, resume",
+        "begin, raise, rescue",
+        "try, throw, catch",
+        "try, except, finally"
+      ],
+      "answer": "d",
+      "explanation": "try/throw/catch."
+    },
+    {
+      "id": 170,
+      "source": "Additional A30",
+      "topic": "C++ & OOP",
+      "question": "Wrapping data and methods into one unit and hiding the data is:",
+      "options": [
+        "Encapsulation",
+        "Polymorphism",
+        "Aggregation",
+        "Abstraction",
+        "Inheritance"
+      ],
+      "answer": "a",
+      "explanation": "Encapsulation hides data; abstraction hides implementation."
+    },
+    {
+      "id": 171,
+      "source": "Additional A31",
+      "topic": "C++ & OOP",
+      "question": "Which is an example of aggregation?",
+      "options": [
+        "Car → Engine built inside",
+        "Order → Order line",
+        "House → Room",
+        "Department → Teacher",
+        "Human → Heart"
+      ],
+      "answer": "d",
+      "explanation": "The teacher exists without the department."
+    },
+    {
+      "id": 172,
+      "source": "Additional A32",
+      "topic": "C++ & OOP",
+      "question": "Inheritance represents which relationship?",
+      "options": [
+        "knows-a",
+        "uses-a",
+        "is-a",
+        "has-a",
+        "part-of"
+      ],
+      "answer": "c",
+      "explanation": "Composition/aggregation = has-a."
+    },
+    {
+      "id": 173,
+      "source": "Additional A33",
+      "topic": "Java",
+      "question": "Which component compiles .java files into bytecode?",
+      "options": [
+        "JVM",
+        "JIT",
+        "JRE",
+        "Garbage collector",
+        "javac (in the JDK)"
+      ],
+      "answer": "e",
+      "explanation": "javac compiles; JVM executes."
+    },
+    {
+      "id": 174,
+      "source": "Additional A34",
+      "topic": "Java",
+      "question": "How many primitive data types does Java have?",
+      "options": [
+        "4",
+        "8",
+        "10",
+        "6",
+        "12"
+      ],
+      "answer": "b",
+      "explanation": "byte, short, int, long, float, double, char, boolean."
+    },
+    {
+      "id": 175,
+      "source": "Additional A35",
+      "topic": "Java",
+      "question": "What is the output of System.out.println(\"1\" + 2 + 3);?",
+      "options": [
+        "6",
+        "123",
+        "15",
+        "33",
+        "Error"
+      ],
+      "answer": "b",
+      "explanation": "String first → concatenation."
+    },
+    {
+      "id": 176,
+      "source": "Additional A36",
+      "topic": "Java",
+      "question": "What is the value of 'A' + 1 in Java?",
+      "options": [
+        "Error",
+        "B",
+        "65",
+        "66",
+        "A1"
+      ],
+      "answer": "d",
+      "explanation": "char is treated as a number."
+    },
+    {
+      "id": 177,
+      "source": "Additional A37",
+      "topic": "Java",
+      "question": "What is the result of 10.0 / 0 in Java?",
+      "options": [
+        "0",
+        "Infinity",
+        "Compile error",
+        "ArithmeticException",
+        "NaN"
+      ],
+      "answer": "b",
+      "explanation": "Floating-point division by zero gives Infinity."
+    },
+    {
+      "id": 178,
+      "source": "Additional A38",
+      "topic": "Java",
+      "question": "How do you get the length of an array arr in Java?",
+      "options": [
+        "arr.length",
+        "arr.size()",
+        "arr.count",
+        "len(arr)",
+        "arr.length()"
+      ],
+      "answer": "a",
+      "explanation": "Field for arrays; method length() for Strings."
+    },
+    {
+      "id": 179,
+      "source": "Additional A39",
+      "topic": "Java",
+      "question": "What does \"bank\".indexOf(\"z\") return in Java?",
+      "options": [
+        "Exception",
+        "null",
+        "4",
+        "0",
+        "-1"
+      ],
+      "answer": "e",
+      "explanation": "−1 if not found (SQL INSTR returns 0)."
+    },
+    {
+      "id": 180,
+      "source": "Additional A40",
+      "topic": "Java",
+      "question": "A Java field marked transient is:",
+      "options": [
+        "Shared by threads safely",
+        "Private",
+        "Skipped during serialisation",
+        "Static",
+        "Constant"
+      ],
+      "answer": "c",
+      "explanation": "transient."
+    },
+    {
+      "id": 181,
+      "source": "Additional A41",
+      "topic": "Java",
+      "question": "Which Java keyword ensures only one thread at a time runs a block of code?",
+      "options": [
+        "transient",
+        "final",
+        "static",
+        "synchronized",
+        "volatile"
+      ],
+      "answer": "d",
+      "explanation": "synchronized."
+    },
+    {
+      "id": 182,
+      "source": "Additional A42",
+      "topic": "Java",
+      "question": "Which of these are reserved but unused in Java?",
+      "options": [
+        "try and catch",
+        "const and goto",
+        "new and delete",
+        "static and final",
+        "this and super"
+      ],
+      "answer": "b",
+      "explanation": "const and goto."
+    },
+    {
+      "id": 183,
+      "source": "Additional A43",
+      "topic": "Java",
+      "question": "Which class is the root of every Java class?",
+      "options": [
+        "System",
+        "Object",
+        "Root",
+        "Main",
+        "Class"
+      ],
+      "answer": "b",
+      "explanation": "java.lang.Object."
+    },
+    {
+      "id": 184,
+      "source": "Additional A44",
+      "topic": "Java",
+      "question": "Which can an abstract class have that an interface cannot?",
+      "options": [
+        "default methods",
+        "Constants",
+        "Abstract methods",
+        "Constructors",
+        "Public methods"
+      ],
+      "answer": "d",
+      "explanation": "Interfaces have no constructors."
+    },
+    {
+      "id": 185,
+      "source": "Additional A45",
+      "topic": "Java",
+      "question": "What is Java's default access level (no modifier)?",
+      "options": [
+        "Private",
+        "Package-private",
+        "Public",
+        "Protected",
+        "Internal"
+      ],
+      "answer": "b",
+      "explanation": "Visible within the package."
+    },
+    {
+      "id": 186,
+      "source": "Additional A46",
+      "topic": "Java",
+      "question": "Which methods always use static binding in Java?",
+      "options": [
+        "Abstract methods",
+        "All public methods",
+        "static, private and final methods",
+        "Overridden methods",
+        "Interface methods"
+      ],
+      "answer": "c",
+      "explanation": "They can't be overridden."
+    },
+    {
+      "id": 187,
+      "source": "Additional A47",
+      "topic": "Java",
+      "question": "Which Java keyword declares that a method may throw an exception?",
+      "options": [
+        "throws",
+        "try",
+        "catch",
+        "finally",
+        "throw"
+      ],
+      "answer": "a",
+      "explanation": "throw actually throws; throws declares."
+    },
+    {
+      "id": 188,
+      "source": "Additional A48",
+      "topic": "Java",
+      "question": "Calling which method actually starts a new thread in Java?",
+      "options": [
+        "init()",
+        "start()",
+        "run()",
+        "execute()",
+        "begin()"
+      ],
+      "answer": "b",
+      "explanation": "Calling run() directly doesn't create a new thread."
+    },
+    {
+      "id": 189,
+      "source": "Additional A49",
+      "topic": "Java",
+      "question": "Which Java collection does not allow duplicates?",
+      "options": [
+        "HashSet",
+        "Vector",
+        "ArrayList",
+        "Stack",
+        "LinkedList"
+      ],
+      "answer": "a",
+      "explanation": "Set = no duplicates."
+    },
+    {
+      "id": 190,
+      "source": "Additional A50",
+      "topic": "Java",
+      "question": "NoClassDefFoundError occurs when:",
+      "options": [
+        "A class loaded by name at runtime isn't found",
+        "A null reference is used",
+        "An array index is invalid",
+        "An integer is divided by zero",
+        "A class present at compile time is missing at runtime"
+      ],
+      "answer": "e",
+      "explanation": "It's an Error, not an Exception."
+    },
+    {
+      "id": 191,
+      "source": "Additional A51",
+      "topic": "Python",
+      "question": "Which Python data type is immutable?",
+      "options": [
+        "list",
+        "bytearray",
+        "dict",
+        "set",
+        "tuple"
+      ],
+      "answer": "e",
+      "explanation": "Tuples and strings are immutable."
+    },
+    {
+      "id": 192,
+      "source": "Additional A52",
+      "topic": "Python",
+      "question": "What does list.remove(x) do?",
+      "options": [
+        "Clears the list",
+        "Removes all occurrences of x",
+        "Removes the last item",
+        "Removes the first occurrence of x",
+        "Removes the item at index x"
+      ],
+      "answer": "d",
+      "explanation": "pop(i) removes by index."
+    },
+    {
+      "id": 193,
+      "source": "Additional A53",
+      "topic": "Python",
+      "question": "What is the output of print([1, 2, 3, 4][::-1])?",
+      "options": [
+        "[4, 3, 2, 1]",
+        "[1, 2, 3, 4]",
+        "[4]",
+        "[1]",
+        "Error"
+      ],
+      "answer": "a",
+      "explanation": "Step −1 reverses."
+    },
+    {
+      "id": 194,
+      "source": "Additional A54",
+      "topic": "Python",
+      "question": "What does list(range(2, 6)) produce?",
+      "options": [
+        "[1, 2, 3, 4, 5]",
+        "[3, 4, 5, 6]",
+        "[2, 3, 4, 5]",
+        "[2, 3, 4, 5, 6]",
+        "[2, 6]"
+      ],
+      "answer": "c",
+      "explanation": "stop is excluded."
+    },
+    {
+      "id": 195,
+      "source": "Additional A55",
+      "topic": "Python",
+      "question": "What happens when you access d['z'] and 'z' is not a key?",
+      "options": [
+        "Returns ''",
+        "IndexError",
+        "Returns 0",
+        "KeyError",
+        "Returns None"
+      ],
+      "answer": "d",
+      "explanation": "Use d.get('z', default) to avoid it."
+    },
+    {
+      "id": 196,
+      "source": "Additional A56",
+      "topic": "Python",
+      "question": "In a function, *args collects extra positional arguments into a:",
+      "options": [
+        "dict",
+        "string",
+        "list",
+        "set",
+        "tuple"
+      ],
+      "answer": "e",
+      "explanation": "**kwargs collects keyword arguments into a dict."
+    },
+    {
+      "id": 197,
+      "source": "Additional A57",
+      "topic": "Python",
+      "question": "What is the output of [x*x for x in range(4)]?",
+      "options": [
+        "[1, 4, 9, 16]",
+        "[0, 1, 2, 3]",
+        "[0, 2, 4, 6]",
+        "[0, 1, 4, 9]",
+        "Error"
+      ],
+      "answer": "d",
+      "explanation": "range(4) = 0, 1, 2, 3."
+    },
+    {
+      "id": 198,
+      "source": "Additional A58",
+      "topic": "Python",
+      "question": "Which Python file mode raises an error if the file already exists?",
+      "options": [
+        "'x'",
+        "'w'",
+        "'r'",
+        "'a'",
+        "'r+'"
+      ],
+      "answer": "a",
+      "explanation": "Exclusive creation."
+    },
+    {
+      "id": 199,
+      "source": "Additional A59",
+      "topic": "Python",
+      "question": "Using with open(...) as f: ensures that:",
+      "options": [
+        "The file is read-only",
+        "The file is encrypted",
+        "The file is closed automatically",
+        "The file is deleted afterwards",
+        "The file is opened in binary"
+      ],
+      "answer": "c",
+      "explanation": "Context manager auto-closes."
+    },
+    {
+      "id": 200,
+      "source": "Additional A60",
+      "topic": "Python",
+      "question": "In regex, which pattern matches ANY single character?",
+      "options": [
+        "^",
+        "?",
+        "*",
+        "$",
+        "."
+      ],
+      "answer": "e",
+      "explanation": ". = any character; * = zero or more; ? = zero or one."
+    },
+    {
+      "id": 201,
+      "source": "Additional A61",
+      "topic": "Python",
+      "question": "Which function finds the first regex match anywhere in a string?",
+      "options": [
+        "re.findall()",
+        "re.split()",
+        "re.search()",
+        "re.match()",
+        "re.sub()"
+      ],
+      "answer": "c",
+      "explanation": "re.match only checks the start."
+    },
+    {
+      "id": 202,
+      "source": "Additional A62",
+      "topic": "Python",
+      "question": "What is the output of print(2 ** 4)?",
+      "options": [
+        "24",
+        "6",
+        "8",
+        "Error",
+        "16"
+      ],
+      "answer": "e",
+      "explanation": "** is power."
+    },
+    {
+      "id": 203,
+      "source": "Additional A63",
+      "topic": "Web",
+      "question": "In an HTML table, which tag creates a row?",
+      "options": [
+        "<row>",
+        "<td>",
+        "<th>",
+        "<tb>",
+        "<tr>"
+      ],
+      "answer": "e",
+      "explanation": "<td> = cell; <th> = header cell."
+    },
+    {
+      "id": 204,
+      "source": "Additional A64",
+      "topic": "Web",
+      "question": "Which element is block-level by default?",
+      "options": [
+        "<div>",
+        "<a>",
+        "<img>",
+        "<span>",
+        "<b>"
+      ],
+      "answer": "a",
+      "explanation": "<span> is inline."
+    },
+    {
+      "id": 205,
+      "source": "Additional A65",
+      "topic": "Web",
+      "question": "What is the default value of the CSS position property?",
+      "options": [
+        "absolute",
+        "static",
+        "sticky",
+        "fixed",
+        "relative"
+      ],
+      "answer": "b",
+      "explanation": "static."
+    },
+    {
+      "id": 206,
+      "source": "Additional A66",
+      "topic": "Web",
+      "question": "Which CSS selector has the highest specificity (ignoring !important)?",
+      "options": [
+        "Element",
+        "#id",
+        "Class",
+        "Universal *",
+        "Inline style"
+      ],
+      "answer": "e",
+      "explanation": "Inline > id > class > element."
+    },
+    {
+      "id": 207,
+      "source": "Additional A67",
+      "topic": "Web",
+      "question": "What does typeof NaN return in JavaScript?",
+      "options": [
+        "\"number\"",
+        "\"undefined\"",
+        "\"NaN\"",
+        "\"object\"",
+        "\"string\""
+      ],
+      "answer": "a",
+      "explanation": "NaN is technically a number."
+    },
+    {
+      "id": 208,
+      "source": "Additional A68",
+      "topic": "Web",
+      "question": "What is the output of console.log(\"5\" - 2);?",
+      "options": [
+        "Error",
+        "NaN",
+        "\"3\"",
+        "\"52\"",
+        "3"
+      ],
+      "answer": "e",
+      "explanation": "Minus converts strings to numbers."
+    },
+    {
+      "id": 209,
+      "source": "Additional A69",
+      "topic": "Web",
+      "question": "What does null == undefined evaluate to in JavaScript?",
+      "options": [
+        "false",
+        "undefined",
+        "true",
+        "Error",
+        "NaN"
+      ],
+      "answer": "c",
+      "explanation": "Loose equality treats them as equal; === would be false."
+    },
+    {
+      "id": 210,
+      "source": "Additional A70",
+      "topic": "Web",
+      "question": "In JavaScript, let and const are:",
+      "options": [
+        "Hoisted with value undefined",
+        "Interchangeable with var",
+        "Block-scoped",
+        "Function-scoped",
+        "Global only"
+      ],
+      "answer": "c",
+      "explanation": "var is function-scoped."
+    },
+    {
+      "id": 211,
+      "source": "Additional A71",
+      "topic": "Web",
+      "question": "Which method converts a JSON string into a JavaScript object?",
+      "options": [
+        "JSON.parse()",
+        "eval.json()",
+        "JSON.stringify()",
+        "JSON.object()",
+        "JSON.convert()"
+      ],
+      "answer": "a",
+      "explanation": "stringify does the reverse."
+    },
+    {
+      "id": 212,
+      "source": "Additional A72",
+      "topic": "Web",
+      "question": "AJAX allows a web page to:",
+      "options": [
+        "Store passwords",
+        "Style elements",
+        "Compile JavaScript",
+        "Send requests asynchronously without reloading the page",
+        "Encrypt traffic"
+      ],
+      "answer": "d",
+      "explanation": "Asynchronous requests."
+    },
+    {
+      "id": 213,
+      "source": "Additional A73",
+      "topic": "Web",
+      "question": "Where is session data stored?",
+      "options": [
+        "In the browser's cookies only",
+        "In the CSS",
+        "In the DNS",
+        "In the HTML",
+        "On the server"
+      ],
+      "answer": "e",
+      "explanation": "Cookies = client; sessions = server."
+    },
+    {
+      "id": 214,
+      "source": "Additional A74",
+      "topic": "Web",
+      "question": "In PHP, variable names begin with:",
+      "options": [
+        "@",
+        "$",
+        "#",
+        "%",
+        "&"
+      ],
+      "answer": "b",
+      "explanation": "e.g. $name."
+    }
+  ]
+}
