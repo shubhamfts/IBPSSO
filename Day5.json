@@ -1,0 +1,2167 @@
+{
+  "title": "Day 5: Operating Systems + COA & Number Systems",
+  "total": 144,
+  "answer_format": "answer is the option letter a–e mapping to options[0]–options[4]",
+  "questions": [
+    {
+      "id": 1,
+      "source": "Batch 1 Q1",
+      "topic": "Scheduling",
+      "question": "P1, P2 and P3 arrive at time 0 with burst times 6, 2 and 4. Using non-preemptive SJF, what is the turnaround time of P3?",
+      "options": [
+        "2 units",
+        "4 units",
+        "6 units",
+        "8 units",
+        "10 units"
+      ],
+      "answer": "c",
+      "explanation": "Order P2 (0–2), P3 (2–6), P1 (6–12). TAT of P3 = 6 − 0 = 6 (PYQ 2025)."
+    },
+    {
+      "id": 2,
+      "source": "Batch 1 Q2",
+      "topic": "Scheduling",
+      "question": "Using FCFS, find the average waiting time and average turnaround time.\nProcess  Arrival  Burst\nP1       0        5\nP2       2        3\nP3       4        1\nP4       6        8\nP5       8        6",
+      "options": [
+        "Avg WT 4.2, Avg TAT 8.2",
+        "Avg WT 6.0, Avg TAT 11.0",
+        "Avg WT 4.6, Avg TAT 8.6",
+        "Avg WT 3.8, Avg TAT 8.4",
+        "Avg WT 3.6, Avg TAT 7.6"
+      ],
+      "answer": "d",
+      "explanation": "FCFS order P1→P5. CT = 5, 8, 9, 17, 23. TAT = 5, 6, 5, 11, 15 (avg 8.4). WT = TAT − BT = 0, 3, 4, 3, 9 (avg 3.8). PYQ 2022."
+    },
+    {
+      "id": 3,
+      "source": "Batch 1 Q3",
+      "topic": "Scheduling",
+      "question": "P1 = 6, P2 = 8, P3 = 7 and P4 = 3 ms all arrive at time 0. Using non-preemptive SJF, what is the average waiting time?",
+      "options": [
+        "7.0 ms",
+        "5.5 ms",
+        "6.25 ms",
+        "5.0 ms",
+        "6.0 ms"
+      ],
+      "answer": "a",
+      "explanation": "Order P4, P1, P3, P2 → starts 0, 3, 9, 16. All arrive at 0, so WT = start: 28/4 = 7.0 (PYQ 2023)."
+    },
+    {
+      "id": 4,
+      "source": "Batch 1 Q4",
+      "topic": "Scheduling",
+      "question": "Which scenario can lead to starvation in process scheduling?",
+      "options": [
+        "A process is stuck in a circular wait for resources",
+        "A high-priority process continuously preempts a lower-priority process",
+        "All processes have equal priority and resources are shared fairly",
+        "Processes run in arrival order without preemption",
+        "Processes communicate to avoid mutual exclusion violations"
+      ],
+      "answer": "b",
+      "explanation": "Fix = aging (PYQ 2022). Circular wait = deadlock."
+    },
+    {
+      "id": 5,
+      "source": "Batch 1 Q5",
+      "topic": "Processes",
+      "question": "Which correctly describes the return values of fork() in a Unix-like OS?",
+      "options": [
+        "0 to the child process and a positive value (the child's PID) to the parent process",
+        "1 to the child process and 0 to the parent process",
+        "A negative value if the fork fails",
+        "Both (a) and (c)",
+        "None of the above"
+      ],
+      "answer": "d",
+      "explanation": "Child gets 0, parent gets the child's PID, negative on failure (PYQ 2023)."
+    },
+    {
+      "id": 6,
+      "source": "Batch 1 Q6",
+      "topic": "Processes",
+      "question": "Where are newly submitted processes typically stored before they are admitted into main memory?",
+      "options": [
+        "Process table",
+        "Ready queue",
+        "Cache memory",
+        "Stack",
+        "Job pool"
+      ],
+      "answer": "e",
+      "explanation": "Job pool (disk) → ready queue (RAM) → CPU (PYQ 2023)."
+    },
+    {
+      "id": 7,
+      "source": "Batch 1 Q7",
+      "topic": "Scheduling",
+      "question": "P1 = 5, P2 = 3 and P3 = 1 all arrive at time 0. Using Round Robin with time quantum 2, what is the average waiting time?",
+      "options": [
+        "3.67",
+        "4.33",
+        "5.0",
+        "4.0",
+        "3.33"
+      ],
+      "answer": "b",
+      "explanation": "P1 0–2, P2 2–4, P3 4–5, P1 5–7, P2 7–8, P1 8–9. WT = 4, 5, 4 → 13/3 = 4.33."
+    },
+    {
+      "id": 8,
+      "source": "Batch 1 Q8",
+      "topic": "Processes",
+      "question": "A program calls fork() three times in sequence. How many processes exist in total?",
+      "options": [
+        "3",
+        "6",
+        "8",
+        "7",
+        "9"
+      ],
+      "answer": "c",
+      "explanation": "2ⁿ = 2³ = 8 (7 children)."
+    },
+    {
+      "id": 9,
+      "source": "Batch 1 Q9",
+      "topic": "Scheduling",
+      "question": "Which scheduling algorithm suffers from the convoy effect?",
+      "options": [
+        "SJF",
+        "Round Robin",
+        "SRTF",
+        "Priority",
+        "FCFS"
+      ],
+      "answer": "e",
+      "explanation": "A long job at the front holds everyone up (like a slow truck)."
+    },
+    {
+      "id": 10,
+      "source": "Batch 1 Q10",
+      "topic": "Scheduling",
+      "question": "Turnaround time is calculated as:",
+      "options": [
+        "Burst time − Arrival time",
+        "Waiting time − Burst time",
+        "Completion time − Burst time",
+        "Completion time − Arrival time",
+        "Arrival time + Waiting time"
+      ],
+      "answer": "d",
+      "explanation": "TAT = CT − AT; WT = TAT − BT."
+    },
+    {
+      "id": 11,
+      "source": "Batch 2 Q11",
+      "topic": "Synchronization",
+      "question": "Which statement about mutual exclusion is false?",
+      "options": [
+        "No two processes can execute in their critical sections at the same time",
+        "Multiple processes can safely access a shared critical resource at the same time without synchronization",
+        "Processes outside the critical section should not interfere with those inside",
+        "Mutual exclusion helps prevent race conditions",
+        "Only one process can access a critical resource at a time"
+      ],
+      "answer": "b",
+      "explanation": "Mutual exclusion means only one process at a time; simultaneous unsynchronised access is the FALSE statement (PYQ 2023)."
+    },
+    {
+      "id": 12,
+      "source": "Batch 2 Q12",
+      "topic": "Deadlock",
+      "question": "Using the Banker's algorithm, how many safe sequences are possible?\nProcess  Alloc(R1 R2 R3)  Max(R1 R2 R3)\nP1       0 1 0            7 5 3\nP2       2 0 0            3 2 2\nP3       3 0 2            9 0 2\nP4       2 1 1            2 2 2\nAvailable = 3 2 1",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "a",
+      "explanation": "Need = Max − Alloc: P1 743, P2 122, P3 600, P4 011. P4 → avail 532, P2 → 732, P3 → 10 3 4, then P1 needs 4 of R2 but only 3 exist → stuck. Unsafe → 0 (PYQ 2022). Shortcut: P1's Max R2 (5) exceeds total R2 (4)."
+    },
+    {
+      "id": 13,
+      "source": "Batch 2 Q13",
+      "topic": "Deadlock",
+      "question": "Which is NOT one of the four necessary conditions for deadlock?",
+      "options": [
+        "Mutual exclusion",
+        "Hold and wait",
+        "Circular wait",
+        "No preemption",
+        "Preemption is allowed"
+      ],
+      "answer": "e",
+      "explanation": "The 4 conditions: mutual exclusion, hold and wait, NO preemption, circular wait."
+    },
+    {
+      "id": 14,
+      "source": "Batch 2 Q14",
+      "topic": "Deadlock",
+      "question": "The Banker's algorithm is used for:",
+      "options": [
+        "Deadlock prevention",
+        "Deadlock detection",
+        "Deadlock avoidance",
+        "Deadlock recovery",
+        "Process scheduling"
+      ],
+      "answer": "c",
+      "explanation": "Banker's = Avoidance (checks BEFORE allocating)."
+    },
+    {
+      "id": 15,
+      "source": "Batch 2 Q15",
+      "topic": "Deadlock",
+      "question": "In the Banker's algorithm, how is Need calculated?",
+      "options": [
+        "Max + Allocation",
+        "Available − Allocation",
+        "Allocation − Max",
+        "Max − Allocation",
+        "Available − Max"
+      ],
+      "answer": "d",
+      "explanation": "Need = Max − Allocation."
+    },
+    {
+      "id": 16,
+      "source": "Batch 2 Q16",
+      "topic": "Synchronization",
+      "question": "A binary semaphore behaves most like a:",
+      "options": [
+        "Mutex",
+        "Counting semaphore",
+        "Monitor",
+        "Pipe",
+        "Message queue"
+      ],
+      "answer": "a",
+      "explanation": "Values 0/1 = locked/unlocked."
+    },
+    {
+      "id": 17,
+      "source": "Batch 2 Q17",
+      "topic": "Synchronization",
+      "question": "When the outcome depends on the order in which processes access shared data, this is called a:",
+      "options": [
+        "Deadlock",
+        "Starvation",
+        "Thrashing",
+        "Convoy effect",
+        "Race condition"
+      ],
+      "answer": "e",
+      "explanation": "Race condition."
+    },
+    {
+      "id": 18,
+      "source": "Batch 2 Q18",
+      "topic": "Deadlock",
+      "question": "What is the difference between deadlock and starvation?",
+      "options": [
+        "They are the same",
+        "In starvation one process waits indefinitely while others progress; in deadlock all processes involved are stuck",
+        "Starvation needs a circular wait",
+        "Deadlock happens only in FCFS",
+        "Starvation can never happen with priorities"
+      ],
+      "answer": "b",
+      "explanation": "Deadlock = everyone stuck; starvation = one left behind."
+    },
+    {
+      "id": 19,
+      "source": "Batch 2 Q19",
+      "topic": "Deadlock",
+      "question": "A system has 10 instances of one resource. P1 holds 3 (max 7), P2 holds 2 (max 4), P3 holds 2 (max 9). Which is a safe sequence?",
+      "options": [
+        "P1 → P2 → P3",
+        "P3 → P1 → P2",
+        "P1 → P3 → P2",
+        "P2 → P1 → P3",
+        "No safe sequence exists"
+      ],
+      "answer": "d",
+      "explanation": "Available = 3. Need: P1 4, P2 2, P3 7. P2 (→ avail 5), P1 (→ 8), P3 (→ 10)."
+    },
+    {
+      "id": 20,
+      "source": "Batch 2 Q20",
+      "topic": "Deadlock",
+      "question": "Ignoring deadlocks completely, as most general-purpose OSs do, is called the:",
+      "options": [
+        "Banker's algorithm",
+        "Wait-die scheme",
+        "Ostrich algorithm",
+        "Peterson's solution",
+        "Aging"
+      ],
+      "answer": "c",
+      "explanation": "Ostrich algorithm."
+    },
+    {
+      "id": 21,
+      "source": "Batch 3 Q21",
+      "topic": "Memory",
+      "question": "External fragmentation is most commonly associated with which memory allocation technique?",
+      "options": [
+        "Contiguous memory allocation",
+        "Paging",
+        "Segmentation with paging",
+        "Non-contiguous memory allocation",
+        "Virtual memory"
+      ],
+      "answer": "a",
+      "explanation": "PYQ 2025. Paging removes external fragmentation."
+    },
+    {
+      "id": 22,
+      "source": "Batch 3 Q22",
+      "topic": "Memory",
+      "question": "What does the dirty bit identify?",
+      "options": [
+        "Pages currently in use in memory",
+        "Pages swapped out to disk",
+        "Pages modified in memory but not written to disk",
+        "Read-only pages",
+        "Pages not loaded in memory"
+      ],
+      "answer": "c",
+      "explanation": "PYQ 2022."
+    },
+    {
+      "id": 23,
+      "source": "Batch 3 Q23",
+      "topic": "Memory",
+      "question": "A system spends more time swapping data between RAM and disk than executing tasks. This is:",
+      "options": [
+        "Deadlock",
+        "Thrashing",
+        "Starvation",
+        "Fragmentation",
+        "Bottleneck"
+      ],
+      "answer": "b",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 24,
+      "source": "Batch 3 Q24",
+      "topic": "Memory",
+      "question": "Which page replacement algorithm replaces the page not used for the longest period of time?",
+      "options": [
+        "FIFO",
+        "Optimal",
+        "Random",
+        "NRU",
+        "LRU"
+      ],
+      "answer": "e",
+      "explanation": "LRU looks back; Optimal looks ahead (PYQ Prelims 2026)."
+    },
+    {
+      "id": 25,
+      "source": "Batch 3 Q25",
+      "topic": "Memory",
+      "question": "With 3 frames and the reference string 7, 2, 1, 0, 2, 0, 4, 3, how many page faults occur under FIFO?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "c",
+      "explanation": "7 F, 2 F, 1 F, 0 F (replace 7), 2 hit, 0 hit, 4 F (replace 2), 3 F (replace 1) → 6 (PYQ Prelims 2026)."
+    },
+    {
+      "id": 26,
+      "source": "Batch 3 Q26",
+      "topic": "Storage",
+      "question": "The disk head starts at cylinder 50. Requests: 95, 180, 34, 119, 11, 123, 62, 64. What is the total head movement under FCFS?",
+      "options": [
+        "440",
+        "620",
+        "560",
+        "735",
+        "644"
+      ],
+      "answer": "e",
+      "explanation": "45 + 85 + 146 + 85 + 108 + 112 + 61 + 2 = 644 (PYQ 2022)."
+    },
+    {
+      "id": 27,
+      "source": "Batch 3 Q27",
+      "topic": "Storage",
+      "question": "Which RAID level uses both striping and mirroring and needs at least four disks?",
+      "options": [
+        "RAID 0",
+        "RAID 5",
+        "RAID 6",
+        "RAID 10",
+        "RAID 1"
+      ],
+      "answer": "d",
+      "explanation": "PYQ Prelims 2026."
+    },
+    {
+      "id": 28,
+      "source": "Batch 3 Q28",
+      "topic": "Storage",
+      "question": "Which is NOT a valid file system format?",
+      "options": [
+        "NTFS",
+        "exFAT",
+        "FAT32",
+        "FAT84",
+        "ReFS"
+      ],
+      "answer": "d",
+      "explanation": "FAT84 doesn't exist (PYQ 2024)."
+    },
+    {
+      "id": 29,
+      "source": "Batch 3 Q29",
+      "topic": "Storage",
+      "question": "Which partitioning styles are available in Windows?",
+      "options": [
+        "NTFS and FAT32",
+        "MBR and GPT",
+        "Logical and Physical",
+        "Primary and Extended",
+        "BIOS and UEFI"
+      ],
+      "answer": "b",
+      "explanation": "PYQ 2022."
+    },
+    {
+      "id": 30,
+      "source": "Batch 3 Q30",
+      "topic": "Memory",
+      "question": "Belady's anomaly (more frames → more faults) occurs with:",
+      "options": [
+        "FIFO",
+        "LRU",
+        "Optimal",
+        "Round Robin",
+        "SSTF"
+      ],
+      "answer": "a",
+      "explanation": "Only FIFO."
+    },
+    {
+      "id": 31,
+      "source": "Batch 4 Q31",
+      "topic": "Number Systems",
+      "question": "What is the binary equivalent of 726?",
+      "options": [
+        "1011010110",
+        "1101101010",
+        "1110010110",
+        "1010110110",
+        "1110101010"
+      ],
+      "answer": "a",
+      "explanation": "726 = 512 + 128 + 64 + 16 + 4 + 2 (PYQ 2022)."
+    },
+    {
+      "id": 32,
+      "source": "Batch 4 Q32",
+      "topic": "Number Systems",
+      "question": "What is the hexadecimal equivalent of binary 10111010?",
+      "options": [
+        "9A",
+        "A9",
+        "BA",
+        "AB",
+        "B8"
+      ],
+      "answer": "c",
+      "explanation": "1011 | 1010 → B | A, same order (PYQ 2024)."
+    },
+    {
+      "id": 33,
+      "source": "Batch 4 Q33",
+      "topic": "Number Systems",
+      "question": "What is the binary equivalent of hexadecimal 1B0?",
+      "options": [
+        "001011100000",
+        "000101110000",
+        "000110101000",
+        "000100110000",
+        "000110110000"
+      ],
+      "answer": "e",
+      "explanation": "1 → 0001, B → 1011, 0 → 0000 (PYQ 2023)."
+    },
+    {
+      "id": 34,
+      "source": "Batch 4 Q34",
+      "topic": "Digital Logic",
+      "question": "How many input combinations does a truth table with four Boolean variables have?",
+      "options": [
+        "8",
+        "12",
+        "24",
+        "16",
+        "32"
+      ],
+      "answer": "d",
+      "explanation": "2⁴ = 16 (PYQ Prelims 2026)."
+    },
+    {
+      "id": 35,
+      "source": "Batch 4 Q35",
+      "topic": "COA",
+      "question": "Which CPU register stores the address of the next instruction before it is fetched?",
+      "options": [
+        "Instruction Register (IR)",
+        "Memory Address Register (MAR)",
+        "Program Counter (PC)",
+        "Accumulator (AC)",
+        "Stack Pointer (SP)"
+      ],
+      "answer": "c",
+      "explanation": "PYQ 2022."
+    },
+    {
+      "id": 36,
+      "source": "Batch 4 Q36",
+      "topic": "COA",
+      "question": "Which of the following is a general-purpose processing register?",
+      "options": [
+        "PC",
+        "DR",
+        "IR",
+        "AR",
+        "None of the above"
+      ],
+      "answer": "e",
+      "explanation": "PC, IR, AR, DR, MAR, MDR are special-purpose. General-purpose = R0–Rn / AX, BX… (PYQ 2022)."
+    },
+    {
+      "id": 37,
+      "source": "Batch 4 Q37",
+      "topic": "COA",
+      "question": "In indirect addressing mode, the address field of an instruction contains:",
+      "options": [
+        "The effective address of the operand directly",
+        "The address of a memory location that stores the effective address",
+        "The operand value itself",
+        "The address stored in the PC",
+        "The register number containing the operand"
+      ],
+      "answer": "b",
+      "explanation": "An address of an address (PYQ 2023)."
+    },
+    {
+      "id": 38,
+      "source": "Batch 4 Q38",
+      "topic": "COA",
+      "question": "Consider: (1) CISC instructions are complex and can do multiple tasks in one instruction; (2) CISC needs fewer instructions, resulting in simpler control units; (3) CISC prioritises hardware over software complexity. Which is correct?",
+      "options": [
+        "1 True, 2 True, 3 False",
+        "1 True, 2 False, 3 True",
+        "1 False, 2 True, 3 True",
+        "1 False, 2 False, 3 True",
+        "1 True, 2 False, 3 False"
+      ],
+      "answer": "b",
+      "explanation": "Statement 2 is false: CISC control units are complex (PYQ 2022)."
+    },
+    {
+      "id": 39,
+      "source": "Batch 4 Q39",
+      "topic": "COA",
+      "question": "What happens during a cache hit?",
+      "options": [
+        "The requested data is retrieved directly from the cache memory",
+        "Data is transferred to the hard drive",
+        "Data is fetched from main memory into the cache",
+        "Data is permanently stored in the cache",
+        "The cache is cleared"
+      ],
+      "answer": "a",
+      "explanation": "PYQ 2023. (c) describes a miss."
+    },
+    {
+      "id": 40,
+      "source": "Batch 4 Q40",
+      "topic": "COA",
+      "question": "A computer has a 32-bit address bus and byte-addressable memory. What is the maximum addressable memory?",
+      "options": [
+        "2 GB",
+        "8 GB",
+        "4 GB",
+        "16 GB",
+        "32 GB"
+      ],
+      "answer": "c",
+      "explanation": "2³² bytes = 4 GB (PYQ Prelims 2026)."
+    },
+    {
+      "id": 41,
+      "source": "Retest R1",
+      "topic": "Number Systems",
+      "question": "Convert binary 11011110 to hexadecimal.",
+      "options": [
+        "ED",
+        "DE",
+        "CE",
+        "DF",
+        "EE"
+      ],
+      "answer": "b",
+      "explanation": "1101 | 1110 → D | E."
+    },
+    {
+      "id": 42,
+      "source": "Retest R2",
+      "topic": "Number Systems",
+      "question": "Convert hexadecimal 2A to binary.",
+      "options": [
+        "00101010",
+        "00100110",
+        "10100010",
+        "00101100",
+        "00101011"
+      ],
+      "answer": "a",
+      "explanation": "2 → 0010, A → 1010."
+    },
+    {
+      "id": 43,
+      "source": "Retest R3",
+      "topic": "Number Systems",
+      "question": "Convert hexadecimal 3F to decimal.",
+      "options": [
+        "36",
+        "51",
+        "47",
+        "63",
+        "61"
+      ],
+      "answer": "d",
+      "explanation": "3 × 16 + 15 = 63."
+    },
+    {
+      "id": 44,
+      "source": "Retest R4",
+      "topic": "Number Systems",
+      "question": "Convert decimal 45 to binary.",
+      "options": [
+        "110101",
+        "101011",
+        "100101",
+        "111001",
+        "101101"
+      ],
+      "answer": "e",
+      "explanation": "45 = 32 + 8 + 4 + 1."
+    },
+    {
+      "id": 45,
+      "source": "Retest R5",
+      "topic": "COA",
+      "question": "Which of the following is a general-purpose register?",
+      "options": [
+        "PC",
+        "IR",
+        "None of the above",
+        "MAR",
+        "MDR"
+      ],
+      "answer": "c",
+      "explanation": "PC, IR, AR, DR, MAR, MDR are special-purpose. General-purpose = R0–Rn / AX, BX… (PYQ 2022)."
+    },
+    {
+      "id": 46,
+      "source": "Retest R6",
+      "topic": "COA",
+      "question": "Consider: (1) CISC instructions are complex and can do multiple tasks in one instruction; (2) CISC needs fewer instructions, resulting in simpler control units; (3) CISC prioritises hardware over software complexity. Which is correct?",
+      "options": [
+        "1 True, 2 True, 3 False",
+        "1 True, 2 False, 3 True",
+        "1 False, 2 True, 3 True",
+        "1 False, 2 False, 3 True",
+        "1 True, 2 False, 3 False"
+      ],
+      "answer": "b",
+      "explanation": "Statement 2 is false: CISC control units are complex (PYQ 2022)."
+    },
+    {
+      "id": 47,
+      "source": "Day Test Q1",
+      "topic": "Scheduling",
+      "question": "P1, P2 and P3 arrive at time 0 with burst times 6, 2 and 4. Using non-preemptive SJF, what is the turnaround time of P3?",
+      "options": [
+        "2",
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": "c",
+      "explanation": "Order P2 (0–2), P3 (2–6), P1 (6–12). TAT of P3 = 6 − 0 = 6 (PYQ 2025)."
+    },
+    {
+      "id": 48,
+      "source": "Day Test Q2",
+      "topic": "Scheduling",
+      "question": "Which scheduling algorithm suffers from the convoy effect?",
+      "options": [
+        "FCFS",
+        "SJF",
+        "Round Robin",
+        "SRTF",
+        "Priority"
+      ],
+      "answer": "a",
+      "explanation": "FCFS."
+    },
+    {
+      "id": 49,
+      "source": "Day Test Q3",
+      "topic": "Processes",
+      "question": "Which statement correctly describes the return values of fork()?",
+      "options": [
+        "0 to the child and the child's PID to the parent",
+        "1 to the child and 0 to the parent",
+        "A negative value if the fork fails",
+        "Both (a) and (c)",
+        "None of the above"
+      ],
+      "answer": "d",
+      "explanation": "Child gets 0, parent gets the child's PID, negative on failure (PYQ 2023)."
+    },
+    {
+      "id": 50,
+      "source": "Day Test Q4",
+      "topic": "Deadlock",
+      "question": "The Banker's algorithm is used for deadlock:",
+      "options": [
+        "Prevention",
+        "Avoidance",
+        "Detection",
+        "Recovery",
+        "Scheduling"
+      ],
+      "answer": "b",
+      "explanation": "Banker's = Avoidance. Detection = wait-for graph cycle."
+    },
+    {
+      "id": 51,
+      "source": "Day Test Q5",
+      "topic": "Memory",
+      "question": "What does the dirty bit identify?",
+      "options": [
+        "Pages currently in use",
+        "Pages swapped out to disk",
+        "Read-only pages",
+        "Pages not loaded in memory",
+        "Pages modified in memory but not written to disk"
+      ],
+      "answer": "e",
+      "explanation": "Dirty = modified."
+    },
+    {
+      "id": 52,
+      "source": "Day Test Q6",
+      "topic": "Memory",
+      "question": "Which page replacement algorithm replaces the page not used for the longest time in the past?",
+      "options": [
+        "FIFO",
+        "Optimal",
+        "LRU",
+        "NRU",
+        "Random"
+      ],
+      "answer": "c",
+      "explanation": "LRU."
+    },
+    {
+      "id": 53,
+      "source": "Day Test Q7",
+      "topic": "Number Systems",
+      "question": "What is the binary equivalent of decimal 100?",
+      "options": [
+        "1100100",
+        "1010100",
+        "1100010",
+        "1001100",
+        "1110000"
+      ],
+      "answer": "a",
+      "explanation": "100 = 64 + 32 + 4."
+    },
+    {
+      "id": 54,
+      "source": "Day Test Q8",
+      "topic": "Number Systems",
+      "question": "What is the binary equivalent of hexadecimal 1B0?",
+      "options": [
+        "001011100000",
+        "000101110000",
+        "000110101000",
+        "000110110000",
+        "000100110000"
+      ],
+      "answer": "d",
+      "explanation": "0001 1011 0000."
+    },
+    {
+      "id": 55,
+      "source": "Day Test Q9",
+      "topic": "COA",
+      "question": "Which of the following is a general-purpose register?",
+      "options": [
+        "PC",
+        "IR",
+        "AR",
+        "DR",
+        "None of the above"
+      ],
+      "answer": "e",
+      "explanation": "PC, IR, AR, DR, MAR, MDR are special-purpose. General-purpose = R0–Rn / AX, BX… (PYQ 2022)."
+    },
+    {
+      "id": 56,
+      "source": "Day Test Q10",
+      "topic": "COA",
+      "question": "A computer has a 32-bit address bus and byte-addressable memory. What is the maximum addressable memory?",
+      "options": [
+        "2 GB",
+        "4 GB",
+        "8 GB",
+        "16 GB",
+        "32 GB"
+      ],
+      "answer": "b",
+      "explanation": "2³² = 4 GB."
+    },
+    {
+      "id": 57,
+      "source": "Day Test Q11",
+      "topic": "Scheduling",
+      "question": "Using FCFS, find the average waiting time and average turnaround time.\nProcess  Arrival  Burst\nP1       0        5\nP2       2        3\nP3       4        1\nP4       6        8\nP5       8        6",
+      "options": [
+        "Avg WT 4.2, Avg TAT 8.2",
+        "Avg WT 6.0, Avg TAT 11.0",
+        "Avg WT 4.6, Avg TAT 8.6",
+        "Avg WT 3.8, Avg TAT 8.4",
+        "Avg WT 3.6, Avg TAT 7.6"
+      ],
+      "answer": "d",
+      "explanation": "FCFS order P1→P5. CT = 5, 8, 9, 17, 23. TAT = 5, 6, 5, 11, 15 (avg 8.4). WT = TAT − BT = 0, 3, 4, 3, 9 (avg 3.8). PYQ 2022."
+    },
+    {
+      "id": 58,
+      "source": "Day Test Q12",
+      "topic": "Scheduling",
+      "question": "P1 = 6, P2 = 8, P3 = 7 and P4 = 3 ms all arrive at time 0. Using non-preemptive SJF, what is the average waiting time?",
+      "options": [
+        "5.5 ms",
+        "6.25 ms",
+        "5.0 ms",
+        "6.0 ms",
+        "7.0 ms"
+      ],
+      "answer": "e",
+      "explanation": "Order P4, P1, P3, P2 → starts 0, 3, 9, 16. All arrive at 0, so WT = start: 28/4 = 7.0 (PYQ 2023)."
+    },
+    {
+      "id": 59,
+      "source": "Day Test Q13",
+      "topic": "Scheduling",
+      "question": "Which scenario can lead to starvation?",
+      "options": [
+        "A circular wait for resources",
+        "A high-priority process continuously preempts a lower-priority process",
+        "Equal priorities with fair allocation",
+        "Running processes in arrival order",
+        "Processes communicating to avoid mutual exclusion"
+      ],
+      "answer": "b",
+      "explanation": "Starvation; fix = aging."
+    },
+    {
+      "id": 60,
+      "source": "Day Test Q14",
+      "topic": "Processes",
+      "question": "Where are newly submitted processes stored before they are admitted into main memory?",
+      "options": [
+        "Ready queue",
+        "Process table",
+        "Job pool",
+        "Cache",
+        "Stack"
+      ],
+      "answer": "c",
+      "explanation": "Job pool."
+    },
+    {
+      "id": 61,
+      "source": "Day Test Q15",
+      "topic": "Synchronization",
+      "question": "Which statement about mutual exclusion is false?",
+      "options": [
+        "Multiple processes can safely access a shared critical resource simultaneously without synchronization",
+        "No two processes can be in their critical sections at the same time",
+        "Processes outside the critical section shouldn't interfere",
+        "It helps prevent race conditions",
+        "Only one process can access a critical resource at a time"
+      ],
+      "answer": "a",
+      "explanation": "Mutual exclusion means only one process at a time; simultaneous unsynchronised access is the FALSE statement (PYQ 2023)."
+    },
+    {
+      "id": 62,
+      "source": "Day Test Q16",
+      "topic": "Deadlock",
+      "question": "For the 2022 Banker's data (Need: P1 = 7 4 3, P2 = 1 2 2, P3 = 6 0 0, P4 = 0 1 1; Available = 3 2 1), how many safe sequences are possible?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "b",
+      "explanation": "Need = Max − Alloc: P1 743, P2 122, P3 600, P4 011. P4 → avail 532, P2 → 732, P3 → 10 3 4, then P1 needs 4 of R2 but only 3 exist → stuck. Unsafe → 0 (PYQ 2022). Shortcut: P1's Max R2 (5) exceeds total R2 (4)."
+    },
+    {
+      "id": 63,
+      "source": "Day Test Q17",
+      "topic": "Memory",
+      "question": "A system spends more time swapping pages between RAM and disk than executing tasks. This is:",
+      "options": [
+        "Deadlock",
+        "Starvation",
+        "Fragmentation",
+        "Thrashing",
+        "Bottleneck"
+      ],
+      "answer": "d",
+      "explanation": "Thrashing."
+    },
+    {
+      "id": 64,
+      "source": "Day Test Q18",
+      "topic": "Memory",
+      "question": "With 3 frames and the reference string 7, 2, 1, 0, 2, 0, 4, 3, how many page faults occur under FIFO?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
+      "answer": "c",
+      "explanation": "7 F, 2 F, 1 F, 0 F (replace 7), 2 hit, 0 hit, 4 F (replace 2), 3 F (replace 1) → 6 (PYQ Prelims 2026)."
+    },
+    {
+      "id": 65,
+      "source": "Day Test Q19",
+      "topic": "Storage",
+      "question": "The disk head starts at cylinder 50. Requests: 95, 180, 34, 119, 11, 123, 62, 64. What is the total head movement under FCFS?",
+      "options": [
+        "440",
+        "620",
+        "560",
+        "735",
+        "644"
+      ],
+      "answer": "e",
+      "explanation": "45 + 85 + 146 + 85 + 108 + 112 + 61 + 2 = 644 (PYQ 2022)."
+    },
+    {
+      "id": 66,
+      "source": "Day Test Q20",
+      "topic": "Deadlock",
+      "question": "Which algorithm avoids deadlock by checking that the system remains in a safe state before granting a resource?",
+      "options": [
+        "Banker's algorithm",
+        "Wait-for graph",
+        "Ostrich algorithm",
+        "Aging",
+        "Round Robin"
+      ],
+      "answer": "a",
+      "explanation": "Banker's = avoidance."
+    },
+    {
+      "id": 67,
+      "source": "Day Test Q21",
+      "topic": "Memory",
+      "question": "External fragmentation is most commonly associated with:",
+      "options": [
+        "Contiguous memory allocation",
+        "Paging",
+        "Segmentation with paging",
+        "Non-contiguous allocation",
+        "Virtual memory"
+      ],
+      "answer": "a",
+      "explanation": "Contiguous allocation."
+    },
+    {
+      "id": 68,
+      "source": "Day Test Q22",
+      "topic": "Storage",
+      "question": "Which RAID level uses both striping and mirroring and needs at least four disks?",
+      "options": [
+        "RAID 0",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6",
+        "RAID 10"
+      ],
+      "answer": "e",
+      "explanation": "RAID 10."
+    },
+    {
+      "id": 69,
+      "source": "Day Test Q23",
+      "topic": "Storage",
+      "question": "Which is NOT a valid file system format?",
+      "options": [
+        "NTFS",
+        "FAT84",
+        "exFAT",
+        "FAT32",
+        "ReFS"
+      ],
+      "answer": "b",
+      "explanation": "FAT84."
+    },
+    {
+      "id": 70,
+      "source": "Day Test Q24",
+      "topic": "Storage",
+      "question": "Which partitioning styles are available in Windows?",
+      "options": [
+        "NTFS and FAT32",
+        "Primary and Extended",
+        "Logical and Physical",
+        "MBR and GPT",
+        "BIOS and UEFI"
+      ],
+      "answer": "d",
+      "explanation": "MBR and GPT."
+    },
+    {
+      "id": 71,
+      "source": "Day Test Q25",
+      "topic": "Number Systems",
+      "question": "What is the hexadecimal equivalent of binary 10111010?",
+      "options": [
+        "AB",
+        "9A",
+        "BA",
+        "B8",
+        "A9"
+      ],
+      "answer": "c",
+      "explanation": "BA."
+    },
+    {
+      "id": 72,
+      "source": "Day Test Q26",
+      "topic": "Digital Logic",
+      "question": "How many input combinations does a truth table with four Boolean variables have?",
+      "options": [
+        "8",
+        "12",
+        "24",
+        "16",
+        "32"
+      ],
+      "answer": "d",
+      "explanation": "16."
+    },
+    {
+      "id": 73,
+      "source": "Day Test Q27",
+      "topic": "COA",
+      "question": "Which register stores the address of the next instruction to be fetched?",
+      "options": [
+        "Program Counter (PC)",
+        "Instruction Register (IR)",
+        "Memory Address Register (MAR)",
+        "Accumulator (AC)",
+        "Stack Pointer (SP)"
+      ],
+      "answer": "a",
+      "explanation": "PC."
+    },
+    {
+      "id": 74,
+      "source": "Day Test Q28",
+      "topic": "COA",
+      "question": "In indirect addressing mode, the address field contains:",
+      "options": [
+        "The operand value itself",
+        "The effective address directly",
+        "The address stored in the PC",
+        "A register number",
+        "The address of a memory location that stores the effective address"
+      ],
+      "answer": "e",
+      "explanation": "Address of an address."
+    },
+    {
+      "id": 75,
+      "source": "Day Test Q29",
+      "topic": "COA",
+      "question": "What happens during a cache hit?",
+      "options": [
+        "Data is fetched from main memory into the cache",
+        "The requested data is retrieved directly from the cache",
+        "Data is written to the hard drive",
+        "The cache is cleared",
+        "Data is permanently stored in the cache"
+      ],
+      "answer": "b",
+      "explanation": "Cache hit."
+    },
+    {
+      "id": 76,
+      "source": "Day Test Q30",
+      "topic": "COA",
+      "question": "Consider: (1) CISC instructions are complex and can do multiple tasks in one instruction; (2) CISC needs fewer instructions, resulting in simpler control units; (3) CISC prioritises hardware over software complexity. Which is correct?",
+      "options": [
+        "1 True, 2 True, 3 False",
+        "1 False, 2 True, 3 True",
+        "1 True, 2 False, 3 True",
+        "1 False, 2 False, 3 True",
+        "1 True, 2 False, 3 False"
+      ],
+      "answer": "c",
+      "explanation": "Statement 2 is false: CISC control units are complex (PYQ 2022)."
+    },
+    {
+      "id": 77,
+      "source": "Additional A1",
+      "topic": "Processes",
+      "question": "A program in execution is called a:",
+      "options": [
+        "Process",
+        "Program",
+        "File",
+        "Thread",
+        "Job pool"
+      ],
+      "answer": "a",
+      "explanation": "A program is passive code; a process is active."
+    },
+    {
+      "id": 78,
+      "source": "Additional A2",
+      "topic": "Processes",
+      "question": "Which data structure stores a process's ID, state, program counter and registers?",
+      "options": [
+        "TLB",
+        "Job pool",
+        "Page table",
+        "PCB (Process Control Block)",
+        "Ready queue"
+      ],
+      "answer": "d",
+      "explanation": "The OS's record card for each process."
+    },
+    {
+      "id": 79,
+      "source": "Additional A3",
+      "topic": "Processes",
+      "question": "A process that requests I/O moves from Running to:",
+      "options": [
+        "New",
+        "Terminated",
+        "Suspended-ready",
+        "Ready",
+        "Waiting (Blocked)"
+      ],
+      "answer": "e",
+      "explanation": "Running → Waiting on I/O; Waiting → Ready when I/O completes."
+    },
+    {
+      "id": 80,
+      "source": "Additional A4",
+      "topic": "Processes",
+      "question": "When a running process's time slice expires, it moves to:",
+      "options": [
+        "Terminated",
+        "Ready",
+        "Blocked",
+        "Waiting",
+        "New"
+      ],
+      "answer": "b",
+      "explanation": "Preempted → back to Ready."
+    },
+    {
+      "id": 81,
+      "source": "Additional A5",
+      "topic": "Processes",
+      "question": "Which scheduler controls the degree of multiprogramming by admitting jobs into memory?",
+      "options": [
+        "Dispatcher",
+        "Medium-term scheduler",
+        "Long-term scheduler",
+        "Short-term scheduler",
+        "Disk scheduler"
+      ],
+      "answer": "c",
+      "explanation": "Long-term = job pool → ready queue."
+    },
+    {
+      "id": 82,
+      "source": "Additional A6",
+      "topic": "Processes",
+      "question": "Which scheduler runs most frequently, choosing the next process for the CPU?",
+      "options": [
+        "Swapper",
+        "Long-term scheduler",
+        "Short-term (CPU) scheduler",
+        "Medium-term scheduler",
+        "Job scheduler"
+      ],
+      "answer": "c",
+      "explanation": "Short-term scheduler."
+    },
+    {
+      "id": 83,
+      "source": "Additional A7",
+      "topic": "Processes",
+      "question": "Saving the state of one process and loading another's is called:",
+      "options": [
+        "Paging",
+        "Spooling",
+        "Swapping",
+        "Context switch",
+        "Thrashing"
+      ],
+      "answer": "d",
+      "explanation": "Pure overhead."
+    },
+    {
+      "id": 84,
+      "source": "Additional A8",
+      "topic": "Processes",
+      "question": "A child process that has finished but whose parent hasn't called wait() is a:",
+      "options": [
+        "Thread",
+        "Daemon",
+        "Zombie process",
+        "Kernel process",
+        "Orphan process"
+      ],
+      "answer": "c",
+      "explanation": "An orphan's parent has died instead."
+    },
+    {
+      "id": 85,
+      "source": "Additional A9",
+      "topic": "Processes",
+      "question": "Which system call replaces the current process's program with a new one?",
+      "options": [
+        "exit()",
+        "wait()",
+        "exec()",
+        "kill()",
+        "fork()"
+      ],
+      "answer": "c",
+      "explanation": "fork() creates a copy; exec() replaces it."
+    },
+    {
+      "id": 86,
+      "source": "Additional A10",
+      "topic": "Processes",
+      "question": "A lightweight unit of execution that shares memory with others in the same process is a:",
+      "options": [
+        "Process",
+        "PCB",
+        "Thread",
+        "Page",
+        "Program"
+      ],
+      "answer": "c",
+      "explanation": "Thread."
+    },
+    {
+      "id": 87,
+      "source": "Additional A11",
+      "topic": "Processes",
+      "question": "A request from a user program for a kernel service (like open or read) is a:",
+      "options": [
+        "System call",
+        "Page fault",
+        "Context switch",
+        "Trap door",
+        "Interrupt vector"
+      ],
+      "answer": "a",
+      "explanation": "It switches user mode → kernel mode."
+    },
+    {
+      "id": 88,
+      "source": "Additional A12",
+      "topic": "Processes",
+      "question": "An OS that must meet strict timing deadlines (e.g. airbag control) is a:",
+      "options": [
+        "Distributed OS",
+        "Network OS",
+        "Batch OS",
+        "Time-sharing OS",
+        "Real-time OS"
+      ],
+      "answer": "e",
+      "explanation": "Hard real-time = missing a deadline is a failure."
+    },
+    {
+      "id": 89,
+      "source": "Additional A13",
+      "topic": "Processes",
+      "question": "Keeping several jobs in memory so the CPU always has work is called:",
+      "options": [
+        "Spooling",
+        "Virtualisation",
+        "Multiprogramming",
+        "Batch processing",
+        "Multiprocessing"
+      ],
+      "answer": "c",
+      "explanation": "Multiprocessing = multiple CPUs."
+    },
+    {
+      "id": 90,
+      "source": "Additional A14",
+      "topic": "Scheduling",
+      "question": "Which algorithm gives the minimum average waiting time?",
+      "options": [
+        "Priority",
+        "FCFS",
+        "Multilevel queue",
+        "SJF",
+        "Round Robin"
+      ],
+      "answer": "d",
+      "explanation": "SJF is optimal for average waiting time."
+    },
+    {
+      "id": 91,
+      "source": "Additional A15",
+      "topic": "Scheduling",
+      "question": "The preemptive version of SJF is:",
+      "options": [
+        "LJF",
+        "Priority",
+        "Round Robin",
+        "FCFS",
+        "SRTF"
+      ],
+      "answer": "e",
+      "explanation": "Shortest Remaining Time First."
+    },
+    {
+      "id": 92,
+      "source": "Additional A16",
+      "topic": "Scheduling",
+      "question": "The technique of gradually increasing the priority of waiting processes is:",
+      "options": [
+        "Spooling",
+        "Thrashing",
+        "Aging",
+        "Paging",
+        "Swapping"
+      ],
+      "answer": "c",
+      "explanation": "Fix for starvation."
+    },
+    {
+      "id": 93,
+      "source": "Additional A17",
+      "topic": "Scheduling",
+      "question": "Which scheduling algorithm is designed for time-sharing and has no starvation?",
+      "options": [
+        "Priority",
+        "SRTF",
+        "Round Robin",
+        "SJF",
+        "FCFS"
+      ],
+      "answer": "c",
+      "explanation": "Every process gets a quantum in turn."
+    },
+    {
+      "id": 94,
+      "source": "Additional A18",
+      "topic": "Scheduling",
+      "question": "If the Round Robin time quantum is very large, RR behaves like:",
+      "options": [
+        "Priority",
+        "LRU",
+        "SJF",
+        "SRTF",
+        "FCFS"
+      ],
+      "answer": "e",
+      "explanation": "Very small quantum = too much context switching."
+    },
+    {
+      "id": 95,
+      "source": "Additional A19",
+      "topic": "Scheduling",
+      "question": "P1 (AT 0, BT 8), P2 (AT 1, BT 4), P3 (AT 2, BT 2). Using SRTF, what is the average waiting time?",
+      "options": [
+        "2.67",
+        "4.0",
+        "3.33",
+        "2.0",
+        "5.33"
+      ],
+      "answer": "a",
+      "explanation": "P1 0–1, P2 1–2, P3 2–4, P2 4–7, P1 7–14. WT: 6, 2, 0 → 8/3 = 2.67."
+    },
+    {
+      "id": 96,
+      "source": "Additional A20",
+      "topic": "Scheduling",
+      "question": "Waiting time is calculated as:",
+      "options": [
+        "Burst time − Arrival time",
+        "Arrival time − Completion time",
+        "Completion time − Arrival time",
+        "Turnaround time − Burst time",
+        "Burst time + Arrival time"
+      ],
+      "answer": "d",
+      "explanation": "WT = TAT − BT."
+    },
+    {
+      "id": 97,
+      "source": "Additional A21",
+      "topic": "Synchronization",
+      "question": "In a semaphore, the wait() (P) operation:",
+      "options": [
+        "Deletes the semaphore",
+        "Resets the value to zero",
+        "Decrements the value and blocks if it would go below zero",
+        "Wakes all processes",
+        "Increments the value"
+      ],
+      "answer": "c",
+      "explanation": "signal() (V) increments."
+    },
+    {
+      "id": 98,
+      "source": "Additional A22",
+      "topic": "Synchronization",
+      "question": "Which semaphore is used when a resource has multiple instances?",
+      "options": [
+        "Counting semaphore",
+        "Binary semaphore",
+        "Monitor",
+        "Mutex",
+        "Spinlock"
+      ],
+      "answer": "a",
+      "explanation": "Binary = 0/1 (like a mutex)."
+    },
+    {
+      "id": 99,
+      "source": "Additional A23",
+      "topic": "Synchronization",
+      "question": "Which is a classic synchronization problem?",
+      "options": [
+        "Knapsack",
+        "Dining philosophers",
+        "Travelling salesman",
+        "N-Queens",
+        "Tower of Hanoi"
+      ],
+      "answer": "b",
+      "explanation": "Also producer–consumer and readers–writers."
+    },
+    {
+      "id": 100,
+      "source": "Additional A24",
+      "topic": "Synchronization",
+      "question": "The part of a program that accesses a shared resource is the:",
+      "options": [
+        "Kernel section",
+        "Critical section",
+        "Entry section",
+        "Remainder section",
+        "Data section"
+      ],
+      "answer": "b",
+      "explanation": "Only one process at a time should be in it."
+    },
+    {
+      "id": 101,
+      "source": "Additional A25",
+      "topic": "Deadlock",
+      "question": "A process holding one resource while waiting for another illustrates which deadlock condition?",
+      "options": [
+        "No preemption",
+        "Mutual exclusion",
+        "Starvation",
+        "Hold and wait",
+        "Circular wait"
+      ],
+      "answer": "d",
+      "explanation": "One of the four conditions."
+    },
+    {
+      "id": 102,
+      "source": "Additional A26",
+      "topic": "Deadlock",
+      "question": "P1 waits for P2, P2 waits for P3, and P3 waits for P1. This is:",
+      "options": [
+        "Preemption",
+        "Hold and wait",
+        "Circular wait",
+        "Mutual exclusion",
+        "Aging"
+      ],
+      "answer": "c",
+      "explanation": "Circular wait."
+    },
+    {
+      "id": 103,
+      "source": "Additional A27",
+      "topic": "Deadlock",
+      "question": "How many of the four deadlock conditions must hold at the same time for deadlock to occur?",
+      "options": [
+        "Any three",
+        "None",
+        "Any one",
+        "All four",
+        "Any two"
+      ],
+      "answer": "d",
+      "explanation": "Break any one to prevent deadlock."
+    },
+    {
+      "id": 104,
+      "source": "Additional A28",
+      "topic": "Deadlock",
+      "question": "Deadlock detection typically looks for:",
+      "options": [
+        "A dirty bit",
+        "A time quantum",
+        "A cycle in the wait-for (resource allocation) graph",
+        "A safe sequence",
+        "A page fault"
+      ],
+      "answer": "c",
+      "explanation": "Avoidance = Banker's; detection = cycle."
+    },
+    {
+      "id": 105,
+      "source": "Additional A29",
+      "topic": "Memory",
+      "question": "Wasted space inside an allocated block is called:",
+      "options": [
+        "External fragmentation",
+        "Compaction",
+        "Internal fragmentation",
+        "Paging",
+        "Thrashing"
+      ],
+      "answer": "c",
+      "explanation": "External = scattered free gaps between blocks."
+    },
+    {
+      "id": 106,
+      "source": "Additional A30",
+      "topic": "Memory",
+      "question": "Which technique eliminates external fragmentation?",
+      "options": [
+        "Contiguous allocation",
+        "Segmentation",
+        "Compaction never",
+        "Fixed partitions",
+        "Paging"
+      ],
+      "answer": "e",
+      "explanation": "Fixed-size frames fit anywhere."
+    },
+    {
+      "id": 107,
+      "source": "Additional A31",
+      "topic": "Memory",
+      "question": "A cache that stores recent page-table entries to speed up address translation is the:",
+      "options": [
+        "TLB",
+        "DMA",
+        "PCB",
+        "MBR",
+        "ALU"
+      ],
+      "answer": "a",
+      "explanation": "Translation Lookaside Buffer."
+    },
+    {
+      "id": 108,
+      "source": "Additional A32",
+      "topic": "Memory",
+      "question": "Which feature lets a program larger than physical RAM run?",
+      "options": [
+        "DMA",
+        "ROM",
+        "Virtual memory",
+        "Cache memory",
+        "Registers"
+      ],
+      "answer": "c",
+      "explanation": "Pages are loaded only when needed (demand paging)."
+    },
+    {
+      "id": 109,
+      "source": "Additional A33",
+      "topic": "Memory",
+      "question": "When a requested page is not in main memory, a ______ occurs.",
+      "options": [
+        "Cache hit",
+        "Segmentation hit",
+        "Page fault",
+        "Context switch",
+        "Deadlock"
+      ],
+      "answer": "c",
+      "explanation": "The page must be loaded from disk."
+    },
+    {
+      "id": 110,
+      "source": "Additional A34",
+      "topic": "Memory",
+      "question": "Which page replacement algorithm gives the fewest page faults but can't be implemented in practice?",
+      "options": [
+        "Optimal",
+        "Random",
+        "LRU",
+        "FIFO",
+        "NRU"
+      ],
+      "answer": "a",
+      "explanation": "It needs knowledge of the future."
+    },
+    {
+      "id": 111,
+      "source": "Additional A35",
+      "topic": "Memory",
+      "question": "How can thrashing be reduced?",
+      "options": [
+        "Disable virtual memory",
+        "Use FIFO",
+        "Increase CPU speed only",
+        "Add more processes",
+        "Reduce the degree of multiprogramming"
+      ],
+      "answer": "e",
+      "explanation": "Fewer processes = more frames each."
+    },
+    {
+      "id": 112,
+      "source": "Additional A36",
+      "topic": "Storage",
+      "question": "Which disk scheduling algorithm always goes to the nearest request next?",
+      "options": [
+        "C-SCAN",
+        "SCAN",
+        "LOOK",
+        "SSTF",
+        "FCFS"
+      ],
+      "answer": "d",
+      "explanation": "Shortest Seek Time First."
+    },
+    {
+      "id": 113,
+      "source": "Additional A37",
+      "topic": "Storage",
+      "question": "Head at 50; requests 95, 180, 34, 119, 11, 123, 62, 64. What is the total head movement with SSTF?",
+      "options": [
+        "312",
+        "236",
+        "208",
+        "180",
+        "644"
+      ],
+      "answer": "b",
+      "explanation": "50→62→64→34→11→95→119→123→180: 12+2+30+23+84+24+4+57 = 236."
+    },
+    {
+      "id": 114,
+      "source": "Additional A38",
+      "topic": "Storage",
+      "question": "Which disk scheduling algorithm is known as the elevator algorithm?",
+      "options": [
+        "SCAN",
+        "FCFS",
+        "SSTF",
+        "C-LOOK",
+        "Random"
+      ],
+      "answer": "a",
+      "explanation": "Goes to one end, then reverses."
+    },
+    {
+      "id": 115,
+      "source": "Additional A39",
+      "topic": "Storage",
+      "question": "Which RAID level uses striping only, with no redundancy?",
+      "options": [
+        "RAID 0",
+        "RAID 10",
+        "RAID 1",
+        "RAID 5",
+        "RAID 6"
+      ],
+      "answer": "a",
+      "explanation": "Fast, but one failure loses everything."
+    },
+    {
+      "id": 116,
+      "source": "Additional A40",
+      "topic": "Storage",
+      "question": "Which RAID level is pure mirroring?",
+      "options": [
+        "RAID 5",
+        "RAID 3",
+        "RAID 1",
+        "RAID 0",
+        "RAID 6"
+      ],
+      "answer": "c",
+      "explanation": "RAID 1."
+    },
+    {
+      "id": 117,
+      "source": "Additional A41",
+      "topic": "Storage",
+      "question": "RAID 5 uses striping with distributed parity and needs at least:",
+      "options": [
+        "3 disks",
+        "5 disks",
+        "4 disks",
+        "2 disks",
+        "1 disk"
+      ],
+      "answer": "a",
+      "explanation": "Survives 1 disk failure. RAID 6 needs 4 and survives 2."
+    },
+    {
+      "id": 118,
+      "source": "Additional A42",
+      "topic": "Storage",
+      "question": "What is the maximum file size supported by FAT32?",
+      "options": [
+        "Unlimited",
+        "2 TB",
+        "4 GB",
+        "2 GB",
+        "16 GB"
+      ],
+      "answer": "c",
+      "explanation": "FAT32 = 4 GB max file size."
+    },
+    {
+      "id": 119,
+      "source": "Additional A43",
+      "topic": "Storage",
+      "question": "What is the default file system for modern Windows installations?",
+      "options": [
+        "ext4",
+        "FAT32",
+        "NTFS",
+        "HFS",
+        "exFAT"
+      ],
+      "answer": "c",
+      "explanation": "NTFS: permissions, journaling, large files."
+    },
+    {
+      "id": 120,
+      "source": "Additional A44",
+      "topic": "Storage",
+      "question": "What is the maximum file size of the original Macintosh HFS?",
+      "options": [
+        "16 GB",
+        "8 GB",
+        "4 GB",
+        "2 GB",
+        "32 GB"
+      ],
+      "answer": "d",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 121,
+      "source": "Additional A45",
+      "topic": "Storage",
+      "question": "Which partition style supports disks larger than 2 TB and is used with UEFI?",
+      "options": [
+        "GPT",
+        "NTFS",
+        "MBR",
+        "FAT32",
+        "Extended"
+      ],
+      "answer": "a",
+      "explanation": "MBR: 2 TB, 4 primary partitions, BIOS."
+    },
+    {
+      "id": 122,
+      "source": "Additional A46",
+      "topic": "Number Systems",
+      "question": "What is the decimal value of binary 1101?",
+      "options": [
+        "11",
+        "13",
+        "12",
+        "15",
+        "14"
+      ],
+      "answer": "b",
+      "explanation": "8 + 4 + 1 = 13."
+    },
+    {
+      "id": 123,
+      "source": "Additional A47",
+      "topic": "Number Systems",
+      "question": "What is the octal equivalent of binary 110101?",
+      "options": [
+        "35",
+        "56",
+        "53",
+        "65",
+        "72"
+      ],
+      "answer": "d",
+      "explanation": "Groups of 3: 110 | 101 → 6 | 5."
+    },
+    {
+      "id": 124,
+      "source": "Additional A48",
+      "topic": "Number Systems",
+      "question": "The 2's complement of a binary number is obtained by:",
+      "options": [
+        "Inverting all bits and adding 1",
+        "Reversing the bit order",
+        "Inverting all bits only",
+        "Shifting left by one",
+        "Adding 1 only"
+      ],
+      "answer": "a",
+      "explanation": "Used to represent negative numbers."
+    },
+    {
+      "id": 125,
+      "source": "Additional A49",
+      "topic": "Number Systems",
+      "question": "What is the hexadecimal equivalent of decimal 255?",
+      "options": [
+        "FF",
+        "F0",
+        "EF",
+        "FE",
+        "100"
+      ],
+      "answer": "a",
+      "explanation": "255 = 15 × 16 + 15."
+    },
+    {
+      "id": 126,
+      "source": "Additional A50",
+      "topic": "Digital Logic",
+      "question": "Which gates are called universal gates?",
+      "options": [
+        "OR and XOR",
+        "NAND and NOR",
+        "AND and OR",
+        "NOT and AND",
+        "XOR and XNOR"
+      ],
+      "answer": "b",
+      "explanation": "Any gate can be built from them."
+    },
+    {
+      "id": 127,
+      "source": "Additional A51",
+      "topic": "Digital Logic",
+      "question": "An XOR gate outputs 1 when:",
+      "options": [
+        "All inputs are equal",
+        "The inputs are different",
+        "Both inputs are 1",
+        "Both inputs are 0",
+        "Any input is 1"
+      ],
+      "answer": "b",
+      "explanation": "XOR = exclusive OR."
+    },
+    {
+      "id": 128,
+      "source": "Additional A52",
+      "topic": "Digital Logic",
+      "question": "In a half adder, the Sum and Carry outputs are produced by:",
+      "options": [
+        "OR and XOR",
+        "NAND and NOR",
+        "XOR and AND",
+        "AND and OR",
+        "XOR and OR"
+      ],
+      "answer": "c",
+      "explanation": "Sum = A ⊕ B; Carry = A·B."
+    },
+    {
+      "id": 129,
+      "source": "Additional A53",
+      "topic": "Digital Logic",
+      "question": "Which circuit has memory (its output depends on past inputs)?",
+      "options": [
+        "Combinational circuit",
+        "Sequential circuit (e.g. flip-flop)",
+        "Half adder",
+        "Multiplexer",
+        "Decoder"
+      ],
+      "answer": "b",
+      "explanation": "Combinational output depends only on current inputs."
+    },
+    {
+      "id": 130,
+      "source": "Additional A54",
+      "topic": "Digital Logic",
+      "question": "A circuit that selects one of many inputs and sends it to a single output is a:",
+      "options": [
+        "Multiplexer",
+        "Flip-flop",
+        "Decoder",
+        "Demultiplexer",
+        "Encoder"
+      ],
+      "answer": "a",
+      "explanation": "MUX = many to one."
+    },
+    {
+      "id": 131,
+      "source": "Additional A55",
+      "topic": "Digital Logic",
+      "question": "According to De Morgan's law, (A·B)' equals:",
+      "options": [
+        "A' · B'",
+        "A' + B'",
+        "A · B",
+        "(A + B)'",
+        "A + B"
+      ],
+      "answer": "b",
+      "explanation": "And (A + B)' = A' · B'."
+    },
+    {
+      "id": 132,
+      "source": "Additional A56",
+      "topic": "COA",
+      "question": "Which register holds the instruction currently being executed?",
+      "options": [
+        "IR",
+        "SP",
+        "MAR",
+        "AC",
+        "PC"
+      ],
+      "answer": "a",
+      "explanation": "PC = next instruction's address."
+    },
+    {
+      "id": 133,
+      "source": "Additional A57",
+      "topic": "COA",
+      "question": "Which register holds the address of the memory location being accessed?",
+      "options": [
+        "AC",
+        "IR",
+        "MAR",
+        "MDR",
+        "PC"
+      ],
+      "answer": "c",
+      "explanation": "MDR holds the data."
+    },
+    {
+      "id": 134,
+      "source": "Additional A58",
+      "topic": "COA",
+      "question": "What is the correct order of the basic instruction cycle?",
+      "options": [
+        "Decode → Fetch → Execute",
+        "Execute → Fetch → Decode",
+        "Decode → Execute → Fetch",
+        "Fetch → Execute → Decode",
+        "Fetch → Decode → Execute"
+      ],
+      "answer": "e",
+      "explanation": "Fetch, decode, execute."
+    },
+    {
+      "id": 135,
+      "source": "Additional A59",
+      "topic": "COA",
+      "question": "In immediate addressing mode, the instruction contains:",
+      "options": [
+        "An address of an address",
+        "A register number",
+        "The PC value",
+        "The operand's address",
+        "The operand itself"
+      ],
+      "answer": "e",
+      "explanation": "Direct = operand's address; indirect = address of an address."
+    },
+    {
+      "id": 136,
+      "source": "Additional A60",
+      "topic": "COA",
+      "question": "Which is a characteristic of RISC processors?",
+      "options": [
+        "Emphasis on hardware complexity",
+        "Microprogrammed complex control units",
+        "Simple, fixed-length instructions that are easy to pipeline",
+        "Fewer registers",
+        "Complex variable-length instructions"
+      ],
+      "answer": "c",
+      "explanation": "RISC (e.g. ARM) keeps hardware simple."
+    },
+    {
+      "id": 137,
+      "source": "Additional A61",
+      "topic": "COA",
+      "question": "What is the correct memory hierarchy from fastest to slowest?",
+      "options": [
+        "Registers → Cache → RAM → Disk",
+        "RAM → Cache → Registers → Disk",
+        "Cache → Registers → RAM → Disk",
+        "Registers → RAM → Cache → Disk",
+        "Disk → RAM → Cache → Registers"
+      ],
+      "answer": "a",
+      "explanation": "Faster = smaller and costlier."
+    },
+    {
+      "id": 138,
+      "source": "Additional A62",
+      "topic": "COA",
+      "question": "When requested data is not found in the cache, it is a:",
+      "options": [
+        "Cache hit",
+        "TLB hit",
+        "Page hit",
+        "Cache miss",
+        "Write-back"
+      ],
+      "answer": "d",
+      "explanation": "The data is fetched from RAM."
+    },
+    {
+      "id": 139,
+      "source": "Additional A63",
+      "topic": "COA",
+      "question": "How much memory can a 16-bit address bus address (byte-addressable)?",
+      "options": [
+        "4 GB",
+        "256 KB",
+        "64 KB",
+        "1 MB",
+        "16 KB"
+      ],
+      "answer": "c",
+      "explanation": "2¹⁶ = 65,536 bytes."
+    },
+    {
+      "id": 140,
+      "source": "Additional A64",
+      "topic": "COA",
+      "question": "The Intel 8086 has a 20-bit address bus. How much memory can it address?",
+      "options": [
+        "256 MB",
+        "1 MB",
+        "64 KB",
+        "4 GB",
+        "16 MB"
+      ],
+      "answer": "b",
+      "explanation": "2²⁰ = 1 MB."
+    },
+    {
+      "id": 141,
+      "source": "Additional A65",
+      "topic": "COA",
+      "question": "Which technique lets an I/O device transfer data to memory without CPU involvement?",
+      "options": [
+        "Paging",
+        "Interrupt",
+        "DMA",
+        "Polling",
+        "Pipelining"
+      ],
+      "answer": "c",
+      "explanation": "Direct Memory Access."
+    },
+    {
+      "id": 142,
+      "source": "Additional A66",
+      "topic": "COA",
+      "question": "Which type of memory is volatile?",
+      "options": [
+        "Flash ROM",
+        "ROM",
+        "EEPROM",
+        "EPROM",
+        "RAM"
+      ],
+      "answer": "e",
+      "explanation": "RAM loses data when powered off."
+    },
+    {
+      "id": 143,
+      "source": "Additional A67",
+      "topic": "COA",
+      "question": "Which memory is erased using ultraviolet light?",
+      "options": [
+        "SRAM",
+        "EPROM",
+        "EEPROM",
+        "PROM",
+        "DRAM"
+      ],
+      "answer": "b",
+      "explanation": "EEPROM is erased electrically."
+    },
+    {
+      "id": 144,
+      "source": "Additional A68",
+      "topic": "COA",
+      "question": "How many pins does the Intel 8089 I/O processor have?",
+      "options": [
+        "40",
+        "20",
+        "64",
+        "80",
+        "24"
+      ],
+      "answer": "a",
+      "explanation": "PYQ 2022."
+    }
+  ]
+}
