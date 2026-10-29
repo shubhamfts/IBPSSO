@@ -257,11 +257,14 @@ function renderHome(){
   return root;
 }
 
-function openDay(key){ view = {screen:"quiz", key, page:1, topic:"all", status:"all"}; render(); window.scrollTo(0,0); }
+function openDay(key){ view = {screen:"quiz", key, page:1, topic:"all", status:"all", source:"all"}; render(); window.scrollTo(0,0); }
 
 function filtered(d, p){
   return d.questions.filter(q=>{
     if(view.topic!=="all" && q.topic!==view.topic) return false;
+    const isNew = /^Additional/i.test(q.source||"");
+    if(view.source==="new" && !isNew) return false;
+    if(view.source==="old" && isNew) return false;
     const a = p[q.id];
     if(view.status==="unanswered") return !a;
     if(view.status==="right") return a && a===q.answer;
@@ -288,6 +291,11 @@ function renderQuiz(){
     [["all","All questions"],["unanswered","Unanswered"],["right","Answered right"],["wrong","Answered wrong"]]
       .map(([v,t])=>el("option",{value:v, selected:view.status===v},t)));
 
+  const newCount = d.questions.filter(q=>/^Additional/i.test(q.source||"")).length;
+  const sourceSel = el("select",{"aria-label":"Filter by source", onchange:e=>{view.source=e.target.value; view.page=1; render();}},
+    [["all","All sources ("+d.questions.length+")"],["new","New only ("+newCount+")"],["old","Practised only ("+(d.questions.length-newCount)+")"]]
+      .map(([v,t])=>el("option",{value:v, selected:(view.source||"all")===v},t)));
+
   root.append(el("div",{class:"bar"},
     el("div",{class:"top"},
       el("button",{class:"btn small", onclick:()=>{view={screen:"home"}; render(); window.scrollTo(0,0);}},"All days"),
@@ -301,7 +309,7 @@ function renderQuiz(){
       el("span",null,"Net score ", el("b",{text:fmt(s.net)}), " (−0.25 per wrong)"),
       el("span",null,"Accuracy ", el("b",{text:(s.answered? Math.round(s.right/s.answered*100):0)+"%"}))
     ),
-    el("div",{class:"filters"}, topicSel, statusSel)
+    el("div",{class:"filters"}, sourceSel, topicSel, statusSel)
   ));
 
   if(!slice.length){
