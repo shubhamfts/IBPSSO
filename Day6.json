@@ -1,0 +1,2362 @@
+{
+  "title": "Day 6: DSA + Software Engineering + TOC",
+  "total": 157,
+  "answer_format": "answer is the option letter a–e mapping to options[0]–options[4]",
+  "questions": [
+    {
+      "id": 1,
+      "source": "Batch 1 Q1",
+      "topic": "Complexity",
+      "question": "Assuming constant-time operations, what is the time complexity of three nested loops, each running from 0 to n?",
+      "options": [
+        "O(n)",
+        "O(n²)",
+        "O(n³)",
+        "O(n log n)",
+        "O(log n)"
+      ],
+      "answer": "c",
+      "explanation": "k nested loops → O(nᵏ) (PYQ 2023)."
+    },
+    {
+      "id": 2,
+      "source": "Batch 1 Q2",
+      "topic": "Linear DS",
+      "question": "Which data structure supports the LIFO behaviour needed for undo and redo in text editors?",
+      "options": [
+        "Queue",
+        "Stack",
+        "Linked list",
+        "Heap",
+        "Hash table"
+      ],
+      "answer": "b",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 3,
+      "source": "Batch 1 Q3",
+      "topic": "Expressions",
+      "question": "What is the correct postfix expression for (a + b) * (c − d)?",
+      "options": [
+        "ab+cd−*",
+        "+ab−cd*",
+        "ab*cd+−",
+        "abcd+*−",
+        "ab+*cd−"
+      ],
+      "answer": "a",
+      "explanation": "(ab+)(cd−)* (PYQ 2024)."
+    },
+    {
+      "id": 4,
+      "source": "Batch 1 Q4",
+      "topic": "Linear DS",
+      "question": "Which of the following is not a linear data structure?",
+      "options": [
+        "Array",
+        "Stack",
+        "Queue",
+        "Tree",
+        "Linked list"
+      ],
+      "answer": "d",
+      "explanation": "Trees and graphs are non-linear (PYQ 2022)."
+    },
+    {
+      "id": 5,
+      "source": "Batch 1 Q5",
+      "topic": "Expressions",
+      "question": "What is the maximum number of elements present at the same time in the operand stack while evaluating the postfix expression 6 2 3 + − 3 8 2 / + * ?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "None of the above",
+        "4"
+      ],
+      "answer": "e",
+      "explanation": "Push 6, 2, 3 (3) → + → 6 5 → − → 1 → push 3, 8, 2 → 1 3 8 2 (4) → / → + → *. Max = 4 (PYQ 2023)."
+    },
+    {
+      "id": 6,
+      "source": "Batch 1 Q6",
+      "topic": "Linear DS",
+      "question": "The values 34, 25, 58, 96 and 12 are pushed onto a stack in that order. The stack is reversed recursively and printed from top to bottom. What is the output?",
+      "options": [
+        "12 96 58 25 34",
+        "34 25 58 96 12",
+        "25 34 58 96 12",
+        "96 58 25 34 12",
+        "Compilation error"
+      ],
+      "answer": "b",
+      "explanation": "Top was 12; after reversing, 34 is on top → 34 25 58 96 12 (PYQ 2023)."
+    },
+    {
+      "id": 7,
+      "source": "Batch 1 Q7",
+      "topic": "Complexity",
+      "question": "What is the time complexity of: for (i = 1; i < n; i = i * 2) { constant work }?",
+      "options": [
+        "O(n)",
+        "O(n²)",
+        "O(log n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "c",
+      "explanation": "Doubling/halving loops → O(log n)."
+    },
+    {
+      "id": 8,
+      "source": "Batch 1 Q8",
+      "topic": "Expressions",
+      "question": "What is the postfix form of a + b * c?",
+      "options": [
+        "abc*+",
+        "ab+c*",
+        "a+bc*",
+        "abc+*",
+        "*+abc"
+      ],
+      "answer": "a",
+      "explanation": "* binds first: a (bc*) +."
+    },
+    {
+      "id": 9,
+      "source": "Batch 1 Q9",
+      "topic": "Linear DS",
+      "question": "What is the time complexity of accessing the i-th element in an array and in a singly linked list?",
+      "options": [
+        "O(n) for both",
+        "O(1) for both",
+        "O(n) array, O(1) linked list",
+        "O(log n) for both",
+        "O(1) array, O(n) linked list"
+      ],
+      "answer": "e",
+      "explanation": "Arrays allow direct indexing; lists must be walked."
+    },
+    {
+      "id": 10,
+      "source": "Batch 1 Q10",
+      "topic": "Graphs",
+      "question": "Which data structure is used to implement BFS?",
+      "options": [
+        "Stack",
+        "Heap",
+        "Tree",
+        "Queue",
+        "Hash table"
+      ],
+      "answer": "d",
+      "explanation": "BFS = queue; DFS = stack."
+    },
+    {
+      "id": 11,
+      "source": "Batch 2 Q11",
+      "topic": "Trees",
+      "question": "Which correctly shows the order of a binary tree traversal?",
+      "options": [
+        "Pre-order: Left → Root → Right",
+        "Post-order: Root → Left → Right",
+        "In-order: Left → Root → Right",
+        "Level-order: Left → Right → Root",
+        "Reverse in-order: Root → Left → Right"
+      ],
+      "answer": "c",
+      "explanation": "Root's position = name: pre (first), in (middle), post (last). PYQ Prelims 2026."
+    },
+    {
+      "id": 12,
+      "source": "Batch 2 Q12",
+      "topic": "Trees",
+      "question": "A BST is built by inserting 46, 72, 39, 58, 21, 13, 65, 87, 99 in that order. What is its inorder traversal?",
+      "options": [
+        "46, 39, 21, 13, 72, 58, 65, 87, 99",
+        "13, 21, 39, 46, 58, 65, 72, 87, 99",
+        "99, 87, 72, 65, 58, 46, 39, 21, 13",
+        "13, 39, 21, 46, 58, 72, 65, 87, 99",
+        "21, 13, 39, 46, 65, 58, 72, 99, 87"
+      ],
+      "answer": "b",
+      "explanation": "BST inorder is always sorted ascending, so just sort the numbers (PYQ 2024)."
+    },
+    {
+      "id": 13,
+      "source": "Batch 2 Q13",
+      "topic": "Trees",
+      "question": "What is the maximum height of an AVL tree with 12 nodes (taking a single root node's height as 0)?",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "4",
+        "None of the above"
+      ],
+      "answer": "d",
+      "explanation": "Min nodes N(h) = N(h−1) + N(h−2) + 1: 1, 2, 4, 7, 12 → 12 nodes allow height 4 (PYQ 2022)."
+    },
+    {
+      "id": 14,
+      "source": "Batch 2 Q14",
+      "topic": "Graphs",
+      "question": "Which of the following is a graph traversal technique?",
+      "options": [
+        "DFS",
+        "Stack",
+        "Heap",
+        "Priority queue",
+        "None of the above"
+      ],
+      "answer": "a",
+      "explanation": "Stack/heap/PQ are data structures (PYQ 2025)."
+    },
+    {
+      "id": 15,
+      "source": "Batch 2 Q15",
+      "topic": "Graphs",
+      "question": "Which algorithm finds the MST by selecting edges in increasing order of weight?",
+      "options": [
+        "Prim's algorithm",
+        "Dijkstra's algorithm",
+        "Kruskal's algorithm",
+        "Floyd-Warshall algorithm",
+        "Bellman-Ford algorithm"
+      ],
+      "answer": "c",
+      "explanation": "Kruskal keeps a sorted edge list; Prim grows from a point (PYQ 2025)."
+    },
+    {
+      "id": 16,
+      "source": "Batch 2 Q16",
+      "topic": "Graphs",
+      "question": "Which algorithm is NOT used to find a Minimum Spanning Tree?",
+      "options": [
+        "Kruskal's",
+        "Prim's",
+        "Borůvka's",
+        "Bellman-Ford",
+        "Reverse-Delete"
+      ],
+      "answer": "d",
+      "explanation": "Bellman-Ford is a shortest-path algorithm (PYQ 2023)."
+    },
+    {
+      "id": 17,
+      "source": "Batch 2 Q17",
+      "topic": "Trees",
+      "question": "In a max-heap, the root always contains:",
+      "options": [
+        "The minimum element",
+        "The median",
+        "The most recently inserted element",
+        "A random element",
+        "The maximum element"
+      ],
+      "answer": "e",
+      "explanation": "Parent ≥ children."
+    },
+    {
+      "id": 18,
+      "source": "Batch 2 Q18",
+      "topic": "Graphs",
+      "question": "Which shortest-path algorithm handles negative edge weights and detects negative cycles?",
+      "options": [
+        "Dijkstra's",
+        "Bellman-Ford",
+        "Prim's",
+        "Kruskal's",
+        "BFS"
+      ],
+      "answer": "b",
+      "explanation": "Dijkstra can't handle negative weights."
+    },
+    {
+      "id": 19,
+      "source": "Batch 2 Q19",
+      "topic": "Trees",
+      "question": "What is the maximum number of nodes in a binary tree of height 3 (root at height 0)?",
+      "options": [
+        "7",
+        "8",
+        "15",
+        "16",
+        "31"
+      ],
+      "answer": "c",
+      "explanation": "2ʰ⁺¹ − 1 = 15."
+    },
+    {
+      "id": 20,
+      "source": "Batch 2 Q20",
+      "topic": "Trees",
+      "question": "Root A has children B (left) and C (right); B has children D (left) and E (right). What is the preorder traversal?",
+      "options": [
+        "A B D E C",
+        "D B E A C",
+        "D E B C A",
+        "A B C D E",
+        "A C B E D"
+      ],
+      "answer": "a",
+      "explanation": "Root, left subtree, right subtree."
+    },
+    {
+      "id": 21,
+      "source": "Batch 3 Q21",
+      "topic": "Sorting",
+      "question": "Which sorting algorithm has the same time complexity in the best, average and worst cases?",
+      "options": [
+        "Merge sort",
+        "Quick sort",
+        "Bubble sort",
+        "Insertion sort",
+        "None of the above"
+      ],
+      "answer": "a",
+      "explanation": "Merge sort is always O(n log n) (PYQ 2024)."
+    },
+    {
+      "id": 22,
+      "source": "Batch 3 Q22",
+      "topic": "Sorting",
+      "question": "Which sorting algorithm has a worst-case time complexity of O(n²)?",
+      "options": [
+        "Merge sort",
+        "Radix sort",
+        "Bubble sort",
+        "Heap sort",
+        "None of the above"
+      ],
+      "answer": "c",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 23,
+      "source": "Batch 3 Q23",
+      "topic": "Sorting",
+      "question": "In which case is insertion sort better than quicksort and merge sort?",
+      "options": [
+        "Large, random input",
+        "Large input needing a stable sort",
+        "Sorting linked lists",
+        "Parallel sorting of big data",
+        "Small, nearly sorted input with low memory use"
+      ],
+      "answer": "e",
+      "explanation": "Best case O(n) on nearly sorted data (PYQ 2025)."
+    },
+    {
+      "id": 24,
+      "source": "Batch 3 Q24",
+      "topic": "Sorting",
+      "question": "Which in-place comparison sort generally performs the fewest swaps in the worst case?",
+      "options": [
+        "Bubble sort",
+        "Selection sort",
+        "Quick sort",
+        "Insertion sort",
+        "Heap sort"
+      ],
+      "answer": "b",
+      "explanation": "At most n − 1 swaps (PYQ 2024)."
+    },
+    {
+      "id": 25,
+      "source": "Batch 3 Q25",
+      "topic": "Sorting",
+      "question": "Which sorting algorithm does not use comparison operations?",
+      "options": [
+        "Quick sort",
+        "Merge sort",
+        "Heap sort",
+        "Radix sort",
+        "Insertion sort"
+      ],
+      "answer": "d",
+      "explanation": "Radix, counting and bucket sort (PYQ 2025)."
+    },
+    {
+      "id": 26,
+      "source": "Batch 3 Q26",
+      "topic": "Sorting",
+      "question": "What is the space complexity of a tail-recursive quicksort on an array of size n?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n log n)",
+        "O(n²)"
+      ],
+      "answer": "c",
+      "explanation": "SPACE = recursion depth O(log n); O(n log n) is its time (PYQ 2025)."
+    },
+    {
+      "id": 27,
+      "source": "Batch 3 Q27",
+      "topic": "Hashing",
+      "question": "In a hash table, the load factor primarily represents:",
+      "options": [
+        "The ratio of stored elements to the total number of slots",
+        "The number of collisions per bucket",
+        "The number of hash functions",
+        "The total memory used",
+        "The maximum key size"
+      ],
+      "answer": "a",
+      "explanation": "α = n / m (PYQ 2024)."
+    },
+    {
+      "id": 28,
+      "source": "Batch 3 Q28",
+      "topic": "Paradigms",
+      "question": "Which of the following exemplifies divide and conquer?",
+      "options": [
+        "Heap sort",
+        "Insertion sort",
+        "Bubble sort",
+        "Merge sort",
+        "None of the above"
+      ],
+      "answer": "d",
+      "explanation": "Split → solve → combine (PYQ 2022)."
+    },
+    {
+      "id": 29,
+      "source": "Batch 3 Q29",
+      "topic": "Paradigms",
+      "question": "What is the primary purpose of memoization in DP?",
+      "options": [
+        "To reduce memory allocation",
+        "To increase recursion depth",
+        "To run functions in parallel",
+        "To convert iteration into recursion",
+        "To store the intermediate results of repeated subproblems"
+      ],
+      "answer": "e",
+      "explanation": "Top-down DP (PYQ 2024)."
+    },
+    {
+      "id": 30,
+      "source": "Batch 3 Q30",
+      "topic": "Paradigms",
+      "question": "What is the time complexity of the classical nested-loop DP for LIS?",
+      "options": [
+        "O(n)",
+        "O(n²)",
+        "O(n log n)",
+        "O(log n)",
+        "O(n³)"
+      ],
+      "answer": "b",
+      "explanation": "'Classical nested loops' → O(n²); O(n log n) uses binary search (PYQ 2024)."
+    },
+    {
+      "id": 31,
+      "source": "Retest R1",
+      "topic": "Sorting",
+      "question": "Which sorting algorithm makes the fewest swaps (at most n − 1) in the worst case?",
+      "options": [
+        "Insertion sort",
+        "Bubble sort",
+        "Selection sort",
+        "Quick sort",
+        "Heap sort"
+      ],
+      "answer": "c",
+      "explanation": "Selection sort."
+    },
+    {
+      "id": 32,
+      "source": "Retest R2",
+      "topic": "Sorting",
+      "question": "What is the extra space used by quicksort for its recursion stack?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(1)",
+        "O(log n)",
+        "O(n²)"
+      ],
+      "answer": "d",
+      "explanation": "O(log n)."
+    },
+    {
+      "id": 33,
+      "source": "Retest R3",
+      "topic": "Paradigms",
+      "question": "What is the time complexity of the classical nested-loop DP for LIS?",
+      "options": [
+        "O(n log n)",
+        "O(n²)",
+        "O(n)",
+        "O(2ⁿ)",
+        "O(log n)"
+      ],
+      "answer": "b",
+      "explanation": "O(n²)."
+    },
+    {
+      "id": 34,
+      "source": "Retest R4",
+      "topic": "Sorting",
+      "question": "What is the worst-case time complexity of quicksort?",
+      "options": [
+        "O(n²)",
+        "O(n log n)",
+        "O(n)",
+        "O(log n)",
+        "O(1)"
+      ],
+      "answer": "a",
+      "explanation": "Sorted input + bad pivot."
+    },
+    {
+      "id": 35,
+      "source": "Retest R5",
+      "topic": "Sorting",
+      "question": "How much extra space does merge sort need?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n²)",
+        "O(n log n)",
+        "O(n)"
+      ],
+      "answer": "e",
+      "explanation": "Merge sort is not in-place."
+    },
+    {
+      "id": 36,
+      "source": "Batch 4 Q31",
+      "topic": "SDLC",
+      "question": "Which SDLC model follows a sequential flow, where each phase must be completed before the next?",
+      "options": [
+        "Agile model",
+        "Spiral model",
+        "Waterfall model",
+        "V-Model",
+        "Incremental model"
+      ],
+      "answer": "c",
+      "explanation": "PYQ 2025."
+    },
+    {
+      "id": 37,
+      "source": "Batch 4 Q32",
+      "topic": "SDLC",
+      "question": "A banking application has all requirements finalised upfront, minimal client involvement afterwards, and strictly linear development. Which model fits best?",
+      "options": [
+        "Agile",
+        "Waterfall",
+        "Spiral",
+        "V-Model",
+        "Prototyping"
+      ],
+      "answer": "b",
+      "explanation": "PYQ 2023."
+    },
+    {
+      "id": 38,
+      "source": "Batch 4 Q33",
+      "topic": "SDLC",
+      "question": "Sprints, a product backlog and frequent deployment are key characteristics of:",
+      "options": [
+        "Waterfall",
+        "Spiral",
+        "V-Model",
+        "Scrum",
+        "RAD"
+      ],
+      "answer": "d",
+      "explanation": "PYQ Prelims 2026."
+    },
+    {
+      "id": 39,
+      "source": "Batch 4 Q34",
+      "topic": "SDLC",
+      "question": "Which of the following is NOT a feature of Extreme Programming (XP)?",
+      "options": [
+        "Pair programming",
+        "Continuous customer feedback",
+        "Test-driven development",
+        "Continuous integration",
+        "Fixed project requirements before development"
+      ],
+      "answer": "e",
+      "explanation": "XP embraces change; fixed requirements upfront is Waterfall (PYQ 2022)."
+    },
+    {
+      "id": 40,
+      "source": "Batch 4 Q35",
+      "topic": "Testing",
+      "question": "Which testing type verifies individual components or modules?",
+      "options": [
+        "Unit testing",
+        "Integration testing",
+        "System testing",
+        "Acceptance testing",
+        "Regression testing"
+      ],
+      "answer": "a",
+      "explanation": "PYQ 2022."
+    },
+    {
+      "id": 41,
+      "source": "Batch 4 Q36",
+      "topic": "Testing",
+      "question": "Which testing type verifies that software satisfies business and compliance requirements?",
+      "options": [
+        "Unit testing",
+        "Integration testing",
+        "Black-box testing",
+        "Acceptance testing",
+        "Regression testing"
+      ],
+      "answer": "d",
+      "explanation": "UAT by the client (PYQ 2024)."
+    },
+    {
+      "id": 42,
+      "source": "Batch 4 Q37",
+      "topic": "Estimation",
+      "question": "Which statement about COCOMO is true?",
+      "options": [
+        "It ignores cost drivers such as hardware and personnel",
+        "It manages Agile sprint backlogs",
+        "Intermediate COCOMO refines effort estimation using cost drivers",
+        "It estimates quality using normalisation only",
+        "It schedules network packets"
+      ],
+      "answer": "c",
+      "explanation": "Basic = size only; Intermediate = size + cost drivers (PYQ 2023)."
+    },
+    {
+      "id": 43,
+      "source": "Batch 4 Q38",
+      "topic": "HCI",
+      "question": "According to Fitts's Law, what affects the time to move a cursor to a target?",
+      "options": [
+        "The colour of the target",
+        "The distance to the target and the size of the target",
+        "The size of the cursor",
+        "The screen resolution",
+        "The type of input device"
+      ],
+      "answer": "b",
+      "explanation": "Bigger and closer = faster (PYQ 2023)."
+    },
+    {
+      "id": 44,
+      "source": "Batch 4 Q39",
+      "topic": "TOC",
+      "question": "NFA: q0 —a→ q0, q0 —b→ q1; q1 —a→ q2; q2 —a→ q2, q2 —b→ q0, q2 —ε→ q1. Using subset construction, which DFA states are reachable?",
+      "options": [
+        "{q0}, {q1}, {q1, q2}",
+        "{q0}, {q1}, {q0, q1}, {q1, q2}",
+        "{q0}, {q1}, {q0, q2}, {q1, q2}",
+        "{q0}, {q1}, {q0, q1, q2}",
+        "None of the above"
+      ],
+      "answer": "a",
+      "explanation": "{q0} —a→ {q0}, —b→ {q1}; {q1} —a→ {q2} + ε-closure = {q1, q2}; {q1, q2} —a→ {q1, q2}, —b→ {q0} (PYQ 2022)."
+    },
+    {
+      "id": 45,
+      "source": "Batch 4 Q40",
+      "topic": "Design",
+      "question": "A good software design should have:",
+      "options": [
+        "High coupling, low cohesion",
+        "High coupling, high cohesion",
+        "Low coupling, low cohesion",
+        "No cohesion",
+        "Low coupling and high cohesion"
+      ],
+      "answer": "e",
+      "explanation": "Low coupling, high cohesion."
+    },
+    {
+      "id": 46,
+      "source": "Batch 5 Q41",
+      "topic": "SDLC",
+      "question": "The Spiral model is mainly driven by:",
+      "options": [
+        "Fixed requirements",
+        "Risk analysis in every loop",
+        "Pair programming",
+        "Daily stand-ups",
+        "Code reuse only"
+      ],
+      "answer": "b",
+      "explanation": "Spiral (Boehm)."
+    },
+    {
+      "id": 47,
+      "source": "Batch 5 Q42",
+      "topic": "SDLC",
+      "question": "In Scrum, who facilitates the process and removes obstacles for the team?",
+      "options": [
+        "Product Owner",
+        "Customer",
+        "Project Manager",
+        "Scrum Master",
+        "Tester"
+      ],
+      "answer": "d",
+      "explanation": "The Product Owner owns the backlog."
+    },
+    {
+      "id": 48,
+      "source": "Batch 5 Q43",
+      "topic": "Testing",
+      "question": "In top-down integration testing, an unfinished lower-level module is replaced by a:",
+      "options": [
+        "Stub",
+        "Driver",
+        "Mock user",
+        "Compiler",
+        "Prototype"
+      ],
+      "answer": "a",
+      "explanation": "Stub = called (below); driver = calling (above)."
+    },
+    {
+      "id": 49,
+      "source": "Batch 5 Q44",
+      "topic": "Testing",
+      "question": "An input accepts ages 18 to 60. Which values does boundary value analysis test?",
+      "options": [
+        "30, 40, 50",
+        "0, 100",
+        "18, 60 only",
+        "10, 30, 70",
+        "17, 18, 60, 61"
+      ],
+      "answer": "e",
+      "explanation": "Just below, on and just above each edge."
+    },
+    {
+      "id": 50,
+      "source": "Batch 5 Q45",
+      "topic": "Testing",
+      "question": "Testing after a code change to make sure existing features still work is:",
+      "options": [
+        "Unit testing",
+        "Smoke testing",
+        "Regression testing",
+        "Alpha testing",
+        "Stress testing"
+      ],
+      "answer": "c",
+      "explanation": "Regression testing."
+    },
+    {
+      "id": 51,
+      "source": "Batch 5 Q46",
+      "topic": "Testing",
+      "question": "'Are we building the right product?' describes:",
+      "options": [
+        "Validation",
+        "Verification",
+        "Integration",
+        "Debugging",
+        "Refactoring"
+      ],
+      "answer": "a",
+      "explanation": "Verification = building the product right."
+    },
+    {
+      "id": 52,
+      "source": "Batch 5 Q47",
+      "topic": "Testing",
+      "question": "A control flow graph has 9 edges and 7 nodes. What is its cyclomatic complexity?",
+      "options": [
+        "2",
+        "3",
+        "16",
+        "4",
+        "5"
+      ],
+      "answer": "d",
+      "explanation": "E − N + 2 = 9 − 7 + 2 = 4."
+    },
+    {
+      "id": 53,
+      "source": "Batch 5 Q48",
+      "topic": "Design",
+      "question": "Which type of cohesion is the best?",
+      "options": [
+        "Coincidental",
+        "Logical",
+        "Functional",
+        "Temporal",
+        "Procedural"
+      ],
+      "answer": "c",
+      "explanation": "Functional = best; coincidental = worst."
+    },
+    {
+      "id": 54,
+      "source": "Batch 5 Q49",
+      "topic": "Compiler",
+      "question": "What is the output of the lexical analysis phase?",
+      "options": [
+        "A parse tree",
+        "Machine code",
+        "Intermediate code",
+        "An optimised program",
+        "Tokens"
+      ],
+      "answer": "e",
+      "explanation": "Lexical → tokens; syntax → parse tree; code generation → machine code."
+    },
+    {
+      "id": 55,
+      "source": "Batch 5 Q50",
+      "topic": "TOC",
+      "question": "Context-free languages are recognised by:",
+      "options": [
+        "DFA",
+        "Pushdown automaton (PDA)",
+        "NFA without ε",
+        "Mealy machine",
+        "Moore machine"
+      ],
+      "answer": "b",
+      "explanation": "A PDA is a finite automaton with a stack."
+    },
+    {
+      "id": 56,
+      "source": "Day Test Q1",
+      "topic": "Complexity",
+      "question": "What is the time complexity of three nested loops, each 0 to n?",
+      "options": [
+        "O(n)",
+        "O(n²)",
+        "O(n³)",
+        "O(n log n)",
+        "O(log n)"
+      ],
+      "answer": "c",
+      "explanation": "O(n³)."
+    },
+    {
+      "id": 57,
+      "source": "Day Test Q2",
+      "topic": "Expressions",
+      "question": "What is the postfix form of (a + b) * (c − d)?",
+      "options": [
+        "ab+cd−*",
+        "+ab−cd*",
+        "ab*cd+−",
+        "abcd+*−",
+        "ab+*cd−"
+      ],
+      "answer": "a",
+      "explanation": "ab+cd−*."
+    },
+    {
+      "id": 58,
+      "source": "Day Test Q3",
+      "topic": "Linear DS",
+      "question": "Which data structure supports undo/redo (LIFO)?",
+      "options": [
+        "Queue",
+        "Heap",
+        "Hash table",
+        "Linked list",
+        "Stack"
+      ],
+      "answer": "e",
+      "explanation": "Stack."
+    },
+    {
+      "id": 59,
+      "source": "Day Test Q4",
+      "topic": "Trees",
+      "question": "A BST is built by inserting 46, 72, 39, 58, 21, 13, 65, 87, 99 in that order. What is its inorder traversal?",
+      "options": [
+        "46, 39, 21, 13, 72, 58, 65, 87, 99",
+        "13, 21, 39, 46, 58, 65, 72, 87, 99",
+        "99, 87, 72, 65, 58, 46, 39, 21, 13",
+        "13, 39, 21, 46, 58, 72, 65, 87, 99",
+        "21, 13, 39, 46, 65, 58, 72, 99, 87"
+      ],
+      "answer": "b",
+      "explanation": "BST inorder is always sorted ascending, so just sort the numbers (PYQ 2024)."
+    },
+    {
+      "id": 60,
+      "source": "Day Test Q5",
+      "topic": "Trees",
+      "question": "What is the maximum height of an AVL tree with 12 nodes (taking a single root node's height as 0)?",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "4",
+        "None of the above"
+      ],
+      "answer": "d",
+      "explanation": "Min nodes N(h) = N(h−1) + N(h−2) + 1: 1, 2, 4, 7, 12 → 12 nodes allow height 4 (PYQ 2022)."
+    },
+    {
+      "id": 61,
+      "source": "Day Test Q6",
+      "topic": "Graphs",
+      "question": "Which algorithm finds the MST by selecting edges in increasing order of weight?",
+      "options": [
+        "Prim's",
+        "Dijkstra's",
+        "Kruskal's",
+        "Floyd-Warshall",
+        "Bellman-Ford"
+      ],
+      "answer": "c",
+      "explanation": "Kruskal."
+    },
+    {
+      "id": 62,
+      "source": "Day Test Q7",
+      "topic": "Graphs",
+      "question": "Which algorithm is NOT used to find an MST?",
+      "options": [
+        "Bellman-Ford",
+        "Kruskal's",
+        "Prim's",
+        "Borůvka's",
+        "Reverse-Delete"
+      ],
+      "answer": "a",
+      "explanation": "Bellman-Ford."
+    },
+    {
+      "id": 63,
+      "source": "Day Test Q8",
+      "topic": "Sorting",
+      "question": "Which sort has the same time complexity in the best, average and worst cases?",
+      "options": [
+        "Quick sort",
+        "Bubble sort",
+        "Insertion sort",
+        "Selection sort",
+        "Merge sort"
+      ],
+      "answer": "e",
+      "explanation": "Merge sort."
+    },
+    {
+      "id": 64,
+      "source": "Day Test Q9",
+      "topic": "SDLC",
+      "question": "Which SDLC model is strictly sequential?",
+      "options": [
+        "Agile",
+        "Waterfall",
+        "Spiral",
+        "Incremental",
+        "Prototype"
+      ],
+      "answer": "b",
+      "explanation": "Waterfall."
+    },
+    {
+      "id": 65,
+      "source": "Day Test Q10",
+      "topic": "Testing",
+      "question": "Which testing verifies business and compliance requirements?",
+      "options": [
+        "Unit",
+        "Integration",
+        "Black-box",
+        "Acceptance",
+        "Regression"
+      ],
+      "answer": "d",
+      "explanation": "Acceptance."
+    },
+    {
+      "id": 66,
+      "source": "Day Test Q11",
+      "topic": "Expressions",
+      "question": "What is the maximum number of elements present at the same time in the operand stack while evaluating the postfix expression 6 2 3 + − 3 8 2 / + * ?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "None of the above"
+      ],
+      "answer": "d",
+      "explanation": "Push 6, 2, 3 (3) → + → 6 5 → − → 1 → push 3, 8, 2 → 1 3 8 2 (4) → / → + → *. Max = 4 (PYQ 2023)."
+    },
+    {
+      "id": 67,
+      "source": "Day Test Q12",
+      "topic": "Linear DS",
+      "question": "The values 34, 25, 58, 96 and 12 are pushed onto a stack in that order. The stack is reversed recursively and printed from top to bottom. What is the output?",
+      "options": [
+        "12 96 58 25 34",
+        "25 34 58 96 12",
+        "34 25 58 96 12",
+        "96 58 25 34 12",
+        "Compilation error"
+      ],
+      "answer": "c",
+      "explanation": "Top was 12; after reversing, 34 is on top → 34 25 58 96 12 (PYQ 2023)."
+    },
+    {
+      "id": 68,
+      "source": "Day Test Q13",
+      "topic": "Linear DS",
+      "question": "Which is not a linear data structure?",
+      "options": [
+        "Array",
+        "Stack",
+        "Queue",
+        "Linked list",
+        "Tree"
+      ],
+      "answer": "e",
+      "explanation": "Tree."
+    },
+    {
+      "id": 69,
+      "source": "Day Test Q14",
+      "topic": "Graphs",
+      "question": "Which is a graph traversal technique?",
+      "options": [
+        "DFS",
+        "Stack",
+        "Heap",
+        "Priority queue",
+        "None of the above"
+      ],
+      "answer": "a",
+      "explanation": "DFS."
+    },
+    {
+      "id": 70,
+      "source": "Day Test Q15",
+      "topic": "Sorting",
+      "question": "Which in-place comparison sort performs the fewest swaps in the worst case?",
+      "options": [
+        "Bubble",
+        "Quick",
+        "Insertion",
+        "Heap",
+        "Selection"
+      ],
+      "answer": "e",
+      "explanation": "Selection."
+    },
+    {
+      "id": 71,
+      "source": "Day Test Q16",
+      "topic": "Sorting",
+      "question": "Which sort does not use comparisons?",
+      "options": [
+        "Quick",
+        "Radix",
+        "Merge",
+        "Heap",
+        "Insertion"
+      ],
+      "answer": "b",
+      "explanation": "Radix."
+    },
+    {
+      "id": 72,
+      "source": "Day Test Q17",
+      "topic": "Sorting",
+      "question": "What is the space complexity of tail-recursive quicksort?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(n log n)",
+        "O(log n)",
+        "O(n²)"
+      ],
+      "answer": "d",
+      "explanation": "O(log n)."
+    },
+    {
+      "id": 73,
+      "source": "Day Test Q18",
+      "topic": "Hashing",
+      "question": "In a hash table, the load factor represents:",
+      "options": [
+        "Stored elements ÷ total slots",
+        "Collisions per bucket",
+        "Number of hash functions",
+        "Total memory",
+        "Max key size"
+      ],
+      "answer": "a",
+      "explanation": "α = n / m."
+    },
+    {
+      "id": 74,
+      "source": "Day Test Q19",
+      "topic": "Paradigms",
+      "question": "Which exemplifies divide and conquer?",
+      "options": [
+        "Heap sort",
+        "Insertion sort",
+        "Merge sort",
+        "Bubble sort",
+        "None"
+      ],
+      "answer": "c",
+      "explanation": "Merge sort."
+    },
+    {
+      "id": 75,
+      "source": "Day Test Q20",
+      "topic": "Paradigms",
+      "question": "What is the primary purpose of memoization?",
+      "options": [
+        "Reduce memory",
+        "Store intermediate results of repeated subproblems",
+        "Increase recursion depth",
+        "Run in parallel",
+        "Convert iteration to recursion"
+      ],
+      "answer": "b",
+      "explanation": "Memoization."
+    },
+    {
+      "id": 76,
+      "source": "Day Test Q21",
+      "topic": "Sorting",
+      "question": "When is insertion sort better than quicksort and merge sort?",
+      "options": [
+        "Large random input",
+        "Large stable input",
+        "Linked lists",
+        "Parallel big data",
+        "Small, nearly sorted input with low memory use"
+      ],
+      "answer": "e",
+      "explanation": "Small/nearly sorted."
+    },
+    {
+      "id": 77,
+      "source": "Day Test Q22",
+      "topic": "Paradigms",
+      "question": "Classical nested-loop DP for LIS runs in:",
+      "options": [
+        "O(n)",
+        "O(n²)",
+        "O(n log n)",
+        "O(log n)",
+        "O(n³)"
+      ],
+      "answer": "b",
+      "explanation": "O(n²)."
+    },
+    {
+      "id": 78,
+      "source": "Day Test Q23",
+      "topic": "SDLC",
+      "question": "Sprints and a product backlog are characteristics of:",
+      "options": [
+        "Waterfall",
+        "Spiral",
+        "V-Model",
+        "Scrum",
+        "RAD"
+      ],
+      "answer": "d",
+      "explanation": "Scrum."
+    },
+    {
+      "id": 79,
+      "source": "Day Test Q24",
+      "topic": "SDLC",
+      "question": "Which is NOT a feature of XP?",
+      "options": [
+        "Fixed project requirements before development",
+        "Pair programming",
+        "Continuous customer feedback",
+        "TDD",
+        "Continuous integration"
+      ],
+      "answer": "a",
+      "explanation": "XP embraces change; fixed requirements upfront is Waterfall (PYQ 2022)."
+    },
+    {
+      "id": 80,
+      "source": "Day Test Q25",
+      "topic": "Testing",
+      "question": "Which testing verifies individual modules?",
+      "options": [
+        "Integration",
+        "System",
+        "Unit",
+        "Acceptance",
+        "Regression"
+      ],
+      "answer": "c",
+      "explanation": "Unit."
+    },
+    {
+      "id": 81,
+      "source": "Day Test Q26",
+      "topic": "Estimation",
+      "question": "Which statement about COCOMO is true?",
+      "options": [
+        "It ignores all cost drivers",
+        "Intermediate COCOMO refines effort estimation using cost drivers",
+        "It manages sprint backlogs",
+        "It measures quality only",
+        "It schedules packets"
+      ],
+      "answer": "b",
+      "explanation": "Intermediate = size + cost drivers."
+    },
+    {
+      "id": 82,
+      "source": "Day Test Q27",
+      "topic": "HCI",
+      "question": "According to Fitts's Law, what affects pointing time?",
+      "options": [
+        "Target colour",
+        "Cursor size",
+        "Screen resolution",
+        "Input device type",
+        "Distance to and size of the target"
+      ],
+      "answer": "e",
+      "explanation": "Fitts's Law."
+    },
+    {
+      "id": 83,
+      "source": "Day Test Q28",
+      "topic": "TOC",
+      "question": "NFA: q0 —a→ q0, q0 —b→ q1; q1 —a→ q2; q2 —a→ q2, q2 —b→ q0, q2 —ε→ q1. Using subset construction, which DFA states are reachable?",
+      "options": [
+        "{q0}, {q1}, {q1, q2}",
+        "{q0}, {q1}, {q0, q1}, {q1, q2}",
+        "{q0}, {q1}, {q0, q2}, {q1, q2}",
+        "{q0}, {q1}, {q0, q1, q2}",
+        "None of the above"
+      ],
+      "answer": "a",
+      "explanation": "{q0} —a→ {q0}, —b→ {q1}; {q1} —a→ {q2} + ε-closure = {q1, q2}; {q1, q2} —a→ {q1, q2}, —b→ {q0} (PYQ 2022)."
+    },
+    {
+      "id": 84,
+      "source": "Day Test Q29",
+      "topic": "Design",
+      "question": "A good design should have:",
+      "options": [
+        "High coupling, low cohesion",
+        "High coupling, high cohesion",
+        "Low coupling, low cohesion",
+        "Low coupling, high cohesion",
+        "No coupling, no cohesion"
+      ],
+      "answer": "d",
+      "explanation": "Low coupling, high cohesion."
+    },
+    {
+      "id": 85,
+      "source": "Day Test Q30",
+      "topic": "Compiler",
+      "question": "What does lexical analysis produce?",
+      "options": [
+        "A parse tree",
+        "Machine code",
+        "Tokens",
+        "Intermediate code",
+        "An optimised program"
+      ],
+      "answer": "c",
+      "explanation": "Tokens."
+    },
+    {
+      "id": 86,
+      "source": "Additional A1",
+      "topic": "Complexity",
+      "question": "What is the time complexity of binary search?",
+      "options": [
+        "O(n log n)",
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n²)"
+      ],
+      "answer": "d",
+      "explanation": "The array must be sorted."
+    },
+    {
+      "id": 87,
+      "source": "Additional A2",
+      "topic": "Complexity",
+      "question": "Which notation gives an upper bound (worst case)?",
+      "options": [
+        "Theta (Θ)",
+        "Omega (Ω)",
+        "Little-o",
+        "Sigma",
+        "Big-O"
+      ],
+      "answer": "e",
+      "explanation": "Ω = lower bound; Θ = tight bound."
+    },
+    {
+      "id": 88,
+      "source": "Additional A3",
+      "topic": "Complexity",
+      "question": "Two separate loops run one after the other: one O(n), one O(n²). The total complexity is:",
+      "options": [
+        "O(n + 2)",
+        "O(n³)",
+        "O(n²)",
+        "O(2n²)",
+        "O(n)"
+      ],
+      "answer": "c",
+      "explanation": "Add the blocks, keep the biggest term."
+    },
+    {
+      "id": 89,
+      "source": "Additional A4",
+      "topic": "Linear DS",
+      "question": "Each node of a doubly linked list contains:",
+      "options": [
+        "Data, a next pointer and a previous pointer",
+        "A key and a hash",
+        "Data only",
+        "Data and a next pointer only",
+        "Two next pointers"
+      ],
+      "answer": "a",
+      "explanation": "Singly = next only; circular = last points to first."
+    },
+    {
+      "id": 90,
+      "source": "Additional A5",
+      "topic": "Linear DS",
+      "question": "Popping from an empty stack causes:",
+      "options": [
+        "Deadlock",
+        "Overflow",
+        "Thrashing",
+        "Underflow",
+        "Segmentation"
+      ],
+      "answer": "d",
+      "explanation": "Pushing onto a full stack = overflow."
+    },
+    {
+      "id": 91,
+      "source": "Additional A6",
+      "topic": "Linear DS",
+      "question": "A circular queue of size n is full when:",
+      "options": [
+        "rear == n",
+        "front == 0",
+        "rear == front",
+        "(rear + 1) % n == front",
+        "front == rear + 2"
+      ],
+      "answer": "d",
+      "explanation": "Circular queues reuse freed space."
+    },
+    {
+      "id": 92,
+      "source": "Additional A7",
+      "topic": "Linear DS",
+      "question": "A queue that allows insertion and deletion at both ends is a:",
+      "options": [
+        "Linear queue",
+        "Stack",
+        "Priority queue",
+        "Circular queue",
+        "Deque"
+      ],
+      "answer": "e",
+      "explanation": "Double-ended queue."
+    },
+    {
+      "id": 93,
+      "source": "Additional A8",
+      "topic": "Linear DS",
+      "question": "A priority queue is usually implemented with a:",
+      "options": [
+        "Linked list only",
+        "Stack",
+        "Hash table",
+        "Heap",
+        "Trie"
+      ],
+      "answer": "d",
+      "explanation": "Highest priority is served first."
+    },
+    {
+      "id": 94,
+      "source": "Additional A9",
+      "topic": "Expressions",
+      "question": "What is the prefix form of (a + b) * (c − d)?",
+      "options": [
+        "+ab*−cd",
+        "*ab+cd−",
+        "ab+cd−*",
+        "+*ab−cd",
+        "*+ab−cd"
+      ],
+      "answer": "e",
+      "explanation": "Operator before its operands."
+    },
+    {
+      "id": 95,
+      "source": "Additional A10",
+      "topic": "Expressions",
+      "question": "Postfix is also called:",
+      "options": [
+        "Polish notation",
+        "Prefix notation",
+        "Reverse Polish notation",
+        "Hungarian notation",
+        "Infix notation"
+      ],
+      "answer": "c",
+      "explanation": "Prefix = Polish notation."
+    },
+    {
+      "id": 96,
+      "source": "Additional A11",
+      "topic": "Expressions",
+      "question": "Evaluate the postfix expression 2 3 * 5 +.",
+      "options": [
+        "11",
+        "13",
+        "30",
+        "25",
+        "16"
+      ],
+      "answer": "a",
+      "explanation": "2 × 3 = 6, then 6 + 5 = 11."
+    },
+    {
+      "id": 97,
+      "source": "Additional A12",
+      "topic": "Expressions",
+      "question": "What is the postfix form of a * b + c?",
+      "options": [
+        "abc+*",
+        "ab*c+",
+        "+*abc",
+        "ab+c*",
+        "a*bc+"
+      ],
+      "answer": "b",
+      "explanation": "(ab*) c +."
+    },
+    {
+      "id": 98,
+      "source": "Additional A13",
+      "topic": "Expressions",
+      "question": "Prefix expressions are evaluated by scanning:",
+      "options": [
+        "From the middle",
+        "Twice left to right",
+        "Randomly",
+        "Left to right",
+        "Right to left"
+      ],
+      "answer": "e",
+      "explanation": "Postfix is scanned left to right."
+    },
+    {
+      "id": 99,
+      "source": "Additional A14",
+      "topic": "Linear DS",
+      "question": "A recursive function without a base case leads to:",
+      "options": [
+        "Stack overflow",
+        "Underflow",
+        "Thrashing",
+        "Heap overflow",
+        "Deadlock"
+      ],
+      "answer": "a",
+      "explanation": "Recursion uses the call stack."
+    },
+    {
+      "id": 100,
+      "source": "Additional A15",
+      "topic": "Trees",
+      "question": "How many edges does a tree with n nodes have?",
+      "options": [
+        "2n",
+        "n − 1",
+        "n + 1",
+        "n²",
+        "n"
+      ],
+      "answer": "b",
+      "explanation": "Every node except the root has one parent edge."
+    },
+    {
+      "id": 101,
+      "source": "Additional A16",
+      "topic": "Trees",
+      "question": "What is the maximum number of nodes at level i of a binary tree (root at level 0)?",
+      "options": [
+        "2ⁱ − 1",
+        "i²",
+        "2i",
+        "2ⁱ",
+        "i + 1"
+      ],
+      "answer": "d",
+      "explanation": "Each level can double."
+    },
+    {
+      "id": 102,
+      "source": "Additional A17",
+      "topic": "Trees",
+      "question": "A binary tree where every level is full except possibly the last, which is filled from the left, is:",
+      "options": [
+        "Degenerate",
+        "Full",
+        "Skewed",
+        "Perfect",
+        "Complete"
+      ],
+      "answer": "e",
+      "explanation": "Full = every node has 0 or 2 children."
+    },
+    {
+      "id": 103,
+      "source": "Additional A18",
+      "topic": "Trees",
+      "question": "What is the inorder traversal of: A with children B (left) and C (right), where B has children D (left) and E (right)?",
+      "options": [
+        "D B E A C",
+        "A B D E C",
+        "B D E A C",
+        "A C B E D",
+        "D E B C A"
+      ],
+      "answer": "a",
+      "explanation": "Left, root, right."
+    },
+    {
+      "id": 104,
+      "source": "Additional A19",
+      "topic": "Trees",
+      "question": "What is the postorder traversal of the same tree (A; B, C; D, E under B)?",
+      "options": [
+        "D E B C A",
+        "C A E B D",
+        "D E B A C",
+        "D B E A C",
+        "A B D E C"
+      ],
+      "answer": "a",
+      "explanation": "Left, right, root."
+    },
+    {
+      "id": 105,
+      "source": "Additional A20",
+      "topic": "Trees",
+      "question": "Level-order traversal of a tree uses a:",
+      "options": [
+        "Trie",
+        "Heap",
+        "Hash table",
+        "Stack",
+        "Queue"
+      ],
+      "answer": "e",
+      "explanation": "Level-order = BFS."
+    },
+    {
+      "id": 106,
+      "source": "Additional A21",
+      "topic": "Trees",
+      "question": "What is the worst-case search time in an unbalanced (skewed) BST?",
+      "options": [
+        "O(log n)",
+        "O(1)",
+        "O(n²)",
+        "O(n log n)",
+        "O(n)"
+      ],
+      "answer": "e",
+      "explanation": "A skewed tree behaves like a linked list."
+    },
+    {
+      "id": 107,
+      "source": "Additional A22",
+      "topic": "Trees",
+      "question": "In an AVL tree, the allowed balance factors are:",
+      "options": [
+        "−1, 0, +1",
+        "−2 to +2",
+        "0 only",
+        "Any value",
+        "0 and 1"
+      ],
+      "answer": "a",
+      "explanation": "Balance factor = height(left) − height(right)."
+    },
+    {
+      "id": 108,
+      "source": "Additional A23",
+      "topic": "Trees",
+      "question": "In an array-based heap (0-indexed), the children of index i are at:",
+      "options": [
+        "i − 1 and i + 1",
+        "2i and 2i − 1",
+        "i + 1 and i + 2",
+        "i/2 and i/2 + 1",
+        "2i + 1 and 2i + 2"
+      ],
+      "answer": "e",
+      "explanation": "Parent of i = (i − 1)/2."
+    },
+    {
+      "id": 109,
+      "source": "Additional A24",
+      "topic": "Trees",
+      "question": "What is the time complexity of building a heap from n elements?",
+      "options": [
+        "O(log n)",
+        "O(n log n)",
+        "O(1)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "answer": "d",
+      "explanation": "Insert/delete are O(log n) each."
+    },
+    {
+      "id": 110,
+      "source": "Additional A25",
+      "topic": "Trees",
+      "question": "Which tree is used for prefix-based string search and autocomplete?",
+      "options": [
+        "AVL tree",
+        "Trie",
+        "B tree",
+        "Red-black tree",
+        "Heap"
+      ],
+      "answer": "b",
+      "explanation": "Trie (prefix tree)."
+    },
+    {
+      "id": 111,
+      "source": "Additional A26",
+      "topic": "Graphs",
+      "question": "Which graph representation is best for sparse graphs?",
+      "options": [
+        "Adjacency matrix",
+        "Edge array only",
+        "Incidence matrix",
+        "Distance matrix",
+        "Adjacency list"
+      ],
+      "answer": "e",
+      "explanation": "Matrix = O(V²); list = O(V + E)."
+    },
+    {
+      "id": 112,
+      "source": "Additional A27",
+      "topic": "Graphs",
+      "question": "DFS is implemented using a:",
+      "options": [
+        "Hash table",
+        "Queue",
+        "Stack (or recursion)",
+        "Trie",
+        "Heap"
+      ],
+      "answer": "c",
+      "explanation": "BFS uses a queue."
+    },
+    {
+      "id": 113,
+      "source": "Additional A28",
+      "topic": "Graphs",
+      "question": "Which traversal finds the shortest path in an unweighted graph?",
+      "options": [
+        "BFS",
+        "Inorder",
+        "DFS",
+        "Preorder",
+        "Postorder"
+      ],
+      "answer": "a",
+      "explanation": "BFS explores level by level."
+    },
+    {
+      "id": 114,
+      "source": "Additional A29",
+      "topic": "Graphs",
+      "question": "Topological sorting is possible only for:",
+      "options": [
+        "Directed acyclic graphs (DAGs)",
+        "Undirected graphs",
+        "Graphs with cycles",
+        "Trees only",
+        "Complete graphs"
+      ],
+      "answer": "a",
+      "explanation": "Done with DFS or Kahn's algorithm."
+    },
+    {
+      "id": 115,
+      "source": "Additional A30",
+      "topic": "Graphs",
+      "question": "How many edges does a spanning tree of a graph with V vertices have?",
+      "options": [
+        "V − 1",
+        "V",
+        "V²",
+        "2V",
+        "V + 1"
+      ],
+      "answer": "a",
+      "explanation": "Connects all vertices with no cycle."
+    },
+    {
+      "id": 116,
+      "source": "Additional A31",
+      "topic": "Graphs",
+      "question": "Prim's algorithm builds the MST by:",
+      "options": [
+        "Growing from one vertex, adding the cheapest edge to a new vertex",
+        "Using BFS only",
+        "Using dynamic programming",
+        "Sorting all edges first",
+        "Removing the heaviest edges"
+      ],
+      "answer": "a",
+      "explanation": "Kruskal sorts the edges first."
+    },
+    {
+      "id": 117,
+      "source": "Additional A32",
+      "topic": "Graphs",
+      "question": "Which algorithm finds shortest paths between ALL pairs of vertices?",
+      "options": [
+        "Floyd-Warshall",
+        "Dijkstra",
+        "BFS",
+        "Prim",
+        "Kruskal"
+      ],
+      "answer": "a",
+      "explanation": "O(V³), uses DP."
+    },
+    {
+      "id": 118,
+      "source": "Additional A33",
+      "topic": "Graphs",
+      "question": "Dijkstra's algorithm fails when the graph has:",
+      "options": [
+        "Cycles",
+        "Negative edge weights",
+        "Undirected edges",
+        "Zero-weight edges",
+        "More than 10 vertices"
+      ],
+      "answer": "b",
+      "explanation": "Use Bellman-Ford for negative weights."
+    },
+    {
+      "id": 119,
+      "source": "Additional A34",
+      "topic": "Paradigms",
+      "question": "Huffman coding is an example of which paradigm?",
+      "options": [
+        "Greedy",
+        "Dynamic programming",
+        "Backtracking",
+        "Divide and conquer",
+        "Brute force"
+      ],
+      "answer": "a",
+      "explanation": "Also Kruskal, Prim, Dijkstra, fractional knapsack."
+    },
+    {
+      "id": 120,
+      "source": "Additional A35",
+      "topic": "Paradigms",
+      "question": "The 0/1 knapsack problem is solved optimally using:",
+      "options": [
+        "Hashing",
+        "Dynamic programming",
+        "Greedy",
+        "Divide and conquer",
+        "Backtracking only"
+      ],
+      "answer": "b",
+      "explanation": "Fractional knapsack uses greedy."
+    },
+    {
+      "id": 121,
+      "source": "Additional A36",
+      "topic": "Paradigms",
+      "question": "The N-Queens problem is typically solved using:",
+      "options": [
+        "Divide and conquer",
+        "Greedy",
+        "Sorting",
+        "Backtracking",
+        "Hashing"
+      ],
+      "answer": "d",
+      "explanation": "Try a placement, undo if it fails."
+    },
+    {
+      "id": 122,
+      "source": "Additional A37",
+      "topic": "Paradigms",
+      "question": "The bottom-up approach to DP, filling a table, is called:",
+      "options": [
+        "Greedy",
+        "Recursion",
+        "Backtracking",
+        "Memoization",
+        "Tabulation"
+      ],
+      "answer": "e",
+      "explanation": "Memoization is top-down."
+    },
+    {
+      "id": 123,
+      "source": "Additional A38",
+      "topic": "Paradigms",
+      "question": "The recurrence T(n) = 2T(n/2) + n solves to:",
+      "options": [
+        "O(n²)",
+        "O(n log n)",
+        "O(n)",
+        "O(2ⁿ)",
+        "O(log n)"
+      ],
+      "answer": "b",
+      "explanation": "Merge sort."
+    },
+    {
+      "id": 124,
+      "source": "Additional A39",
+      "topic": "Sorting",
+      "question": "Quicksort's worst case typically occurs when:",
+      "options": [
+        "All elements are distinct",
+        "The input is already sorted and a poor pivot is chosen",
+        "The array is small",
+        "The pivot is the median",
+        "The input is random"
+      ],
+      "answer": "b",
+      "explanation": "Gives O(n²)."
+    },
+    {
+      "id": 125,
+      "source": "Additional A40",
+      "topic": "Sorting",
+      "question": "What is the lower bound for any comparison-based sorting algorithm?",
+      "options": [
+        "Ω(log n)",
+        "Ω(n)",
+        "Ω(n log n)",
+        "Ω(1)",
+        "Ω(n²)"
+      ],
+      "answer": "c",
+      "explanation": "Non-comparison sorts can beat it."
+    },
+    {
+      "id": 126,
+      "source": "Additional A41",
+      "topic": "Sorting",
+      "question": "Which of these sorting algorithms is stable?",
+      "options": [
+        "Selection sort",
+        "Heap sort",
+        "Shell sort",
+        "Merge sort",
+        "Quick sort"
+      ],
+      "answer": "d",
+      "explanation": "Bubble, insertion and merge are stable."
+    },
+    {
+      "id": 127,
+      "source": "Additional A42",
+      "topic": "Sorting",
+      "question": "Which sorting algorithm is preferred for linked lists?",
+      "options": [
+        "Merge sort",
+        "Selection sort",
+        "Heap sort",
+        "Counting sort",
+        "Quick sort"
+      ],
+      "answer": "a",
+      "explanation": "No random access is needed."
+    },
+    {
+      "id": 128,
+      "source": "Additional A43",
+      "topic": "Hashing",
+      "question": "When two keys map to the same index in a hash table, it is a:",
+      "options": [
+        "Rehash",
+        "Deadlock",
+        "Underflow",
+        "Collision",
+        "Overflow"
+      ],
+      "answer": "d",
+      "explanation": "Resolved by chaining or open addressing."
+    },
+    {
+      "id": 129,
+      "source": "Additional A44",
+      "topic": "Hashing",
+      "question": "Collision resolution using a linked list at each slot is:",
+      "options": [
+        "Double hashing",
+        "Linear probing",
+        "Quadratic probing",
+        "Rehashing",
+        "Chaining"
+      ],
+      "answer": "e",
+      "explanation": "Open addressing finds another free slot."
+    },
+    {
+      "id": 130,
+      "source": "Additional A45",
+      "topic": "Hashing",
+      "question": "Checking the next slot one by one after a collision is:",
+      "options": [
+        "Chaining",
+        "Bucketing",
+        "Double hashing",
+        "Linear probing",
+        "Quadratic probing"
+      ],
+      "answer": "d",
+      "explanation": "A type of open addressing."
+    },
+    {
+      "id": 131,
+      "source": "Additional A46",
+      "topic": "SDLC",
+      "question": "Which model pairs each development phase with a matching testing phase?",
+      "options": [
+        "Waterfall",
+        "V-Model",
+        "RAD",
+        "Spiral",
+        "Prototype"
+      ],
+      "answer": "b",
+      "explanation": "Verification and validation."
+    },
+    {
+      "id": 132,
+      "source": "Additional A47",
+      "topic": "SDLC",
+      "question": "Which model is best when requirements are unclear at the start?",
+      "options": [
+        "Prototype",
+        "RAD",
+        "Big Bang",
+        "V-Model",
+        "Waterfall"
+      ],
+      "answer": "a",
+      "explanation": "Build a mock-up, gather feedback."
+    },
+    {
+      "id": 133,
+      "source": "Additional A48",
+      "topic": "SDLC",
+      "question": "Delivering working parts of the system one at a time is the:",
+      "options": [
+        "Waterfall model",
+        "Big Bang model",
+        "V-Model",
+        "Incremental model",
+        "Spiral model"
+      ],
+      "answer": "d",
+      "explanation": "Iterative = refine the whole repeatedly."
+    },
+    {
+      "id": 134,
+      "source": "Additional A49",
+      "topic": "SDLC",
+      "question": "The Agile Manifesto values working software over:",
+      "options": [
+        "Comprehensive documentation",
+        "Responding to change",
+        "Small releases",
+        "Individuals and interactions",
+        "Customer collaboration"
+      ],
+      "answer": "a",
+      "explanation": "Also customer collaboration over contracts; responding to change over a plan."
+    },
+    {
+      "id": 135,
+      "source": "Additional A50",
+      "topic": "SDLC",
+      "question": "In Scrum, who owns and prioritises the product backlog?",
+      "options": [
+        "Stakeholder",
+        "Product Owner",
+        "Scrum Master",
+        "Developers",
+        "Tester"
+      ],
+      "answer": "b",
+      "explanation": "Scrum Master facilitates."
+    },
+    {
+      "id": 136,
+      "source": "Additional A51",
+      "topic": "SDLC",
+      "question": "In TDD, which comes first?",
+      "options": [
+        "Writing the test",
+        "Refactoring",
+        "Writing the code",
+        "Documentation",
+        "Deploying"
+      ],
+      "answer": "a",
+      "explanation": "Test first, then code to pass it."
+    },
+    {
+      "id": 137,
+      "source": "Additional A52",
+      "topic": "SDLC",
+      "question": "A visual board with work-in-progress (WIP) limits is characteristic of:",
+      "options": [
+        "V-Model",
+        "Waterfall",
+        "Spiral",
+        "COCOMO",
+        "Kanban"
+      ],
+      "answer": "e",
+      "explanation": "To Do → In Progress → Done."
+    },
+    {
+      "id": 138,
+      "source": "Additional A53",
+      "topic": "Requirements",
+      "question": "'The system shall respond within 2 seconds' is a:",
+      "options": [
+        "Non-functional requirement",
+        "Test case",
+        "Functional requirement",
+        "Use case",
+        "Design constraint only"
+      ],
+      "answer": "a",
+      "explanation": "Functional = what the system does."
+    },
+    {
+      "id": 139,
+      "source": "Additional A54",
+      "topic": "Design",
+      "question": "Which type of coupling is the worst?",
+      "options": [
+        "Data coupling",
+        "External coupling",
+        "Content coupling",
+        "Stamp coupling",
+        "Control coupling"
+      ],
+      "answer": "c",
+      "explanation": "Data coupling is the best."
+    },
+    {
+      "id": 140,
+      "source": "Additional A55",
+      "topic": "Design",
+      "question": "Which UML diagram shows the order of messages between objects over time?",
+      "options": [
+        "Deployment diagram",
+        "Sequence diagram",
+        "Use case diagram",
+        "Component diagram",
+        "Class diagram"
+      ],
+      "answer": "b",
+      "explanation": "Use case = user interactions; class = structure."
+    },
+    {
+      "id": 141,
+      "source": "Additional A56",
+      "topic": "Testing",
+      "question": "In bottom-up integration testing, an upper-level calling module is replaced by a:",
+      "options": [
+        "Compiler",
+        "Driver",
+        "Prototype",
+        "Mock database",
+        "Stub"
+      ],
+      "answer": "b",
+      "explanation": "Driver = calling module stand-in."
+    },
+    {
+      "id": 142,
+      "source": "Additional A57",
+      "topic": "Testing",
+      "question": "Dividing inputs into valid and invalid classes and testing one value from each is:",
+      "options": [
+        "Regression testing",
+        "Mutation testing",
+        "Statement coverage",
+        "Boundary value analysis",
+        "Equivalence partitioning"
+      ],
+      "answer": "e",
+      "explanation": "Black-box technique."
+    },
+    {
+      "id": 143,
+      "source": "Additional A58",
+      "topic": "Testing",
+      "question": "Testing done by real users in their own environment before the final release is:",
+      "options": [
+        "Alpha testing",
+        "Integration testing",
+        "Smoke testing",
+        "Beta testing",
+        "Unit testing"
+      ],
+      "answer": "d",
+      "explanation": "Alpha = at the developer's site."
+    },
+    {
+      "id": 144,
+      "source": "Additional A59",
+      "topic": "Testing",
+      "question": "A quick check that the basic build works is called:",
+      "options": [
+        "Smoke testing",
+        "Stress testing",
+        "Mutation testing",
+        "Regression testing",
+        "Acceptance testing"
+      ],
+      "answer": "a",
+      "explanation": "Smoke testing."
+    },
+    {
+      "id": 145,
+      "source": "Additional A60",
+      "topic": "Testing",
+      "question": "Testing a system beyond its normal limits is:",
+      "options": [
+        "Unit testing",
+        "Smoke testing",
+        "Usability testing",
+        "Load testing",
+        "Stress testing"
+      ],
+      "answer": "e",
+      "explanation": "Load = expected traffic."
+    },
+    {
+      "id": 146,
+      "source": "Additional A61",
+      "topic": "Maintenance",
+      "question": "Modifying software to work on a new operating system is:",
+      "options": [
+        "Corrective maintenance",
+        "Perfective maintenance",
+        "Preventive maintenance",
+        "Adaptive maintenance",
+        "Emergency maintenance"
+      ],
+      "answer": "d",
+      "explanation": "Corrective = bug fixes; perfective = improvements."
+    },
+    {
+      "id": 147,
+      "source": "Additional A62",
+      "topic": "Estimation",
+      "question": "In COCOMO, a small team working on a familiar, simple project falls under which mode?",
+      "options": [
+        "Intermediate",
+        "Organic",
+        "Detailed",
+        "Semi-detached",
+        "Embedded"
+      ],
+      "answer": "b",
+      "explanation": "Embedded = complex with tight hardware constraints."
+    },
+    {
+      "id": 148,
+      "source": "Additional A63",
+      "topic": "Estimation",
+      "question": "Function point analysis estimates software size based on:",
+      "options": [
+        "Lines of code only",
+        "Number of developers",
+        "Functionality (inputs, outputs, inquiries, files, interfaces)",
+        "Hardware cost",
+        "Number of bugs"
+      ],
+      "answer": "c",
+      "explanation": "Independent of language."
+    },
+    {
+      "id": 149,
+      "source": "Additional A64",
+      "topic": "Estimation",
+      "question": "What is the highest level of CMMI?",
+      "options": [
+        "Managed (Level 2)",
+        "Optimising (Level 5)",
+        "Initial (Level 1)",
+        "Defined (Level 3)",
+        "Quantitatively Managed (Level 4)"
+      ],
+      "answer": "b",
+      "explanation": "Initial → Managed → Defined → Quantitatively Managed → Optimising."
+    },
+    {
+      "id": 150,
+      "source": "Additional A65",
+      "topic": "TOC",
+      "question": "Which automaton has exactly one transition per symbol from each state and no ε-moves?",
+      "options": [
+        "PDA",
+        "DFA",
+        "Turing machine",
+        "NFA",
+        "ε-NFA"
+      ],
+      "answer": "b",
+      "explanation": "NFA allows multiple/ε transitions."
+    },
+    {
+      "id": 151,
+      "source": "Additional A66",
+      "topic": "TOC",
+      "question": "An NFA with n states can produce a DFA with at most how many states?",
+      "options": [
+        "n²",
+        "n",
+        "2ⁿ",
+        "2n",
+        "n!"
+      ],
+      "answer": "c",
+      "explanation": "Every subset of states could be a DFA state."
+    },
+    {
+      "id": 152,
+      "source": "Additional A67",
+      "topic": "TOC",
+      "question": "Regular languages are recognised by:",
+      "options": [
+        "Turing machines only",
+        "Pushdown automata",
+        "Finite automata",
+        "None",
+        "Linear bounded automata"
+      ],
+      "answer": "c",
+      "explanation": "Chomsky Type 3."
+    },
+    {
+      "id": 153,
+      "source": "Additional A68",
+      "topic": "TOC",
+      "question": "Which is the most powerful model of computation?",
+      "options": [
+        "PDA",
+        "Turing machine",
+        "NFA",
+        "DFA",
+        "Mealy machine"
+      ],
+      "answer": "b",
+      "explanation": "Recognises recursively enumerable (Type 0) languages."
+    },
+    {
+      "id": 154,
+      "source": "Additional A69",
+      "topic": "Compiler",
+      "question": "Which compiler phase builds the parse tree?",
+      "options": [
+        "Code optimisation",
+        "Syntax analysis",
+        "Lexical analysis",
+        "Semantic analysis",
+        "Code generation"
+      ],
+      "answer": "b",
+      "explanation": "Done by the parser."
+    },
+    {
+      "id": 155,
+      "source": "Additional A70",
+      "topic": "Compiler",
+      "question": "Type checking is performed during:",
+      "options": [
+        "Code generation",
+        "Semantic analysis",
+        "Syntax analysis",
+        "Linking",
+        "Lexical analysis"
+      ],
+      "answer": "b",
+      "explanation": "Semantic analysis."
+    },
+    {
+      "id": 156,
+      "source": "Additional A71",
+      "topic": "Compiler",
+      "question": "Which translator executes a program line by line?",
+      "options": [
+        "Compiler",
+        "Assembler",
+        "Loader",
+        "Interpreter",
+        "Linker"
+      ],
+      "answer": "d",
+      "explanation": "A compiler translates the whole program at once."
+    },
+    {
+      "id": 157,
+      "source": "Additional A72",
+      "topic": "Compiler",
+      "question": "Which tool combines separate object files into one executable?",
+      "options": [
+        "Loader",
+        "Assembler",
+        "Preprocessor",
+        "Interpreter",
+        "Linker"
+      ],
+      "answer": "e",
+      "explanation": "The loader puts the program into memory."
+    }
+  ]
+}
